@@ -1,0 +1,1898 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+	* {font-family: 'Noto Sans TC';}
+
+
+
+
+
+body{   
+	  background-image: url("../image/background.jpg"); 
+	  background-position: center;
+	  font-family: 'Noto Sans TC', sans-serif;
+	  -moz-background-size: cover;
+	  background-size:cover;
+	  /*overflow-y: hidden;*/
+	  margin:0;
+	  padding:0;
+	  height: 100%
+
+}
+
+body, html {height: 100%}
+
+
+
+div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.3em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 29%;
+	  left: 102px;
+}
+
+div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.125em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 43%;
+	  left: 102px;
+}
+
+div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.9em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 46%;
+	  left: 102px;
+}
+
+div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.9em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 102px;
+}
+
+
+div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 98px;
+	  bottom: 15.5%;
+	  height: 2%;
+	  width: 1%;
+}
+
+div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 120px;
+	  bottom: 14%;
+}
+
+div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 98px;
+	  bottom: 10.5%;
+}
+
+div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 98px;
+	  bottom: 7.3%;
+ }
+
+
+div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 46%;
+	  left: 37.5%;
+	  z-index: 2;
+}
+
+div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 46%;
+	  left: 57%;
+	  z-index: 2;
+}
+
+div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 46%;
+	  left: 76%;
+	  z-index: 2;
+ }
+
+
+	.button /*中文英文圖*/
+	{
+		position:absolute;
+		height: 3.5%;
+		width: 10%;
+		top: 9%;
+		right: 7.5%;
+		z-index: 2;
+	}
+
+
+	.button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 45%;
+		top: 33%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 45%;
+		top: 33%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 45%;
+		top: 33%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	.wrapper{
+		width: 90%;
+		overflow: hidden;
+		transition : all 0.5 ease-in;
+	}
+
+/*
+@media screen and (max-width: 1023px){
+    body{ font-size: 75%; }
+}
+@media screen and (min-width: 1024px) and (max-width: 1087px){
+    body{ font-size: 80%; }
+}
+@media screen and (min-width: 1088px) and (max-width: 1151px){
+    body{ font-size: 85%; }
+}
+@media screen and (min-width: 1152px) and (max-width: 1215px){
+    body{ font-size: 90%; }
+}
+@media screen and (min-width: 1216px) and (max-width: 1279px){
+    body{ font-size: 95%; }
+}
+@media screen and (min-width: 1280px) and (max-width: 1343px){
+    body{ font-size: 100%; }
+}
+@media screen and (min-width: 1344px) and (max-width: 1407px){
+    body{ font-size: 105%; }
+}
+@media screen and (min-width: 1408px) and (max-width: 1471px){
+    body{ font-size: 110%; }
+}
+@media screen and (min-width: 1472px) and (max-width: 1535px){
+    body{ font-size: 115%; }
+}
+@media screen and (min-width: 1536px) and (max-width: 1599px){
+    body{ font-size: 120%; }
+}
+@media screen and (min-width: 1600px) and (max-width: 2000px){
+    body{ font-size: 120%; }
+}
+@media screen and (min-width: 2001px) and (max-width: 4000px){
+    body{ font-size: 180%; }
+}
+@media screen and (min-width: 4001px) {
+    body{ font-size: 280%; }
+}
+*/
+
+
+@media screen and (min-width: 1600px) and (max-width: 2000px){
+    div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.595em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 57.5%;
+	  z-index: 2
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size:3.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 77.5%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 40%;
+		top: 35%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 40%;
+		top: 35%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 40%;
+		top: 35%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	 div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+}
+
+@media screen and (min-width: 1536px) and (max-width: 1599px){
+
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.595em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 37%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 56.5%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 75.5%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 51%;
+		top: 35%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 51%;
+		top: 35%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 51%;
+		top: 35%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+    
+}
+
+@media screen and (min-width: 1472px) and (max-width: 1535px){
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.595em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 37%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 56.5%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 75.5%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 49%;
+		top: 35%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 49%;
+		top: 35%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 49%;
+		top: 35%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	 div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+    
+}
+
+@media screen and (min-width: 1408px) and (max-width: 1471px){
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.1em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.585em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 57%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 76%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 47%;
+		top: 35%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 47%;
+		top: 35%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 47%;
+		top: 35%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	 div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+    
+}
+
+@media screen and (min-width: 1344px) and (max-width: 1407px){
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.8em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.555em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 57%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 76%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 47%;
+		top: 35%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 47%;
+		top: 35%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 47%;
+		top: 35%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	 div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+    
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1343px){
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.495em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.2em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.2em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 57%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 76%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 47%;
+		top: 35%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 47%;
+		top: 35%;
+		right: 23%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 47%;
+		top: 35%;
+		right: 4%;
+		z-index: 1;
+	}
+
+	 div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+    
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1279px){
+    body{ font-size: 95%; }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1215px){
+    body{ font-size: 90%; }
+}
+
+
+
+@media (min-width: 1088px) and (max-width: 1151px) {
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.8em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.095em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.2em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.2em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+	div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 1.9em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 1.9em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 57%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 1.9em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 76%;
+	  z-index: 2;
+ 	}
+
+	.button /*中文英文圖*/
+	{
+		position:absolute;
+		height: 3.3%;
+		width: 12%;
+		top: 9%;
+		right: 7.5%;
+		z-index: 2;
+	}
+
+
+	.button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 35%;
+		top: 40%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 35%;
+		top: 40%;
+		right: 22%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 35%;
+		top: 40%;
+		right: 4%;
+		z-index: 1;
+	}
+		
+
+
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1087px){
+    body{ font-size: 80%; }
+
+    div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	 
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 50%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;	  
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 55%;
+	  left: 115px;
+	}
+
+	div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 35.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7m;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 55.5%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2.7m;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 51%;
+	  left: 75%;
+	  z-index: 2;
+ 	}
+
+    .button /*中文英文圖*/
+	{
+		position:absolute;
+		height: 2.9%;
+		width: 11%;
+		top: 7%;
+		right: 5.5%;
+		z-index: 2;
+	}
+
+
+	.button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 39%;
+		top: 36%;
+		right: 42%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 39%;
+		top: 36%;
+		right: 22.5%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 39%;
+		top: 36%;
+		right: 3%;
+		z-index: 1;
+	}
+}
+
+@media screen and (max-width: 1023px){
+    body{ font-size: 75%; }
+
+    .button /*中文英文圖*/
+	{
+		position:absolute;
+		height: 2.9%;
+		width: 11%;
+		top: 7%;
+		right: 5.5%;
+		z-index: 2;
+	}
+
+
+	.button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 40%;
+		top: 36%;
+		right: 40%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 42%;
+		top: 36%;
+		right: 22%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 42%;
+		top: 36%;
+		right: 4%;
+		z-index: 1;
+	}
+}
+
+/*新加的寬螢幕用測試*/
+
+@media screen and (min-aspect-ratio: 16/10) and (min-width: 1000px){
+    div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.3em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 115px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.595em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 115px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 51%;
+	  left: 115px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 56%;
+	  left: 115px;
+	}
+
+    div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 57.5%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 3.5em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 53%;
+	  left: 77.5%;
+	  z-index: 2;
+ 	}
+
+
+    .button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 50%;
+		top: 35%;
+		right:40%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 50%;
+		top: 35%;
+		right: 20%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 50%;
+		top: 35%;
+		right: 0%;
+		z-index: 1;
+	}
+
+	 div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 75px;
+	  bottom: 11%;
+	  height: 3.0%;
+	  width: 1.6%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 115px;
+	  bottom: 10%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 6%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 75px;
+	  bottom: 2%;
+ 	}
+}
+
+/*新加的寬螢幕用測試*/
+
+
+
+<@media (min-width: 769px) and (max-width: 992px){
+
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.8em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 65px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.125em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 65px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.0em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 50%;
+	  left: 65px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.0em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 54%;
+	  left: 65px;
+	}
+
+	div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 30px;
+	  bottom: 16%;
+	  height: 2.5%;
+	  width: 1.8%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 45px;
+	  bottom: 14%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 31px;
+	  bottom: 10%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 31px;
+	  bottom: 4%;
+ 	}
+
+	div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 50%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 50%;
+	  left: 57.5%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 50%;
+	  left: 77.5%;
+	  z-index: 2;
+ 	}
+
+
+
+	.button /*中文英文圖*/
+	{
+		position:absolute;
+		height: 2.9%;
+		width: 11%;
+		top: 7%;
+		right: 5.5%;
+		z-index: 2;
+	}
+
+
+	.button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 42%;
+		top: 36%;
+		right: 40%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 42%;
+		top: 36%;
+		right: 20%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 42%;
+		top: 36%;
+		right: 0%;
+		z-index: 1;
+	}
+
+	
+}
+
+
+@media (min-width: 769px) and (max-width: 880px){
+
+	div.transbox h2 { /*國立交通大學人事室*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.8em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 30%;
+	  left: 65px;
+	}
+	div.transbox p {  /*NATIONAL CHIAOTUNG UNIVERSITY*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 1.125em;
+	  color: #F9F9F9;
+	  font-weight: initial;
+	  position:absolute;
+	  top: 45%;
+	  left: 65px;
+	}
+
+	div.transbox h1 {  /*PERSONNEL*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.0em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 50%;
+	  left: 65px;
+	}
+
+	div.transbox h3 {  /*OFFICE*/
+	  font-family: 'Noto Sans TC', sans-serif;
+	  font-size: 2.0em;
+	  color: #F9F9F9;
+	  font-weight: bold;
+	  position:absolute;
+	  top: 54%;
+	  left: 65px;
+	}
+
+	div.footer img {  /*房子icon*/
+	  position:absolute;
+	  left: 29px;
+	  bottom: 17%;
+	  height: 2.9%;
+	  width: 1.8%;
+	}
+
+	div.footer h1 {   /*30010 新竹市大學路1001號*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 45px;
+	  bottom: 14%;
+	}
+
+	div.footer h2 {   /*最佳瀏覽環境| IE 8 以上版本 |; 建議解析度 | 1024 x 768*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 31px;
+	  bottom: 9%;
+	}
+
+	div.footer h3 {   /*國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 0.9375em;
+	  color: #F9F9F9;
+	  font-weight: lighter;
+	  position:absolute;
+	  left: 31px;
+	  bottom: 4%;
+ 	}
+
+	div.b1 p {   /*新進人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 50%;
+	  left: 37.5%;
+	  z-index: 2;
+	}
+
+	div.b2 p {   /*現職人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 50%;
+	  left: 57.5%;
+	  z-index: 2;
+	}
+
+	div.b3 p {    /*退離人員*/
+	  font-family: 'Noto Sans TC';
+	  font-size: 2em;
+	  color: #F9F9F9;
+	  font-weight: normal;
+	  position:absolute;
+	  top: 50%;
+	  left: 77.5%;
+	  z-index: 2;
+ 	}
+
+
+
+	.button /*中文英文圖*/
+	{
+		position:absolute;
+		height: 2.9%;
+		width: 11%;
+		top: 7%;
+		right: 5.5%;
+		z-index: 2;
+	}
+
+
+	.button01 /*新進人員圖*/
+	{
+		position: absolute;	
+		height: 40%;
+		top: 36%;
+		right: 40%;
+		z-index: 1;
+	}
+
+
+
+	.button02  /*現職人員圖*/
+	{
+		position:absolute;
+		height: 40%;
+		top: 36%;
+		right: 20%;
+		z-index: 1;
+	}
+
+
+	.button03 /*退離人員圖*/
+	{
+		position:absolute;
+		height: 40%;
+		top: 36%;
+		right: 0%;
+		z-index: 1;
+	}
+
+	
+}
+
+
+
+#tool_bar{
+  width: 33%;
+  /*height: 33%;*/
+  left: 66%;
+  top: 5%;
+  position: fixed;
+  /*background-color: #F4A22C;*/
+}  
+.language-opt{/*
+  position: absolute;
+  top: 8vmin;
+  right: 8vmin;*/
+}
+.lang-normal{
+  background: #54D6CE;
+  color: rgba(255,255,255,0.8);
+}
+.lang-left{
+  float: left;
+  width: 16%;
+/*  height: 3vmin;*/
+  left:45%;
+  top: 0%;
+  position: absolute;
+  border: solid 2px #54D6CE;
+  border-top-left-radius: 1.5vmin;
+  border-bottom-left-radius: 1.5vmin;
+  z-index: 11;
+  text-align: center;
+  line-height: 3vmin;
+}
+.lang-choose{
+  color: #54D6CE;
+}
+.lang-right{
+  float: left;
+  width: 16%;
+/*  height: 3vmin;*/
+  left:60%;
+  top: 0%;
+  position: absolute;
+  border: solid 2px #54D6CE;
+  border-left-style: none;
+  border-top-right-radius: 1.5vmin;
+  border-bottom-right-radius: 1.5vmin;
+  z-index: 10;
+  text-align: center;
+  line-height: 3vmin;
+}

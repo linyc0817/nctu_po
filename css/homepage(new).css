@@ -1,0 +1,832 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+    body{
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+.navbar {  
+      background-color:#f2f2f2;
+      background-size: cover;
+
+      position: relative;
+      top: 0%;
+      width:100%;
+      height:max-content;
+      z-index: 0;
+      margin: 0;
+      padding: 0;
+    }
+.triangle {  
+      position: fixed;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 200px 50px 0 0px;
+      border-color: #83E5DE transparent transparent transparent;
+      z-index: 3;
+
+    }
+
+.hp-img_wrapper div[class^="img"] img{
+      width: 33vh;
+      /*top:58%;*/
+
+
+    }
+.hp-img_wrapper { 
+      float: left;
+      padding: 0;
+      margin: 0;
+      top:25%;
+      /*width: 200vh;*/
+      width:100%;
+      height: 45%
+      /*min-height: 50px;*/
+      margin: 0;
+      position: relative;
+      overflow:hidden;
+      z-index: 0;
+      border-top: 3px solid #F4A22C;
+    }
+.bgd{
+      background-size: cover;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+/*navbar 平行四邊形&字*/
+#nav1{
+  /*width: 10%;
+  height: 33%;
+  left: 10%;
+  /*top: 67%;*/
+  /*position: absolute;
+  /*background-color: #F4A22C;*/
+  /*-ms-transform: skewX(-15deg); /* IE 9 */
+  /*-webkit-transform: skewX(-15deg); /* Safari */
+  /*transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid1{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 21%;
+  top: 10%;
+  transform:skewX(15deg);
+}
+#nav2{
+  width: 10%;
+  height: 33%;
+  left: 21%;
+  top: 67%;
+  position: absolute;
+  /*background-color: #F4A22C;*/
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid2{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 21%;
+  top: 10%;
+    transform:skewX(15deg);
+
+
+}
+#nav3{
+  width: 12%;
+  height: 33%;
+  left: 32%;
+  top: 67%;
+  position: absolute;
+  /*background-color: #F4A22C;*/
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid3{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 21%;
+  top: 10%;
+    transform:skewX(15deg);
+
+}
+#nav4{
+  width: 12%;
+  height: 33%;
+  left: 45%;
+  top: 67%;
+  position: absolute;
+  /*background-color: #F4A22C;*/
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid4_1{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  transform:skewX(15deg);
+
+}
+#navid4_2{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  transform:skewX(15deg);
+
+}
+#nav5{
+  width: 12%;
+  height: 33%;
+  left: 58%;
+  top: 67%;
+  position: absolute;
+  /*background-color: #F4A22C;*/
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid5_1{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  transform:skewX(15deg);
+
+}
+#navid5_2{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  transform:skewX(15deg);
+
+}
+#nav6{
+  width: 12%;
+  height: 33%;
+  left: 71%;
+  top: 67%;
+  position: absolute;
+  /*background-color: #F4A22C;*/
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid6{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 14%;
+  top: 10%;
+  transform:skewX(15deg);
+
+}
+#nav7{
+  width: 10%;
+  height: 33%;
+  left: 84%;
+  top: 67%;
+  position: absolute;
+  /*background-color: #F4A22C;*/
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg); /* Standard syntax */
+}  
+#navid7{
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #144959;
+  position: absolute;
+  left: 21%;
+  top: 10%;
+  transform:skewX(15deg);
+
+}  
+
+/*粗橘線*/
+    .line2 {  
+      background-color:#F4A22C;
+      /*position: fixed;*/
+      right: 0;    /*整行橘色*/
+      /*top: 72.4%;*/
+      width: 600em;
+      height: 9%;
+      z-index: 2;
+    }
+/*灰*/
+    .line3 {  
+      background-color:#D8D8D8;
+      /*position: fixed;*/
+      /*top:auto;*/
+      right: 0;   /*整行灰色*/
+      /*bottom: 8.7%;*/
+      /*width: 700em;
+      height: 40vh;*/
+    }
+/*左box transition*/
+    .one {
+      width: 20%;
+      height: 33.33%;
+      /*bottom: 17.2em;*/
+      top: 0%;
+      background-color:#AAC0CA;   
+      opacity: 0.9;
+      -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+      -moz-transition: width 2s;
+      -o-transition: width 2s;
+      transition: width 2s;
+      position: relative;
+      z-index: 7; 
+    }
+    .one_word{
+      color: #040000;
+      position: absolute;
+      left: 35%;
+      top: 10%;
+      font-size: 1.7em;
+      display: none;
+    }
+
+    .one:hover{
+      width: 55%;
+      z-index: 7;
+      transform-origin: left top;
+      transform: skewX(-15deg);
+    }
+    .one:hover .one_word{
+      display: block;
+    }
+
+    .two {
+      width: 20%;
+      height: 33.33%;
+      /*bottom: 17.5em;*/
+      top: 0%;
+      background-color:#88B0AD;   
+      opacity: 0.9;
+      -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+      -moz-transition: width 2s;
+      -o-transition: width 2s;
+      transition: width 2s;
+      position: relative;
+      z-index: 7;
+    }
+    .two_word{
+      color: #040000;
+      position: absolute;
+      left: 35%;
+      top: 10%;
+      font-size: 1.7em;
+      display: none;
+    }
+    .two:hover {
+      width: 55%;
+      z-index: 7;
+      transform-origin: left top;
+      transform: skewX(-15deg);
+    }
+    .two:hover .two_word{
+      display: block;
+    }
+    .three {
+      width: 20%;
+      height: 33.34%;
+      /*bottom: 1em;*/
+      top: 0%;
+      background-color:#D8C59A;   
+      opacity: 0.9;
+      -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+      -moz-transition: width 2s;
+      -o-transition: width 2s;
+      transition: width 2s;
+      position: relative;
+      z-index: 7;
+    }
+    .three_word{
+      color: #040000;
+      position: absolute;
+      left: 35%;
+      top: 7%;
+      font-size: 1.5em;
+      display: none;
+    }
+    .three:hover {
+      width: 55%;
+      z-index: 7;
+      transform-origin: left top;
+      transform: skewX(-15deg);
+    }
+    .three:hover .three_word{
+      display: block;
+    }
+    .three:hover+#left7{
+      display: none;
+    }
+/*右欄BOX hover*/
+#rbox1{
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+  position: absolute;
+  padding: 20px;
+  top: 0%;
+  /*margin-right: 100px;*/
+  left: 35em;
+  height: 50em;
+  width: 42em;
+  color: white;
+}
+#right1:hover + #rbox1{
+  display: block;
+}
+
+#rbox2{
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+  position: absolute;
+  padding: 20px;
+  top: 0%;
+  /*margin-right: 100px;*/
+  left: 35em;
+  height: 50em;
+  width: 42em;
+  color: white;
+}
+#right2:hover + #rbox2{
+  display: block;
+}
+
+#rbox3{
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+  position: absolute;
+  padding: 20px;
+  top: 0%;
+  /*margin-right: 100px;*/
+  left: 35em;
+  height: 50em;
+  width: 42em;
+  color: white;
+}
+#right3:hover + #rbox3{
+  display: block;
+}
+
+#rbox4{
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+  position: absolute;
+  padding: 20px;
+  top: 0%;
+  /*margin-right: 100px;*/
+  left: 35em;
+  height: 50em;
+  width: 42em;
+  color: white;
+}
+#right4:hover + #rbox4{
+  display: block;
+}
+
+#rbox5{
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+  position: absolute;
+  padding: 20px;
+  top: 0%;
+  /*margin-right: 100px;*/
+  left: 35em;
+  height: 50em;
+  width: 42em;
+  /*color: white;*/
+}
+#right5:hover + #rbox5{
+  display: block;
+}
+
+.hp-img_wrapper div[class^="text"] img{
+      width: 33vh;
+      /*top:58%;*/
+}
+/*下方img1*/
+.img1{
+  z-index: 3;
+  position: fixed;
+  top: 58%;/*
+  height: 23.5%;
+  width: 13%;*/
+  /*left: 4%;*/
+
+}
+
+
+img.01{
+  box-shadow: inset 0px 0px 50px 0px #ABABAB,2px -8px 18px 10px #242424;
+  -webkit-box-shadow: inset 0px 0px 50px 0px #ABABAB,2px -8px 18px 10px #242424;
+  -moz-box-shadow: inset 0px 0px 50px 0px #ABABAB,2px -8px 18px 10px #242424;
+  -o-box-shadow: inset 0px 0px 50px 0px #ABABAB,2px -8px 18px 10px #242424;
+}
+.text1{
+  position: absolute;
+  bottom: 5%;
+  /*left: 25%;*/
+  /*background-color: black;*/
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*下方img2*/
+.img2{
+  z-index: 3;
+  position: fixed;
+  left: 18%;
+  top: 58%;/*
+  height: 23.5%;
+  width: 13%;*/
+}
+.text2{
+  position: absolute;
+  bottom: 5%;
+  left: 25%;
+  /*background-color: black;*/
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*下方img3*/
+.img3{
+  z-index: 3;
+  position: fixed;
+  left: 33%;
+  top: 58%;
+  /*height: 23.5%;
+  width: 13%;*/
+}
+.text3{
+  position: absolute;
+  bottom: 5%;
+  left: 27%;
+  /*background-color: black;*/
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*下方img4*/
+.img4{
+  z-index: 3;
+  position: fixed;
+  left: 47%;
+  top: 58%;/*
+  height: 23.5%;
+  width: 13%;*/
+}
+.text4{
+  position: absolute;
+  bottom: 5%;
+  left: 25%;
+  /*background-color: black;*/｛
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*下方img5*/
+.img5{
+  z-index: 3;
+  position: fixed;
+  left: 61%;
+  top: 58%;/*
+  height: 23.5%;
+  width: 13%;*/
+}
+.text5{
+  position: absolute;
+  bottom: 5%;
+  left: 28%;
+  /*background-color: black;*/
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*下方img6*/
+.img6{
+  z-index: 3;
+  position: fixed;
+  left: 74%;
+  top: 58%;/*
+  height: 23.5%;
+  width: 13%;*/
+}
+.text6{
+  position: absolute;
+  bottom: 19%;
+  left: 28%;
+  /*background-color: black;*/
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*下方img7*/
+.img7{
+  z-index: 3;
+  position: fixed;
+  left: 86%;
+  top: 58%;/*
+  height: 23.5%;
+  width: 13%;*/
+}
+.text7{
+  position: absolute;
+  bottom: 19%;
+  left: 28%;
+  /*background-color: black;*/
+  color: #040000;
+  font-size: 1.3em;
+  font-weight: 500;
+  line-height: 1.0em;
+}
+/*navbar hover 出2個直角梯形外面一大包*/
+/*.top{
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+}*/
+
+/*關於本室，訊息公告.....hover後橘色效果*/
+#nav1:hover{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav1:hover #navid1{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+
+#nav2:hover{
+  background-color: #F4A22C;
+  color: #FFFFFF;
+}
+#nav2:hover #navid2{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav3:hover{
+  background-color: #F4A22C;
+  color: #FFFFFF;
+}
+#nav3:hover #navid3{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav4:hover{
+  background-color: #F4A22C;
+  color: #FFFFFF;
+}
+#nav4:hover #navid4_1{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav4:hover #navid4_2{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav5:hover{
+  background-color: #F4A22C;
+  color: #FFFFFF;
+}
+#nav5:hover #navid5_1{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav5:hover #navid5_2{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav6:hover{
+  background-color: #F4A22C;
+  color: #FFFFFF;
+}
+#nav6:hover #navid6{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+#nav7:hover{
+  background-color: #F4A22C;
+  color: #FFFFFF;
+}
+#nav7:hover #navid7{
+  background-color: #F4A22C;
+  color: #F2F2F2;
+}
+/*hover 2個直角梯形,點擊再展開直角梯形*/
+.navbox1{
+  width:29%;height:0;margin:10.2% auto; padding: 0;
+  border-right:81px solid transparent;
+  border-top:375px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox1_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+
+
+.navbox2{
+  width:30%;height:0;margin:10.2% auto; padding: 0;
+  border-right:80px solid transparent;
+  border-top:373px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox2_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+.navbox3{
+  width:30%;height:0;margin:10.2% auto; padding: 0;
+  border-right:80px solid transparent;
+  border-top:373px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox3_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+.navbox4{
+  width:30%;height:0;margin:10.2% auto; padding: 0;
+  border-right:80px solid transparent;
+  border-top:373px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox4_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+.navbox5{
+  width:30%;height:0;margin:10.2% auto; padding: 0;
+  border-right:80px solid transparent;
+  border-top:373px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox5_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+.navbox6{
+  width:30%;height:0;margin:10.2% auto; padding: 0;
+  border-right:80px solid transparent;
+  border-top:373px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox6_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+.navbox7{
+  width:30%;height:0;margin:10.2% auto; padding: 0;
+  border-right:80px solid transparent;
+  border-top:373px solid #F4A22C;  
+  z-index: 10;
+  position: absolute;
+  opacity: 0.8;
+  display: none;
+}
+.navbox7_2{
+  width:75%;height:0;margin:10.2% auto; padding: 0;
+  border-left:80px solid transparent;
+  border-bottom:372px solid #144959;  
+  z-index: 10;
+  position: absolute;
+  /*opacity: 0.8;*/
+  right: 0;
+  display: none;
+}
+/*關於本室navbox1字*/
+#navboxw1{
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 170px;
+  left: 20%;
+  font-size: 1.5em;
+  line-height: 32px;
+  padding: 0;
+  margin: 0;
+}
+#navboxw1_2{
+  color: #FFFFFF;
+  position: absolute;
+  top: 60px;
+  left: 3em;
+  font-size: 1.5em;
+  line-height: 40px;
+}
+
+#navboxw1_2{
+  color: #FFFFFF;
+  position: absolute;
+  top: 60px;
+  left: 3em;
+  font-size: 1.5em;
+  line-height: 40px;
+}
+
+.part3 {  
+
+  top:70%;
+  height:30%;
+  width: 100%;
+/*      background-color:#f2f2f2;
+      background-size: cover;
+
+      position: absolute;
+      top: 0;
+      width: max-content;
+      height: 36vh;
+      z-index: 0;
+      margin: 0;
+      padding: 0;*/
+    }
