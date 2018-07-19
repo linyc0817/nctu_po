@@ -6,7 +6,6 @@ body {
 .navbar {
     background-color: #f2f2f2;
     background-size: cover;
-
     position: fixed;
     top: 0;
     width: 100%;
@@ -17,17 +16,16 @@ body {
 }
 
 .triangle {
-    position: fixed;
-    width: 0;
-    height: 0;
+    position: absolute;
+    width: 0%;
+    height: 0%;
     border-style: solid;
-    border-width: 200px 50px 0 0px;
+    border-width: 25vh 10vh 0 0;
     border-color: #83E5DE transparent transparent transparent;
     z-index: 3;
 }
 
 .hp-img_wrapper div[class^="img"] img {
-    width: 10vh;
     /*top:58%;*/
 }
 
@@ -72,9 +70,9 @@ body {
     float: right;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.right-side{
-  
-}
+
+.right-side {}
+
 .line {
     width: 60px;
     height: 1px;
@@ -90,14 +88,39 @@ body {
     flex-direction: column;
     position: absolute;
     height: 100%;
-    padding: 50px 0px 50px 20px;
+    padding: 50px 0px 50px 40px;
     background-color: none;
     width: 100%;
     text-align: left;
-
 }
 
 .left-side-bar-element {
+    font-family: Noto Sans CJK TC Medium;
+    font-size: 1em;
+    line-height: 2.5em;
+    letter-spacing: 0.2em;
+    color: #F4A22C;
+    letter-spacing: 2.3px;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    text-align: left;
+    margin-top: 3%;
+    white-space: nowrap;
+    width: 10px;
+}
+
+.msg-board-div {
+    padding-left: 170px;
+    padding-top: 60px;
+    float: right;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+}
+
+.msg-board-content {
+    text-align: center;
     letter-spacing: 2.3px;
     font-weight: bold;
     color: #f4a22c;
@@ -109,6 +132,9 @@ body {
     width: 10px;
 }
 
+/* 留言板 */
+
+.other-questions {}
 
 /*語言*/
 
@@ -185,16 +211,12 @@ input[type=text] {
     /*background-color: #F4A22C;*/
 }
 
-
-
-
-
 /*navbar 平行四邊形&字*/
 
 #nav1 {
     width: 10%;
     height: 33%;
-    left: 15%;
+    left: 10%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -219,7 +241,7 @@ input[type=text] {
 #nav2 {
     width: 10%;
     height: 33%;
-    left: 25%;
+    left: 21%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -244,7 +266,7 @@ input[type=text] {
 #nav3 {
     width: 12%;
     height: 33%;
-    left: 35%;
+    left: 32%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -269,7 +291,7 @@ input[type=text] {
 #nav4 {
     width: 12%;
     height: 33%;
-    left: 60%;
+    left: 45%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -339,7 +361,7 @@ input[type=text] {
 #nav6 {
     width: 12%;
     height: 33%;
-    left: 45%;
+    left: 71%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -364,7 +386,7 @@ input[type=text] {
 #nav7 {
     width: 10%;
     height: 33%;
-    left: 55%;
+    left: 84%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -386,18 +408,7 @@ input[type=text] {
     transform: skewX(15deg);
 }
 
-#navid7_2{
-    font-size: 1.4em;
-    font-weight: 500;
-    color: #144959;
-    position: absolute;
-    left: 21%;
-    top: 45%;
-    transform: skewX(15deg);
-}
 .new_navbox1_and_2 {
-
-
     background-color: #F4A22C;
     position: fixed;
     top: 75%;
@@ -406,51 +417,19 @@ input[type=text] {
     /*bottom: 8.7%;*/
     width: 100%;
     height: 25%;
-
     width: 28%;
     height: 0;
     /*  margin:10.2% auto;
 */
     padding: 0;
-
-
     border-right: 81px solid transparent;
     border-top: 375px solid #F4A22C;
     z-index: 10;
     position: absolute;
     opacity: 0.8;
     top: 90%;
-
     display: none;
 }
-
-
-#nav8 {
-    width: 10%;
-    height: 33%;
-    left: 65%;
-    top: 70%;
-    position: absolute;
-    /*background-color: #F4A22C;*/
-    -ms-transform: skewX(-15deg);
-    /* IE 9 */
-    -webkit-transform: skewX(-15deg);
-    /* Safari */
-    transform: skewX(-15deg);
-    /* Standard syntax */
-}
-
-#navid8 {
-    font-size: 1.4em;
-    font-weight: 500;
-    color: #144959;
-    position: absolute;
-    left: 21%;
-    top: 10%;
-    transform: skewX(15deg);
-}
-
-
 
 /*粗橘線*/
 
@@ -532,8 +511,20 @@ input[type=text] {
     z-index: 2;
 }
 
-
 /*灰*/
+
+.buttom-icon {
+    width: 75px;
+    height: 75px;
+    z-index: 11;
+    position: relative;
+    top: 20px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0px -2px 2px rgba(0, 0, 0, 0.3))
+}
+
+.buttom-text {}
 
 .pic1 {
     background-color: #D8D8D8;
@@ -702,7 +693,6 @@ input[type=text] {
     bottom: 0%;
 }
 
-
 /*左box transition*/
 
 .one {
@@ -817,7 +807,6 @@ input[type=text] {
     display: none;
 }
 
-
 /*右欄BOX hover*/
 
 #rbox1 {
@@ -915,7 +904,6 @@ input[type=text] {
     display: block;
 }
 
-
 /*
 .line3 > div[class^="text"] img{
       width:100%;
@@ -930,16 +918,16 @@ input[type=text] {
     top: 78%;
 }
 
-
 /*下方img1*/
 
+/*
 .img1 {
     left: 56%;
     width: 100%;
     height: 100;
-
     top: 78%;
 }
+*/
 
 img.01 {
     box-shadow: inset 0px 0px 50px 0px #ABABAB, 2px -8px 18px 10px #242424;
@@ -950,61 +938,44 @@ img.01 {
 
 .text1 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
 
-
 /*下方img2*/
 
+/*
 .img2 {
     left: 56%;
     width: 100%;
     height: 100;
-
     top: 78%;
-    /*top: 78%;*/
-    /*height: 23.5%;
-  width: 13%;*/
 }
+*/
 
 .text2 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
 
-
 /*下方img3*/
 
 .img3 {
-    left: 56%;
-    width: 100%;
-    height: 100;
-
-    top: 78%;
     /*top: 78%;*/
     /*height: 23.5%;
   width: 13%;*/
@@ -1012,155 +983,78 @@ img.01 {
 
 .text3 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
-
 
 /*下方img4*/
 
-.img4 {
-    z-index: 3;
-    /*position: fixed;*/
-    left: 56%;
-    width: 100%;
-    height: 100;
-
-    top: 78%;
-    /*top: 78%;*/
-    /*
-  height: 23.5%;
-  width: 13%;*/
-}
-
 .text4 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
-
 
 /*下方img5*/
 
-.img5 {
-    z-index: 3;
-    /*position: fixed;*/
-    left: 56%;
-    width: 100%;
-    height: 100;
-
-    top: 78%;
-
-    /*top:78%;/*
-
-  height: 23.5%;
-  width: 13%;*/
-}
-
 .text5 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
-
 
 /*下方img6*/
 
-.img6 {
-    z-index: 3;
-    /*position: fixed;*/
-    left: 56%;
-    width: 100%;
-    height: 100;
-
-    top: 78%;
-    /*top: 78%;*/
-    /*
-  height: 23.5%;
-  width: 13%;*/
-}
-
 .text6 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
-
 
 /*下方img7*/
 
-.img7 {
-    left: 56%;
-    width: 100%;
-    height: 100;
-
-    top: 78%;
-}
-
 .text7 {
     position: relative;
-
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-
-
     top: 25px;
     width: 100%;
     left: 0%;
     text-align: center;
-
     font-weight: 500;
     line-height: 1.0em;
 }
 
-
 /*navbar hover 出2個直角梯形外面一大包*/
-
 
 /*.top{
   width: 100%;
@@ -1170,7 +1064,6 @@ img.01 {
   margin: 0px;
   position: absolute;
 }*/
-
 
 /*關於本室，訊息公告.....hover後橘色效果*/
 
@@ -1250,17 +1143,6 @@ img.01 {
 }
 
 #nav7:hover #navid7 {
-    background-color: #F4A22C;
-    color: #F2F2F2;
-}
-
-
-#nav8:hover {
-    background-color: #F4A22C;
-    color: #FFFFFF;
-}
-
-#nav8:hover #navid8 {
     background-color: #F4A22C;
     color: #F2F2F2;
 }
@@ -1347,16 +1229,6 @@ img.01 {
     color: #F2F2F2;
 }
 
-
-#nav8.click1 {
-    background-color: #F4A22C;
-    color: #FFFFFF;
-}
-
-#nav8.click1 #navid8 {
-    background-color: #F4A22C;
-    color: #F2F2F2;
-}
 /*hover 2個直角梯形,點擊再展開直角梯形*/
 
 .navbox1 {
@@ -1364,12 +1236,11 @@ img.01 {
     height: 0;
     padding: 0;
     border-right: 81px solid transparent;
-    border-top: 50vh solid #F4A22C;
+    border-top: 375px solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1384,7 +1255,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
-    border-bottom:50vh solid #144959;
+    border-bottom: 372px solid #144959;
     z-index: 10;
     position: fixed;
     right: 0;
@@ -1392,19 +1263,17 @@ img.01 {
     display: none;
 }
 
-
 .navbox2 {
     width: 28%;
     height: 0;
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 50vh solid #F4A22C;
+    border-top: 373px solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1414,7 +1283,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
-    border-bottom: 50vh solid #144959;
+    border-bottom: 372px solid #144959;
     z-index: 10;
     position: fixed;
     top: 25%;
@@ -1428,12 +1297,11 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 50vhsolid #F4A22C;
+    border-top: 373px solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1443,7 +1311,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
-    border-bottom: 50vh solid #144959;
+    border-bottom: 372px solid #144959;
     z-index: 10;
     position: fixed;
     top: 25%;
@@ -1457,12 +1325,11 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 50vh solid #F4A22C;
+    border-top: 483px solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1472,7 +1339,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
-    border-bottom: 50vh solid #144959;
+    border-bottom: 482px solid #144959;
     z-index: 10;
     position: fixed;
     top: 25%;
@@ -1497,12 +1364,11 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 50vh solid #F4A22C;
+    border-top: 373px solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1512,7 +1378,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
-    border-bottom: 50vh solid #144959;
+    border-bottom: 372px solid #144959;
     z-index: 10;
     position: fixed;
     right: 0;
@@ -1526,13 +1392,12 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 50vhsolid #F4A22C;
+    border-top: 373px solid #F4A22C;
     z-index: 5;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
     opacity: 0.1;
-
     display: none;
 }
 
@@ -1542,7 +1407,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px dashed transparent;
-    border-bottom: 50vh solid #144959;
+    border-bottom: 372px solid #144959;
     z-index: 5;
     position: fixed;
     right: 0;
@@ -1550,7 +1415,6 @@ img.01 {
     display: none;
     top: 25%;
 }
-
 
 .navbox6_map {
     width: 100%;
@@ -1591,46 +1455,17 @@ img.01 {
 
 .navbox7 {
     width: 100%;
-    height: 0;
+    font-weight: bold;
+    background-color: black;
+    height: 100%;
     border-right: solid transparent;
-    border-top: 50vh solid #191919;
+    border-top: 1px solid #191919;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     display: none;
     top: 25%;
 }
-
-
-.navbox8 {
-    width: 28%;
-    height: 0;
-    /*margin:10.2% auto;*/
-    padding: 0;
-    border-right: 80px solid transparent;
-    border-top: 50vh solid #F4A22C;
-    z-index: 10;
-    position: fixed;
-    /*opacity: 0.8;*/
-    top: 25%;
-
-    display: none;
-}
-
-.navbox8_2 {
-    width: 75%;
-    height: 0;
-    /*margin:10.2% auto;*/
-    padding: 0;
-    border-left: 80px solid transparent;
-    border-bottom: 50vh solid #144959;
-    z-index: 10;
-    position: fixed;
-    top: 25%;
-    right: 0;
-    display: none;
-}
-
 
 /*關於本室navbox1字*/
 
@@ -1805,161 +1640,106 @@ img.01 {
     line-height: 40px;
 }
 
-#foot{
-  z-index: 11;
-  position: fixed;
-  left:0;
-  bottom: 0vh;
-  width: 100%;
-  height: 5%;
-  border-top-left-radius: 0vh;
-  border-top-right-radius: 0vh;
-  background-color: rgba(1,1,1,0.6);
-  -webkit-transition: bottom 1.7s ease-in-out; /* For Safari 3.1 to 6.0 */
+#foot {
+    z-index: 11;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+    width: 100%;
+    height: 5%;
+    border-top-left-radius: 0vh;
+    border-top-right-radius: 0vh;
+    background-color: rgba(1, 1, 1, 0.6);
+    -webkit-transition: bottom 1.7s ease-in-out;
+    /* For Safari 3.1 to 6.0 */
     transition: bottom 1.7s ease-in-out;
 }
-#foot:hover{
-  bottom: 0;
-  height: 75%;
+
+#foot:hover {
+    bottom: 0;
+    height: 75%;
 }
 
-
-#foot_left{
-  border-right:80px solid transparent;
-  border-top:50vh solid #262626;  
-  float:right;
-  position: absolute;
-  height: 50vh;
-  width: 50%;
-  left:0%;
-
-}
-#foot-area1{
-
-  float:right;
-  position: absolute;
-/*  left: 3vh;
+#foot-area1 {
+    position: absolute;
+    /*  left: 3vh;
   top: 3vh;*/
-  height: 100%;
-  width: 20%;
-  left:0%;
-  background-color: #262626;
-/*
+    height: 100%;
+    width: 20%;
+    left: 0%;
+    background-color: #262626;
+    /*
   border:solid 1px #FFFFFF;*/
-
-
-
 }
 
-#foot-area2{
-  float:right;
-
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  left:20%;
-  background-color: #262626;
-
+#foot-area2 {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 20%;
+    background-color: #262626;
 }
 
-
-#foot_right{
-
-  border-left:80px solid transparent;
-  border-bottom:50vh solid #243538;  
-
-  float:right;
-  position: absolute;
-
-  height: 50vh;
-  width: 60%;
-  right:0%;
+#foot-area3 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 40%;
+    background-color: #262626;
+    /*  background-color: #666666;
+*/
 }
 
-#foot-area3{
-  float:right;
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  left:10%;
-  background-color: #262626;
-
-/*  background-color: #666666;
-*/}
-
-
-#foot-area4{
-  float:right;
-  position: absolute;
-  height: 100%;
-  width: 40%;
-  left:30%;
-  background-color: #243538;}
-
-
-#foot-area5{
-    float:right;
-  position: absolute;
-  height: 100%;
-  width: 30%;
-  left:70%;
-
-  background-color: #243538;
+#foot-area4 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 13.3%;
+    left: 60%;
+    background-color: #243538;
 }
 
-
-#foot-area6{
-  float:right;
-  position: absolute;
-  height: 100%;
-  width: 13.4%;
-  left:86.6%;
-
-  background-color: #243538;
-
+#foot-area5 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 13.3%;
+    left: 73.3%;
+    background-color: #243538;
 }
 
-#foot-bottom{
-
-
-  background-color: #666666;
-
-  float:right;
-  position: absolute;
-  bottom: 0;
-  height:25vh ;
-  width: 100vh;
-  right:0%;
+#foot-area6 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 13.4%;
+    left: 86.6%;
+    background-color: #243538;
 }
 
-
-
-.foot_title{
-  color:#DA9E2A;
-  font-family:'Noto Sans TC', '微軟正黑體', sans-serif;
-  font-size:1.5em; 
-/*  top:2.5%;
+.foot_title {
+    color: #DA9E2A;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-size: 1.5em;
+    /*  top:2.5%;
   left:2.5%;*/
-  font-weight: 350; 
-  letter-spacing: 0.1em;
-  height: 3vh;
-  line-height: 3vh;
-  border: solid 0px orange;
-
-
+    font-weight: 350;
+    letter-spacing: 0.1em;
+    height: 3vh;
+    line-height: 3vh;
+    border: solid 0px orange;
 }
 
-.foot_link{
-  color:white;
-  font-family:'Noto Sans TC', '微軟正黑體', sans-serif;
-  font-size:1em; 
-  font-weight: 350; 
-  letter-spacing: 0.1em;
-  height: 3vh;
-  line-height: 3vh;
-/*  top:2.5%;
+.foot_link {
+    color: white;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-size: 1em;
+    font-weight: 350;
+    letter-spacing: 0.1em;
+    height: 3vh;
+    line-height: 3vh;
+    /*  top:2.5%;
   left:2.5%;*/
-  border: solid 0px orange;
-
-
+    border: solid 0px orange;
 }
