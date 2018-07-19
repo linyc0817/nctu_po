@@ -194,7 +194,7 @@ input[type=text] {
 #nav1 {
     width: 10%;
     height: 33%;
-    left: 10%;
+    left: 15%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -219,7 +219,7 @@ input[type=text] {
 #nav2 {
     width: 10%;
     height: 33%;
-    left: 21%;
+    left: 25%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -244,7 +244,7 @@ input[type=text] {
 #nav3 {
     width: 12%;
     height: 33%;
-    left: 32%;
+    left: 35%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -269,7 +269,7 @@ input[type=text] {
 #nav4 {
     width: 12%;
     height: 33%;
-    left: 45%;
+    left: 60%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -339,7 +339,7 @@ input[type=text] {
 #nav6 {
     width: 12%;
     height: 33%;
-    left: 71%;
+    left: 45%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -364,7 +364,7 @@ input[type=text] {
 #nav7 {
     width: 10%;
     height: 33%;
-    left: 84%;
+    left: 55%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -386,6 +386,15 @@ input[type=text] {
     transform: skewX(15deg);
 }
 
+#navid7_2{
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #144959;
+    position: absolute;
+    left: 21%;
+    top: 45%;
+    transform: skewX(15deg);
+}
 .new_navbox1_and_2 {
 
 
@@ -413,6 +422,32 @@ input[type=text] {
     top: 90%;
 
     display: none;
+}
+
+
+#nav8 {
+    width: 10%;
+    height: 33%;
+    left: 65%;
+    top: 70%;
+    position: absolute;
+    /*background-color: #F4A22C;*/
+    -ms-transform: skewX(-15deg);
+    /* IE 9 */
+    -webkit-transform: skewX(-15deg);
+    /* Safari */
+    transform: skewX(-15deg);
+    /* Standard syntax */
+}
+
+#navid8 {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #144959;
+    position: absolute;
+    left: 21%;
+    top: 10%;
+    transform: skewX(15deg);
 }
 
 
@@ -1220,6 +1255,16 @@ img.01 {
 }
 
 
+#nav8:hover {
+    background-color: #F4A22C;
+    color: #FFFFFF;
+}
+
+#nav8:hover #navid8 {
+    background-color: #F4A22C;
+    color: #F2F2F2;
+}
+
 /*關於本室，訊息公告.....點擊後橘色效果*/
 
 #nav1.click1 {
@@ -1303,6 +1348,15 @@ img.01 {
 }
 
 
+#nav8.click1 {
+    background-color: #F4A22C;
+    color: #FFFFFF;
+}
+
+#nav8.click1 #navid8 {
+    background-color: #F4A22C;
+    color: #F2F2F2;
+}
 /*hover 2個直角梯形,點擊再展開直角梯形*/
 
 .navbox1 {
@@ -1545,6 +1599,36 @@ img.01 {
     /*opacity: 0.8;*/
     display: none;
     top: 25%;
+}
+
+
+.navbox8 {
+    width: 28%;
+    height: 0;
+    /*margin:10.2% auto;*/
+    padding: 0;
+    border-right: 80px solid transparent;
+    border-top: 50vh solid #F4A22C;
+    z-index: 10;
+    position: fixed;
+    /*opacity: 0.8;*/
+    top: 25%;
+
+    display: none;
+}
+
+.navbox8_2 {
+    width: 75%;
+    height: 0;
+    /*margin:10.2% auto;*/
+    padding: 0;
+    border-left: 80px solid transparent;
+    border-bottom: 50vh solid #144959;
+    z-index: 10;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    display: none;
 }
 
 

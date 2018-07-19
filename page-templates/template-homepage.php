@@ -109,10 +109,10 @@
   <div class="navbox3"></div>
   <div class="navbox3_2"></div>
 </div>
-<div class="top" id="top_4">
+<!-- <div class="top" id="top_4">
   <div id="nav4">
     <div id="navid4_1">人事系統</div>
-    <!-- <div id="navid4_2">作業流程</div> -->
+    <div id="navid4_2">作業流程</div>
   </div>
   <div class="navbox4">
     <div id="navboxw4"> 可 查 閱 重 要 訊 息 、 業 <br>務 訊 息 、 活 動 訊 息 、<br>法 規 訊 息 及 友 校 訊 息
@@ -123,8 +123,8 @@
 
     </div>
   </div>
-</div>
-<div class="top" id="top_5">
+</div> -->
+<!-- <div class="top" id="top_5">
   <div id="nav5">
     <div id="navid5_1">公務員廉政</div>
     <div id="navid5_2">倫理規範</div>
@@ -141,7 +141,7 @@
       <a href="<?php echo site_url(); ?>/links/" style="color: #FFFFFF;"><div id="navboxw5_2_4">相 關 連 結<br></div></a>
     </div>
   </div>
-</div>
+</div> -->
 <div class="top" id="top_6">
   <div id="nav6">
     <div id="navid6">出勤卡鐘位置</div>
@@ -171,7 +171,8 @@
 </div>
 <div class="top" id="top_7">
   <div id="nav7">
-    <div id="navid7">留言版</div>
+    <div id="navid7">留言版&</div>
+    <div id="navid7_2">FAQ問答</div>
   </div>
   <div class="navbox7">
     <hr style=" border: 1px solid #EA9C32; position: fixed; top: 30%; left: 5%; width: 10%;">
@@ -191,6 +192,14 @@
 
   </div>
 </div>
+<div class="top" id="top_8">
+  <div id="nav8">
+    <div id="navid2">系統連結</div>
+  </div>
+  <div class="navbox8"></div>
+  <div class="navbox8_2"></div>
+</div>
+
 
 <div class="hp-img_wrapper">
 
