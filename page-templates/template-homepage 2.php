@@ -112,10 +112,10 @@
   <div class="navbox3"></div>
   <div class="navbox3_2"></div>
 </div>
-<!-- <div class="top" id="top_4">
+<div class="top" id="top_4">
   <div id="nav4">
     <div id="navid4_1">人事系統</div>
-    <div id="navid4_2">作業流程</div>
+    <!-- <div id="navid4_2">作業流程</div> -->
   </div>
   <div class="navbox4">
     <div id="navboxw4"> 可 查 閱 重 要 訊 息 、 業 <br>務 訊 息 、 活 動 訊 息 、<br>法 規 訊 息 及 友 校 訊 息
@@ -126,8 +126,8 @@
 
     </div>
   </div>
-</div> -->
-<!-- <div class="top" id="top_5">
+</div>
+<div class="top" id="top_5">
   <div id="nav5">
     <div id="navid5_1">公務員廉政</div>
     <div id="navid5_2">倫理規範</div>
@@ -144,7 +144,7 @@
       <a href="<?php echo site_url(); ?>/links/" style="color: #FFFFFF;"><div id="navboxw5_2_4">相 關 連 結<br></div></a>
     </div>
   </div>
-</div> -->
+</div>
 <div class="top" id="top_6">
   <div id="nav6">
     <div id="navid6">出勤卡鐘位置</div>
@@ -154,7 +154,7 @@
   <div class="navbox6_2"></div>
   <div class="navbox6_map">
 
-    <div class="map1" style="background-image: url(<?php bloginfo('template_url');?>/image/clock_map_1.png");"></div>
+    <div class="map1" style="background-image: url(<?php bloginfo('template_url');?>/image/clock_map_1.png);"></div>
     <button id="close">X</button>
 
     <div  id=c_navi>
@@ -444,92 +444,155 @@ foreach ($all as &$text) {
 </div>
 
 
-
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100%;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100%;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
 
-  <div id="foot_left">
-    <div id="foot-area1">
-<!--          <div class="foot_title">關於本室</div>
-         <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>  
+  <div id="foot-area1">
+<!--
+    <div id = "area1_1 "> -->
+      <div class="foot_title"> <p><p>關於本室</p></p></div>
+      <div class="foot_link"> <p><p>本室簡介|本室位置|人事職掌|本室願景|工作成果</p></p></div>
+<!--     </div>
+
+    <div id = "area1_2"> -->
+     <div class="foot_title"> <p><p>訊息公告</p></p></div>
+
+      <div class="foot_link"> <p><p>一般訊息|活動訊息|法規訊息|友校訊息|業務訊息</p></p></div>
+<!--     </div>
  -->
+    <div class="foot_title"> 法令&表格</div>
+
+    <div class="foot_link">
+      <table border="0">
+      <tr>新卸任交接│新進教師報到</p></tr>
+ <tr>外籍教師聘任教師│教師升等留職停薪</p></tr>
+ <tr>兼職│科技部延攬人才事項</p></tr>
+ <tr>計畫類博士後研究人員服務證│在職證明</p></tr>
+ <tr><p>職名章、日期章離職 / 變更身分</p></tr>
+ <tr><p>優秀公教人員│出國│退休</p></tr>
+ <tr>延長服務退撫基金│出差│請假</p></tr>
+ <tr>公教人員保險勞健保業務</p></tr>
+ <tr>教授休假研究│教師離校進修</p></tr>
+ <tr>婚、喪、生育補助│子女教育補助</p></tr>
+ <tr>申請離職儲金│國防工業緩召│健康檢查</p></tr>
+ <tr>新進職員│職員陞遷│職工獎勵</p></tr>
+ <tr>工作績效平時考核│年終考核│職員獎懲</p></tr>
+
+</table><p></div>
+<!--     <div class="foot_title"> 本室位置</div>
+    <div class="foot_title"> 人事職掌</div>
+    <div class="foot_title"> 本室願景</div>
+    <div class="foot_title"> 工作成果</div> -->
+
+
+
+
   </div>
 
-    <div id="foot-area2">
+  <div id="foot-area2">
 
+        <div class="foot_link"> 職員進修補助│英語能力檢定│加班
+職務代理│保留休假│新進約聘助教
+新進約用人員│約聘助教申請提敘
+約用人員申請提敘│約用人員申請升級
+約用人員申請加給│新進/續聘計畫約用人員
+計畫約用人員申請提敘│約用人員考核
+全時工讀生│行政人力資源整合
+兼任人員及臨時工│服務證明申請書
+延聘國外顧問、專家及學者來臺推展國內建
+設與學術研究案件評估檢查表
+解聘、停聘、不續聘│組織│其他
+全民健康保險│自強康樂│俸給待遇
+保障及申訴│政風<p></div>
 
-    </div>
 
   </div>
 
+  <div id="foot-area3">
 
-  <div id="foot_right">
+      <div class="foot_title"> <p><p>人事業務標準作業流程(SOP)</p></p></div>
+
+      <div class="foot_link"> <p><p>第一組業務│第二組業務</p></p></div>
 
 
-    <div id="foot-area3">
+      <div class="foot_title"> <p><p>公務員廉政倫理規範</p></p></div>
+
+
+      <div class="foot_title"> <p><p>出勤卡鐘位置</p></p></div>
+
+
+      <div class="foot_title"> <p><p>留言板</p></p></div>
+
+  </div>
+
+  <div id="foot-area4">
+
+      <div class="foot_title"> <p><p>適用勞基法專區</p></p></div>
+
+      <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
+
+
       <div class="foot_title"> <p><p>外籍教職員專區</p></p></div>
+
       <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
 
 
       <div class="foot_title"> <p><p>兼任教師專區</p></p></div>
+
       <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
+
 
       <div class="foot_title"> <p><p>教師升等專區</p></p></div>
       <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
-    </div>
 
-    <div id="foot-area4">
+
+      <div class="foot_title"> <p><p>員工協助專區</p></p></div>
+      <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
+
+  </div>
+
+  <div id="foot-area5">
 
       <div class="foot_title"> <p><p>學習與勞動權益專區</p></p></div>
-      <div class="foot_link"> <p><p>訊息│法規&表格|會議紀錄</p></p></div>
 
+      <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
 
 
       <div class="foot_title"> <p><p>退休專區</p></p></div>
 
-      <div class="foot_link"> <p><p>教育人員:訊息│法規&表格</p></p></div>
-      <div class="foot_link"> <p><p>公務人員訊息│法規&表格</p></p></div>
+      <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
 
 
       <div class="foot_title"> <p><p>福利專區<b>（含自強康樂委員會）</b></p></p></div>
-      <div class="foot_link"> <p><p>各類人員福利│訊息|法規&表格</p></p></div>
-      <div class="foot_link"> <p><p>社團資訊│會議紀錄|特約廠商</p></p></div>
 
+      <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
 
-
-      <div class="foot_title"> <p><p>員工協助專區</b></p></p></div>
-      <div class="foot_link"> <p><p>訊息|法規&表格|網站連結</p></p></div>
-    </div>
-
-    <div id="foot-area5">
-      <div class="foot_title"> <p><p>適用勞基法專區</b></p></p></div>
-      <div class="foot_link"> <p><p>訊息|法規&表格</p></p></div>
-
-      <div class="foot_title"> <p><p>個人資料保護專區</b></p></p></div>
-      <div class="foot_link"> <p><p>訊息|法規&表格|網站連結</p></p></div>
-
-
-      <div class="foot_title"> <p><p>托育專區</b></p></p></div>
-      <div class="foot_link"> <p><p>托育簡介|訊息|法規&表格</p></p></div>
-      <div class="foot_link"> <p><p>哺乳室介紹</p></p></div>
-
-
-      <div class="foot_title"> <p><p>線上教學專區</b></p></p></div>
-      <div class="foot_link"> <p><p>教學訓練影片|影片課程相關文件</p></p></div>
-    </div>
-      
-  <div id="foot_bottom">
-      30010 新竹市大學路1001號
-      最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
-      國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
-<!-- 
-      
-    <div class="foot_title">關於本室2</div>
-    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>  
- -->
   </div>
-</div>
 
+  <div id="foot-area6">
+
+      <div class="foot_title"> <p><p>個人資料保護專區</p></p></div>
+      <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
+
+
+      <div class="foot_title"> <p><p>動態行事曆</p></p></div>
+      <div class="foot_title"> <p><p>人事簡訊</p></p></div>
+      <div class="foot_title"> <p><p>加保人數</p></p></div>
+      <div class="foot_title"> <p><p>系統連結</p></p></div>
+      <div class="foot_title"> <p><p>FAQ問答</p></p></div>
+      <div class="foot_title"> <p><p>網站連結</p></p></div>
+
+  </div>
+
+
+<!--                 <div id="foot-center">
+                    <hr class="ft-hr"/>
+                    <div class="foot-font-4" style="float:left;"> <a href="http://www.nctu.edu.tw/">交通大學</a> | <a target="_blank" href="<?php bloginfo('template_url');?>/files/site_map.jpg">網頁導覽</a> | <a href="http://cos.nctu.edu.tw/"> 舊版網頁</a> | <a target=_blank href="<?php bloginfo('template_url')?>/files/Web_Design_Guideline.pdf">設計規範</a> | <a id="hp-announce">著作權聲明</a> </div>
+                <div id="foot-right">
+                    <div >
+                    </div>
+                    <div  style="margin-top:1vh">
+                </div> -->
 </div>
 
 
