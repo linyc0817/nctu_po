@@ -277,7 +277,7 @@ foreach ($all as &$text) {
   <div class="left-side-bar-bg">
     <div class="left-side-bar-container">
         <div class=" left-side-bar-element ">
-            重要AA訊息
+            重要訊息
         </div>
         <div class="left-side-bar-element ">
             業務訊息
