@@ -277,7 +277,7 @@ foreach ($all as &$text) {
   <div class="left-side-bar-bg">
     <div class="left-side-bar-container">
         <div class=" left-side-bar-element ">
-            重要訊息
+            重要AA訊息
         </div>
         <div class="left-side-bar-element ">
             業務訊息
@@ -446,12 +446,12 @@ foreach ($all as &$text) {
 
 
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100%;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100%;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
 
   <div id="foot_left">
     <div id="foot-area1">
 <!--          <div class="foot_title">關於本室</div>
-         <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>  
+         <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>
  -->
   </div>
 
@@ -517,15 +517,15 @@ foreach ($all as &$text) {
       <div class="foot_title"> <p><p>線上教學專區</b></p></p></div>
       <div class="foot_link"> <p><p>教學訓練影片|影片課程相關文件</p></p></div>
     </div>
-      
+
   <div id="foot_bottom">
       30010 新竹市大學路1001號
       最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
       國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
-<!-- 
-      
+<!--
+
     <div class="foot_title">關於本室2</div>
-    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>  
+    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>
  -->
   </div>
 </div>
