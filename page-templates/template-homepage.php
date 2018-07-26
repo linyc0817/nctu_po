@@ -64,7 +64,7 @@
 
 <div class="top" id="top_1">
   <div id="nav1">
-    <div id="navid1">關於本室//drake上傳</div>
+    <div id="navid1">關於本室</div>
   </div>
   <div class="navbox1">   <!-- hover出梯形一 -->
     <div id="navboxw1">可 查 閱 本 室 簡 介 、 本<br>室 位 置 、 主 任 簡 介 、<br>本 室 願 景 、 組 織 架<br>構 、 人 員 職 掌 及 工 作<br>成 果 等 資 訊
@@ -446,26 +446,43 @@ foreach ($all as &$text) {
 
 
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100%;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
 
   <div id="foot_left">
     <div id="foot-area1">
-<!--          <div class="foot_title">關於本室</div>
-         <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>
- -->
-  </div>
+        <div class="foot_title"></p></p>本室簡介</p></p></div>
+        <div class="foot_link"></p></p>本室簡介|本室位置|人事職掌|</p></p></div>
+        <div class="foot_link"></p></p>本室願景|工作成果</p></p></div>
 
-    <div id="foot-area2">
+
+        <div class="foot_title"></p></p>訊息公告</p></p></div>
+        <div class="foot_link"></p></p>重要訊息|業務訊息|法規訊息|</p></p></div> 
+        <div class="foot_link"></p></p>友校訊息</p></p></div> 
+
+        <div class="foot_title"></p></p>法令&表格</p></p></div>
+        <div class="foot_link"></p></p>教育/研究人員|公務人員</p></p></div>
+        <div class="foot_link"></p></p>適用勞基法人員</p></p></div>
 
 
     </div>
+
+    <div id="foot-area2">
+        <div class="foot_title"></p></p>人事業務標準作業流程(SOP)</p></p></div>
+        <div class="foot_link"></p></p>第一組業務|第二組業務</p></p></div>
+
+        <div class="foot_title"></p></p>公務員廉政倫理規範</p></p></div>
+
+        <div class="foot_title"></p></p>出勤卡鐘位置</p></p></div>
+
+        <div class="foot_title"></p></p>留言板&FAQ問答</p></p></div>        
+
+    </div>
+
 
   </div>
 
 
   <div id="foot_right">
-
-
     <div id="foot-area3">
       <div class="foot_title"> <p><p>外籍教職員專區</p></p></div>
       <div class="foot_link"> <p><p>訊息│法規&表格</p></p></div>
@@ -517,15 +534,15 @@ foreach ($all as &$text) {
       <div class="foot_title"> <p><p>線上教學專區</b></p></p></div>
       <div class="foot_link"> <p><p>教學訓練影片|影片課程相關文件</p></p></div>
     </div>
-
+      
   <div id="foot_bottom">
       30010 新竹市大學路1001號
       最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
       國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
-<!--
-
+<!-- 
+      
     <div class="foot_title">關於本室2</div>
-    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>
+    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>  
  -->
   </div>
 </div>
