@@ -271,10 +271,11 @@ foreach ($all as &$text) {
   <div class="navbox2"></div>
   <div class="navbox2_2"></div>
 
-
+<img id="close-button" src="<?php bloginfo('template_url');?>/image/close-button.png" alt="close button" >
 <div class="bgd" style="background-image: url(<?php bloginfo('template_url');?>/image/picture.jpg");">
     <!-- 左欄box -->
   <div class="left-side-bar-bg">
+
     <div class="left-side-bar-container">
         <div class=" left-side-bar-element ">
             重要訊息
@@ -298,6 +299,7 @@ foreach ($all as &$text) {
         <div class="left-side-bar-element ">
             加保人數
         </div>
+
     </div>
 </div>
 <div class="right-bg"></div>

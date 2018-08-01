@@ -94,6 +94,19 @@ body {
     text-align: left;
 }
 
+img#close-button {
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    right: 20px;
+    z-index: 10;
+    dislay: none;
+}
+
+img#close-button:hover {
+    cursor: pointer;
+}
+
 .left-side-bar-element {
     font-family: Noto Sans CJK TC Medium;
     font-size: 1em;
@@ -102,12 +115,12 @@ body {
     color: #F4A22C;
     letter-spacing: 2.3px;
     font-weight: bold;
-    display: block;
+    display: inline-block;
     position: relative;
     text-align: left;
     margin-top: 3%;
     white-space: nowrap;
-    width: 10px;
+    width: -webkit-fit-content;
 }
 
 .msg-board-div {
@@ -210,10 +223,6 @@ input[type=text] {
     position: fixed;
     /*background-color: #F4A22C;*/
 }
-
-
-
-
 
 /*navbar 平行四邊形&字*/
 
@@ -412,7 +421,7 @@ input[type=text] {
     transform: skewX(15deg);
 }
 
-#navid7_2{
+#navid7_2 {
     font-size: 1.4em;
     font-weight: 500;
     color: #144959;
@@ -421,9 +430,8 @@ input[type=text] {
     top: 45%;
     transform: skewX(15deg);
 }
+
 .new_navbox1_and_2 {
-
-
     background-color: #F4A22C;
     position: fixed;
     top: 75%;
@@ -432,24 +440,19 @@ input[type=text] {
     /*bottom: 8.7%;*/
     width: 100%;
     height: 25%;
-
     width: 28%;
     height: 0;
     /*  margin:10.2% auto;
 */
     padding: 0;
-
-
     border-right: 81px solid transparent;
     border-top: 375px solid #F4A22C;
     z-index: 10;
     position: absolute;
     opacity: 0.8;
     top: 90%;
-
     display: none;
 }
-
 
 #nav8 {
     width: 10%;
@@ -475,8 +478,6 @@ input[type=text] {
     top: 10%;
     transform: skewX(15deg);
 }
-
-
 
 /*粗橘線*/
 
@@ -1194,7 +1195,6 @@ img.01 {
     color: #F2F2F2;
 }
 
-
 #nav8:hover {
     background-color: #F4A22C;
     color: #FFFFFF;
@@ -1287,7 +1287,6 @@ img.01 {
     color: #F2F2F2;
 }
 
-
 #nav8.click1 {
     background-color: #F4A22C;
     color: #FFFFFF;
@@ -1297,6 +1296,7 @@ img.01 {
     background-color: #F4A22C;
     color: #F2F2F2;
 }
+
 /*hover 2個直角梯形,點擊再展開直角梯形*/
 
 .navbox1 {
@@ -1309,7 +1309,6 @@ img.01 {
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1324,7 +1323,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
-    border-bottom:50vh solid #144959;
+    border-bottom: 50vh solid #144959;
     z-index: 10;
     position: fixed;
     right: 0;
@@ -1399,7 +1398,6 @@ img.01 {
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1439,7 +1437,6 @@ img.01 {
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-
     display: none;
 }
 
@@ -1469,7 +1466,6 @@ img.01 {
     /*opacity: 0.8;*/
     top: 25%;
     opacity: 0.1;
-
     display: none;
 }
 
@@ -1487,7 +1483,6 @@ img.01 {
     display: none;
     top: 25%;
 }
-
 
 .navbox6_map {
     width: 100%;
@@ -1713,22 +1708,24 @@ img.01 {
     line-height: 40px;
 }
 
-#foot{
-  z-index: 11;
-  position: fixed;
-  left:0;
-  bottom: 0vh;
-  width: 100%;
-  height: 5%;
-  border-top-left-radius: 0vh;
-  border-top-right-radius: 0vh;
-  background-color: rgba(1,1,1,0.6);
-  -webkit-transition: bottom 1.7s ease-in-out; /* For Safari 3.1 to 6.0 */
+#foot {
+    z-index: 11;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+    width: 100%;
+    height: 5%;
+    border-top-left-radius: 0vh;
+    border-top-right-radius: 0vh;
+    background-color: rgba(1, 1, 1, 0.6);
+    -webkit-transition: bottom 1.7s ease-in-out;
+    /* For Safari 3.1 to 6.0 */
     transition: bottom 1.7s ease-in-out;
 }
-#foot:hover{
-  bottom: 0;
-  height: 75%;
+
+#foot:hover {
+    bottom: 0;
+    height: 75%;
 }
 
 
@@ -1749,11 +1746,11 @@ img.01 {
     z-index: -1;
 
 }
-#foot-area1{
 
-  float:right;
-  position: absolute;
-/*  left: 3vh;
+#foot-area1 {
+    float: right;
+    position: absolute;
+    /*  left: 3vh;
   top: 3vh;*/
   height: 100%;
   width: 20%;
@@ -1762,9 +1759,25 @@ img.01 {
   background-color: #262626;
 /*
   border:solid 1px #FFFFFF;*/
+}
 
+#foot-area2 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 20%;
+    background-color: #262626;
+}
 
-
+#foot_right {
+    border-left: 80px solid transparent;
+    border-bottom: 50vh solid #243538;
+    float: right;
+    position: absolute;
+    height: 50vh;
+    width: 60%;
+    right: 0%;
 }
 
 #foot-area2{
@@ -1778,104 +1791,65 @@ img.01 {
 
 }
 
-
-#foot_right{
-
-  border-left:80px solid transparent;
-  border-bottom:50vh solid #243538;  
-
-  float:right;
-  position: absolute;
-
-  height: 50vh;
-  width: 60%;
-  right:0%;
+#foot-area4 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    left: 30%;
+    background-color: #243538;
 }
 
-#foot-area3{
-  float:right;
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  left:10%;
-  background-color: #262626;
-
-/*  background-color: #666666;
-*/}
-
-
-#foot-area4{
-  float:right;
-  position: absolute;
-  height: 100%;
-  width: 40%;
-  left:30%;
-  background-color: #243538;}
-
-
-#foot-area5{
-    float:right;
-  position: absolute;
-  height: 100%;
-  width: 30%;
-  left:70%;
-
-  background-color: #243538;
+#foot-area5 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    left: 70%;
+    background-color: #243538;
 }
 
-
-#foot-area6{
-  float:right;
-  position: absolute;
-  height: 100%;
-  width: 13.4%;
-  left:86.6%;
-
-  background-color: #243538;
-
+#foot-area6 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 13.4%;
+    left: 86.6%;
+    background-color: #243538;
 }
 
-#foot-bottom{
-
-
-  background-color: #666666;
-
-  float:right;
-  position: absolute;
-  bottom: 0;
-  height:25vh ;
-  width: 100vh;
-  right:0%;
+#foot-bottom {
+    background-color: #666666;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    height: 25vh;
+    width: 100vh;
+    right: 0%;
 }
 
-
-
-.foot_title{
-  color:#DA9E2A;
-  font-family:'Noto Sans TC', '微軟正黑體', sans-serif;
-  font-size:1.5em; 
-/*  top:2.5%;
+.foot_title {
+    color: #DA9E2A;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-size: 1.5em;
+    /*  top:2.5%;
   left:2.5%;*/
-  font-weight: 350; 
-  letter-spacing: 0.1em;
-  height: 3vh;
-  line-height: 3vh;
-  border: solid 0px orange;
-
-
+    font-weight: 350;
+    letter-spacing: 0.1em;
+    height: 3vh;
+    line-height: 3vh;
+    border: solid 0px orange;
 }
 
-.foot_link{
-  color:white;
-  font-family:'Noto Sans TC', '微軟正黑體', sans-serif;
-  font-size:1em; 
-  font-weight: 350; 
-  letter-spacing: 0.1em;
-  height: 3vh;
-  line-height: 3vh;
-/*  top:2.5%;
+.foot_link {
+    color: white;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-size: 1em;
+    font-weight: 350;
+    letter-spacing: 0.1em;
+    height: 3vh;
+    line-height: 3vh;
+    /*  top:2.5%;
   left:2.5%;*/
-  border: solid 0px orange;
-
-
+    border: solid 0px orange;
 }
