@@ -233,6 +233,7 @@ foreach ($all as &$text) {
     echo ($print);
 }
 ?>
+<!-- 專兼任教師 -->
     <?php
 $my_postid = 106; //This is page id or post id
 $content_post = get_post($my_postid);
@@ -273,11 +274,45 @@ foreach ($all as &$text) {
 
 <img id="close-button" src="<?php bloginfo('template_url');?>/image/close-button.png" alt="close button" >
 <div class="bgd" style="background-image: url(<?php bloginfo('template_url');?>/image/picture.jpg");">
+
+<!-- 左欄抓文章 -->
+<?php
+function debug_to_console($data)
+{
+    $output = $data;
+    if (is_array($output)) {
+        $output = implode(',', $output);
+    }
+
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}
+function importantMsg()
+{
+    $cat_id = get_cat_ID('重要訊息');
+    $posts = get_posts(array('category' => $cat_id));
+    foreach ($posts as $post) {
+        $content = get_post($post->ID)->post_content;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+        $all = getAllP($content);
+        foreach ($all as &$text) {
+
+            $print = '<div class="important-msgs">' . $text . '</div>';
+            $date = get_the_date('Y-m-d', $post->ID);
+            echo ('<div class="important-msgs">' . $date . '</div>');
+            echo ($print);
+        }
+    }
+
+}
+
+?>
+
     <!-- 左欄box -->
   <div class="left-side-bar-bg">
 
     <div class="left-side-bar-container">
-        <div class=" left-side-bar-element ">
+        <div class=" left-side-bar-element " id ="important-msgs">
             重要訊息
         </div>
         <div class="left-side-bar-element ">
@@ -302,7 +337,9 @@ foreach ($all as &$text) {
 
     </div>
 </div>
-<div class="right-bg"></div>
+<div class="right-bg">
+<?php importantMsg();?>
+</div>
 </div>
 
 
@@ -448,7 +485,7 @@ foreach ($all as &$text) {
 
 
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));"></div>
 
   <div id="foot_left">
     <div id="foot-area1">
@@ -458,8 +495,8 @@ foreach ($all as &$text) {
 
 
         <div class="foot_title"></p></p>訊息公告</p></p></div>
-        <div class="foot_link"></p></p>重要訊息|業務訊息|法規訊息|</p></p></div> 
-        <div class="foot_link"></p></p>友校訊息</p></p></div> 
+        <div class="foot_link"></p></p>重要訊息|業務訊息|法規訊息|</p></p></div>
+        <div class="foot_link"></p></p>友校訊息</p></p></div>
 
         <div class="foot_title"></p></p>法令&表格</p></p></div>
         <div class="foot_link"></p></p>教育/研究人員|公務人員</p></p></div>
@@ -476,7 +513,7 @@ foreach ($all as &$text) {
 
         <div class="foot_title"></p></p>出勤卡鐘位置</p></p></div>
 
-        <div class="foot_title"></p></p>留言板&FAQ問答</p></p></div>        
+        <div class="foot_title"></p></p>留言板&FAQ問答</p></p></div>
 
     </div>
 
@@ -536,15 +573,15 @@ foreach ($all as &$text) {
       <div class="foot_title"> <p><p>線上教學專區</b></p></p></div>
       <div class="foot_link"> <p><p>教學訓練影片|影片課程相關文件</p></p></div>
     </div>
-      
+
   <div id="foot_bottom">
       30010 新竹市大學路1001號
       最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
       國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
-<!-- 
-      
+<!--
+
     <div class="foot_title">關於本室2</div>
-    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>  
+    <div class="foot_link">本室簡介|本室位置|人事職掌|本室願景|工作成果</div>
  -->
   </div>
 </div>

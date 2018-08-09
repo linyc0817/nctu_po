@@ -123,6 +123,11 @@ img#close-button:hover {
     width: -webkit-fit-content;
 }
 
+.important-msgs {
+    color: white;
+    display: none;
+}
+
 .msg-board-div {
     padding-left: 170px;
     padding-top: 60px;
@@ -148,6 +153,10 @@ img#close-button:hover {
 /* 留言板 */
 
 .other-questions {}
+
+.msg-board-content:hover {
+    color: #FFFFFF;
+}
 
 /*語言*/
 
@@ -1365,7 +1374,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 373px solid #F4A22C;
+    border-top: 50vh solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
@@ -1728,9 +1737,8 @@ img.01 {
     height: 75%;
 }
 
-
-#foot_left{
-/*  border-right:80px solid transparent;
+#foot_left {
+    /*  border-right:80px solid transparent;
   border-top:50vh solid #262626;  
   float:right;
   position: absolute;
@@ -1741,10 +1749,8 @@ img.01 {
     width: 50%;
     height: 50vh;
     position: absolute;
-
     background: #262626;
     z-index: -1;
-
 }
 
 #foot-area1 {
@@ -1752,12 +1758,12 @@ img.01 {
     position: absolute;
     /*  left: 3vh;
   top: 3vh;*/
-  height: 100%;
-  width: 20%;
-  left:10%;
-  top:0vh;
-  background-color: #262626;
-/*
+    height: 100%;
+    width: 20%;
+    left: 10%;
+    top: 0vh;
+    background-color: #262626;
+    /*
   border:solid 1px #FFFFFF;*/
 }
 
@@ -1780,15 +1786,13 @@ img.01 {
     right: 0%;
 }
 
-#foot-area2{
-  float:right;
-
-  position: absolute;
-  height: 100%;
-  width: 40%;
-  left:30%;
-  background-color: #262626;
-
+#foot-area2 {
+    float: right;
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    left: 30%;
+    background-color: #262626;
 }
 
 #foot-area4 {
