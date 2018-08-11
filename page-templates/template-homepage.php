@@ -109,8 +109,45 @@
   <div id="nav3">
     <div id="navid3">法令&表格</div>
   </div>
-  <div class="navbox3"></div>
-  <div class="navbox3_2"></div>
+
+  <div class="navbox3"><!-- 法令左側 -->
+    <div style="
+    position: fixed;
+    top: 35vh;
+    font-size: 18px;
+    margin-left: 50px;
+    letter-spacing: 0.3em;
+    width:220px;
+    color: white;">
+    可查閱相關法律規章，並下載與該法規相關之表格</div>
+  </div>
+
+  <div class="navbox3_2"><!-- 法令右側 -->
+    <div id="decree-flex-container" style="position: fixed; top:25%;">
+        <div id="type">
+            <p class="decree-item mouse-hover">
+                教育/研究人員
+            </p>
+            <p class="decree-item mouse-hover">
+                公務人員
+            </p>
+            <p class="decree-item mouse-hover">
+                適用勞基法人員
+            </p>
+        </div>
+        <div id="cat">
+            <p class="decree-item mouse-hover">組織、任用、報到、留職停薪</p>
+        </div>
+    </div>
+    <!-- 法規第二層 -->
+    <div id="decree-left decree-details">
+
+    </div>
+    <div id="decree-right decree-details">
+
+    </div>
+
+  </div>
 </div>
 <!-- <div class="top" id="top_4">
   <div id="nav4">
@@ -286,42 +323,82 @@ function debug_to_console($data)
 
     echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
 }
-function importantMsg()
+function leftSideBarMsgs()
 {
-    $cat_id = get_cat_ID('重要訊息');
-    $posts = get_posts(array('category' => $cat_id));
-    foreach ($posts as $post) {
-        $content = get_post($post->ID)->post_content;
-        $content = apply_filters('the_content', $content);
-        $content = str_replace(']]>', ']]&gt;', $content);
-        $all = getAllP($content);
-        foreach ($all as &$text) {
+    $categorys = array("重要訊息", "業務訊息", "法規訊息", "友校訊息");
+    $cat_class = array("important-msgs", "business-msgs", "legislation-msgs", "friendSchools-msgs");
+    foreach ($categorys as $index => &$catname) {
+        $cat_id = get_cat_ID($catname);
+        $posts = get_posts(array('category' => $cat_id));
+        foreach ($posts as $post) {
+            $content = get_post($post->ID)->post_content;
+            $content = apply_filters('the_content', $content);
+            $content = str_replace(']]>', ']]&gt;', $content);
+            $all = getAllP($content);
+            foreach ($all as &$text) {
 
-            $print = '<div class="important-msgs">' . $text . '</div>';
-            $date = get_the_date('Y-m-d', $post->ID);
-            echo ('<div class="important-msgs">' . $date . '</div>');
-            echo ($print);
+                $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
+                $date = get_the_date('Y-m-d', $post->ID);
+                echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $date . '</div>');
+                echo ($print);
+            }
         }
     }
-
 }
+/*
+function importantMsg()
+{
+$cat_id = get_cat_ID('重要訊息');
+$posts = get_posts(array('category' => $cat_id));
+foreach ($posts as $post) {
+$content = get_post($post->ID)->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]&gt;', $content);
+$all = getAllP($content);
+foreach ($all as &$text) {
 
+$print = '<div class="important-msgs left-side-bar-msgs">' . $text . '</div>';
+$date = get_the_date('Y-m-d', $post->ID);
+echo ('<div class="important-msgs left-side-bar-msgs">' . $date . '</div>');
+echo ($print);
+}
+}
+}
+function businessMsg()
+{
+$cat_id = get_cat_ID('業務訊息');
+$posts = get_posts(array('category' => $cat_id));
+foreach ($posts as $post) {
+
+$content = get_post($post->ID)->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]&gt;', $content);
+$all = getAllP($content);
+foreach ($all as &$text) {
+$print = '<div class="business-msgs left-side-bar-msgs">' . $text . '</div>';
+$date = get_the_date('Y-m-d', $post->ID);
+echo ('<div class="business-msgs left-side-bar-msgs">' . $date . '</div>');
+echo ($print);
+}
+}
+}
+ */
 ?>
 
     <!-- 左欄box -->
   <div class="left-side-bar-bg">
 
     <div class="left-side-bar-container">
-        <div class=" left-side-bar-element " id ="important-msgs">
+        <div class=" left-side-bar-element " id="important-msgs">
             重要訊息
         </div>
-        <div class="left-side-bar-element ">
+        <div class="left-side-bar-element" id="business-msgs">
             業務訊息
         </div>
-        <div class="left-side-bar-element ">
+        <div class="left-side-bar-element" id="legislation-msgs">
             法規訊息
         </div>
-        <div class="left-side-bar-element ">
+        <div class="left-side-bar-element" id="friendSchools-msgs">
             友校訊息
         </div>
         <div id="line" class="" style="border-style: solid;border-width:0.2px;height: 1px;width: 45%;color: #f4a22c;">
@@ -338,7 +415,10 @@ function importantMsg()
     </div>
 </div>
 <div class="right-bg">
-<?php importantMsg();?>
+<?php
+leftSideBarMsgs();
+?>
+
 </div>
 </div>
 

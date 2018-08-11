@@ -32,7 +32,7 @@ $(document).ready(function () {
         // 點擊別的不會衝突 
         sibling = $(this).siblings(".click1")
         if (sibling) {
-            sibling.find('div[class^="navbox"]').hide();
+            sibling.find('div[class^="navbox"]').hide();//div classname started with navbox
             sibling.removeClass("click1");
             sibling.find('div[id^="nav"]').removeClass("click1");
         }
@@ -70,6 +70,24 @@ $(function () {
             $(".important-msgs").css("display", 'block');
         } else {
             $(".important-msgs").css("display", 'none');
+        }
+        //顯示 {業務訊息} 內容
+        if (this.id == "business-msgs") {
+            $(".business-msgs").css("display", 'block');
+        } else {
+            $(".business-msgs").css("display", 'none');
+        }
+        //顯示 {法規訊息} 內容
+        if (this.id == "legislation-msgs") {
+            $(".legislation-msgs").css("display", 'block');
+        } else {
+            $(".legislation-msgs").css("display", 'none');
+        }
+        //顯示 {友校訊息} 內容
+        if (this.id == "friendSchools-msgs") {
+            $(".friendSchools-msgs").css("display", 'block');
+        } else {
+            $(".friendSchools-msgs").css("display", 'none');
         }
     })
 
@@ -115,3 +133,10 @@ $(function () {
     })
 
 });
+
+//class mouse-hover change cursor
+$(function () {
+    $(".mouse-hover").hover(function () {
+        $(this).css('cursor', 'pointer');
+    })
+})

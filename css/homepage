@@ -123,7 +123,7 @@ img#close-button:hover {
     width: -webkit-fit-content;
 }
 
-.left-side-bar-msgs {
+.important-msgs {
     color: white;
     display: none;
 }
@@ -1306,6 +1306,13 @@ img.01 {
     color: #F2F2F2;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {}
+
 /*hover 2個直角梯形,點擊再展開直角梯形*/
 
 .navbox1 {
@@ -1369,7 +1376,7 @@ img.01 {
 }
 
 .navbox3 {
-    width: 28%;
+    width: 34%;
     height: 0;
     /*margin:10.2% auto;*/
     padding: 0;
@@ -1383,7 +1390,7 @@ img.01 {
 }
 
 .navbox3_2 {
-    width: 75%;
+    width: 72%;
     height: 0;
     /*margin:10.2% auto;*/
     padding: 0;
@@ -1394,26 +1401,6 @@ img.01 {
     top: 25%;
     right: 0;
     display: none;
-}
-
-#decree-flex-container {
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    width: 75%;
-}
-
-.decree-item {
-    color: white;
-}
-
-#decree-left {}
-
-#decree-right {}
-
-.decree-details {
-    display: none;
-    width: 50%;
 }
 
 .navbox4 {
