@@ -1,5 +1,5 @@
 li li, li p, li span, li p span, p span{font-size:1em}
-*{font-family:'Noto Sans TC', 'Microsoft JhengHei', sans-serif;font-size:1em;margin:0;padding:0;-webkit-font-smoothing: antialiased;}
+t{font-family:'Noto Sans TC', 'Microsoft JhengHei', sans-serif;font-size:1em;margin:0;padding:0;-webkit-font-smoothing: antialiased;}
 body{overflow: hidden; font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;font-size:100%;margin:0;padding:0; -webkit-font-smoothing: antialiased;}
 img {border:none;}
 a{font-family:'Noto Sans TC', 'Microsoft JhengHei', sans-serif; text-decoration:none; color:#646464;}
