@@ -27,6 +27,7 @@ $(document).ready(function () {
 
 
 // nav click 展開2個直角梯形
+/*
 $(document).ready(function () {
     $('div.top').click(function () {
         // 點擊別的不會衝突 
@@ -42,12 +43,14 @@ $(document).ready(function () {
             $(this).removeClass("click1");
             $(this).find('div[id^="nav"]').removeClass("click1");
         } else {
+
             $(this).find('div[class^="navbox"]').show();
             $(this).addClass("click1");
             $(this).find('div[id^="nav"]').addClass("click1");
         }
     });
 });
+*/
 
 //left-side-bar
 $(function () {
@@ -113,6 +116,10 @@ $(function () {
             commentHighlight.css('color', '#f4a22c');
         }
         switch (this.id) {
+            //出國申請
+            case 'navboxw7_1':
+                $('.msg-board-content.abroad').css('display', 'block');
+                break;
             //其他問題
             case 'navboxw7_3':
                 $('.msg-board-content.other-questions').css('display', 'block');
@@ -140,3 +147,54 @@ $(function () {
         $(this).css('cursor', 'pointer');
     })
 })
+
+//法令類別
+$(function () {
+    function showDetails() { //顯示細項
+        if (personnel === null || S === null) {
+            return;
+        }
+        $(".decree-details").hide();
+        $("." + personnel + "." + S).show();
+        $("#decree-left-flexbox").css('display', 'flex');
+        $("#decree-right-flexbox").css('display', 'flex');
+        //第二層法條顯示
+        $('decree-main-container').hide();
+        $('.main' + (S.substr(1))).show();
+    }
+    var personnel = null; //用來判斷現在點選哪個人員
+    var S = null; // 用來判斷現在點選哪個類別
+
+    $(".personnels").click((e) => {
+        $(".personnels").css('color', '#F4A22C');
+        var personnel_type = event.target.id;
+        $(event.target).css('color', 'white');
+        if (personnel_type < 1 || personnel_type > 3) {
+            return;
+        }
+        personnel = personnel_type;
+        showDetails();
+    })
+
+    $(".decree-main").click((e) => {
+        var sType = event.target.id;
+        var re = /S{1}/
+        if (re.test(sType))
+            S = sType;
+        else
+            return;
+        $(".decree-main").css('color', '#F4A22C');
+        $(event.target).css('color', 'white');
+        showDetails();
+    })
+
+    $(".decree-detail-articles").click((e) => {
+        $(".decree-detail-articles").css('color', '#F4A22C');
+        $(event.target).css('color', 'white');
+
+
+    })
+})
+
+
+
