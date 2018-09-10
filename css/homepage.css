@@ -1449,9 +1449,11 @@ img.01 {
     margin-left: 200px;
 }
 
-#decree-left {}
-
-#decree-right {}
+.decree-right-item-container {
+    position: absolute;
+    top: 0;
+    display: none;
+}
 
 #decree-left-flexbox {
     display: none;
@@ -1463,7 +1465,7 @@ img.01 {
 }
 
 #decree-right-flexbox {
-    display: none;
+    display: flex;
     flex-direction: column;
     height: 100%;
     width: 50vw;
@@ -1929,13 +1931,10 @@ img.01 {
 
 #foot_bottom {
     background-color: #666666;
-
     position: absolute;
     top: 70%;
-    
     width: 100%;
     left: 0%;
-
     height: 20vh;
     z-index: 20;
 }

@@ -182,7 +182,10 @@ foreach ($main_cats as $m_idx => $main_cat) {
         ));
         echo "<div class='articles-container'>";
         foreach ($articles as $article) {
-            $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover";
+            // post[num]是用來實作js -> 點選時右邊內容顯示什麼
+            $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover" . " post_" . $article->ID;
+            //var_dump($article);
+
             echo "<p class= '$article_class'>" . $article->post_title . "</p>";
             //$myJSON = json_decode($article->post_content);
             //echo "<p>" . $myJSON->name . "</p>";
@@ -208,13 +211,93 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     letter-spacing: 0.3em;
                     width:50vw;
                     height: 100%;
-                    display: block;
+                    display: none;
                     z-index:100;
                     right: 0;
                     top:25%;
+                    background-color:black;
                 ">
                     <div id="decree-right-flexbox">
+                        <?php
+$right_article_has = []; //use to avoid duplicate article content
+foreach ($main_cats as $m_idx => $main_cat) {
+    $detail_cats = get_categories(array('parent' => $main_cat->cat_ID, 'hide_empty' => true));
+    foreach ($detail_cats as $index => $detail_cat) {
+        $articles = get_posts(array(
+            'numberposts' => 50,
+            'category' => $detail_cat->cat_ID,
+            'hide_empty' => false,
+        ));
+        foreach ($articles as $article) {
+            if ($right_article_has[$article->ID] == true) {
+                continue;
+            } else {
+                $right_article_has[$article->ID] = true;
+            }
+            $article_content = $article->post_content;
+            $item_container_class = "decree-right-item-container " . "post_" . $article->ID;
+            echo "<div class='$item_container_class'>";
+            echo ("<div class='decree-right-item-title'>法規</div>");
+            echo ("<p>" . $article->post_title . "</p>");
+            echo ("<div class='decree-right-item-title'>相關表格</div>");
+            $article_slices = explode("\n", $article_content);
+            $forms_pdf = [];
+            $forms_doc = [];
+            $forms_odf = [];
+            foreach ($article_slices as $slice) {
+                trim($slice);
+                //if it's a form:
+                if (preg_match('/^form/', $slice)) {
+                    //explode the $slice to title and content
+                    $title_content = explode(" ", $slice);
+                    $title = $title_content[0];
+                    $content = $title_content[1];
+                    //remove spaces from both side
+                    trim($title);
+                    trim($content);
+                    //form1-pdf: -> 1-pdf:
+                    $index_type = trim($title, "form");
+                    //1-pdf: -> ["1","pdf:"]
+                    $index_type = explode("-", $index_type);
+                    $index = (int) $index_type[0];
+                    //"pdf:" -> "pdf"
+                    $type = trim($index_type[1], ":");
+                    if ($type == "pdf") {
+                        array_push($forms_pdf, $content);
+                    } else if ($type == "doc") {
+                        array_push($forms_doc, $content);
+                    } else if ($type == "odf") {
+                        array_push($forms_odf, $content);
+                    }
 
+                }
+            }
+            $html_href = function ($link, $type) {
+                return (
+                    "<a href='$link'>"
+                    . '<img border="0" alt="PDFICON" src="'
+                    . (get_bloginfo('template_url')
+                        . '/image/' . strtoupper($type) . 'icon.png ')
+                    . '" width="40" height="40">'
+                    . "</a>"
+                );
+            };
+
+            for ($i = 0; $i < sizeof($forms_pdf); $i++) {
+                echo $html_href($forms_doc[$i], "doc");
+                echo $html_href($forms_pdf[$i], "pdf");
+                echo $html_href($forms_odf[$i], "odf");
+            }
+            echo ("<div class='decree-right-item-title'>法規動態</div>");
+            echo ("<div class='decree-right-item-title'>適用人員</div>");
+
+            echo "</div>"; // decree-right-item-container
+
+        }
+    }
+}
+
+?>
                     </div>
                 </div>
 
@@ -920,7 +1003,7 @@ leftSideBarMsgs();
 
 
 (測試文字)
-<!-- 
+<!--
       30010 新竹市大學路1001號
       最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
       國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載

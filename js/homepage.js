@@ -157,7 +157,8 @@ $(function () {
         $(".decree-details").hide();
         $("." + personnel + "." + S).show();
         $("#decree-left-flexbox").css('display', 'flex');
-        $("#decree-right-flexbox").css('display', 'flex');
+        //$("#decree-right-flexbox").css('display', 'flex');
+        $("#decree-right-details-container").css('display', 'flex');
         //第二層法條顯示
         $('decree-main-container').hide();
         $('.main' + (S.substr(1))).show();
@@ -188,12 +189,18 @@ $(function () {
         showDetails();
     })
 
+    //法條點選後 右邊decree-right顯示
     $(".decree-detail-articles").click((e) => {
         $(".decree-detail-articles").css('color', '#F4A22C');
         $(event.target).css('color', 'white');
-
+        let all_classes = $(event.target).attr("class");
+        let clicked_postid = all_classes.match(/post_\w+/)[0];
+        console.log(clicked_postid);
+        $('.decree-right-item-container').hide();
+        $('.decree-right-item-container' + ('.' + clicked_postid)).first().show();
 
     })
+
 })
 
 
