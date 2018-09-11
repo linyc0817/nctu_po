@@ -1386,7 +1386,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 373px solid #F4A22C;
+    border-top: 50vh solid #F4A22C;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
@@ -1447,6 +1447,53 @@ img.01 {
 .decree-item {
     color: #F4A22C;
     margin-left: 200px;
+}
+
+.decree-right-item-title {
+    color: white;
+    display: inline-block;
+    /* margin-right: 50px; */
+    width: 100px;
+}
+
+.decree-right-item-container p {
+    color: white;
+    display: inline;
+    margin: 0;
+}
+
+.decree-right-cell-container {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+}
+
+.decree-form-flexbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10vw;
+}
+
+.decree-form-name {
+    display: inline;
+    color: white;
+    margin-right: 50px;
+}
+
+.decree-form-flex-item {
+    width: 50vw;
+}
+
+.fileIcon {
+    margin-right: 20px;
+    display: inline;
+    width: 20px;
+}
+
+.decree-right-item-container p:after {
+    content: "\A";
+    white-space: pre;
 }
 
 .decree-right-item-container {

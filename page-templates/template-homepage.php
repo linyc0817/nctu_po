@@ -239,11 +239,13 @@ foreach ($main_cats as $m_idx => $main_cat) {
             echo "<div class='$item_container_class'>";
             echo ("<div class='decree-right-item-title'>法規</div>");
             echo ("<p>" . $article->post_title . "</p>");
+            echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>相關表格</div>");
             $article_slices = explode("\n", $article_content);
             $forms_pdf = [];
             $forms_doc = [];
             $forms_odf = [];
+            $forms_name = [];
             foreach ($article_slices as $slice) {
                 trim($slice);
                 //if it's a form:
@@ -268,6 +270,8 @@ foreach ($main_cats as $m_idx => $main_cat) {
                         array_push($forms_doc, $content);
                     } else if ($type == "odf") {
                         array_push($forms_odf, $content);
+                    } else if ($type == "name") {
+                        array_push($forms_name, $content);
                     }
 
                 }
@@ -275,19 +279,25 @@ foreach ($main_cats as $m_idx => $main_cat) {
             $html_href = function ($link, $type) {
                 return (
                     "<a href='$link'>"
-                    . '<img border="0" alt="PDFICON" src="'
+                    . '<img border="0" alt="PDFICON" class="fileIcon" src="'
                     . (get_bloginfo('template_url')
                         . '/image/' . strtoupper($type) . 'icon.png ')
-                    . '" width="40" height="40">'
+                    . '">'
                     . "</a>"
                 );
             };
-
-            for ($i = 0; $i < sizeof($forms_pdf); $i++) {
+            echo ("<div class='decree-form-flexbox'>");
+            for ($i = 0; $i < max(sizeof($forms_pdf), sizeof($forms_doc), sizeof($forms_odf)); $i++) {
+                echo ("<div class='decree-form-flex-item'>");
+                echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
                 echo $html_href($forms_doc[$i], "doc");
                 echo $html_href($forms_pdf[$i], "pdf");
                 echo $html_href($forms_odf[$i], "odf");
+                //echo "<br>";
+                echo ("</div>");
             }
+            echo "</div>";
+            echo "</div>"; //decree-right-cell-container
             echo ("<div class='decree-right-item-title'>法規動態</div>");
             echo ("<div class='decree-right-item-title'>適用人員</div>");
 
