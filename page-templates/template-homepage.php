@@ -223,12 +223,23 @@ $right_article_has = []; //use to avoid duplicate article content
 foreach ($main_cats as $m_idx => $main_cat) {
     $detail_cats = get_categories(array('parent' => $main_cat->cat_ID, 'hide_empty' => true));
     foreach ($detail_cats as $index => $detail_cat) {
+        $personnel_cat = []; //歸類人員
+        if ($detail_cat->description[0] == 'O') {
+            array_push($personnel_cat, "教師", "約聘教師", "研究類教師", "助教", "科技部補助延攬人才", "兼任教師", "教官", "研究人員", "計畫類博士後研究");
+        }
+        if ($detail_cat->description[1] == 'O') {
+            array_push($personnel_cat, "公務人員");
+        }
+        if ($detail_cat->description[2] == 'O') {
+            array_push($personnel_cat, "研發替代役", "約用人員", "計畫人員", "全時工讀生", "學生兼任助理", "臨時工");
+        }
         $articles = get_posts(array(
             'numberposts' => 50,
             'category' => $detail_cat->cat_ID,
             'hide_empty' => false,
         ));
         foreach ($articles as $article) {
+            //過濾重複
             if ($right_article_has[$article->ID] == true) {
                 continue;
             } else {
@@ -306,9 +317,20 @@ foreach ($main_cats as $m_idx => $main_cat) {
             }
             echo "</div>";
             echo "</div>"; //decree-right-cell-container
+            echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>法規動態</div>");
+            echo ("</div>"); //decree-right-cell-container
+            echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>適用人員</div>");
-
+            echo ("<div class='personnel-category'>");
+            foreach ($personnel_cat as $key => $value) {
+                echo $value;
+                if ($key != sizeof($personnel_cat) - 1) {
+                    echo '、';
+                }
+            }
+            echo ("</div>");
+            echo ("</div>"); //decree-right-cell-container
             echo "</div>"; // decree-right-item-container
 
         }

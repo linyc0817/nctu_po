@@ -1500,6 +1500,10 @@ img.01 {
     display: none;
 }
 
+.personnel-category {
+    color: white;
+}
+
 #decree-left-flexbox {
     display: none;
     /* display: flex; */
