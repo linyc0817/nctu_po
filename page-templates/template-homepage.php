@@ -237,8 +237,10 @@ foreach ($main_cats as $m_idx => $main_cat) {
             $article_content = $article->post_content;
             $item_container_class = "decree-right-item-container " . "post_" . $article->ID;
             echo "<div class='$item_container_class'>";
+            echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>法規</div>");
-            echo ("<p>" . $article->post_title . "</p>");
+            echo ("<div style='color:white;'>" . $article->post_title . "</div>");
+            echo ("</div>"); //cell
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>相關表格</div>");
             $article_slices = explode("\n", $article_content);
@@ -286,10 +288,16 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     . "</a>"
                 );
             };
-            echo ("<div class='decree-form-flexbox'>");
+            //form names
+            echo ("<div class='decree-form-names-container'>");
+            for ($i = 0; $i < sizeof($forms_name); $i++) {
+                echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
+            }
+            echo ("</div>");
+            echo ("<div class='decree-forms-container'>");
             for ($i = 0; $i < max(sizeof($forms_pdf), sizeof($forms_doc), sizeof($forms_odf)); $i++) {
                 echo ("<div class='decree-form-flex-item'>");
-                echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
+
                 echo $html_href($forms_doc[$i], "doc");
                 echo $html_href($forms_pdf[$i], "pdf");
                 echo $html_href($forms_odf[$i], "odf");
