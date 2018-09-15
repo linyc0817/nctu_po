@@ -195,6 +195,8 @@ foreach ($main_cats as $m_idx => $main_cat) {
 
         //var_dump($articles);
         echo "</div>"; // close tag for {details-container}
+        //  abc
+        echo ("<hr class='decree-hr'>");
 
     }
     echo "</div>"; // close tag for main-container
@@ -252,6 +254,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             echo ("<div class='decree-right-item-title'>法規</div>");
             echo ("<div style='color:white;'>" . $article->post_title . "</div>");
             echo ("</div>"); //cell
+            echo ("<hr class='decree-hr'>");
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>相關表格</div>");
             $article_slices = explode("\n", $article_content);
@@ -317,9 +320,11 @@ foreach ($main_cats as $m_idx => $main_cat) {
             }
             echo "</div>";
             echo "</div>"; //decree-right-cell-container
+            echo ("<hr class='decree-hr'>");
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>法規動態</div>");
             echo ("</div>"); //decree-right-cell-container
+            echo ("<hr class='decree-hr'>");
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>適用人員</div>");
             echo ("<div class='personnel-category'>");
@@ -331,6 +336,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             }
             echo ("</div>");
             echo ("</div>"); //decree-right-cell-container
+            echo ("<hr class='decree-hr'>");
             echo "</div>"; // decree-right-item-container
 
         }
