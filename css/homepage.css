@@ -1450,6 +1450,7 @@ img.01 {
 }
 
 .decree-right-item-title {
+    margin-top: 10px; 
     color: white;
     display: inline-block;
     /* margin-right: 50px; */
