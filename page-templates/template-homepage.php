@@ -79,17 +79,17 @@
             <div class="navbox1_2">
                 <!-- hover出梯形二 -->
                 <div id="navboxw1_2">
-                    <a href="<?php echo site_url(); ?>/intro/" style="color: #FFFFFF;">
-                        <div id="navboxw1_2_1">本 室 簡 介<br></div>
-                    </a>
-                    <a href="<?php echo site_url(); ?>/site/" style="color: #FFFFFF;">
-                        <div id="navboxw1_2_2">本 室 位 置<br></div>
-                    </a>
-                    <div id="navboxw1_2_3">人 員 職 掌<br></div>
-                    <a href="<?php echo site_url(); ?>/vision/" style="color: #FFFFFF;">
-                        <div id="navboxw1_2_4">本 室 願 景<br></div>
-                    </a>
-                    <div id="navboxw1_2_5">工 作 成 果</div>
+                    <!-- <a href="<?php echo site_url(); ?>/intro/" style="color: #FFFFFF;"> -->
+                        <div id="navboxw1_2_1" class="mouse-hover">本 室 簡 介<br></div>
+                    <!-- </a> -->
+                    <!-- <a href="<?php echo site_url(); ?>/site/" style="color: #FFFFFF;"> -->
+                        <div id="navboxw1_2_2" class="mouse-hover">本 室 位 置<br></div>
+                    <!-- </a> -->
+                    <div id="navboxw1_2_3" class="mouse-hover">人 員 職 掌<br></div>
+                    <!-- <a href="<?php echo site_url(); ?>/vision/" style="color: #FFFFFF;"> -->
+                        <div id="navboxw1_2_4" class="mouse-hover">本 室 願 景<br></div>
+                    <!-- </a> -->
+                    <div id="navboxw1_2_5" class="mouse-hover">工 作 成 果</div>
                 </div>
             </div>
             <div class="navbox1_3">
