@@ -203,5 +203,56 @@ $(function () {
 
 })
 
+//關於本室右邊選項click
+$(function () {
+    $("div[id^='navboxw1_2_']").click((e) => {
+        $("#navboxw1").hide();
+        $("#navboxw1_2").hide();
+    });
+})
+
+// 本室介紹下各頁面
+$(function () {
+    $("#navboxw1_2_1").click(() => {
+        $("#intro_page").show();
+    })
+    $("#navboxw1_2_4").click(() => {
+        $("#vision_page").show();
+    })
+
+})
+
+$(document).ready(function () {
+    $('div.h1').hover(function () {
+        $(this).find('div.cb1').show();
+    }, function () {
+        $(this).find('div.cb1').hide();
+    });
+});
+
+$(document).ready(function () {
+    $('div.h2').hover(function () {
+        $(this).find('div.cb2').show();
+    }, function () {
+        $(this).find('div.cb2').hide();
+    });
+});
+
+$(document).ready(function () {
+    $('div.h3').hover(function () {
+        $(this).find('div.cb3').show();
+    }, function () {
+        $(this).find('div.cb3').hide();
+    });
+});
+
+$(document).ready(function () {
+    $('div.h4').hover(function () {
+        $(this).find('div.cb4').show();
+    }, function () {
+        $(this).find('div.cb4').hide();
+    });
+});
+//# 
 
 

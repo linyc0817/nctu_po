@@ -1449,20 +1449,19 @@ img.01 {
     margin-left: 200px;
 }
 
-.decree-right-hr { 
+.decree-right-hr {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
     border-style: solid;
     border-width: 1px;
-    opacity:0.2;
-} 
+    opacity: 0.2;
+}
 
 .decree-right-item-title {
-    /*margin-top: 30px;*/ 
+    margin-top: 30px;
     color: white;
     display: inline-block;
-
     /* margin-right: 50px; */
     width: 12vw;
     font-size: 14px;
@@ -1531,7 +1530,7 @@ img.01 {
     color: white;
 }
 
-.decree-left-hr { 
+.decree-left-hr {
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -1539,8 +1538,8 @@ img.01 {
     margin-right: 2.5em;
     border-style: solid;
     border-width: 1px;
-    opacity:0.2;
-} 
+    opacity: 0.2;
+}
 
 #decree-left-flexbox {
     display: none;
@@ -1772,6 +1771,150 @@ img.01 {
     font-size: 1.5em;
     line-height: 40px;
 }
+
+/* 本室簡介 intro.css copy */
+
+.circle1 {
+    width: 120px;
+    height: 120px;
+    background-color: #144959;
+    /* Can be set to transparent */
+    border: 2px #FFFFFF solid;
+    -webkit-border-radius: 100px;
+    position: absolute;
+    top: 6vh;
+    left: 5vw;
+}
+
+._hide {
+    display: none;
+}
+
+#cw1 {
+    color: #FFFFFF;
+    font-size: 1em;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.circle1:hover {
+    border: 5px #FFFFFF solid;
+}
+
+.cb1 {
+    color: #FFFFFF;
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+    font-size: 0.5em;
+    line-height: 50px;
+    display: none;
+}
+
+.circle2 {
+    width: 120px;
+    height: 120px;
+    background-color: #144959;
+    /* Can be set to transparent */
+    border: 2px #FFFFFF solid;
+    -webkit-border-radius: 100px;
+    position: absolute;
+    top: 6vh;
+    left: 23vw;
+}
+
+.circle2:hover {
+    border: 5px #FFFFFF solid;
+}
+
+#cw2 {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.cb2 {
+    color: #FFFFFF;
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+    font-size: 0.6em;
+    line-height: 50px;
+    display: none;
+}
+
+.circle3 {
+    width: 120px;
+    height: 120px;
+    background-color: #144959;
+    /* Can be set to transparent */
+    border: 2px #FFFFFF solid;
+    -webkit-border-radius: 100px;
+    position: absolute;
+    top: 6vh;
+    left: 42vw;
+}
+
+.circle3:hover {
+    border: 5px #FFFFFF solid;
+}
+
+#cw3 {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.cb3 {
+    color: #FFFFFF;
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+    font-size: 0.7em;
+    line-height: 50px;
+    display: none;
+}
+
+.circle4 {
+    width: 120px;
+    height: 120px;
+    background-color: #144959;
+    /* Can be set to transparent */
+    border: 2px #FFFFFF solid;
+    -webkit-border-radius: 100px;
+    position: absolute;
+    top: 6vh;
+    left: 60vw;
+}
+
+.circle4:hover {
+    border: 5px #FFFFFF solid;
+}
+
+#cw4 {
+    color: #FFFFFF;
+    font-size: 1.8em;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.cb4 {
+    color: #FFFFFF;
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+    font-size: 0.9em;
+    line-height: 50px;
+    display: none;
+}
+
+/* end of 本室簡介 */
 
 #navboxw4 {
     color: #FFFFFF;
