@@ -77,6 +77,39 @@
                 </div>
             </div>
             <div class="navbox1_2">
+                <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
+                    <div class="h1" id="h1">
+                    <div class="circle1"><div id="cw1">簡介</div></div>
+                    <div class="cb1">本校人事室係依據人事管理條例、大學法及本校組織規程而設置，掌理本校組<br>織編制，教職員聘(任)免、還調、敘薪、考核、獎懲、差假勤惰、訓練進<br>修、待遇、福利、保險、退休、撫卹、人事資料管理等事務。
+                    </div>
+                    </div>
+                    <div class="h2" id="h2">
+                    <div class="circle2"><div id="cw2">現況</div></div>
+                    <div class="cb2">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>
+                    </div>
+                    <div class="h3" id="h3">
+                    <div class="circle3"><div id="cw3">組織</div></div>
+                    <div class="cb3">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>
+                    </div>
+                    <div class="h4" id="h4">
+                    <div class="circle4"><div id="cw4">目標</div></div>
+                    <div class="cb4">本校人事服務工作的主要任務，乃依據人事法令及學校人事規章，配合校務發<br>展需要，善盡幕僚職責，支援各單位，達成校務發展目標;並維護職員同仁合<br>法權益，建立顧客導向之服務理念與和諧人際關係，以提升人事服務效能。</div>
+                    </div>
+                </div>
+                <div id="vision_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
+                    <div class="h1" id="h1">
+                    <div class="circle1"><div id="cw1">願景</div></div>
+                    <div class="cb1">兼具專業與熱忱的團隊，攜手邁向頂尖!</div>
+                    </div>
+                    <div class="h2" id="h2">
+                    <div class="circle2"><div id="cw2">核心任務</div></div>
+                    <div class="cb2">一、以前瞻創新之思維，建立完善的人事體制。<br>二、以專業精進之精神，提升服務的品質效能。<br>三、以關懷同理之熱誠，營造溫馨的校園環境。</div>
+                    </div>
+                    <div class="h3" id="h3">
+                    <div class="circle3"><div id="cw3">核心價值</div></div>
+                    <div class="cb3">廉政 廉潔、公正，具有高尚人格。清廉自持，潔身自好，不收受不當利益，並主動利益迴<br>&nbsp;           避;誠信公平執行公務，以兼顧各方利益之均衡，營造全民良善之生存發展環境。<br><br>忠誠 忠於憲法及法律，忠於國家及全民;重視榮譽、誠信、誠實並應具道德感與責任感。<br><br>專業 以謙虛的態度，終身學習，積極充實職務所需之知識技能，並熟悉主管法令及相關政<br>&nbsp;&nbsp;策措施，以提供全民第一流的公共服務。<br><br>效能 運用有效方法，簡化行政程序;研修相關法令、措施應符合成本效益要求;發揮執行<br>&nbsp;&nbsp;力，以提高行政效率與工作績效，達成政策目標。<br><br>關懷 時時以民眾福祉為念，親切提供服務;對人民之需要及所遭遇之困難與問題，能以同<br>&nbsp;&nbsp;理心設身處地著想，並提供必要之協助與照護，以增進其利益。</div>
+                    </div>
+                </div>
                 <!-- hover出梯形二 -->
                 <div id="navboxw1_2">
                     <!-- <a href="<?php echo site_url(); ?>/intro/" style="color: #FFFFFF;"> -->
