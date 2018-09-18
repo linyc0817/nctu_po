@@ -1459,12 +1459,18 @@ img.01 {
 }
 
 .decree-right-item-title {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
+    display:inline-flex; 
+    flex-wrap: wrap;
     color: white;
     display: inline-block;
-    /* margin-right: 50px; */
-    width: 12vw;
+
+    /*margin-right: 50px;*/
+    width: 17vw;
     font-size: 14px;
+}
+.nowrap {
+    flex-wrap: nowrap;
 }
 
 .decree-right-item-container p {
@@ -1494,8 +1500,13 @@ img.01 {
     text-justify:inter-ideograph;
 }
 .decree-form-names-container {
-    margin-left: 120px;
-    margin-right: 50px;
+    display:inline-flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    /*margin-right: 50px;*/
+}
+.nowrap{
+    flex-wrap: nowrap;
 }
 .decree-forms-container {
     margin-left: 120px;
