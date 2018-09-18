@@ -1459,7 +1459,7 @@ img.01 {
 }
 
 .decree-right-item-title {
-    /*margin-top: 30px;*/
+    margin-top: 30px;
     display:inline-flex; 
     flex-wrap: wrap;
     color: white;
