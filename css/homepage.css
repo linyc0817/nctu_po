@@ -1459,7 +1459,7 @@ img.01 {
 }
 
 .decree-right-item-title {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     display:inline-flex; 
     flex-wrap: wrap;
     color: white;
@@ -1468,6 +1468,8 @@ img.01 {
     /*margin-right: 50px;*/
     width: 17vw;
     font-size: 14px;
+    /*vertical-align: middle;*/
+
 }
 .nowrap {
     flex-wrap: nowrap;
@@ -1484,6 +1486,7 @@ img.01 {
     display: flex;
     flex-direction: row;
     font-size: 14px;
+    align-items:center;
 }
 
 .decree-forms-container {
