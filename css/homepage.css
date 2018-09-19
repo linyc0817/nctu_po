@@ -1469,7 +1469,8 @@ img.01 {
     width: 17vw;
     font-size: 14px;
     /*vertical-align: middle;*/
-
+    overflow: hidden;
+    white-space: nowrap;
 }
 .nowrap {
     flex-wrap: nowrap;
