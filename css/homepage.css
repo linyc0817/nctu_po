@@ -1460,13 +1460,13 @@ img.01 {
 
 .decree-right-item-title {
     /*margin-top: 30px;*/
-    display:inline-flex; 
+    display:flex; 
     flex-wrap: wrap;
     color: white;
     display: inline-block;
 
     /*margin-right: 50px;*/
-    width: 17vw;
+    width: 7vw;
     font-size: 14px;
     /*vertical-align: middle;*/
     overflow: hidden;
@@ -1484,10 +1484,13 @@ img.01 {
 
 .decree-right-cell-container {
     font-weight: bold;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
     flex-direction: row;
     font-size: 14px;
+    width: 100%;
     align-items:center;
+    justify-content: flex-start;
 }
 
 .decree-forms-container {
@@ -1506,11 +1509,11 @@ img.01 {
 .decree-form-names-container {
     display:inline-flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    width: 40%;
+    flex-direction:column;
     /*margin-right: 50px;*/
 }
-.nowrap{
-    flex-wrap: nowrap;
+
 }
 .decree-forms-container {
     margin-left: 120px;
@@ -1518,7 +1521,7 @@ img.01 {
 
 
 .decree-form-flex-item {
-    width: 50vw;
+    width: 20vw;
 }
 
 .fileIcon {
@@ -1543,6 +1546,7 @@ img.01 {
 
 .personnel-category {
     color: white;
+    width: 50%;
 }
 
 .decree-left-hr {
@@ -1572,6 +1576,7 @@ img.01 {
     width: 50vw;
     background-color: #182326;
 }
+
 
 .decree-main-container {
     padding-left: 2.5px;
