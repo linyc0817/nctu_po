@@ -72,8 +72,7 @@
             </div>
             <div class="navbox1">
                 <!-- hover出梯形一 -->
-                <div id="navboxw1">可 查 閱 本 室 簡 介 、 本<br>室 位 置 、 主 任 簡 介 、<br>本 室 願 景 、 組 織 架<br>構 、 人 員 職 掌 及 工 作<br>成
-                    果 等 資 訊
+                <div id="navboxw1">可 查 閱 本 室 簡 介 、 本<br>室 位 置 、 主 任 簡 介 、<br>本 室 願 景 、 組 織 架 構<br>、 人 員 職 掌 及 工 作 成<br>果 等 資 訊
                 </div>
             </div>
             <div class="navbox1_2">
