@@ -218,7 +218,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover" . " post_" . $article->ID;
             //var_dump($article);
 
-            echo "<p class= '$article_class'>" . $article->post_title . "</p>";
+            echo "<div class= '$article_class'>" . $article->post_title . "</div>";
             //$myJSON = json_decode($article->post_content);
             //echo "<p>" . $myJSON->name . "</p>";
             //var_dump($myJSON);
