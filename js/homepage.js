@@ -214,21 +214,34 @@ $(function () {
 $(function () {
     $("div[id^='navboxw1_2_']").click((e) => {
         $("#navboxw1").hide();
-        $("#navboxw1_2").hide();
+        //$("#navboxw1_2").hide();
     });
 })
 
 // 本室介紹下各頁面
 $(function () {
+    function change_css(DOMstring, css) {
+        $(DOMstring).css(css);
+    }
+    function intro_hide_others() {
+        $("#intro_page").hide();
+        $("#vision_page").hide();
+    }
+    let new_css = { "position": "fixed", "top": "40vh" }; // 移動簡介選單
     $("#navboxw1_2_1").click(() => {
+        intro_hide_others();
         $("#intro_page").show();
+        change_css("#navboxw1_2", new_css);
     })
     $("#navboxw1_2_4").click(() => {
+        intro_hide_others();
         $("#vision_page").show();
+        change_css("#navboxw1_2", new_css);
     })
 
 })
 
+//簡介區的圓圈
 $(document).ready(function () {
     $('div.h1').hover(function () {
         $(this).find('div.cb1').show();
