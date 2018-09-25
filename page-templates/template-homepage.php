@@ -294,7 +294,9 @@ foreach ($main_cats as $m_idx => $main_cat) {
             $forms_doc = [];
             $forms_odf = [];
             $forms_name = [];
-            foreach ($article_slices as $slice) {
+            $revisions_name = [];
+            $revisions_link = [];
+            foreach ($article_slices as $slice) { //slicing
                 trim($slice);
                 //if it's a form:
                 if (preg_match('/^form/', $slice)) {
@@ -321,8 +323,19 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     } else if ($type == "name") {
                         array_push($forms_name, $content);
                     }
+                } //{forms}
+                if (preg_match('/^revision/', $slice)) { // matching revision
+                    $content = trim(explode(' ', $slice)[1]);
+                    if (preg_match('/name/', $slice)) {
+                        array_push($revisions_name, $content);
+                    }
+
+                    if (preg_match('/link/', $slice)) {
+                        array_push($revisions_link, $content);
+                    }
 
                 }
+
             }
             $html_href = function ($link, $type) {
                 return (
@@ -355,6 +368,9 @@ foreach ($main_cats as $m_idx => $main_cat) {
             echo ("<hr class='decree-right-hr'>");
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>法規動態</div>");
+            foreach ($revisions_name as $idx => $revision) {
+                echo ("<a href='$revisions_link[$idx]' class='revisions'>$revision</a>");
+            }
             echo ("</div>"); //decree-right-cell-container
             echo ("<hr class='decree-right-hr'>");
             echo ("<div class='decree-right-cell-container'>");
