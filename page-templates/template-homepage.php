@@ -302,7 +302,8 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     //explode the $slice to title and content
                     $title_content = explode(" ", $slice);
                     $title = $title_content[0];
-                    $content = $title_content[1];
+                    $content = substr($slice, strpos($slice, ":") + 1);
+
                     //remove spaces from both side
                     trim($title);
                     trim($content);
@@ -324,7 +325,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     }
                 } //{forms}
                 if (preg_match('/^revision/', $slice)) { // matching revision
-                    $content = trim(explode(' ', $slice)[1]);
+                    $content = substr($slice, strpos($slice, ":") + 1);
                     if (preg_match('/name/', $slice)) {
                         array_push($revisions_name, $content);
                     }
@@ -367,7 +368,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             echo ("<hr class='decree-right-hr'>");
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>法規動態</div>");
-            foreach ($revisions_name as $idx => $revision) {
+            foreach (array_reverse($revisions_name) as $idx => $revision) {
                 echo ("<a href='$revisions_link[$idx]' class='revisions'>$revision</a>");
             }
             echo ("</div>"); //decree-right-cell-container
