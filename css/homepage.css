@@ -1466,16 +1466,13 @@ img.01 {
     color: white;
     display: inline-block;
     /*margin-right: 50px;*/
-    width: 7vw;
+    width: 8vw;
     font-size: 14px;
     /*vertical-align: middle;*/
     overflow: hidden;
     white-space: nowrap;
 }
 
-.nowrap {
-    flex-wrap: nowrap;
-}
 
 .decree-right-item-container p {
     color: white;
@@ -1599,10 +1596,16 @@ img.01 {
 .details-container p {
     margin: 0;
 }
+.details-container.decree-details p{
+    width: 10vw;
+}
+
 
 .decree-details {
     /* margin: auto 0 auto 50px; */
     /* position: relative; */
+    display:flex; 
+    flex-wrap: wrap;
     color: white;
     font-weight: bold;
     margin-left: 50px;
@@ -1614,6 +1617,7 @@ img.01 {
     font-size: 14px;
     margin-left: 50px;
     flex-direction: column;
+    width: 50%;
     /* align-items: center; */
 }
 
@@ -1621,6 +1625,7 @@ img.01 {
     margin: 0 0 0 0;
     color: #F4A22C;
     font-size: 14px;
+    width: 400%;
 }
 
 .navbox4 {
