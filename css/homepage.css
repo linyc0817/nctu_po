@@ -1353,16 +1353,17 @@ img.01 {
     height: 0;
     padding: 0;
     border-right: 81px solid transparent;
-    border-top: 50vh solid #F4A22C;
+    border-top: 50vh solid rgba(244, 162, 44, 0.7); /*背景透明文字不透明(後面文字會顯示)*/
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
     top: 25%;
-    display: none;
+    display: none;  
+
 }
 
 .navbox1:hover #navid1 {
-    background-color: #F4A22C;
+    background-color: rgba(244, 162, 44, 0.6);
     color: #F2F2F2;
 }
 
@@ -1386,7 +1387,7 @@ img.01 {
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
-    border-top: 50vh solid #F4A22C;
+    border-top: 50vh solid rgba(244, 162, 44, 0.7);;
     z-index: 10;
     position: fixed;
     /*opacity: 0.8;*/
@@ -1776,21 +1777,22 @@ img.01 {
     color: #FFFFFF;
     position: fixed;
     /*bottom: 170px;*/
-    left: 2%;
+    left: 4%;
     font-size: 1.5em;
     line-height: 32px;
     padding: 0;
     margin: 0;
-    top: 35%;
+    top: 30%;
 }
 
 #navboxw1_2 {
     color: #FFFFFF;
     position: absolute;
-    top: 60px;
-    left: 3em;
-    font-size: 1.5em;
-    line-height: 40px;
+    padding: 6%;
+    left: 0em;
+    font-weight: bold;
+    font-size: 1.75em; 
+    line-height: 32px;
 }
 
 /* 本室簡介 intro.css copy */
