@@ -1,14 +1,13 @@
 // nav hover 展開2個直角梯形
 $(document).ready(function () {
     $('div.top').hover(function () {
-        //stupid clock
+        //clock
         if (this.id == 'top_6') {
             return;
         }
 
         $(this).find('div[class^="navbox"]').show();
         $(this).addClass("hover");
-
 
     }, function () {
         //留言板預設行
@@ -150,6 +149,14 @@ $(function () {
 
 //法令類別
 $(function () {
+    $("#prev-page").click((e) => {
+        $('decree-main-container').show();
+        $("#decree-left-flexbox").hide();
+        $("#decree-right-details-container").hide();
+        $(".decree-item").css("color", "#F4A22C");
+    })
+
+
     function showDetails() { //顯示細項
         if (personnel === null || S === null) {
             return;

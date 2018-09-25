@@ -36,7 +36,7 @@
     <div class="navbar">
         <div class="triangle"></div>
 
-        <a href="<?php echo site_url(); ?>"><img src="<?php bloginfo('template_url');?>/image/logo.png" alt="NCTU logo"
+        <a href="<?php echo site_url() ?>/welcome"; ><img src="<?php bloginfo('template_url');?>/image/logo.png" alt="NCTU logo"
                 width="360" height="75" style="position: relative; left: 6%; top: 1.5em;"></a>
 
 
@@ -173,7 +173,7 @@
                     z-index:100;
                     top:25%;
                 ">
-            <img id="prev-page" style="width:30%;"
+            <img id="prev-page" class="mouse-hover" style="width:30%;"
             src="<?php bloginfo('template_url');?>/image/prev-page.png" alt="prev-page-img">
                     <div id="decree-left-flexbox">
 

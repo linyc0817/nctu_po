@@ -1460,11 +1460,10 @@ img.01 {
 
 .decree-right-item-title {
     /*margin-top: 30px;*/
-    display:flex; 
+    display: flex;
     flex-wrap: wrap;
     color: white;
     display: inline-block;
-
     /*margin-right: 50px;*/
     width: 7vw;
     font-size: 14px;
@@ -1472,6 +1471,7 @@ img.01 {
     overflow: hidden;
     white-space: nowrap;
 }
+
 .nowrap {
     flex-wrap: nowrap;
 }
@@ -1489,7 +1489,7 @@ img.01 {
     flex-direction: row;
     font-size: 14px;
     width: 100%;
-    align-items:center;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -1502,23 +1502,25 @@ img.01 {
     color: white;
     margin-right: 90px;
     /*margin-left: 120px;*/
-    font-size: 14px; /*change*/
+    font-size: 14px;
+    /*change*/
     text-align: justify;
-    text-justify:inter-ideograph;
+    text-justify: inter-ideograph;
 }
+
 .decree-form-names-container {
-    display:inline-flex;
+    display: inline-flex;
     flex-wrap: wrap;
     width: 40%;
-    flex-direction:column;
+    flex-direction: column;
     /*margin-right: 50px;*/
 }
 
 }
+
 .decree-forms-container {
     margin-left: 120px;
 }
-
 
 .decree-form-flex-item {
     width: 20vw;
@@ -1576,7 +1578,6 @@ img.01 {
     width: 50vw;
     background-color: #182326;
 }
-
 
 .decree-main-container {
     padding-left: 2.5px;
