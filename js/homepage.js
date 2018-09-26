@@ -250,7 +250,7 @@ $(function () {
 //關於本室右邊選項click
 $(function () {
     $("div[id^='navboxw1_2_']").click((e) => {
-        $("#navboxw1").hide();
+        //$("#navboxw1").hide();
         //$("#navboxw1_2").hide();
     });
 })
