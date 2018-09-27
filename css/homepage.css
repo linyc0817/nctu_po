@@ -1630,7 +1630,7 @@ img.01 {
 .decree-detail-articles {
     margin: 0 0 0 0;
     color: #F4A22C;
-    font-size: 14px;
+    font-size: 12px;
     width: 400%;
 }
 
@@ -1793,19 +1793,19 @@ img.01 {
     line-height: 32px;
     padding: 0;
     margin: 0;
-    top: 30%;
+    top: 26%;
 }
 
 #navboxw1_2 {
     color: #FFFFFF;
     position: absolute;
-    padding: 4%;
+    padding: 3%;
     font-weight: bold;
     font-size: 2em;
-    line-height: 60px;
+    line-height: 57px;
     letter-spacing: 1px;
     top: 30px;
-    left: 5%;
+    left: 2%;
 }
 
 /* 本室簡介 intro.css copy */

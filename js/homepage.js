@@ -264,7 +264,7 @@ $(function () {
         $("#intro_page").hide();
         $("#vision_page").hide();
     }
-    let new_css = { "position": "fixed", "top": "40vh" }; // 移動簡介選單
+    let new_css = { "position": "fixed", "top": "39vh" }; // 移動簡介選單
     $("#navboxw1_2_1").click(() => {
         intro_hide_others();
         $("#intro_page").show();
