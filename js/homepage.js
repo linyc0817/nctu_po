@@ -298,9 +298,12 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('div.h3').hover(function () {
         $(this).find('div.cb3').show();
+        $(".cb3-title").show();
     }, function () {
         $(this).find('div.cb3').hide();
+        $(".cb3-title").hide();
     });
+
 });
 
 $(document).ready(function () {
