@@ -111,7 +111,7 @@
                     <div class="cb3-title">專業</div>
                     <div class="cb3-title">效能</div>
                     <div class="cb3-title">關懷</div>
-                    <div class="cb3">
+                    <div class="cb3 core-value-context">
                         廉潔、公正，具有高尚人格。清廉自持，潔身自好，不收受不當利益，並主動利益迴<br>&nbsp;           避;誠信公平執行公務，以兼顧各方利益之均衡，營造全民良善之生存發展環境。<br><br>
                         忠於憲法及法律，忠於國家及全民;重視榮譽、誠信、誠實並應具道德感與責任感。<br><br>
                         以謙虛的態度，終身學習，積極充實職務所需之知識技能，並熟悉主管法令及相關政<br>&nbsp;&nbsp;策措施，以提供全民第一流的公共服務。<br><br>
