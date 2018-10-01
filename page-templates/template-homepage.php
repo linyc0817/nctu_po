@@ -882,10 +882,7 @@ leftSideBarMsgs();
                     <div class="text1">
                         <p>適用勞基法</p>
                         <p>專區</p>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-
+                        適用勞基法人員（人事代號D/E/F/G/H/Z/Y/V/O/B/Q第三階段/校內外學生及校外人士之本校勞動型兼任助王或臨時工）
                     </div>
                 </div>
             </div>
@@ -898,17 +895,19 @@ leftSideBarMsgs();
                     <div class="text2">
                         <p>外籍教職員</p>
                         <p>專區</p>
+                        適用對象：本校外籍人士
                     </div>
                 </div>
             </div>
 
             <div class="pic3">
                 <div class="picline3"></div>
-                <div class="img3 ">
+                <div class="img3">
                     <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/03.png" alt="03">
                     <div class="text3">
                         <p>兼任教師</p>
                         <p>專區</p>
+                        適用對象：本校兼任教師（人事代號PTxxx）
                     </div>
                 </div>
             </div>
@@ -920,6 +919,9 @@ leftSideBarMsgs();
                     <div class="text4">
                         <p>學習與勞動</p>
                         <p>權益專區</p>
+                        適用對象：校內外學生
+
+
                     </div>
                 </div>
             </div>
@@ -932,6 +934,7 @@ leftSideBarMsgs();
                     <div class="text5">
                         <p>教師升等</p>
                         <p>專區</p>
+                        適用對象：本校教師（人事代號T/TR/XT/XC）
                     </div>
 
                 </div>
@@ -944,6 +947,8 @@ leftSideBarMsgs();
                     <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/06.png" alt="06">
                     <div class="text6">
                         <p>退休專區</p>
+                        適用對象：已退休或待退休之公務員（人事代號T/TR/TS/S/L/P）
+
                     </div>
                 </div>
             </div>
@@ -955,8 +960,8 @@ leftSideBarMsgs();
 
                     <div class="text7">
                         <p>福利專區 </p>
-
                         <p>含自強康樂委員會</p>
+                        適用對象：本校教職員工（自強康樂委員會適用對象：T/TR/TS/XT/XC/XB/X/S/L/M/P/D/E/F/G/B/J）
 
                     </div>
                 </div>
