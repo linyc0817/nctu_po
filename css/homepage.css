@@ -1884,7 +1884,7 @@ img.01 {
     position: absolute;
     top: 28vh;
     left: 5vw;
-    font-size: 0.6em;
+    font-size: 0.5em;
     line-height: 50px;
     display: none;
 }
@@ -1918,6 +1918,15 @@ img.01 {
 }
 
 .cb3 {
+    color: #FFFFFF;
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+    font-size: 0.5em;
+    /*line-height: 50px;*/
+    display: none;
+}
+.cb3.core-value-context{
     color: #FFFFFF;
     position: absolute;
     width: 200%;
@@ -1971,7 +1980,7 @@ img.01 {
     position: absolute;
     top: 28vh;
     left: 5vw;
-    font-size: 0.9em;
+    font-size: 0.5em;
     line-height: 50px;
     display: none;
 }
