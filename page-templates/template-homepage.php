@@ -157,7 +157,7 @@
         </div>
         <div class="top" id="top_2">
             <div id="nav2">
-                <div id="navid2">訊息公告</div>
+                <div id="navid2" >訊息公告</div>
             </div>
             <div class="navbox2"></div>
             <div class="navbox2_2"></div>
