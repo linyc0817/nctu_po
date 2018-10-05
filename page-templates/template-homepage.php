@@ -80,25 +80,35 @@
                         <div>學校地圖</div>
                         <div>Google Map</div>
                         <div>聯外交通資訊</div>
+
                     </div>
-                    <div id="intro_position_left_font">本室位於<br>
+                    <div id="intro_position_left_font">
+                        本室位於<br>
                         交通大學光復校區<br>
                         行政大樓 二樓
                     </div>
-                    <div class="position_page pp1" style="display:none">
 
-                    </div>
-                    <div class="position_page pp2" style="display:none">
-                    </div>
-                    <div class="position_page pp3" style="background-color:blue">
-                        <div id="self-driving">
 
+                    <div class="position_page pp1"  style="background-color:blue">
+                        <div class="pp1_photo1">
+                            <div class="pp1_photo_photo">
+                                <img style="width: 100% " src="https://i.screenshot.net/5dr30c1">
+                            </div>
+                            <div class="pp1_photo_font">
+                                光復校區位置分佈圖
+                            </div>
                         </div>
-                        <div id="public-transport">
-
-                        </div>
+                        <div class="pp1_photo2">
+                            <div class="pp1_photo_photo">
+                                <img style="width: 100%" src="https://i.screenshot.net/8gjmxa4">
+                            </div>
+                            <div class="pp1_photo_font">
+                                行政大樓二樓平面圖
+                            </div>
+                        </div>                        
                     </div>
                     <div class="position_page pp2">
+
                     </div>
                 </div>
                 <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
