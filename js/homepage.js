@@ -284,9 +284,9 @@ $(function () {
 //簡介區的圓圈
 $(document).ready(function () {
     $('div.h1').hover(function () {
-        $(this).find('div.cb1').show();
+        $('.cb1').show();
     }, function () {
-        $(this).find('div.cb1').hide();
+        $('.cb1').hide();
     });
 });
 
@@ -300,10 +300,12 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('div.h3').hover(function () {
-        $(this).find('div.cb3').show();
+        $('.core-value-context').show();
+        $('.cb3').show();
         $(".cb3-title").show();
     }, function () {
-        $(this).find('div.cb3').hide();
+        $('.core-value-context').hide();
+        $('.cb3').hide();
         $(".cb3-title").hide();
     });
 
@@ -311,9 +313,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('div.h4').hover(function () {
-        $(this).find('div.cb4').show();
+        $('.cb4').show();
     }, function () {
-        $(this).find('div.cb4').hide();
+        $('.cb4').hide();
     });
 });
 //# 

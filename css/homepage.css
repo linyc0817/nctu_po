@@ -1803,7 +1803,7 @@ img.01 {
     font-size: 2em;
     line-height: 57px;
     letter-spacing: 1px;
-    top: 30px;
+    top: 7vh;
     left: 2%;
 }
 
@@ -1846,7 +1846,7 @@ img.01 {
     position: absolute;
     top: 28vh;
     left: 5vw;
-    font-size: 0.5em;
+    font-size: 1.5em;
     line-height: 50px;
     display: none;
 }
@@ -1884,7 +1884,7 @@ img.01 {
     position: absolute;
     top: 28vh;
     left: 5vw;
-    font-size: 0.5em;
+    font-size: 1.5em;
     line-height: 50px;
     display: none;
 }
@@ -1922,25 +1922,26 @@ img.01 {
     position: absolute;
     top: 28vh;
     left: 5vw;
-    font-size: 0.5em;
-    /*line-height: 50px;*/
+    font-size: 1.5em;
+    line-height: 50px;
     display: none;
 }
-.cb3.core-value-context{
+.core-value-context{
     color: #FFFFFF;
     position: absolute;
     width: 200%;
-    top: 180px;
+    top: 18vh;
     left: 10vw;
-    font-size: 0.8em;
+    font-size: 1.3em;
     display: none;
 }
 .cb3-title {
     left: 3vw;
     position:relative;
     color: #FFFFFF;
-    top: 160px;
-    padding:13px;
+    top: 13vh;
+    font-size: 1.7em;
+    line-height: 63px;
 }
 
 .cb3-title {
@@ -1980,7 +1981,7 @@ img.01 {
     position: absolute;
     top: 28vh;
     left: 5vw;
-    font-size: 0.5em;
+    font-size: 1.5em;
     line-height: 50px;
     display: none;
 }
