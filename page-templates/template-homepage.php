@@ -76,7 +76,12 @@
             </div>
             <div class="navbox1_2">
                 <div id="intro_position" class="_hide">
-                    aaaaa
+                    <div id="intro_position_slider">
+                        <div>學校地圖</div>
+                        <div>Google Map</div>
+                        <div>聯外交通資訊</div>
+                        <div class="position_page pp1"></div>
+                    </div>
                 </div>
                 <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
                     <div class="h1" id="h1">
