@@ -266,6 +266,7 @@ $(function () {
     function intro_hide_others() {
         $("#intro_page").hide();
         $("#vision_page").hide();
+        $("#intro_position").hide();
     }
     let new_css = { "position": "fixed", "top": "39vh" }; // 移動簡介選單
     $("#navboxw1_2_1").click(() => {
@@ -276,6 +277,11 @@ $(function () {
     $("#navboxw1_2_4").click(() => {
         intro_hide_others();
         $("#vision_page").show();
+        change_css("#navboxw1_2", new_css);
+    })
+    $("#navboxw1_2_2").click(() => {
+        intro_hide_others();
+        $("#intro_position").show();
         change_css("#navboxw1_2", new_css);
     })
 

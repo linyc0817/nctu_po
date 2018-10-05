@@ -32,7 +32,6 @@
 </script>
 
 <body>
-
     <div class="navbar">
         <div class="triangle"></div>
 
@@ -76,6 +75,9 @@
                 </div>
             </div>
             <div class="navbox1_2">
+                <div id="intro_position" class="_hide">
+                    aaaaa
+                </div>
                 <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
                     <div class="h1" id="h1">
                     <div class="circle1">
@@ -90,7 +92,6 @@
                     <div class="circle2">
                         <div id="cw2">現況</div>
                     </div>
-
                     </div>
                     <div class="cb2">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>
                     <div class="h3" id="h3">
@@ -109,7 +110,8 @@
                     </div>
                     <div class="cb4">本校人事服務工作的主要任務，乃依據人事法令及學校人事規章，配合校務發<br>展需要，善盡幕僚職責，支援各單位，達成校務發展目標;並維護職員同仁合<br>法權益，建立顧客導向之服務理念與和諧人際關係，以提升人事服務效能。</div>
                     </div>
-                
+                </div>
+
                 <div id="vision_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
                     <div class="h1" id="h1">
                     <div class="circle1">
@@ -180,13 +182,6 @@
       <div id="navboxw1_7">工 作 成 果</div> -->
                 </div>
             </div>
-        </div>
-        <div class="top" id="top_2">
-            <div id="nav2">
-                <div id="navid2" >訊息公告</div>
-            </div>
-            <div class="navbox2"></div>
-            <div class="navbox2_2"></div>
         </div>
 
         <div class="top" id="top_3">
