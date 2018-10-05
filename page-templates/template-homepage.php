@@ -83,9 +83,12 @@
                     </div>
                     </div>
                     <div class="h2" id="h2">
-                    <div class="circle2"><div id="cw2">現況</div></div>
-                    <div class="cb2">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>
+                    <div class="circle2">
+                        <div id="cw2">現況</div>
                     </div>
+
+                    </div>
+                    <div class="cb2">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>
                     <div class="h3" id="h3">
                     <div class="circle3"><div id="cw3">組織</div></div>
                     <div class="cb3">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>

@@ -8,6 +8,8 @@ $(document).ready(function () {
 
         $(this).find('div[class^="navbox"]').show();
         $(this).addClass("hover");
+        $(".left-side-bar-bg").hide();
+
 
     }, function () {
         //留言板預設行
@@ -19,6 +21,7 @@ $(document).ready(function () {
         //
         $(this).find('div[class^="navbox"]').hide();
         $(this).removeClass("hover");
+        $(".left-side-bar-bg").show();
     });
 
 });
@@ -289,9 +292,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('div.h2').hover(function () {
-        $(this).find('div.cb2').show();
+        $('.cb2').show();
     }, function () {
-        $(this).find('div.cb2').hide();
+        $('.cb2').hide();
     });
 });
 
