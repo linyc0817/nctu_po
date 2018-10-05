@@ -84,6 +84,7 @@
                     <div id="intro_position_left_font">本室位於<br>
                         交通大學光復校區<br>
                         行政大樓 二樓
+                    </div>
                     <div class="position_page pp1" style="display:none">
 
                     </div>
@@ -97,9 +98,8 @@
 
                         </div>
                     </div>
-                    </div>
                     <div class="position_page pp2">
-
+                    </div>
                 </div>
                 <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
                     <div class="h1" id="h1">
