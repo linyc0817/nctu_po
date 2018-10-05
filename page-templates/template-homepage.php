@@ -83,7 +83,10 @@
 
                     </div>
                     <div class="position_page pp1"  style="background-color:blue">
-
+                        <div>本室位於<br>
+                        交通大學光復校區<br>
+                        行政大樓 二樓
+                        </div>
                     </div>
                     <div class="position_page pp2">
 
