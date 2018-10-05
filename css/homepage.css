@@ -1818,6 +1818,93 @@ img.01 {
     height: 40vh;
 }
 
+.circle5 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #F4A22C;
+    /* Can be set to transparent */
+    border: 1px #FFFFFF solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 12vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle6 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #F4A22C;
+    /* Can be set to transparent */
+    border: 1px #FFFFFF solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 32vw;
+    align-items: center;
+    justify-content: center;
+}
+.circle7 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #F4A22C;
+    /* Can be set to transparent */
+    border: 1px #FFFFFF solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 52vw;
+    align-items: center;
+    justify-content: center;
+}
+
+/*透明圓圈*/
+.circle5-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 12vw;
+    align-items: center;
+    justify-content: center;
+}
+.circle5-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 32vw;
+    align-items: center;
+    justify-content: center;
+}
+.circle5-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 52vw;
+    align-items: center;
+    justify-content: center;
+}
 /* 本室簡介 intro.css copy */
 
 .circle1 {

@@ -77,10 +77,16 @@
             <div class="navbox1_2">
                 <div id="intro_position" class="_hide">
                     <div id="intro_position_slider_container" style="background-color:red">
-                        <div>學校地圖</div>
-                        <div>Google Map</div>
-                        <div>聯外交通資訊</div>
-
+                        <div style="position:absolute; top: 2vh;margin-left: 11vw;">學校地圖</div>
+                        <div class="circle5"></div>
+                        <div style="position:absolute; top: 2vh;margin-left: 31vw;">Google Map
+                        </div>
+                        <div class="circle6"></div>
+                        <div style="position:absolute; top: 2vh;margin-left: 51vw;" : ">聯外交通資訊</div>
+                        <div class="circle7"></div>
+                        <!--<div class="circle5-2"></div>-->
+                        <div style="position:absolute; top: 6.5vh; left:13vw; width: 40vw;height: 1.5px; background:#F4A22C"></div>
+               
                     </div>
                     <div class="position_page pp1"  style="background-color:blue">
 
