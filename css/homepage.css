@@ -1807,6 +1807,17 @@ img.01 {
     left: 2%;
 }
 
+/* 本室位置 */
+
+#intro_position_slider_container {
+    position: relative;
+    height: 10vh;
+}
+
+.position_page {
+    height: 40vh;
+}
+
 /* 本室簡介 intro.css copy */
 
 .circle1 {
@@ -1926,7 +1937,8 @@ img.01 {
     line-height: 50px;
     display: none;
 }
-.core-value-context{
+
+.core-value-context {
     color: #FFFFFF;
     position: absolute;
     width: 200%;
@@ -1935,9 +1947,10 @@ img.01 {
     font-size: 1.3em;
     display: none;
 }
+
 .cb3-title {
     left: 3vw;
-    position:relative;
+    position: relative;
     color: #FFFFFF;
     top: 13vh;
     font-size: 1.7em;

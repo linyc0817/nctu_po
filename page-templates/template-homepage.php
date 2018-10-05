@@ -76,11 +76,17 @@
             </div>
             <div class="navbox1_2">
                 <div id="intro_position" class="_hide">
-                    <div id="intro_position_slider">
+                    <div id="intro_position_slider_container" style="background-color:red">
                         <div>學校地圖</div>
                         <div>Google Map</div>
                         <div>聯外交通資訊</div>
-                        <div class="position_page pp1"></div>
+
+                    </div>
+                    <div class="position_page pp1"  style="background-color:blue">
+
+                    </div>
+                    <div class="position_page pp2">
+
                     </div>
                 </div>
                 <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
@@ -92,7 +98,7 @@
                     </div>
                     <div class="cb1">本校人事室係依據人事管理條例、大學法及本校組織規程而設置，掌理本校組織編制，教職員聘(任)免、<br>還調、敘薪、考核、獎懲、差假勤惰、訓練進修、待遇、福利、保險、退休、撫卹、人事資料管理等事務。
                     </div>
-                   
+
                     <div class="h2" id="h2">
                     <div class="circle2">
                         <div id="cw2">現況</div>
@@ -106,7 +112,7 @@
 
                     </div>
                     <div class="cb3">人事室現有同仁21人，置主任1人，綜理人事業務，並分設第一組、第二組辦<br>事，各組置組長1人。</div>
-                    
+
                     <div class="h4" id="h4">
                     <div class="circle4">
                         <div id="cw4">目標</div>
@@ -132,7 +138,7 @@
 
                     </div>
                     <div class="cb2">一、以前瞻創新之思維，建立完善的人事體制。<br>二、以專業精進之精神，提升服務的品質效能。<br>三、以關懷同理之熱誠，營造溫馨的校園環境。</div>
-                    
+
                     <div class="h3" id="h3">
                     <div class="circle3">
                         <div id="cw3">核心價值</div>
@@ -151,7 +157,7 @@
                         運用有效方法，簡化行政程序;研修相關法令、措施應符合成本效益要求;發揮執行<br>&nbsp;&nbsp;力，以提高行政效率與工作績效，達成政策目標。<br><br>
                         時時以民眾福祉為念，親切提供服務;對人民之需要及所遭遇之困難與問題，能以同<br>&nbsp;&nbsp;理心設身處地著想，並提供必要之協助與照護，以增進其利益。
                     </div>
-                    
+
                 </div>
                 <!-- hover出梯形二 -->
                 <div id="navboxw1_2">
