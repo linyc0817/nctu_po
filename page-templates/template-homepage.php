@@ -87,6 +87,11 @@
                         <!--<div class="circle5-2"></div>-->
                         <div style="position:absolute; top: 6.5vh; left:13vw; width: 40vw;height: 1.5px; background:#F4A22C"></div>
                
+                    <div id="intro_position_slider_container" style="border: 1px solid red">
+                        <div>學校地圖</div>
+                        <div>Google Map</div>
+                        <div>聯外交通資訊</div>
+
                     </div>
                     <div id="intro_position_left_font">
                         本室位於<br>
@@ -95,7 +100,7 @@
                     </div>
 
 
-                    <div class="position_page pp1"  style="background-color:blue">
+                    <div class="position_page pp1"  style="border: 1px solid red">
                         <div class="pp1_photo1">
                             <div class="pp1_photo_photo">
                                 <img style="width: 100% " src="https://i.screenshot.net/5dr30c1">
@@ -111,7 +116,7 @@
                             <div class="pp1_photo_font">
                                 行政大樓二樓平面圖
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="position_page pp2">
 
@@ -872,7 +877,7 @@ function leftSideBarMsgs()
 
 
                         </div>
-                        <div class="left-side-bar-element ">
+                        <div class="left-side-bar-element" id="calendar-msgs">
                             動態行事曆
                         </div>
                         <div class="left-side-bar-element ">
@@ -882,18 +887,11 @@ function leftSideBarMsgs()
                     </div>
                 </div>
                 <div class="right-bg">
-                    <div id="left-msgs" style="
-    position: fixed;
-    top: 220px;
-    left:345px;
-">
-                        <?php
-leftSideBarMsgs();
-?>
+                    <div id="left-msgs" style="position: fixed;top: 30vh;left:345px;">
+                        <?php leftSideBarMsgs();?>
                     </div>
-
-
                 </div>
+                <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw; position :absolute; left:25vw; display:none;" frameborder="0" scrolling="no"></iframe>
             </div>
 
 

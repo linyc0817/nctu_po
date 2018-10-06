@@ -94,6 +94,11 @@ $(function () {
         } else {
             $(".friendSchools-msgs").css("display", 'none');
         }
+        if (this.id == "calendar-msgs") {
+            $("#msg-calender").css("display", 'block');
+        } else {
+            $("#msg-calender").css("display", 'none');
+        }
     })
 
     $("#close-button").click(() => {
@@ -101,6 +106,8 @@ $(function () {
         $(".right-bg").css("display", "none");
         $("#close-button").css("display", 'none');
     })
+
+    //行事曆
 
 })
 
@@ -268,7 +275,7 @@ $(function () {
         $("#vision_page").hide();
         $("#intro_position").hide();
     }
-    let new_css = { "position": "fixed", "top": "40%" }; // 移動簡介選單
+    let new_css = { "position": "fixed", "top": "" }; // 移動簡介選單
     $("#navboxw1_2_1").click(() => {
         intro_hide_others();
         $("#intro_page").show();
