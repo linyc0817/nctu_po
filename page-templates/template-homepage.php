@@ -76,19 +76,19 @@
             </div>
             <div class="navbox1_2">
                 <div id="intro_position" class="_hide">
-                    <div id="intro_position_slider_container" style="background-color:red">
+                    <div id="intro_position_slider_container">
                         <div style="position:absolute; top: 2vh;margin-left: 11vw;">學校地圖</div>
-                        <div class="circle5"></div>
+                        <div id="school_map_circle" class="circle5 mouse-hover"></div>
                         <div style="position:absolute; top: 2vh;margin-left: 31vw;">Google Map
                         </div>
-                        <div class="circle6"></div>
+                        <div id="google_map_circle" class="circle6 mouse-hover"></div>
                         <div style="position:absolute; top: 2vh;margin-left: 51vw;" : ">聯外交通資訊</div>
-                        <div class="circle7"></div>
+                        <div id="transport_circle" class="circle7 mouse-hover"></div>
                         <!--<div class="circle5-2"></div>-->
                         <div style="position:absolute; top: 6.5vh; left:13vw; width: 40vw;height: 1.5px; background:#F4A22C">
-                            
+
                         </div>
-               
+
                     </div>
 
                     <div id="intro_position_left_font">
@@ -98,23 +98,23 @@
                     </div>
 
 
-                    <div class="position_page pp1"  style="background-color:blue">
+                    <div class="position_page pp1">
                         <div class="pp1_photo1">
-                            <div class="pp1_photo_photo">
-                                <img style="width: 100% " src="https://i.screenshot.net/5dr30c1">
+                            <div class="pp1_photo_photo mouse-hover">
+                                <img style="width: 100% "  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
                             </div>
                             <div class="pp1_photo_font">
                                 光復校區位置分佈圖
                             </div>
                         </div>
-                        <div class="pp1_photo2">
+                        <div class="pp1_photo2 mouse-hover">
                             <div class="pp1_photo_photo">
-                                <img style="width: 100%" src="https://i.screenshot.net/8gjmxa4">
+                                <img style="width: 100%"  src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" >
                             </div>
                             <div class="pp1_photo_font">
                                 行政大樓二樓平面圖
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="position_page pp2">
 

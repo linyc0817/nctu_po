@@ -1875,7 +1875,6 @@ img.01 {
     height: 21px;
     background-color: #F4A22C;
     /* Can be set to transparent */
-    border: 1px #FFFFFF solid;
     -webkit-border-radius: 20px;
     position: absolute;
     top: 5vh;
@@ -1890,7 +1889,6 @@ img.01 {
     height: 21px;
     background-color: #F4A22C;
     /* Can be set to transparent */
-    border: 1px #FFFFFF solid;
     -webkit-border-radius: 20px;
     position: absolute;
     top: 5vh;
@@ -1898,6 +1896,7 @@ img.01 {
     align-items: center;
     justify-content: center;
 }
+
 .circle7 {
     display: flex;
     width: 21px;
@@ -1914,6 +1913,7 @@ img.01 {
 }
 
 /*透明圓圈*/
+
 .circle5-2 {
     display: flex;
     width: 21px;
@@ -1928,6 +1928,7 @@ img.01 {
     align-items: center;
     justify-content: center;
 }
+
 .circle5-2 {
     display: flex;
     width: 21px;
@@ -1942,6 +1943,7 @@ img.01 {
     align-items: center;
     justify-content: center;
 }
+
 .circle5-2 {
     display: flex;
     width: 21px;
@@ -1956,6 +1958,7 @@ img.01 {
     align-items: center;
     justify-content: center;
 }
+
 /* 本室簡介 intro.css copy */
 
 .circle1 {
