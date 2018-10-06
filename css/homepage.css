@@ -1818,6 +1818,59 @@ img.01 {
     height: 40vh;
 }
 
+#self-driving {
+    background-color: yellow;
+}
+
+#public-transport {
+    background-color: green;
+}
+
+
+
+#intro_position_left_font{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    opacity: 0.8;
+    top:5em;
+    left: 2%;
+}
+
+.pp1_photo1{
+    position: absolute;
+    left: 20%;
+    width: 25em;
+    height: 20em;
+    top:8em;
+    opacity: 0.6;
+}
+
+.pp1_photo2{
+    position: absolute;
+    left: 60%;
+    width: 25em;
+    height: 20em;
+    top:8em;
+    opacity: 0.6;
+}
+
+.pp1_photo_photo{
+    border:3px white solid;
+}
+
+.pp1_photo_font{
+    position: relative;
+    color: #FFFFFF;
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align:center;
+}
+
+/*end of 本室位置*/
+
 .circle5 {
     display: flex;
     width: 21px;

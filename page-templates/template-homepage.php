@@ -88,8 +88,30 @@
                         <div style="position:absolute; top: 6.5vh; left:13vw; width: 40vw;height: 1.5px; background:#F4A22C"></div>
                
                     </div>
-                    <div class="position_page pp1"  style="background-color:blue">
+                    <div id="intro_position_left_font">
+                        本室位於<br>
+                        交通大學光復校區<br>
+                        行政大樓 二樓
+                    </div>
 
+
+                    <div class="position_page pp1"  style="background-color:blue">
+                        <div class="pp1_photo1">
+                            <div class="pp1_photo_photo">
+                                <img style="width: 100% " src="https://i.screenshot.net/5dr30c1">
+                            </div>
+                            <div class="pp1_photo_font">
+                                光復校區位置分佈圖
+                            </div>
+                        </div>
+                        <div class="pp1_photo2">
+                            <div class="pp1_photo_photo">
+                                <img style="width: 100%" src="https://i.screenshot.net/8gjmxa4">
+                            </div>
+                            <div class="pp1_photo_font">
+                                行政大樓二樓平面圖
+                            </div>
+                        </div>                        
                     </div>
                     <div class="position_page pp2">
 
