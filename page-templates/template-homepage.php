@@ -78,17 +78,17 @@
                 <div id="intro_position" class="_hide">
                     <div id="intro_position_slider_container">
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">學校地圖</div>
-                        <div id="school_map_circle" class="circle5 mouse-hover"></div>
+                        <div id="school_map_circle" class="circle5-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">Google Map
                         </div>
-                        <div id="google_map_circle" class="circle6 mouse-hover"></div>
+                        <div id="google_map_circle" class="circle6-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">聯外交通資訊</div>
-                        <div id="transport_circle" class="circle7 mouse-hover"></div>
-                        <!--<div class="circle5-2"></div>-->
-                        <div style="position:absolute; top: 6.5vh; left:13vw; width: 40vw;height: 1.5px; background:#F4A22C">
-
+                        <div id="transport_circle" class="circle7-2 mouse-hover"></div>
+                        <div class="circle5-2"></div>
+                        <div style="position:absolute; top: 6.5vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
                         </div>
-
+                        <div style="position:absolute; top: 6.5vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        </div>
                     </div>
 
                     <div id="intro_position_left_font">

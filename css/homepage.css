@@ -1903,7 +1903,6 @@ img.01 {
     height: 21px;
     background-color: #F4A22C;
     /* Can be set to transparent */
-    border: 1px #FFFFFF solid;
     -webkit-border-radius: 20px;
     position: absolute;
     top: 5vh;
@@ -1929,7 +1928,7 @@ img.01 {
     justify-content: center;
 }
 
-.circle5-2 {
+.circle6-2 {
     display: flex;
     width: 21px;
     height: 21px;
@@ -1944,7 +1943,7 @@ img.01 {
     justify-content: center;
 }
 
-.circle5-2 {
+.circle7-2 {
     display: flex;
     width: 21px;
     height: 21px;
