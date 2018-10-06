@@ -77,12 +77,12 @@
             <div class="navbox1_2">
                 <div id="intro_position" class="_hide">
                     <div id="intro_position_slider_container">
-                        <div style="position:absolute; top: 2vh;margin-left: 11vw;">學校地圖</div>
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: black;">學校地圖</div>
                         <div id="school_map_circle" class="circle5 mouse-hover"></div>
-                        <div style="position:absolute; top: 2vh;margin-left: 31vw;">Google Map
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 29vw;color: black;">Google Map
                         </div>
                         <div id="google_map_circle" class="circle6 mouse-hover"></div>
-                        <div style="position:absolute; top: 2vh;margin-left: 51vw;" : ">聯外交通資訊</div>
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 49vw;color: black;" : ">聯外交通資訊</div>
                         <div id="transport_circle" class="circle7 mouse-hover"></div>
                         <!--<div class="circle5-2"></div>-->
                         <div style="position:absolute; top: 6.5vh; left:13vw; width: 40vw;height: 1.5px; background:#F4A22C">
