@@ -886,9 +886,9 @@ function leftSideBarMsgs()
                 </div>
                 <div class="right-bg">
                     <div id="left-msgs" style="
-    position: fixed;
-    top: 220px;
-    left:345px;
+    position: relative;
+    top: 0px;
+    left:100px;
 ">
                         <?php
 leftSideBarMsgs();
