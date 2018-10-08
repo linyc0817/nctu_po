@@ -875,7 +875,7 @@ function leftSideBarMsgs()
 
 
                         </div>
-                        <div class="left-side-bar-element ">
+                        <div id="calendar-msgs" class="left-side-bar-element ">
                             動態行事曆
                         </div>
                         <div class="left-side-bar-element ">
@@ -885,16 +885,11 @@ function leftSideBarMsgs()
                     </div>
                 </div>
                 <div class="right-bg">
-                    <div id="left-msgs" style="
-    position: relative;
-    top: 0px;
-    left:100px;
-">
-                        <?php
-leftSideBarMsgs();
-?>
+                    <div id="left-msgs" style="position: relative;top: 0px;left:100px;">
+                        <?php leftSideBarMsgs();?>
                     </div>
-
+                    <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw; position :absolute; left:25vw; display:none;" frameborder="0" scrolling="no">
+                    </iframe>
 
                 </div>
             </div>
