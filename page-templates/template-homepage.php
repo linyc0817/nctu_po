@@ -897,7 +897,6 @@ leftSideBarMsgs();
 
 
                 </div>
-                <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw; position :absolute; left:25vw; display:none;" frameborder="0" scrolling="no"></iframe>
             </div>
 
 
