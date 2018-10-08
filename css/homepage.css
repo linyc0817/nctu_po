@@ -1518,14 +1518,15 @@ img.01 {
     flex-direction: column;
     /*margin-right: 50px;*/
 }
-.decree-revisions-container{
+
+.decree-revisions-container {
     /*display: inline-flex;
     flex-wrap: wrap;*/
     display: flex;
     width: 40%;
     height: 60px;
     flex-direction: column;
-    overflow-y:auto
+    overflow-y: auto
 }
 
 .decree-form-flex-item {
@@ -1832,8 +1833,8 @@ img.01 {
 
 .pp3 {
     position: absolute;
+    display: none;
 }
-
 
 #self-driving {
     background-color: yellow;
@@ -1981,61 +1982,73 @@ img.01 {
 }
 
 /*聯外交通資訊*/
-#containerself-driving{
+
+#containerself-driving {
     display: flex;
     color: #F4A22C;
     margin-top: 20vh;
     margin-left: 4vh;
 }
-.containerself-driving-left{
+
+.containerself-driving-left {
     margin-left: 1px;
     display: inline-flex;
     font-size: 1.5em;
 }
-.containerself-driving-right{
+
+.containerself-driving-right {
     margin-left: 15px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     font-size: 1.5em;
 }
-#public-transport-container{
+
+#public-transport-container {
     display: flex;
     color: #F4A22C;
     margin-left: 4vh;
     margin-top: 4vh;
 }
-.public-transport-container-left{
+
+.public-transport-container-left {
     margin-left: 1px;
     display: inline-flex;
     font-size: 1.5em;
 }
-.public-transport-container-right{
+
+.public-transport-container-right {
     margin-left: 15px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     font-size: 1.5em;
 }
-#pp3-right{
+
+#pp3-right {
     padding-left: 30px;
     float: left;
     width: 77%;
     position: relative;
 }
-#pp3-left{
+
+#pp3-left {
     float: left;
     width: 23%;
     position: relative;
     border-right: 1px solid white;
 }
-.pp3-right-context{
+
+.pp3-right-context {
     height: 20vh;
     display: none;
-    width:50%;
+    width: 50%;
     left: 50px;
-    color:#F4A22C;
+    color: #F4A22C;
     font-size: 1.5em;
 }
 
+#head-south-context {
+    display: flex;
+}
 
 /* 本室簡介 intro.css copy */
 
