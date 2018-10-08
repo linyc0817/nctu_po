@@ -275,7 +275,7 @@ $(function () {
         $("#vision_page").hide();
         $("#intro_position").hide();
     }
-    let new_css = { "position": "fixed", "top": "" }; // 移動簡介選單
+    let new_css = { "position": "fixed", "top": "40%" }; // 移動簡介選單
     $("#navboxw1_2_1").click(() => {
         intro_hide_others();
         $("#intro_page").show();
@@ -331,6 +331,19 @@ $(document).ready(function () {
         $('.cb4').hide();
     });
 });
-//# 
-
+//本事位置 slider bar control
+$(function () {
+    $("#school_map_circle").click(() => {
+        $(".position_page").hide();
+        $(".position_page.pp1").show();
+    })
+    $("#google_map_circle").click(() => {
+        $(".position_page").hide();
+        $(".position_page.pp2").show();
+    })
+    $("#transport_circle").click(() => {
+        $(".position_page").hide();
+        $(".position_page.pp3").show();
+    })
+})
 

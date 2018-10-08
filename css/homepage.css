@@ -1869,6 +1869,95 @@ img.01 {
 
 /*end of 本室位置*/
 
+.circle5 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #F4A22C;
+    /* Can be set to transparent */
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 12vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle6 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #F4A22C;
+    /* Can be set to transparent */
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 32vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle7 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    background-color: #F4A22C;
+    /* Can be set to transparent */
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 52vw;
+    align-items: center;
+    justify-content: center;
+}
+
+/*透明圓圈*/
+
+.circle5-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 12vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle6-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 32vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle7-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 52vw;
+    align-items: center;
+    justify-content: center;
+}
+
 /* 本室簡介 intro.css copy */
 
 .circle1 {
@@ -1880,7 +1969,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 4vh;
+    top: 2vh;
     left: 5vw;
     align-items: center;
     justify-content: center;
@@ -1922,7 +2011,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 4vh;
+    top: 2vh;
     left: 23vw;
     align-items: center;
     justify-content: center;
@@ -1960,7 +2049,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 4vh;
+    top: 2vh;
     left: 42vw;
     align-items: center;
     justify-content: center;
@@ -2021,7 +2110,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 4vh;
+    top: 2vh;
     left: 60vw;
     align-items: center;
     justify-content: center;
