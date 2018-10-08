@@ -1488,7 +1488,7 @@ img.01 {
 .decree-right-cell-container {
     font-weight: bold;
     display: inline-flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     flex-direction: row;
     font-size: 14px;
     width: 100%;
@@ -1518,11 +1518,11 @@ img.01 {
     flex-direction: column;
     /*margin-right: 50px;*/
 }
-
-}
-
-.decree-forms-container {
-    margin-left: 120px;
+.decree-revisions-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 40%;
+    flex-direction: column;
 }
 
 .decree-form-flex-item {
@@ -1547,6 +1547,7 @@ img.01 {
     position: absolute;
     top: 0;
     display: none;
+    overflow-y: auto;
 }
 
 .personnel-category {

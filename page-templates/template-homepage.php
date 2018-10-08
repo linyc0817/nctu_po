@@ -84,7 +84,7 @@
                         <div id="google_map_circle" class="circle6-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">聯外交通資訊</div>
                         <div id="transport_circle" class="circle7-2 mouse-hover"></div>
-                        <div class="circle5-2"></div>
+                        <!--<div class="circle5-2"></div>-->
                         <div style="position:absolute; top: 6.5vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
                         </div>
                         <div style="position:absolute; top: 6.5vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
@@ -442,9 +442,11 @@ foreach ($main_cats as $m_idx => $main_cat) {
             echo ("<hr class='decree-right-hr'>");
             echo ("<div class='decree-right-cell-container'>");
             echo ("<div class='decree-right-item-title'>法規動態</div>");
+            echo ("<div class='decree-revisions-container'>");
             foreach (array_reverse($revisions_name) as $idx => $revision) {
                 echo ("<a href='$revisions_link[$idx]' class='revisions'>$revision</a>");
             }
+            echo ("</div>");
             echo ("</div>"); //decree-right-cell-container
             echo ("<hr class='decree-right-hr'>");
             echo ("<div class='decree-right-cell-container'>");
