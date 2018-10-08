@@ -78,13 +78,12 @@
                 <div id="intro_position" class="_hide">
                     <div id="intro_position_slider_container">
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">學校地圖</div>
-                        <div id="school_map_circle" class="circle5-2 mouse-hover"></div>
+                        <div id="school_map_circle" class="position-circle circle5-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">Google Map
                         </div>
-                        <div id="google_map_circle" class="circle6-2 mouse-hover"></div>
+                        <div id="google_map_circle" class="position-circle  circle6-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">聯外交通資訊</div>
-                        <div id="transport_circle" class="circle7-2 mouse-hover"></div>
-                        <!--<div class="circle5-2"></div>-->
+                        <div id="transport_circle" class="position-circle  circle7-2 mouse-hover"></div>
                         <div style="position:absolute; top: 6.5vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
                         </div>
                         <div style="position:absolute; top: 6.5vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
@@ -119,6 +118,62 @@
                     <div class="position_page pp2">
 
                     </div>
+                    <div class="position_page pp3">
+                        <div id="pp3-left">
+                            <div id="containerself-driving-">
+                                <div>自行開車
+                                    <div id="head-south" class="mouse-hover">南下</div>
+                                    <div id="head-north" class="mouse-hover">北上</div>
+                                </div>
+                            </div>
+                            <div id="public-transport-container">
+                                <div id="HSR" class="mouse-hover">高鐵</div>
+                                <div id="TRA" class="mouse-hover">台鐵</div>
+                                <div id="caoch" class="mouse-hover">客運</div>
+                            </div>
+                        </div>
+                        <div id="pp3-right">
+                            <div class="pp3-right-context" id="head-south-context">
+                            中山高速公路南下:
+                            台北→中壢→新竹交流道 (靠右)→(左轉入) 大學路 (加油站旁)→交通大學 光復校區
+
+                            第二高速公路南下:
+                            台北→關西→新竹系統交流道→中山高北上 (往台北方向)→新竹交流道 ( 左彎往新竹市區方向)→經光復路 (高速公路下) →(左轉入) 大學路 (加油 站旁)→交通大學光復校區
+                            </div>
+                            <div class="pp3-right-context" id="head-north-context">
+                            中山高速公路北上:
+                            1.台中→中山高北上 (往台北方向)→新竹交流道 (左彎往新竹市區方向)→ 經光復路 (高速公路下)→(左轉入) 大學路 (加油站旁)→交通大學光復校區 2.台中→中山高北上 (往台北方向)→科學園區交流道 (左彎)→園區二路 ( 左彎)→新安路→交通大學光復校區
+                            第二高速公路北上:請於新竹系統處轉接中山高速公路，後續請參考「中 山高速公路北上」走法。
+                            備註: 新竹交流道以集散道路連結為一複合式之交流道，南下車輛由交流 道南下出口駛出後，依續有公道五、光復路、新竹科學園區出口，請由光 復路出口右前方轉入大學路抵達交通大學
+                            </div>
+                            <div class="pp3-right-context" id="HSR-context">
+                            抵高鐵新竹站後，可選擇下列方式轉運至交通大學光復校區。
+                            1.計程車 2.科學園區接駁巴士:於1號月台搭乘橘線科學園區接駁巴士
+                            抵達科技生活館後 轉搭紅線科學園區接駁巴士，即可抵達交通大學
+                            3.公車:於2號月台搭乘新竹客運前往火車站後 再轉搭市內公車至交通大學。
+                            </div>
+                            <div class="pp3-right-context" id="TRA-context">
+                            抵達新竹火車站後，可選擇下列方式轉運至交通大學光復校區。
+                            1.計程車 2.公車:步行至站前民族路上之公車總站轉搭
+                            1路市區公車(約10至15分鐘一班)
+                            (火車站→過溝)
+                            2路市區公車(約60分鐘一班):
+                            (火車站→交通大學)</div>
+                            <div class="pp3-right-context" id="coach-context">
+                            搭乘火車抵達新竹火車站，可選擇下列方式轉運至交通大學光復校區。
+                            1.計程車 2.公車:步行至站前民族路上之公車總站轉搭
+                                1路市區公車(約10至15分鐘一班) 火車站→東門市場→東門國小→公園→學園商場→省中→省商→學府路口→光復中學
+                            →清華大學→過溝(下車)→徒步從大學路走約10分鐘→交通大學光復校區
+                            大眾運輸
+                            高鐵
+                            2路市區公車(約60分鐘一班):
+                            (火車站→交通大學)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="job_page">
+                    asdjasidjsaoi sai
                 </div>
                 <div id="intro_page" class="_hide">   <!-- 點擊展開出右大梯形 -->
                     <div class="h1" id="h1">
@@ -890,7 +945,7 @@ function leftSideBarMsgs()
                     <div id="left-msgs" style="position: relative;top: 0px;left:100px;">
                         <?php leftSideBarMsgs();?>
                     </div>
-                    <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw; position :absolute; left:25vw; display:none;" frameborder="0" scrolling="no">
+                    <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw; position :absolute; left:15vw; display:none;" frameborder="0" scrolling="no">
                     </iframe>
 
                 </div>

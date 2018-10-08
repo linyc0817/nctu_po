@@ -1820,6 +1820,22 @@ img.01 {
 
 .position_page {
     height: 40vh;
+    z-index: 100;
+}
+
+.position_page * {
+    height: 40vh;
+    color: #F4A22C;
+    display: inline-block;
+    position: relative;
+}
+
+.pp3 {
+    position: absolute;
+}
+
+.pp3-right-context {
+    display: none;
 }
 
 #self-driving {
@@ -1960,6 +1976,11 @@ img.01 {
     left: 52vw;
     align-items: center;
     justify-content: center;
+}
+
+.solid-circle {
+    background-color: #F4A22C;
+    opacity: 1;
 }
 
 /* 本室簡介 intro.css copy */

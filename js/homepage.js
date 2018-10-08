@@ -274,6 +274,7 @@ $(function () {
         $("#intro_page").hide();
         $("#vision_page").hide();
         $("#intro_position").hide();
+        $("#jobs_page").hide();
     }
     let new_css = { "position": "fixed", "top": "40%" }; // 移動簡介選單
     $("#navboxw1_2_1").click(() => {
@@ -290,6 +291,12 @@ $(function () {
         intro_hide_others();
         $("#intro_position").show();
         change_css("#navboxw1_2", new_css);
+    })
+    $("#navboxw1_2_3").click(() => {
+        intro_hide_others();
+        $("#jobs_page").show();
+        change_css("#navboxw1_2", new_css);
+
     })
 
 })
@@ -331,19 +338,48 @@ $(document).ready(function () {
         $('.cb4').hide();
     });
 });
-//本事位置 slider bar control
+
 $(function () {
-    $("#school_map_circle").click(() => {
+    //本室位置 slider bar control
+    $("#school_map_circle").click((e) => {
         $(".position_page").hide();
         $(".position_page.pp1").show();
+        $(".position-circle").removeClass('solid-circle');
+        $(e.target).addClass('solid-circle');
     })
-    $("#google_map_circle").click(() => {
+    $("#google_map_circle").click((e) => {
         $(".position_page").hide();
         $(".position_page.pp2").show();
+        $(".position-circle").removeClass('solid-circle');
+        $(e.target).addClass('solid-circle');
     })
-    $("#transport_circle").click(() => {
+    $("#transport_circle").click((e) => {
         $(".position_page").hide();
         $(".position_page.pp3").show();
+        $(".position-circle").removeClass('solid-circle');
+        $(e.target).addClass('solid-circle');
+    })
+
+    // 本室位置 聯外交通資訊
+    $("#head-north").click(() => {
+        $(".pp3-right-context").hide();
+        $("#head-north-context").show();
+    })
+    $("#head-south").click(() => {
+        $(".pp3-right-context").hide();
+        $("#head-south-context").show();
+    })
+    $("#HSR").click(() => {
+        $(".pp3-right-context").hide();
+        $("#HSR-context").show();
+    })
+    $("#TRA").click(() => {
+        $(".pp3-right-context").hide();
+        $("#TRA-context").show();
+    })
+    $("#caoch").click(() => {
+        $(".pp3-right-context").hide();
+        $("#caoch-context").show();
     })
 })
 
