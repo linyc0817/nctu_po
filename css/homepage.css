@@ -1519,10 +1519,13 @@ img.01 {
     /*margin-right: 50px;*/
 }
 .decree-revisions-container{
-    display: inline-flex;
-    flex-wrap: wrap;
+    /*display: inline-flex;
+    flex-wrap: wrap;*/
+    display: flex;
     width: 40%;
+    height: 60px;
     flex-direction: column;
+    overflow-y:auto
 }
 
 .decree-form-flex-item {
