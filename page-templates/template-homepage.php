@@ -76,12 +76,21 @@
             </div>
             <div class="navbox1_2">
                 <div id="intro_position" class="_hide">
-                    <div id="intro_position_slider_container" style="border: 1px solid red">
-                        <div>學校地圖</div>
-                        <div>Google Map</div>
-                        <div>聯外交通資訊</div>
-
+                    <div id="intro_position_slider_container">
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">學校地圖</div>
+                        <div id="school_map_circle" class="circle5-2 mouse-hover"></div>
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">Google Map
+                        </div>
+                        <div id="google_map_circle" class="circle6-2 mouse-hover"></div>
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">聯外交通資訊</div>
+                        <div id="transport_circle" class="circle7-2 mouse-hover"></div>
+                        <div class="circle5-2"></div>
+                        <div style="position:absolute; top: 6.5vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        </div>
+                        <div style="position:absolute; top: 6.5vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        </div>
                     </div>
+
                     <div id="intro_position_left_font">
                         本室位於<br>
                         交通大學光復校區<br>
@@ -89,18 +98,18 @@
                     </div>
 
 
-                    <div class="position_page pp1"  style="border: 1px solid red">
+                    <div class="position_page pp1">
                         <div class="pp1_photo1">
-                            <div class="pp1_photo_photo">
-                                <img style="width: 100% " src="https://i.screenshot.net/5dr30c1">
+                            <div class="pp1_photo_photo mouse-hover">
+                                <img style="width: 100% "  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
                             </div>
                             <div class="pp1_photo_font">
                                 光復校區位置分佈圖
                             </div>
                         </div>
-                        <div class="pp1_photo2">
+                        <div class="pp1_photo2 mouse-hover">
                             <div class="pp1_photo_photo">
-                                <img style="width: 100%" src="https://i.screenshot.net/8gjmxa4">
+                                <img style="width: 100%"  src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" >
                             </div>
                             <div class="pp1_photo_font">
                                 行政大樓二樓平面圖
@@ -866,7 +875,7 @@ function leftSideBarMsgs()
 
 
                         </div>
-                        <div class="left-side-bar-element" id="calendar-msgs">
+                        <div class="left-side-bar-element ">
                             動態行事曆
                         </div>
                         <div class="left-side-bar-element ">
@@ -876,9 +885,17 @@ function leftSideBarMsgs()
                     </div>
                 </div>
                 <div class="right-bg">
-                    <div id="left-msgs" style="position: fixed;top: 30vh;left:345px;">
-                        <?php leftSideBarMsgs();?>
+                    <div id="left-msgs" style="
+    position: relative;
+    top: 0px;
+    left:100px;
+">
+                        <?php
+leftSideBarMsgs();
+?>
                     </div>
+
+
                 </div>
                 <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw; position :absolute; left:25vw; display:none;" frameborder="0" scrolling="no"></iframe>
             </div>
