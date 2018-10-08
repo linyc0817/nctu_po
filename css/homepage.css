@@ -1818,7 +1818,7 @@ img.01 {
     height: 10vh;
 }
 
-.position_page {
+/*.position_page {
     height: 40vh;
     z-index: 100;
 }
@@ -1828,15 +1828,12 @@ img.01 {
     color: #F4A22C;
     display: inline-block;
     position: relative;
-}
+}*/
 
 .pp3 {
     position: absolute;
 }
 
-.pp3-right-context {
-    display: none;
-}
 
 #self-driving {
     background-color: yellow;
@@ -1982,6 +1979,63 @@ img.01 {
     background-color: #F4A22C;
     opacity: 1;
 }
+
+/*聯外交通資訊*/
+#containerself-driving{
+    display: flex;
+    color: #F4A22C;
+    margin-top: 20vh;
+    margin-left: 4vh;
+}
+.containerself-driving-left{
+    margin-left: 1px;
+    display: inline-flex;
+    font-size: 1.5em;
+}
+.containerself-driving-right{
+    margin-left: 15px;
+    display:flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+#public-transport-container{
+    display: flex;
+    color: #F4A22C;
+    margin-left: 4vh;
+    margin-top: 4vh;
+}
+.public-transport-container-left{
+    margin-left: 1px;
+    display: inline-flex;
+    font-size: 1.5em;
+}
+.public-transport-container-right{
+    margin-left: 15px;
+    display:flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+#pp3-right{
+    padding-left: 30px;
+    float: left;
+    width: 77%;
+    position: relative;
+}
+#pp3-left{
+    float: left;
+    width: 23%;
+    position: relative;
+    border-right: 1px solid white;
+}
+.pp3-right-context{
+    height: 20vh;
+    display: flex;
+    width:50%;
+    left: 50px;
+    color:#F4A22C;
+    font-size: 1.5em;
+}
+
 
 /* 本室簡介 intro.css copy */
 
