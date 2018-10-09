@@ -2041,7 +2041,7 @@ img.01 {
 .pp3-right-context {
     height: 20vh;
     display: none;
-    width: 50%;
+    width: 70%;
     left: 50px;
     color: #F4A22C;
     font-size: 1.5em;
@@ -2062,7 +2062,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 2vh;
+    top: 3vh;
     left: 5vw;
     align-items: center;
     justify-content: center;
@@ -2088,7 +2088,7 @@ img.01 {
 .cb1 {
     color: #FFFFFF;
     position: absolute;
-    top: 28vh;
+    top: 23vh;
     left: 5vw;
     font-size: 1.5em;
     line-height: 50px;
@@ -2104,7 +2104,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 2vh;
+    top: 3vh;
     left: 23vw;
     align-items: center;
     justify-content: center;
@@ -2126,7 +2126,7 @@ img.01 {
 .cb2 {
     color: #FFFFFF;
     position: absolute;
-    top: 28vh;
+    top: 23vh;
     left: 5vw;
     font-size: 1.5em;
     line-height: 50px;
@@ -2142,7 +2142,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 2vh;
+    top: 3vh;
     left: 42vw;
     align-items: center;
     justify-content: center;
@@ -2164,7 +2164,7 @@ img.01 {
 .cb3 {
     color: #FFFFFF;
     position: absolute;
-    top: 28vh;
+    top: 23vh;
     left: 5vw;
     font-size: 1.5em;
     line-height: 50px;
@@ -2174,23 +2174,26 @@ img.01 {
 .core-value-context {
     color: #FFFFFF;
     position: absolute;
-    width: 200%;
+    width: 100%;
     top: 18vh;
-    left: 10vw;
+    left: 15vw;
     font-size: 1.3em;
+    line-height: 1.375em;
+    letter-spacing: 0.01em;
     display: none;
 }
 
 .cb3-title {
-    left: 3vw;
+    font-family: ．Noto Sans CJK TC Medium;
+    left: 8vw;
     position: relative;
     color: #FFFFFF;
-    top: 13vh;
-    font-size: 1.7em;
-    line-height: 63px;
-}
-
-.cb3-title {
+    top: 14vh;
+    font-size: 1.8em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1.375em;
+    letter-spacing: 0.01em;
     display: none;
 }
 
@@ -2203,7 +2206,7 @@ img.01 {
     border: 2px #FFFFFF solid;
     -webkit-border-radius: 100px;
     position: absolute;
-    top: 2vh;
+    top: 3vh;
     left: 60vw;
     align-items: center;
     justify-content: center;
@@ -2225,7 +2228,7 @@ img.01 {
 .cb4 {
     color: #FFFFFF;
     position: absolute;
-    top: 28vh;
+    top: 23vh;
     left: 5vw;
     font-size: 1.5em;
     line-height: 50px;
