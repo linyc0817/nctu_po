@@ -78,7 +78,7 @@
                 <div id="intro_position" class="_hide">
                     <div id="intro_position_slider_container">
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">學校地圖</div>
-                        <div id="school_map_circle" class="position-circle circle5-2 mouse-hover"></div>
+                        <div id="school_map_circle" class="position-circle circle5-2 mouse-hover solid-circle"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">Google Map
                         </div>
                         <div id="google_map_circle" class="position-circle  circle6-2 mouse-hover"></div>

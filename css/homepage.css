@@ -74,6 +74,7 @@ hr-custom {
 }
 
 .right-bg {
+    padding-top: 15px;
     position: relative;
     display: none;
     height: 100%;
@@ -1529,7 +1530,6 @@ img.01 {
     overflow-y: auto
 }
 
-
 .decree-form-flex-item {
     width: 20vw;
 }
@@ -1807,7 +1807,7 @@ img.01 {
     padding: 3%;
     font-weight: bold;
     font-size: 2em;
-    line-height: 57px;
+    line-height: 40px;
     letter-spacing: 1px;
     top: 7vh;
     left: 2%;
@@ -2045,6 +2045,10 @@ img.01 {
     left: 50px;
     color: #F4A22C;
     font-size: 1.5em;
+}
+
+#head-south {
+    color: white;
 }
 
 #head-south-context {
