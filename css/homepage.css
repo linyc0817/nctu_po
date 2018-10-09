@@ -1832,11 +1832,6 @@ img.01 {
     position: relative;
 }*/
 
-.pp3 {
-    position: absolute;
-    display: none;
-}
-
 #self-driving {
     background-color: yellow;
 }
@@ -2024,6 +2019,12 @@ img.01 {
     font-size: 1.5em;
 }
 
+.pp3 {
+    position: absolute;
+    display: none;
+    width: 80vw;
+}
+
 #pp3-right {
     padding-left: 30px;
     float: left;
@@ -2042,7 +2043,7 @@ img.01 {
     height: 20vh;
     display: none;
     width: 70%;
-    left: 50px;
+    left: 50%;
     color: #F4A22C;
     font-size: 1.5em;
 }
