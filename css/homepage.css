@@ -122,7 +122,7 @@ img#close-button:hover {
 
 .left-side-bar-element {
     font-family: Noto Sans CJK TC Medium;
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 2.5em;
     letter-spacing: 0.2em;
     color: #F4A22C;
@@ -131,7 +131,8 @@ img#close-button:hover {
     display: inline-block;
     position: relative;
     text-align: left;
-    margin-top: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     white-space: nowrap;
     width: -webkit-fit-content;
 }
@@ -1797,7 +1798,7 @@ img.01 {
     font-size: 1.5em;
     line-height: 32px;
     padding: 0;
-    margin: 0;
+    margin:0;
     top: 26%;
 }
 
@@ -1807,7 +1808,7 @@ img.01 {
     padding: 3%;
     font-weight: bold;
     font-size: 2em;
-    line-height: 40px;
+    line-height: 50px;
     letter-spacing: 1px;
     top: 7vh;
     left: 2%;
@@ -1850,35 +1851,112 @@ img.01 {
     top: 5em;
     left: 2%;
 }
+/*放大圖片的規格*/
+/*放大後上部*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) 中部*/
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+/* Caption of Modal Image 下部*/
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+/*圖片動畫*/
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
 
-.pp1_photo1 {
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+/* The Close Button 關閉鈕 */
+.close {
     position: absolute;
-    left: 20%;
-    width: 25em;
-    height: 20em;
-    top: 8em;
-    opacity: 0.6;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.pp1_photo2 {
-    position: absolute;
-    left: 60%;
-    width: 25em;
-    height: 20em;
-    top: 8em;
-    opacity: 0.6;
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.pp1_photo_photo {
-    border: 3px white solid;
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
 
+/*本市位置圖片class*/
+.image-map{
+    width:30%;
+    margin-right:7%;
+}
+#pp1_photo1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:20%;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 3vh;
+}
+img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#pp1_photo2 {
+    margin-left:60%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 3vh;
+}
+#pp1_photo2:hover {
+    opacity: 0.7;
+}
 .pp1_photo_font {
-    position: relative;
+    position: absolute;
     color: #FFFFFF;
     font-size: 1.75em;
     font-weight: bold;
     text-align: center;
+    padding-left: 3vw;
 }
 
 /*end of 本室位置*/
@@ -2040,12 +2118,14 @@ img.01 {
 }
 
 .pp3-right-context {
-    height: 20vh;
+    height: 100%;
     display: none;
     width: 70%;
     left: 50%;
     color: #F4A22C;
     font-size: 1.5em;
+    line-height: 200%;
+    overflow-y: auto;
 }
 
 #head-south {

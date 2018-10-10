@@ -98,20 +98,18 @@
 
 
                     <div class="position_page pp1">
-                        <div class="pp1_photo1">
-                            <div class="pp1_photo_photo mouse-hover">
-                                <img style="width: 100% "  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
-                            </div>
+                        <div id="pp1_photo1">
+                            <div class="image-map">
+                                <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
                             <div class="pp1_photo_font">
                                 光復校區位置分佈圖
                             </div>
-                        </div>
-                        <div class="pp1_photo2 mouse-hover">
-                            <div class="pp1_photo_photo">
-                                <img style="width: 100%"  src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" >
                             </div>
+                            <div class="image-map">
+                                <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" >
                             <div class="pp1_photo_font">
                                 行政大樓二樓平面圖
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -146,10 +144,11 @@
                             <div class="pp3-right-context" id="head-north-context">
                             中山高速公路北上:<br>
                             1.台中→中山高北上 (往台北方向)→新竹交流道 (左彎往新竹市區方向)→ 經光復路 (高速公路下)→(左轉入) 大學路 (加油站旁)→交通大學光復校區<br>
-                            2.台中→中山高北上 (往台北方向)→科學園區交流道 (左彎)→園區二路 ( 左彎)→新安路→交通大學光復校區<br>
+                            2.台中→中山高北上 (往台北方向)→科學園區交流道 (左彎)→園區二路 ( 左彎)→新安路→交通大學光復校區
                             
                             <br>
-                            第二高速公路北上:請於新竹系統處轉接中山高速公路，後續請參考「中山高速公路北上」走法。<br>
+                            第二高速公路北上:<br>
+                            請於新竹系統處轉接中山高速公路，後續請參考「中山高速公路北上」走法。<br>
                             備註: 新竹交流道以集散道路連結為一複合式之交流道，南下車輛由交流 道南下出口駛出後，依續有公道五、光復路、新竹科學園區出口，請由光 復路出口右前方轉入大學路抵達交通大學
                             </div>
                             <div class="pp3-right-context" id="HSR-context">
@@ -953,7 +952,7 @@ function leftSideBarMsgs()
                     <div id="left-msgs" style="position: relative;overflow-y:auto;overflow-x:hidden;height:100%;top: 0px;left:100px;">
                         <?php leftSideBarMsgs();?>
                     </div>
-                    <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:50vh; width:55vw;
+                    <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:100%; width:55vw;
                     top:0vh; position :absolute; left:15vw; display:none;" frameborder="0" scrolling="no">
                     </iframe>
 
