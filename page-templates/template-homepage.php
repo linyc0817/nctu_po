@@ -160,7 +160,7 @@
                             </div>
                             <div class="pp3-right-context" id="TRA-context">
                             抵達新竹火車站後，可選擇下列方式轉運至交通大學光復校區。<br>
-                            1.計程車<br> 
+                            1.計程車<br>
                             2.公車:步行至站前民族路上之公車總站轉搭<br>
                             1).1路市區公車(約10至15分鐘一班)
                             (火車站→過溝)<br>
@@ -168,7 +168,7 @@
                             (火車站→交通大學)</div>
                             <div class="pp3-right-context" id="caoch-context">
                             搭乘火車抵達新竹火車站，可選擇下列方式轉運至交通大學光復校區。<br>
-                            1.計程車<br> 
+                            1.計程車<br>
                             2.公車:步行至站前民族路上之公車總站轉搭<br>
                             1路市區公車(約10至15分鐘一班) 火車站→東門市場→東門國小→公園→學園商場→省中→省商→學府路口→光復中學
                             →清華大學→過溝(下車)→徒步從大學路走約10分鐘→交通大學光復校區<br>
@@ -896,21 +896,20 @@ function leftSideBarMsgs()
     $cat_class = array("important-msgs", "business-msgs", "legislation-msgs", "friendSchools-msgs");
     foreach ($categorys as $index => &$catname) {
         $cat_id = get_cat_ID($catname);
-        $posts = get_posts(array('category' => $cat_id, 'numberposts' => 3));
+        $posts = get_posts(array('category' => $cat_id, 'numberposts' => 5));
         foreach ($posts as $postIndex => $post) {
             $content = get_post($post->ID)->post_content;
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]&gt;', $content);
             $all = getAllP($content);
             foreach ($all as &$text) {
-
                 $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
                 $date = get_the_date('Y-m-d', $post->ID);
                 echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
                 echo ($print);
             }
             if ($postIndex != (sizeof($posts) - 1)) {
-                echo ('<hr class="' . $cat_class[$index] . ' left-side-bar-msgs" />');
+                echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
             }
 
         }
