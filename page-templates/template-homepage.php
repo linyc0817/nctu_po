@@ -101,6 +101,14 @@
                         <div id="pp1_photo1">
                             <div class="image-map">
                                 <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
+                                
+                    <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                              <span class="close">&times;</span>
+                              <img class="modal-content" id="img01">
+                              <div id="caption"></div>
+                            </div>
+
                             <div class="pp1_photo_font">
                                 光復校區位置分佈圖
                             </div>
