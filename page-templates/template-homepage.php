@@ -317,7 +317,7 @@
                     z-index:100;
                     top:25%;
                 ">
-            <img id="prev-page" class="mouse-hover" style="width:30%;"
+            <img id="prev-page" class="mouse-hover" style="width:50%;"
             src="<?php bloginfo('template_url');?>/image/prev-page.png" alt="prev-page-img">
                     <div id="decree-left-flexbox">
 
@@ -547,9 +547,10 @@ foreach ($main_cats as $m_idx => $main_cat) {
                 <div id="decree-left-default" style="
                     position: fixed;
                     top: 35vh;
-                    font-size: 18px;
+                    font-size: 20px;
                     margin-left: 50px;
                     letter-spacing: 0.3em;
+                    line-height: 120%;
                     width:220px;
                     color: white;
                     display: block;">

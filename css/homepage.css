@@ -120,6 +120,10 @@ img#close-button:hover {
     cursor: pointer;
 }
 
+#prev-page{
+    font-size: 2em;
+    margin-top: 10px;
+}
 .left-side-bar-element {
     font-family: Noto Sans CJK TC Medium;
     font-size: 1.3em;
