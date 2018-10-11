@@ -32,6 +32,13 @@
 </script>
 
 <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg">
+        <img class="modal-content" id="img02" src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" alt="">
+        <div id="caption"></div>
+    </div>
     <div class="navbar">
         <div class="triangle"></div>
 
@@ -97,23 +104,17 @@
                     </div>
 
 
+
                     <div class="position_page pp1">
                         <div id="pp1_photo1">
-                            <div class="image-map">
-                                <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
-                                
-                    <!-- The Modal -->
-                            <div id="myModal" class="modal">
-                              <span class="close">&times;</span>
-                              <img class="modal-content" id="img01">
-                              <div id="caption"></div>
-                            </div>
+                            <div class="image-map" id="big-map">
+                                <img  style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
 
                             <div class="pp1_photo_font">
                                 光復校區位置分佈圖
                             </div>
                             </div>
-                            <div class="image-map">
+                            <div class="image-map" id="second-floor">
                                 <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" >
                             <div class="pp1_photo_font">
                                 行政大樓二樓平面圖
@@ -153,7 +154,7 @@
                             中山高速公路北上:<br>
                             1.台中→中山高北上 (往台北方向)→新竹交流道 (左彎往新竹市區方向)→ 經光復路 (高速公路下)→(左轉入) 大學路 (加油站旁)→交通大學光復校區<br>
                             2.台中→中山高北上 (往台北方向)→科學園區交流道 (左彎)→園區二路 ( 左彎)→新安路→交通大學光復校區
-                            
+
                             <br>
                             第二高速公路北上:<br>
                             請於新竹系統處轉接中山高速公路，後續請參考「中山高速公路北上」走法。<br>

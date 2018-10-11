@@ -1,6 +1,6 @@
 // nav hover 展開2個直角梯形
-$(document).ready(function() {
-    $('div.top').hover(function() {
+$(document).ready(function () {
+    $('div.top').hover(function () {
         //clock
         if (this.id == 'top_6') {
             return;
@@ -11,7 +11,7 @@ $(document).ready(function() {
         $(".left-side-bar-bg").hide();
 
 
-    }, function() {
+    }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
         $(".msg-board-content").css('display', 'none');
@@ -55,13 +55,13 @@ $(document).ready(function () {
 */
 
 //left-side-bar
-$(function() {
-    $(".left-side-bar-element").hover(function() {
+$(function () {
+    $(".left-side-bar-element").hover(function () {
         $(this).css('cursor', 'pointer');
     })
 
     let highlight;
-    $(".left-side-bar-element").click(function() {
+    $(".left-side-bar-element").click(function () {
         if (highlight) {
             highlight.css('color', '#f4a22c');
         }
@@ -113,9 +113,9 @@ $(function() {
 
 let commentHighlight;
 //留言板
-$(function() {
+$(function () {
     let highlight;
-    $(".navbox7-left").hover(function() {
+    $(".navbox7-left").hover(function () {
         $(this).css('cursor', 'pointer');
     })
     function comments_hide() {
@@ -130,7 +130,7 @@ $(function() {
         $('.msg-board-content.postdoctoral').hide();
         $('.msg-board-content.resignation').hide();
     }
-    $(".navbox7-left").click(function() {
+    $(".navbox7-left").click(function () {
         $("#navboxrw7_1").css('display', 'none');
         if (commentHighlight) {
             commentHighlight.css('color', '#f4a22c');
@@ -188,14 +188,14 @@ $(function() {
 });
 
 //class mouse-hover change cursor
-$(function() {
-    $(".mouse-hover").hover(function() {
+$(function () {
+    $(".mouse-hover").hover(function () {
         $(this).css('cursor', 'pointer');
     })
 })
 
 //法令類別
-$(function() {
+$(function () {
     $("#prev-page").click((e) => {
         $('decree-main-container').show();
         $("#decree-left-flexbox").hide();
@@ -258,7 +258,7 @@ $(function() {
 })
 
 //關於本室右邊選項click
-$(function() {
+$(function () {
     $("div[id^='navboxw1_2_']").click((e) => {
         //$("#navboxw1").hide();
         //$("#navboxw1_2").hide();
@@ -266,7 +266,7 @@ $(function() {
 })
 
 // 本室介紹下各頁面
-$(function() {
+$(function () {
     function change_css(DOMstring, css) {
         $(DOMstring).css(css);
     }
@@ -302,28 +302,28 @@ $(function() {
 })
 
 //簡介區的圓圈
-$(document).ready(function() {
-    $('div.h1').hover(function() {
+$(document).ready(function () {
+    $('div.h1').hover(function () {
         $('.cb1').show();
-    }, function() {
+    }, function () {
         $('.cb1').hide();
     });
 });
 
-$(document).ready(function() {
-    $('div.h2').hover(function() {
+$(document).ready(function () {
+    $('div.h2').hover(function () {
         $('.cb2').show();
-    }, function() {
+    }, function () {
         $('.cb2').hide();
     });
 });
 
-$(document).ready(function() {
-    $('div.h3').hover(function() {
+$(document).ready(function () {
+    $('div.h3').hover(function () {
         $('.core-value-context').show();
         $('.cb3').show();
         $(".cb3-title").show();
-    }, function() {
+    }, function () {
         $('.core-value-context').hide();
         $('.cb3').hide();
         $(".cb3-title").hide();
@@ -331,15 +331,15 @@ $(document).ready(function() {
 
 });
 
-$(document).ready(function() {
-    $('div.h4').hover(function() {
+$(document).ready(function () {
+    $('div.h4').hover(function () {
         $('.cb4').show();
-    }, function() {
+    }, function () {
         $('.cb4').hide();
     });
 });
 
-$(function() {
+$(function () {
     //本室位置 slider bar control
     $("#school_map_circle").click((e) => {
         $(".position_page").hide();
@@ -358,6 +358,20 @@ $(function() {
         $(".position_page.pp3").show();
         $(".position-circle").removeClass('solid-circle');
         $(e.target).addClass('solid-circle');
+    })
+    //  圖片放大
+    $("#big-map").click((e) => {
+        $("#myModal").show();
+        $("#img01").show();
+    })
+    $("#second-floor").click((e) => {
+        $("#myModal").show();
+        $("#img02").show();
+    })
+
+    $("#myModal").add(".close").click(e => {
+        $("#myModal").hide();
+        $(".modal-content").hide();
     })
 
     // 本室位置 聯外交通資訊
