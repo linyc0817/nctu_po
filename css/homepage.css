@@ -1471,7 +1471,9 @@ img.01 {
 
 .decree-item {
     color: #F4A22C;
-    margin-left: 200px;
+    margin-left: 25%;
+    font-size: 1.5em;
+
 }
 
 .decree-right-hr {
@@ -1491,7 +1493,7 @@ img.01 {
     display: inline-block;
     /*margin-right: 50px;*/
     width: 8vw;
-    font-size: 14px;
+    font-size: 16px;
     /*vertical-align: middle;*/
     overflow: hidden;
     white-space: nowrap;
@@ -1535,6 +1537,7 @@ img.01 {
     width: 40%;
     flex-direction: column;
     /*margin-right: 50px;*/
+    line-height: 180%;
 }
 
 .decree-revisions-container {
@@ -1542,9 +1545,10 @@ img.01 {
     flex-wrap: wrap;*/
     display: flex;
     width: 40%;
-    height: 60px;
+    height: 81px;
     flex-direction: column;
-    overflow-y: auto
+    overflow-y: auto;
+    line-height: 180%;
 }
 
 .decree-form-flex-item {
@@ -1575,6 +1579,7 @@ img.01 {
 .personnel-category {
     color: white;
     width: 50%;
+    line-height: 180%;
 }
 
 .decree-left-hr {
@@ -1626,7 +1631,8 @@ img.01 {
 }
 
 .details-container.decree-details p {
-    width: 10vw;
+    width: 8vw;
+    font-size: 1.1em;
 }
 
 .decree-details {
@@ -1652,8 +1658,9 @@ img.01 {
 .decree-detail-articles {
     margin: 0 0 0 0;
     color: #F4A22C;
-    font-size: 12px;
+    font-size: 1.1em;
     width: 400%;
+    line-height:200%;
 }
 
 .navbox4 {

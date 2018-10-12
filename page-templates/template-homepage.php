@@ -39,6 +39,8 @@
         <img class="modal-content" id="img02" src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" alt="">
         <div id="caption"></div>
     </div>
+
+
     <div class="navbar">
         <div class="triangle"></div>
 
@@ -173,7 +175,7 @@
                             2.公車:步行至站前民族路上之公車總站轉搭<br>
                             1).1路市區公車(約10至15分鐘一班)
                             (火車站→過溝)<br>
-                            2).路市區公車(約60分鐘一班):
+                            2).2路市區公車(約60分鐘一班):
                             (火車站→交通大學)</div>
                             <div class="pp3-right-context" id="caoch-context">
                             搭乘火車抵達新竹火車站，可選擇下列方式轉運至交通大學光復校區。<br>
@@ -181,7 +183,7 @@
                             2.公車:步行至站前民族路上之公車總站轉搭<br>
                             1路市區公車(約10至15分鐘一班) 火車站→東門市場→東門國小→公園→學園商場→省中→省商→學府路口→光復中學
                             →清華大學→過溝(下車)→徒步從大學路走約10分鐘→交通大學光復校區<br>
-                            3.大眾運輸  高鐵<br>
+                            3.大眾運輸、高鐵<br>
                             2路市區公車(約60分鐘一班):
                             (火車站→交通大學)
                             </div>
@@ -565,8 +567,9 @@ foreach ($main_cats as $m_idx => $main_cat) {
                         <p  style="
                             color: #F4A22C;
                             position: absolute;
+                            font-size: 1.5em;
                             top: 25px;
-                            left: 132px;
+                            left: 150px;
                         ">人員類別</p>
 
                         <div id="type">
@@ -587,8 +590,9 @@ foreach ($main_cats as $m_idx => $main_cat) {
                         <p style="
                         color: #F4A22C;
                         position: absolute;
-                        top: 200px;
-                        left: 132px;
+                        font-size: 1.5em;
+                        top: 250px;
+                        left: 150px;
                         ">項目類別</p>
                         <p class="decree-item decree-main mouse-hover" id="S1">組織、任用、報到、留職停薪</p>
                         <p class="decree-item decree-main mouse-hover" id="S2">兼職、借調</p>
