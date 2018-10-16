@@ -475,8 +475,8 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     $content = substr($slice, strpos($slice, ":") + 1);
 
                     //remove spaces from both side
-                    trim($title);
-                    trim($content);
+                    $title = trim($title, " \t\n\r\0\x0B\xC2\xA0");
+                    $content = trim($content, " \t\n\r\0\x0B\xC2\xA0");
                     //form1-pdf: -> 1-pdf:
                     $index_type = trim($title, "form");
                     //1-pdf: -> ["1","pdf:"]
@@ -484,6 +484,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     $index = (int) $index_type[0];
                     //"pdf:" -> "pdf"
                     $type = trim($index_type[1], ":");
+                    $type = trim($type, " \t\n\r\0\x0B\xC2\xA0");
                     if ($type == "pdf") {
                         array_push($forms_pdf, $content);
                     } else if ($type == "doc") {
@@ -492,6 +493,8 @@ foreach ($main_cats as $m_idx => $main_cat) {
                         array_push($forms_odf, $content);
                     } else if ($type == "name") {
                         array_push($forms_name, $content);
+                    } else {
+                        echo $type;
                     }
                 } //{forms}
                 if (preg_match('/^revision/', $slice)) { // matching revision
@@ -510,7 +513,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             $html_href = function ($link, $type) {
                 return (
                     "<a href='$link'>"
-                    . '<img border="0" alt="PDFICON" class="fileIcon" src="'
+                    . '<img border="0" alt="ICON" class="fileIcon" src="'
                     . (get_bloginfo('template_url')
                         . '/image/' . strtoupper($type) . 'icon.png ')
                     . '">'
