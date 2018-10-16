@@ -2114,6 +2114,20 @@ img:hover {
     align-items: center;
     justify-content: center;
 }
+.circle8-2 {
+    display: flex;
+    width: 21px;
+    height: 21px;
+    opacity: 0.5;
+    /* Can be set to transparent */
+    border: 4px #F4A22C solid;
+    -webkit-border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 62vw;
+    align-items: center;
+    justify-content: center;
+}
 
 .solid-circle {
     background-color: #F4A22C;
