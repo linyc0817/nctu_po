@@ -228,16 +228,15 @@
                                     <div id="director-info">
                                         <?=get_page_by_title('主任資訊', OBJECT, 'post')->post_content?>
                                     </div>
-
                                 </div>
                                 <div id="director-words-container">
                                     <div id="director-word">主任的話</div>
                                     <div id="director-word-content">
                                         <?=get_page_by_title('主任的話', OBJECT, 'post')->post_content?>
-
                                     </div>
                                 </div>
                             </div>
+
                             <div id="staff-group-1" class="_hide">
                                 <div id="staff-type-container">
                                     <div class="staff-container">
@@ -247,7 +246,36 @@ $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_
 foreach ($ary as $name) {
     echo "<div class='staff-name'>" . $name . "</div>";
 }?>
+
+                                        <div class="staff-info-container">
+<?php
+$info = explode("\n", get_page_by_title('第一組組長資料', OBJECT, 'post')->post_content);
+foreach ($info as $line) {
+    if (preg_match("/tel:/", $line)) {
+        $tel = preg_split("/tel:/", $line, PREG_SPLIT_NO_EMPTY)[1];
+    }
+    $agents = array();
+    if (preg_match("/agents:/", $line)) {
+        $agents = preg_split("/[(agents:),]/", $line);
+    }
+}
+?>
+                                            <div class="staff-tel-label">聯絡分機</div>
+                                            <div class="staff-tel"><?=$tel?></div>
+                                            <div class="staff-agent-container">
+                                                <div class="staff-agent-title">職務代理人</div>
+                                                <?php
+foreach ($agents as $agent) {
+    if ($agent != "") {
+        echo "<div>" . "$agent" . "</div>";
+    }
+}
+?>
+                                            </div>
+
+                                        </div>
                                     </div>
+
                                     <div class="staff-container">
                                         <div class="staff-type">專員</div>
                                         <?php
