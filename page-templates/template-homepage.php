@@ -191,45 +191,194 @@
                     </div>
                 </div>
 
+                    <div id="jobs_page" class="_hide">
+                        <div id="intro_position_slider_container">
+                            <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 8.5vw;color: white;">
+                                主任
+                            </div>
+                            <div id="director_circle" class="staff-circle circle5-2 mouse-hover solid-circle"></div>
+                            <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 25vw;color: white;">
+                                第一組
+                            </div>
+                            <div id="first_group_circle" class="staff-circle circle6-2 mouse-hover"></div>
+                            <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 42vw;color: white;">
+                                第二組
+                            </div>
+                            <div id="second_group_circle" class="staff-circle circle7-2 mouse-hover"></div>
+                            <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 57vw;color: white;">
+                                業務職掌一覽
+                                </div>
+                            <div id="third_group_circle" class="staff-circle circle8-2 mouse-hover"></div>
+                            <div style="position:absolute; top: 7.3vh; left:10.2vw; width: 15.8vw;height: 1.5px; background:#F4A22C">
+                            </div>
+                            <div style="position:absolute; top: 7.3vh; left:27.2vw; width: 15.8vw;height: 1.5px; background:#F4A22C">
+                            </div>
+                            <div style="position:absolute; top: 7.3vh; left:44.2vw; width: 15.8vw;height: 1.5px; background:#F4A22C">
+                            </div>
+                        </div>
 
 
-                <div id="jobs_page" class="_hide">
-                    <div id="intro_position_slider_container">
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">主任</div>
-                        <div id="director_circle" class="staff-circle circle5-2 mouse-hover solid-circle"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">第一組
-                        </div>
-                        <div id="first_group_circle" class="staff-circle  circle6-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">第二組</div>
-                        <div id="second_group_circle" class="staff-circle  circle7-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 60vw;color: white;" : ">業務職掌一覽</div>
-                        <div id="second_group_circle" class="staff-circle  circle8-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 6.3vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
-                        </div>
-                        <div style="position:absolute; top: 6.3vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
-                        </div>
-                        <div style="position:absolute; top: 6.3vh; left:53.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
-                        </div>
-                    </div>
+                        <div id="staff-content-container">
+                            <div id="staff-director-page">
+                                <div id="director-info-container">
+                                    <div id="director-name">
+                                        <?=get_page_by_title('主任大名', OBJECT, 'post')->post_content?>
+                                    </div>
 
-                    <div id="staff-left-slider-container">
-<?php
+                                    <div id="director-info">
+                                        <?=get_page_by_title('主任資訊', OBJECT, 'post')->post_content?>
+                                    </div>
+
+                                </div>
+                                <div id="director-words-container">
+                                    <div id="director-word">主任的話</div>
+                                    <div id="director-word-content">
+                                        <?=get_page_by_title('主任的話', OBJECT, 'post')->post_content?>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="staff-group-1" class="_hide">
+                                <div id="staff-type-container">
+                                    <div class="staff-container">
+                                        <div class="staff-type">組長</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">專員</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">組員</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                     </div>
+                                <div class="staff-container">
+                                    <div class="staff-type">行政專員</div>
+                                    <?php
+$ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                </div>
+                                <div class="staff-container">
+                                    <div class="staff-type">計畫助理</div>
+                                    <?php
+$ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                </div>
+                                <div class="staff-container">
+                                    <div class="staff-type">約聘人員</div>
+                                    <?php
+$ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                </div>
+                                <div class="staff-container">
+                                    <div class="staff-type">全時工讀生</div>
+                                    <?php
+$ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="staff-group-2" class="_hide">
+                                <div id="staff-type-container">
+                                    <div class="staff-container">
+                                        <div class="staff-type">組長</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">專員</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">組員</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">行政專員</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">計畫助理</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">約聘人員</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">全時工讀生</div>
+                                        <?php
+$ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
+foreach ($ary as $name) {
+    echo "<div class='staff-name'>" . $name . "</div>";
+}?>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 人員職掌一覽 -->
+                            <div id="staff-group-3" class="_hide">
+                                <div id="staff-left-slider-container">
+                                    <?php
 //hjk
 $staff_wpcat_id = get_cat_iD("人員");
 $staff_main_cats = get_categories(array('parent' => $staff_wpcat_id, 'hide_empty' => false));
 foreach ($staff_main_cats as $m_idx => $cat) {
+
 }
 ?>
+        <div id="staff-left-circle" class="staff-circle mouse-hover">
 
-                        <div id="staff-left-circle" class="staff-circle mouse-hover">
+                                    </div>
 
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>
-                    <div id="staff-content-container">
-
-                    </div>
-                </div>
 
 
 

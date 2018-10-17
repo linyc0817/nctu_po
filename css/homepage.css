@@ -120,10 +120,11 @@ img#close-button:hover {
     cursor: pointer;
 }
 
-#prev-page{
+#prev-page {
     font-size: 2em;
     margin-top: 10px;
 }
+
 .left-side-bar-element {
     font-family: Noto Sans CJK TC Medium;
     font-size: 1.3em;
@@ -1473,7 +1474,6 @@ img.01 {
     color: #F4A22C;
     margin-left: 25%;
     font-size: 1.5em;
-
 }
 
 .decree-right-hr {
@@ -1660,7 +1660,7 @@ img.01 {
     color: #F4A22C;
     font-size: 1.1em;
     width: 400%;
-    line-height:200%;
+    line-height: 200%;
 }
 
 .navbox4 {
@@ -1905,7 +1905,7 @@ img.01 {
     display: none;
     margin: auto;
     left: 30%;
-    top:30%;
+    top: 30%;
     width: 100%;
     max-width: 700px;
     margin-top: 5%;
@@ -1935,8 +1935,10 @@ img.01 {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
+
 /* Safari 和 Chrome */
-@-webkit-keyframes zoom {       
+
+@-webkit-keyframes zoom {
     from {
         -webkit-transform: scale(0)
     }
@@ -1944,8 +1946,10 @@ img.01 {
         -webkit-transform: scale(1)
     }
 }
- /* Firefox */
-@-moz-keyframes zoom{
+
+/* Firefox */
+
+@-moz-keyframes zoom {
     from {
         -webkit-transform: scale(0)
     }
@@ -2114,6 +2118,7 @@ img:hover {
     align-items: center;
     justify-content: center;
 }
+
 .circle8-2 {
     display: flex;
     width: 21px;
@@ -2400,6 +2405,18 @@ img:hover {
 }
 
 /* end of 本室簡介 */
+
+/* 人員職掌 */
+
+.staff-container {
+    color: #F4A22C
+}
+
+#staff-director-page {
+    color: white;
+}
+
+/* end of 人員職掌 */
 
 #navboxw4 {
     color: #FFFFFF;

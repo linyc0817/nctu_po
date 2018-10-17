@@ -412,7 +412,33 @@ $(function () {
     $(".staff-circle").click(e => {
         $(".staff-circle").removeClass("solid-circle");
         $(e.target).addClass("solid-circle");
+        switch (e.target.id) {
+            case "director_circle":
+                $("#staff-director-page").show()
+                $("#staff-group-1").hide();
+                $("#staff-group-2").hide();
+                $("#staff-group-3").hide();
+                break;
 
+            case "first_group_circle":
+                $("#staff-director-page").hide()
+                $("#staff-group-1").show();
+                $("#staff-group-2").hide();
+                $("#staff-group-3").hide();
+                break;
+            case "second_group_circle":
+                $("#staff-director-page").hide()
+                $("#staff-group-1").hide();
+                $("#staff-group-2").show();
+                $("#staff-group-3").hide();
+                break;
+            case "third_group_circle":
+                $("#staff-director-page").hide()
+                $("#staff-group-1").hide();
+                $("#staff-group-2").hide();
+                $("#staff-group-3").show();
+                break;
+        }
     })
 
 })
