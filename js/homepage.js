@@ -339,6 +339,7 @@ $(document).ready(function () {
     });
 });
 
+//本室位置
 $(function () {
     //本室位置 slider bar control
     $("#school_map_circle").click((e) => {
@@ -406,4 +407,12 @@ $(function () {
         $(e.target).css("color", "white");
     })
 })
+//人員職掌
+$(function () {
+    $(".staff-circle").click(e => {
+        $(".staff-circle").removeClass("solid-circle");
+        $(e.target).addClass("solid-circle");
 
+    })
+
+})

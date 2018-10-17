@@ -196,20 +196,38 @@
                 <div id="jobs_page" class="_hide">
                     <div id="intro_position_slider_container">
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">主任</div>
-                        <div id="director_circle" class="position-circle circle5-2 mouse-hover solid-circle"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">第一組 
+                        <div id="director_circle" class="staff-circle circle5-2 mouse-hover solid-circle"></div>
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">第一組
                         </div>
-                        <div id="first_group_circle" class="position-circle  circle6-2 mouse-hover"></div>
+                        <div id="first_group_circle" class="staff-circle  circle6-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">第二組</div>
-                        <div id="second_group_circle" class="position-circle  circle7-2 mouse-hover"></div>
+                        <div id="second_group_circle" class="staff-circle  circle7-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 60vw;color: white;" : ">業務職掌一覽</div>
-                        <div id="second_group_circle" class="position-circle  circle8-2 mouse-hover"></div>
+                        <div id="second_group_circle" class="staff-circle  circle8-2 mouse-hover"></div>
                         <div style="position:absolute; top: 6.3vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
                         </div>
                         <div style="position:absolute; top: 6.3vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
                         </div>
                         <div style="position:absolute; top: 6.3vh; left:53.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
                         </div>
+                    </div>
+
+                    <div id="staff-left-slider-container">
+<?php
+//hjk
+$staff_wpcat_id = get_cat_iD("人員");
+$staff_main_cats = get_categories(array('parent' => $staff_wpcat_id, 'hide_empty' => false));
+foreach ($staff_main_cats as $m_idx => $cat) {
+}
+?>
+
+                        <div id="staff-left-circle" class="staff-circle mouse-hover">
+
+                        </div>
+
+                    </div>
+                    <div id="staff-content-container">
+
                     </div>
                 </div>
 
@@ -473,7 +491,6 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     $title_content = explode(" ", $slice);
                     $title = $title_content[0];
                     $content = substr($slice, strpos($slice, ":") + 1);
-
                     //remove spaces from both side
                     $title = trim($title, " \t\n\r\0\x0B\xC2\xA0");
                     $content = trim($content, " \t\n\r\0\x0B\xC2\xA0");
@@ -483,8 +500,9 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     $index_type = explode("-", $index_type);
                     $index = (int) $index_type[0];
                     //"pdf:" -> "pdf"
-                    $type = trim($index_type[1], ":");
-                    $type = trim($type, " \t\n\r\0\x0B\xC2\xA0");
+                    $type = trim($index_type[1], " \t\n\r\0\x0B\xC2\xA0:");
+                    $type = trim($type, ":");
+
                     if ($type == "pdf") {
                         array_push($forms_pdf, $content);
                     } else if ($type == "doc") {
@@ -494,7 +512,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     } else if ($type == "name") {
                         array_push($forms_name, $content);
                     } else {
-                        echo $type;
+                        //echo $type . "\n";
                     }
                 } //{forms}
                 if (preg_match('/^revision/', $slice)) { // matching revision
@@ -512,7 +530,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             }
             $html_href = function ($link, $type) {
                 return (
-                    "<a href='$link'>"
+                    "<a href='$link' target='_blank'>"
                     . '<img border="0" alt="ICON" class="fileIcon" src="'
                     . (get_bloginfo('template_url')
                         . '/image/' . strtoupper($type) . 'icon.png ')
