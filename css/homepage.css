@@ -2084,7 +2084,10 @@ img:hover {
     align-items: center;
     justify-content: center;
 }
-
+.staff-circle.circle5-2{
+    left:9vw;
+    top: 6vh;
+}
 .circle6-2 {
     display: flex;
     width: 21px;
@@ -2098,6 +2101,11 @@ img:hover {
     left: 32vw;
     align-items: center;
     justify-content: center;
+}
+
+.staff-circle.circle6-2{
+    left:26vw;
+    top: 6vh;
 }
 
 .circle7-2 {
@@ -2114,6 +2122,12 @@ img:hover {
     align-items: center;
     justify-content: center;
 }
+
+.staff-circle.circle7-2{
+    left:43vw;
+    top: 6vh;
+}
+
 .circle8-2 {
     display: flex;
     width: 21px;
@@ -2127,6 +2141,11 @@ img:hover {
     left: 62vw;
     align-items: center;
     justify-content: center;
+}
+
+.staff-circle.circle8-2{
+    left:60vw;
+    top: 6vh;
 }
 
 .solid-circle {

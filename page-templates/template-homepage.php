@@ -93,9 +93,9 @@
                         <div id="google_map_circle" class="position-circle  circle6-2 mouse-hover"></div>
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">聯外交通資訊</div>
                         <div id="transport_circle" class="position-circle  circle7-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 6.3vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        <div style="position:absolute; top: 6.3vh; left:13.2vw; width: 18.8vw;height: 1.5px; background:#F4A22C">
                         </div>
-                        <div style="position:absolute; top: 6.3vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        <div style="position:absolute; top: 6.3vh; left:33.2vw; width: 18.8vw;height: 1.5px; background:#F4A22C">
                         </div>
                     </div>
 
@@ -195,20 +195,20 @@
 
                 <div id="jobs_page" class="_hide">
                     <div id="intro_position_slider_container">
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 10.5vw;color: white;">主任</div>
+                        <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 8.5vw;color: white;">主任</div>
                         <div id="director_circle" class="staff-circle circle5-2 mouse-hover solid-circle"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">第一組
+                        <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 25vw;color: white;">第一組
                         </div>
                         <div id="first_group_circle" class="staff-circle  circle6-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">第二組</div>
+                        <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 42vw;color: white;" : ">第二組</div>
                         <div id="second_group_circle" class="staff-circle  circle7-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 60vw;color: white;" : ">業務職掌一覽</div>
+                        <div style="position:absolute; top: 2vh;font-size: 1.5em;margin-left: 57vw;color: white;" : ">業務職掌一覽</div>
                         <div id="second_group_circle" class="staff-circle  circle8-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 6.3vh; left:13.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        <div style="position:absolute; top: 7.3vh; left:10.2vw; width: 15.8vw;height: 1.5px; background:#F4A22C">
                         </div>
-                        <div style="position:absolute; top: 6.3vh; left:33.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        <div style="position:absolute; top: 7.3vh; left:27.2vw; width: 15.8vw;height: 1.5px; background:#F4A22C">
                         </div>
-                        <div style="position:absolute; top: 6.3vh; left:53.3vw; width: 18.7vw;height: 1.5px; background:#F4A22C">
+                        <div style="position:absolute; top: 7.3vh; left:44.2vw; width: 15.8vw;height: 1.5px; background:#F4A22C">
                         </div>
                     </div>
 
