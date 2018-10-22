@@ -239,126 +239,151 @@
 
                             <div id="staff-group-1" class="_hide">
                                 <div id="staff-type-container">
-                                    <div class="right-container">
                                     <div class="staff-container">
                                         <div class="staff-type chief" >組長</div>
+                                        <div class="staff-name-container">
                                         <?php
-$ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
-foreach ($ary as $name) {
-    echo "<div class='staff-name'>" . $name . "</div>";
-}?>
-
+                                        $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
                                     </div>
 
                                     <div class="staff-container">
-                                     <div class="staff-type">專員</div>
-                                    <?php
-$ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
-foreach ($ary as $name) {
-    echo "<div class='staff-name'>" . $name . "</div>";
-}?>
+                                        <div class="staff-type">專員</div>
+                                        <div class="staff-name-container">  
+                                        <?php
+                                        $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">組員</div>
+                                        <div class="staff-name-container">
                                         <?php
-$ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
-foreach ($ary as $name) {
-    echo "<div class='staff-name'>" . $name . "</div>";
-}?>
+                                        $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
                                      </div>
-                                <div class="staff-container">
-                                    <div class="staff-type">行政專員</div>
-                                    <?php
-$ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
-foreach ($ary as $name) {
-    echo "<div class='staff-name'>" . $name . "</div>";
-}?>
-                                </div>
-                                <div class="staff-container">
-                                    <div class="staff-type">計畫助理</div>
-                                    <?php
-$ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
-foreach ($ary as $name) {
-    echo "<div class='staff-name'>" . $name . "</div>";
-}?>
-                                </div>
-                                <div class="staff-container">
-                                    <div class="staff-type">約聘人員</div>
-                                    <?php
-                                    $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
-                                    foreach ($ary as $name) {
-                                        echo "<div class='staff-name'>" . $name . "</div>";
-                                    }?>
-                                </div>
-                                <div class="staff-container">
-                                    <div class="staff-type">全時工讀生</div>
-                                    <?php
-                                    $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
-                                    foreach ($ary as $name) {
-                                        echo "<div class='staff-name'>" . $name . "</div>";
-                                    }?>
+                                    <div class="staff-container">
+                                        <div class="staff-type">行政專員</div>
+                                        <div class="staff-name-container">
+                                        <?php
+                                        $ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">計畫助理</div>
+                                        <div class="staff-name-container">
+                                        <?php
+                                        $ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">約聘人員</div>
+                                        <div class="staff-name-container">
+                                        <?php
+                                        $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
+                                    </div>
+                                    <div class="staff-container">
+                                        <div class="staff-type">全時工讀生</div>
+                                        <div class="staff-name-container">
+                                        <?php
+                                        $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
+                                        foreach ($ary as $name) {
+                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                        }?>
+                                        </div>
                                     </div>
                                 </div>    
-                                </div>
                             </div>
                             <div id="staff-group-2" class="_hide">
                                 <div id="staff-type-container">
                                 <div class="right-container">
                                     <div class="staff-container">
+                                        <div class="staff-name-container">
                                         <div class="staff-type">組長</div>
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">專員</div>
+                                        <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">組員</div>
+                                        <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">行政專員</div>
+                                        <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">計畫助理</div>
+                                        <div class="staff-name-container">
                                         <?php 
                                         $ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">約聘人員</div>
+                                        <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div>
                                     <div class="staff-container">
                                         <div class="staff-type">全時工讀生</div>
+                                        <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
+                                        </div>
                                     </div> 
                                 </div>     
                                 </div>
