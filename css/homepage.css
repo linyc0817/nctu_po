@@ -2289,12 +2289,11 @@ img:hover {
     width: 100%;
 }
 .staff-type{
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 10%;
-    font-size: 2em;
+    font-size: 1.3em;
     width:35%;
     height: 30px;
-    margin-bottom: 5px;
 }
 .staff-name{
     display: flex;
@@ -2302,14 +2301,18 @@ img:hover {
     flex-wrap: wrap;
     margin-top: 2%;
     margin-left: 8%;
-    font-size: 1.7em;
-    width:40%;
+    font-size: 1.2em;
+    width:60%;
     height: 30px;
-    margin-bottom: 5px;
 }
 .right-container{
     width: 35%;
     border-right: 1px solid white;
+}
+.staff-name-container{
+    display: flex;
+    flex-wrap: wrap;
+    width:60%;
 }
 
 

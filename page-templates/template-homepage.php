@@ -238,6 +238,7 @@
                             </div>
 
                             <div id="staff-group-1" class="_hide">
+                                <div class="right-container">
                                 <div id="staff-type-container">
                                     <div class="staff-container">
                                         <div class="staff-type chief" >組長</div>
@@ -311,13 +312,14 @@
                                         </div>
                                     </div>
                                 </div>    
+                                </div>    
                             </div>
                             <div id="staff-group-2" class="_hide">
                                 <div id="staff-type-container">
                                 <div class="right-container">
                                     <div class="staff-container">
-                                        <div class="staff-name-container">
                                         <div class="staff-type">組長</div>
+                                        <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
