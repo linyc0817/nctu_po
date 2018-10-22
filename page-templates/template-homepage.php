@@ -224,7 +224,7 @@
                                     <div id="director-name">
                                         <?=get_page_by_title('主任大名', OBJECT, 'post')->post_content?>
                                     </div>
-
+                                    
                                     <div id="director-info">
                                         <?=get_page_by_title('主任資訊', OBJECT, 'post')->post_content?>
                                     </div>
@@ -239,6 +239,7 @@
 
                             <div id="staff-group-1" class="_hide">
                                 <div id="staff-type-container">
+                                    <div class="right-container">
                                     <div class="staff-container">
                                         <div class="staff-type chief" >組長</div>
                                         <?php
@@ -250,8 +251,8 @@ foreach ($ary as $name) {
                                     </div>
 
                                     <div class="staff-container">
-                                        <div class="staff-type">專員</div>
-                                        <?php
+                                     <div class="staff-type">專員</div>
+                                    <?php
 $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
 foreach ($ary as $name) {
     echo "<div class='staff-name'>" . $name . "</div>";
@@ -297,10 +298,12 @@ foreach ($ary as $name) {
                                         echo "<div class='staff-name'>" . $name . "</div>";
                                     }?>
                                     </div>
+                                </div>    
                                 </div>
                             </div>
                             <div id="staff-group-2" class="_hide">
                                 <div id="staff-type-container">
+                                <div class="right-container">
                                     <div class="staff-container">
                                         <div class="staff-type">組長</div>
                                         <?php
@@ -356,7 +359,8 @@ foreach ($ary as $name) {
                                         foreach ($ary as $name) {
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
-                                    </div>
+                                    </div> 
+                                </div>     
                                 </div>
                             </div>
                             <!-- 人員職掌一覽 -->
