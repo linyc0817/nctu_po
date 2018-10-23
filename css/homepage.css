@@ -2290,20 +2290,20 @@ img:hover {
 }
 .staff-type{
     margin-top: 1%;
-    margin-left: 10%;
+    margin-left: 25%;
     font-size: 1.3em;
-    width:35%;
-    height: 30px;
+    width:33%;
+    height: 25px;
 }
 .staff-name{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 2%;
-    margin-left: 8%;
+    margin-left: 15%;
     font-size: 1.2em;
     width:60%;
-    height: 30px;
+    height: 22px;
 }
 .right-container{
     width: 35%;
@@ -2312,7 +2312,7 @@ img:hover {
 .staff-name-container{
     display: flex;
     flex-wrap: wrap;
-    width:60%;
+    width:50%;
 }
 
 
