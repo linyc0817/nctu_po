@@ -1070,7 +1070,7 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1107,7 +1107,7 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1141,7 +1141,7 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1169,7 +1169,7 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1197,7 +1197,7 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1224,7 +1224,7 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -1252,10 +1252,10 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 60px;
+    top: 65px;
     width: 100%;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
     text-align: center;
     font-weight: 500;
     line-height: 1.2em;
@@ -2857,15 +2857,22 @@ img:hover {
 }
 
 #foot_bottom {
+    display: flex;
     background-color: #666666;
     position: absolute;
     top: 70%;
     width: 100%;
-    left: 0%;
-    height: 20vh;
+    height: 25vh;
     z-index: 20;
 }
-
+#foot_bottom_description{
+    color: white;
+    font-size: 1.3em;
+    line-height: 120%;
+    margin-top: 100px;
+    margin-left:20px;
+    height: 100px;
+}
 .foot_title {
     color: #DA9E2A;
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;

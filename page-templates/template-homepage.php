@@ -1361,7 +1361,7 @@ function leftSideBarMsgs()
                         <p>含自強康樂委員會</p>
                     </div>
                     <div class="text7-2">
-                        適用對象：本校教職員工（自強康樂委員會適用對象：T/TR/TS/XT/XC/XB/X/S/L/M/P/D/E/F/G/B/J）
+                        適用對象：本校教職員工（自強康樂委員會適用對象：T/TR/TS/XT/XC/XB/X/S/L<br>/M/P/D/E/F/G/B/J）
                     </div>
                 </div>
             </div>
@@ -1382,7 +1382,7 @@ function leftSideBarMsgs()
 
 
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));z-index: 25;"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:20% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));z-index: 25;"></div>
 
         <div id="foot_left">
             <div id="foot-area1">
@@ -1619,19 +1619,16 @@ function leftSideBarMsgs()
   </div>
 
   <div id="foot_bottom">
+         <img src="<?php bloginfo('template_url');?>/image/logo_guide.png" width=200px height=100% float:left alt="03">
+         <div id="foot_bottom_description">
+            30010 新竹市大學路1001號<br>
+            最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768<br>
+            國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
+        </div>
+        
 
-      <img src="?php bloginfo('template_url');?>/image/logo_guide.png" alt="03"">
-
-
-(測試文字)
-<!--
-      30010 新竹市大學路1001號
-      最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
-      國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
- -->
   </div>
 
-    </div>
 
 
 
