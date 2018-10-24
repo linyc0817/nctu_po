@@ -1058,12 +1058,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text1-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img2*/
@@ -1082,12 +1095,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text2-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img3*/
@@ -1103,12 +1129,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text3-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img4*/
@@ -1118,12 +1157,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text4-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img5*/
@@ -1133,14 +1185,26 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
 }
-
+.text5-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
+}
 /*下方img6*/
 
 .text6 {
@@ -1148,12 +1212,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text6-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img7*/
@@ -1163,12 +1240,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text7-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 60px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*navbar hover 出2個直角梯形外面一大包*/
