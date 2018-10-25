@@ -1613,18 +1613,17 @@ img.01 {
 .decree-form-name {
     display: inline;
     color: white;
-    margin-right: 90px;
-    /*margin-left: 120px;*/
+    width: 500px;
     font-size: 14px;
     /*change*/
     text-align: justify;
     text-justify: inter-ideograph;
+    overflow: auto;
 }
 
 .decree-form-names-container {
     display: inline-flex;
-    flex-wrap: wrap;
-    width: 40%;
+    width: 60%;
     flex-direction: column;
     /*margin-right: 50px;*/
     line-height: 180%;
@@ -1642,7 +1641,7 @@ img.01 {
 }
 
 .decree-form-flex-item {
-    width: 20vw;
+    width: 10vw;
 }
 
 .fileIcon {
@@ -2378,11 +2377,12 @@ img:hover {
     flex: wrap;
     width: 100%;
 }
+
 .staff-type{
     margin-top: 1%;
     margin-left: 25%;
-    font-size: 1.3em;
-    width:33%;
+    font-size: 1.5em;
+    width:50%;
     height: 25px;
 }
 .staff-name{
@@ -2390,19 +2390,21 @@ img:hover {
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 2%;
-    margin-left: 15%;
-    font-size: 1.2em;
-    width:60%;
+    margin-left: 20%;
+    font-size: 1.5em;
+    width:70%;
     height: 22px;
 }
 .right-container{
+    position: relative;
     width: 35%;
     border-right: 1px solid white;
+    overflow-y: auto; 
 }
 .staff-name-container{
     display: flex;
     flex-wrap: wrap;
-    width:50%;
+    width:100%;
 }
 
 
