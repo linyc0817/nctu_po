@@ -9,6 +9,7 @@ $(document).ready(function () {
         $(this).find('div[class^="navbox"]').show();
         $(this).addClass("hover");
         $(".left-side-bar-bg").hide();
+        $(".right-bg").hide();
     }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
@@ -20,8 +21,13 @@ $(document).ready(function () {
         $(this).find('div[class^="navbox"]').hide();
         $(this).removeClass("hover");
         $(".left-side-bar-bg").show();
+        $(".right-bg").show();
     });
 
+
+    $("#navboxw7_11").click(() => {
+        window.open('http://personnel.nctu.edu.tw/guestbook.php', '_blank');
+    })
 });
 
 

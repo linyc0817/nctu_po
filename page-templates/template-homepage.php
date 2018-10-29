@@ -66,8 +66,8 @@
 
 
             <div id="lang">
-                <div class="lang-left lang-normal">中文</div>
-                <div class="lang-right lang-choose">EN</div>
+                <a href="<?php echo site_url() ?>"><div class="lang-left lang-normal">中文</div></a>
+                <a href="<?php echo site_url() ?>/working" target="_blank"><div class="lang-right lang-choose">EN</div></a>
             </div>
 
         </div>

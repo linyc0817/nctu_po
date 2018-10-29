@@ -27,11 +27,7 @@
   
 </script>
 <body>
-<div>網站尚未完成！....</div>
-<div class="footer">
-  <img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="footer" width="100%" style="position: fixed; bottom: 0; left: 0;">
-</div>
+<div style="margin: 0 0 0 0;font-size:100px">此部分網站尚未完成！....</div>
 
-<?php get_template_part('includes/footer'); ?>
 </body>
 </html>
