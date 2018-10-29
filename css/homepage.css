@@ -2455,9 +2455,10 @@ img:hover {
 }
 
 .right-container {
-    position: relative;
-    width: 35%;
+    position: absolute;
+    width: 50%;
     border-right: 1px solid white;
+    left: 0;
     overflow-y: auto;
 }
 
@@ -2466,6 +2467,21 @@ img:hover {
     flex-wrap: wrap;
     width: 100%;
 }
+
+.staff-group {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+#staff-right-content-container {
+    background-color: red;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    color: white;
+}
+
 
 /* 本室簡介 intro.css copy */
 

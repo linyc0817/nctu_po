@@ -418,6 +418,7 @@ $(function () {
     $(".staff-circle").click(e => {
         $(".staff-circle").removeClass("solid-circle");
         $(e.target).addClass("solid-circle");
+        $('.staff-info-container').hide();
         switch (e.target.id) {
             case "director_circle":
                 $("#staff-director-page").show()
@@ -431,12 +432,14 @@ $(function () {
                 $("#staff-group-1").show();
                 $("#staff-group-2").hide();
                 $("#staff-group-3").hide();
+                $("#g1m0_0").show();
                 break;
             case "second_group_circle":
                 $("#staff-director-page").hide()
                 $("#staff-group-1").hide();
                 $("#staff-group-2").show();
                 $("#staff-group-3").hide();
+                $("#g2m0_0").show();
                 break;
             case "third_group_circle":
                 $("#staff-director-page").hide()
@@ -447,14 +450,23 @@ $(function () {
         }
     })
     //執掌資訊
-    $("[class*=g1m_]").click((e) => {
+    // group 1
+    $("[class*=g1m]").click((e) => {
         $('.staff-info-container').hide();
         $('.staff-info-container').filter(function () {
-            var x = $(e.target).attr('class').toString().match(/g\dm_\d+/);
+            var x = $(e.target).attr('class').toString().match(/g1m\d+_\d+/);
             return this.id == x;
         }).show();
-
     })
+    // group 2
+    $("[class*=g2m]").click((e) => {
+        $('.staff-info-container').hide();
+        $('.staff-info-container').filter(function () {
+            var x = $(e.target).attr('class').toString().match(/g2m\d+_\d+/);
+            return this.id == x;
+        }).show();
+    })
+
 
 
 })
