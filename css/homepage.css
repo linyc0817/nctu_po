@@ -1065,7 +1065,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text1-2 { 
+
+.text1-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -1102,7 +1103,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text2-2 { 
+
+.text2-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -1136,7 +1138,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text3-2 { 
+
+.text3-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -1164,7 +1167,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text4-2 { 
+
+.text4-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -1192,7 +1196,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text5-2 { 
+
+.text5-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -1205,6 +1210,7 @@ img.01 {
     font-weight: 500;
     line-height: 1.2em;
 }
+
 /*下方img6*/
 
 .text6 {
@@ -1219,7 +1225,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text6-2 { 
+
+.text6-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -1247,7 +1254,8 @@ img.01 {
     font-weight: 500;
     line-height: 1.0em;
 }
-.text7-2 { 
+
+.text7-2 {
     position: relative;
     /*background-color: black;*/
     color: #040000;
@@ -2364,6 +2372,10 @@ img:hover {
 
 /*人事執掌*/
 
+.staff-info-container {
+    display: none;
+}
+
 #director-info-container {
     display: inline-flex;
     flex: wrap;
@@ -2421,11 +2433,11 @@ img:hover {
     width: 100%;
 }
 
-.staff-type{
+.staff-type {
     margin-top: 1%;
     margin-left: 25%;
     font-size: 1.5em;
-    width:50%;
+    width: 50%;
     height: 25px;
 }
 
@@ -2436,20 +2448,21 @@ img:hover {
     margin-top: 2%;
     margin-left: 20%;
     font-size: 1.5em;
-    width:70%;
+    width: 70%;
     height: 22px;
 }
-.right-container{
+
+.right-container {
     position: relative;
     width: 35%;
     border-right: 1px solid white;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .staff-name-container {
     display: flex;
     flex-wrap: wrap;
-    width:100%;
+    width: 100%;
 }
 
 /* 本室簡介 intro.css copy */
@@ -2822,6 +2835,7 @@ img:hover {
 }
 
 */
+
 #foot_left {
     /*  border-right:80px solid transparent;
   border-top:50vh solid #262626;  
@@ -2907,14 +2921,16 @@ img:hover {
     height: 25vh;
     z-index: 20;
 }
-#foot_bottom_description{
+
+#foot_bottom_description {
     color: white;
     font-size: 1.3em;
     line-height: 120%;
     margin-top: 100px;
-    margin-left:20px;
+    margin-left: 20px;
     height: 100px;
 }
+
 .foot_title {
     color: #DA9E2A;
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
