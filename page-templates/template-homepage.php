@@ -247,12 +247,14 @@
                                         <div class="staff-name-container">
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
+                                        $count = 0;
                                         foreach ($ary as $name) {
                                             $name = preg_replace('/[\r\n]+/','', $name);
                                             if(strlen($name)==0){
                                                 continue;
                                             }
-                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
+                                            echo "<div class='staff-name mouse-hover g1m_$count'>" . $name . "</div>";
+                                            $count++;
                                         }?>
                                         </div>
                                     </div>
@@ -461,12 +463,6 @@
                                 </div>
                             </div>
                             <div id="staff-right-content-container">
-                                <?php
-
-                                ?>
-
-
-                                
                                     <?php
                                     $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
                                     $total = 0;
@@ -483,7 +479,7 @@
                                                 break;
                                             }
                                             if (preg_match("/聯絡分機:/", $line)) {
-                                                echo "<div class='staff-info-container' id='m_$count'>";
+                                                echo "<div class='staff-info-container' id='g1m_$count'>";
                                                 echo "<div class='staff-tel'>$line</div>";
                                             }
                                             $agents = array();
@@ -496,12 +492,13 @@
                                                     }
                                                 }
                                                 echo "</div>"; //staff-agent-con
-                                                echo "</div>"; // staff-info
                                             }
                                             if (preg_match("/執掌:/", $line)) {
                                                 echo "<div class='staff-job'>$line</div>";
                                                 $count++;
+                                                echo "</div>"; // staff-info
                                             }
+                                            
                                         }
                                     
                                     ?>
