@@ -203,6 +203,7 @@ $(function () {
         $("#decree-right-details-container").hide();
         $(".decree-item").css("color", "#F4A22C");
         S = null;
+        personnel = null;
     })
     function showDetails() { //顯示細項
         if (personnel === null || S === null) {

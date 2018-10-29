@@ -124,8 +124,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="position_page pp2">
-
+                    <div class="position_page pp2" style="display:none;">
+                        <div style="width:50vw;margin-left:20vw;">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.2887850892794!2d120.99884471455455!3d24.78774981002353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836102a748fd7%3A0x7eb013e01a93d031!2zMzAw5paw56u55biC5p2x5Y2A6KGM5pS_5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1540813184016" width="500" height=300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>        
                     </div>
                     <div class="position_page pp3">
                         <div id="pp3-left">
@@ -551,7 +553,7 @@
 
         <div class="top" id="top_3">
             <div id="nav3">
-                <div id="navid3">法令&表格</div>
+                <div id="navid3">法令&表件</div>
                 <div class="nav-triangle" id="nav3-triangle">
                 </div>
             </div>
@@ -613,8 +615,14 @@ foreach ($main_cats as $m_idx => $main_cat) {
             // post[num]是用來實作js -> 點選時右邊內容顯示什麼
             $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover" . " post_" . $article->ID;
             //var_dump($article);
-
-            echo "<div class= '$article_class'>" . $article->post_title . "</div>";
+            if(mb_strlen($article->post_title,"utf-8") > 14){
+                $tmp_title = $article->post_title;
+                $tmp_title = mb_substr($tmp_title,0,14,"utf-8") . "...";
+                echo "<div class='$article_class'>" . $tmp_title ."<span class='tooltiptext'>$article->post_title</span>" . "</div>";
+                //asdd
+            }else{
+                echo "<div class= '$article_class'>" . $article->post_title. "</div>";
+            }
             //$myJSON = json_decode($article->post_content);
             //echo "<p>" . $myJSON->name . "</p>";
             //var_dump($myJSON);
@@ -749,7 +757,14 @@ foreach ($main_cats as $m_idx => $main_cat) {
             //form names
             echo ("<div class='decree-form-names-container'>");
             for ($i = 0; $i < sizeof($forms_name); $i++) {
+                // shorten long name
+                if(mb_strlen($forms_name[$i],"utf-8") > 15){
+                    $tmp_name = $forms_name[$i];
+                    $forms_name[$i] = mb_substr($forms_name[$i],0,15,"utf-8") . "...";
+                    echo ("<div class='decree-form-name'>$forms_name[$i]"."<span class='tooltiptext'>$tmp_name</span>"."</div>");
+                }else{
                 echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
+                }
             }
             echo ("</div>");
             echo ("<div class='decree-forms-container'>");
