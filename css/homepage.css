@@ -2816,11 +2816,12 @@ img:hover {
     transition: bottom 1.7s ease-in-out;
 }
 
-#foot:hover {
+/* #foot:hover {
     bottom: 0;
     height: 75%;
 }
 
+*/
 #foot_left {
     /*  border-right:80px solid transparent;
   border-top:50vh solid #262626;  

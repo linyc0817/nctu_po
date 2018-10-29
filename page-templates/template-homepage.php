@@ -412,7 +412,7 @@
                                     $info = explode("\n", get_page_by_title('第一組組長資料', OBJECT, 'post')->post_content);
                                     foreach ($info as $line) {
                                         if (preg_match("/tel:/", $line)) {
-                                            $tel = preg_split("/tel:/", $line, PREG_SPLIT_NO_EMPTY)[1];
+                                            $tel = preg_split("/tel:/", $line, PREG_SPLIT_NO_EMPTY)[0];
                                         }
                                         $agents = array();
                                         if (preg_match("/agents:/", $line)) {
@@ -526,7 +526,7 @@
                     <!-- <a href="<?php echo site_url(); ?>/vision/" style="color: #FFFFFF;"> -->
                         <div id="navboxw1_2_4" class="mouse-hover">本 室 願 景<br></div>
                     <!-- </a> -->
-                    <div id="navboxw1_2_5" class="mouse-hover">工 作 成 果</div>
+                    <a href="<?php echo site_url() ?>/working" target="_blank"> <div id="navboxw1_2_5" class="mouse-hover">工 作 成 果</div></a>
                 </div>
             </div>
             <div class="navbox1_3">
@@ -970,7 +970,6 @@ function getAllP($text)
 <div class="msg-board-container other-questions">
             <!-- 其他問題 -->
             <?php
-
 //$my_postid = 98; //This is page id or post id
 $my_postid = get_posts(array('category' => get_cat_ID("其他問題")))[0];
 $content_post = get_post($my_postid);
