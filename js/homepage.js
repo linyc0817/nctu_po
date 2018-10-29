@@ -448,6 +448,7 @@ $(function () {
     })
     //執掌資訊
     $("[class*=g1m_]").click((e) => {
+        $('.staff-info-container').hide();
         $('.staff-info-container').filter(function () {
             var x = $(e.target).attr('class').toString().match(/g\dm_\d+/);
             return this.id == x;
