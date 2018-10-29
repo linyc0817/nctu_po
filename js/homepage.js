@@ -9,8 +9,7 @@ $(document).ready(function () {
         $(this).find('div[class^="navbox"]').show();
         $(this).addClass("hover");
         $(".left-side-bar-bg").hide();
-
-
+        $(".right-bg").hide();
     }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
@@ -22,8 +21,13 @@ $(document).ready(function () {
         $(this).find('div[class^="navbox"]').hide();
         $(this).removeClass("hover");
         $(".left-side-bar-bg").show();
+        $(".right-bg").show();
     });
 
+
+    $("#navboxw7_11").click(() => {
+        window.open('http://personnel.nctu.edu.tw/guestbook.php', '_blank');
+    })
 });
 
 
@@ -196,14 +200,17 @@ $(function () {
 
 //法令類別
 $(function () {
+    var personnel = null; //用來判斷現在點選哪個人員
+    var S = null; // 用來判斷現在點選哪個類別
+
     $("#prev-page").click((e) => {
         $('decree-main-container').show();
         $("#decree-left-flexbox").hide();
         $("#decree-right-details-container").hide();
         $(".decree-item").css("color", "#F4A22C");
+        S = null;
+        personnel = null;
     })
-
-
     function showDetails() { //顯示細項
         if (personnel === null || S === null) {
             return;
@@ -217,8 +224,7 @@ $(function () {
         $('decree-main-container').hide();
         $('.main' + (S.substr(1))).show();
     }
-    var personnel = null; //用來判斷現在點選哪個人員
-    var S = null; // 用來判斷現在點選哪個類別
+
 
     $(".personnels").click((e) => {
         $(".personnels").css('color', '#F4A22C');

@@ -1610,6 +1610,41 @@ img.01 {
     background-color: #144959;
 }
 
+.decree-form-name .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.decree-detail-articles .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 100;
+    right: 0px;
+}
+
+.decree-form-name:hover .tooltiptext {
+    visibility: visible;
+}
+
+.decree-detail-articles:hover .tooltiptext {
+    visibility: visible;
+}
+
 .decree-form-name {
     display: inline;
     color: white;
@@ -2175,10 +2210,12 @@ img:hover {
     align-items: center;
     justify-content: center;
 }
-.staff-circle.circle5-2{
-    left:9vw;
+
+.staff-circle.circle5-2 {
+    left: 9vw;
     top: 6vh;
 }
+
 .circle6-2 {
     display: flex;
     width: 21px;
@@ -2194,8 +2231,8 @@ img:hover {
     justify-content: center;
 }
 
-.staff-circle.circle6-2{
-    left:26vw;
+.staff-circle.circle6-2 {
+    left: 26vw;
     top: 6vh;
 }
 
@@ -2214,8 +2251,8 @@ img:hover {
     justify-content: center;
 }
 
-.staff-circle.circle7-2{
-    left:43vw;
+.staff-circle.circle7-2 {
+    left: 43vw;
     top: 6vh;
 }
 
@@ -2234,8 +2271,8 @@ img:hover {
     justify-content: center;
 }
 
-.staff-circle.circle8-2{
-    left:60vw;
+.staff-circle.circle8-2 {
+    left: 60vw;
     top: 6vh;
 }
 
@@ -2324,53 +2361,61 @@ img:hover {
 #head-south-context {
     display: flex;
 }
+
 /*人事執掌*/
-#director-info-container{
+
+#director-info-container {
     display: inline-flex;
     flex: wrap;
-    width: 100%; 
+    width: 100%;
 }
-#director-name{
+
+#director-name {
     margin-top: 3%;
     margin-left: 13%;
     font-size: 2em;
-    width:17%;
+    width: 17%;
     height: 100px;
     border-right: 1px solid white;
 }
-#director-info{
+
+#director-info {
     display: flex;
     flex-direction: column;
     margin-top: 3%;
     margin-left: 2%;
     font-size: 1em;
-    width:70px;
+    width: 70px;
     height: 100px;
 }
-#director-words-container{
+
+#director-words-container {
     display: inline-flex;
     flex: wrap;
-    width: 100%; 
+    width: 100%;
 }
-#director-word{
+
+#director-word {
     margin-top: 3%;
     margin-left: 13%;
     font-size: 2em;
-    width:17%;
+    width: 17%;
     height: 100px;
     border-right: 1px solid white;
 }
-#director-word-content{
+
+#director-word-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 3%;
     margin-left: 2%;
     font-size: 1em;
-    width:200px;
-    height: 100px;  
+    width: 200px;
+    height: 100px;
 }
-.staff-container{
+
+.staff-container {
     display: inline-flex;
     flex: wrap;
     width: 100%;
@@ -2383,7 +2428,8 @@ img:hover {
     width:50%;
     height: 25px;
 }
-.staff-name{
+
+.staff-name {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -2399,17 +2445,12 @@ img:hover {
     border-right: 1px solid white;
     overflow-y: auto; 
 }
-.staff-name-container{
+
+.staff-name-container {
     display: flex;
     flex-wrap: wrap;
     width:100%;
 }
-
-
-
-
-
-
 
 /* 本室簡介 intro.css copy */
 
