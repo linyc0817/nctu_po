@@ -1058,12 +1058,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text1-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img2*/
@@ -1082,12 +1095,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text2-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img3*/
@@ -1103,12 +1129,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text3-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img4*/
@@ -1118,12 +1157,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text4-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img5*/
@@ -1133,14 +1185,26 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
 }
-
+.text5-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
+}
 /*下方img6*/
 
 .text6 {
@@ -1148,12 +1212,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text6-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*下方img7*/
@@ -1163,12 +1240,25 @@ img.01 {
     /*background-color: black;*/
     color: #040000;
     font-size: 1.3em;
-    top: 25px;
+    top: 30px;
     width: 100%;
     left: 0%;
     text-align: center;
     font-weight: 500;
     line-height: 1.0em;
+}
+.text7-2 { 
+    position: relative;
+    /*background-color: black;*/
+    color: #040000;
+    font-size: 1.3em;
+    top: 65px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 10px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 /*navbar hover 出2個直角梯形外面一大包*/
@@ -1558,18 +1648,17 @@ img.01 {
 .decree-form-name {
     display: inline;
     color: white;
-    margin-right: 20px;
-    /*margin-left: 120px;*/
+    width: 500px;
     font-size: 14px;
     /*change*/
     text-align: justify;
     text-justify: inter-ideograph;
+    overflow: auto;
 }
 
 .decree-form-names-container {
     display: inline-flex;
-    flex-wrap: wrap;
-    width: 55%;
+    width: 60%;
     flex-direction: column;
     /*margin-right: 50px;*/
     line-height: 180%;
@@ -2334,11 +2423,11 @@ img:hover {
     width: 100%;
 }
 
-.staff-type {
+.staff-type{
     margin-top: 1%;
     margin-left: 25%;
-    font-size: 1.3em;
-    width: 33%;
+    font-size: 1.5em;
+    width:50%;
     height: 25px;
 }
 
@@ -2347,21 +2436,22 @@ img:hover {
     flex-direction: column;
     flex-wrap: wrap;
     margin-top: 2%;
-    margin-left: 15%;
-    font-size: 1.2em;
-    width: 60%;
+    margin-left: 20%;
+    font-size: 1.5em;
+    width:70%;
     height: 22px;
 }
-
-.right-container {
+.right-container{
+    position: relative;
     width: 35%;
     border-right: 1px solid white;
+    overflow-y: auto; 
 }
 
 .staff-name-container {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width:100%;
 }
 
 /* 本室簡介 intro.css copy */
@@ -2810,15 +2900,22 @@ img:hover {
 }
 
 #foot_bottom {
+    display: flex;
     background-color: #666666;
     position: absolute;
     top: 70%;
     width: 100%;
-    left: 0%;
-    height: 20vh;
+    height: 25vh;
     z-index: 20;
 }
-
+#foot_bottom_description{
+    color: white;
+    font-size: 1.3em;
+    line-height: 120%;
+    margin-top: 100px;
+    margin-left:20px;
+    height: 100px;
+}
 .foot_title {
     color: #DA9E2A;
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;

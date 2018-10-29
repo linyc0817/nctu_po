@@ -1286,6 +1286,8 @@ function leftSideBarMsgs()
                     <div class="text1">
                         <p>適用勞基法</p>
                         <p>專區</p>
+                    </div>
+                    <div class="text1-2">    
                         適用勞基法人員（人事代號D/E/F/G/H/Z/Y/V/O/B/Q第三階段/校內外學生及校外人士之本校勞動型兼任助王或臨時工）
                     </div>
                 </div>
@@ -1299,6 +1301,8 @@ function leftSideBarMsgs()
                     <div class="text2">
                         <p>外籍教職員</p>
                         <p>專區</p>
+                    </div>
+                    <div class="text2-2">
                         適用對象：本校外籍人士
                     </div>
                 </div>
@@ -1311,6 +1315,8 @@ function leftSideBarMsgs()
                     <div class="text3">
                         <p>兼任教師</p>
                         <p>專區</p>
+                    </div>
+                    <div class="text3-2">
                         適用對象：本校兼任教師（人事代號PTxxx）
                     </div>
                 </div>
@@ -1323,9 +1329,9 @@ function leftSideBarMsgs()
                     <div class="text4">
                         <p>學習與勞動</p>
                         <p>權益專區</p>
+                    </div>
+                    <div class="text4-2">
                         適用對象：校內外學生
-
-
                     </div>
                 </div>
             </div>
@@ -1334,10 +1340,11 @@ function leftSideBarMsgs()
                 <div class="picline5"></div>
                 <div class="img5">
                     <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/05.png" alt="05">
-
                     <div class="text5">
                         <p>教師升等</p>
                         <p>專區</p>
+                    </div>
+                    <div class="text5-2">
                         適用對象：本校教師（人事代號T/TR/XT/XC）
                     </div>
 
@@ -1350,9 +1357,11 @@ function leftSideBarMsgs()
                 <div class="img6">
                     <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/06.png" alt="06">
                     <div class="text6">
-                        <p>退休專區</p>
+                        <p>退休</p>
+                        <p>專區</p>
+                    </div>
+                    <div class="text6-2">
                         適用對象：已退休或待退休之公務員（人事代號T/TR/TS/S/L/P）
-
                     </div>
                 </div>
             </div>
@@ -1365,8 +1374,9 @@ function leftSideBarMsgs()
                     <div class="text7">
                         <p>福利專區 </p>
                         <p>含自強康樂委員會</p>
-                        適用對象：本校教職員工（自強康樂委員會適用對象：T/TR/TS/XT/XC/XB/X/S/L/M/P/D/E/F/G/B/J）
-
+                    </div>
+                    <div class="text7-2">
+                        適用對象：本校教職員工（自強康樂委員會適用對象：T/TR/TS/XT/XC/XB/X/S/L<br>/M/P/D/E/F/G/B/J）
                     </div>
                 </div>
             </div>
@@ -1387,7 +1397,7 @@ function leftSideBarMsgs()
 
 
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:10% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));z-index: 25;"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:20% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));z-index: 25;"></div>
 
         <div id="foot_left">
             <div id="foot-area1">
@@ -1624,19 +1634,16 @@ function leftSideBarMsgs()
   </div>
 
   <div id="foot_bottom">
+         <img src="<?php bloginfo('template_url');?>/image/logo_guide.png" width=200px height=100% float:left alt="03">
+         <div id="foot_bottom_description">
+            30010 新竹市大學路1001號<br>
+            最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768<br>
+            國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
+        </div>
+        
 
-      <img src="?php bloginfo('template_url');?>/image/logo_guide.png" alt="03"">
-
-
-(測試文字)
-<!--
-      30010 新竹市大學路1001號
-      最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768
-      國立交通大學人事室版權所有，請尊重智慧財產權勿任意轉載
- -->
   </div>
 
-    </div>
 
 
 
