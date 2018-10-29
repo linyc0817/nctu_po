@@ -248,7 +248,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -259,7 +263,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -269,6 +277,10 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
                                             echo "<div class='staff-name'>" . $name . "</div>";
                                         }?>
                                         </div>
@@ -279,7 +291,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -289,7 +305,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -299,7 +319,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -307,9 +331,15 @@
                                         <div class="staff-type">全時工讀生</div>
                                         <div class="staff-name-container">
                                         <?php
+                                        $count=0;
                                         $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            $count++;
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -325,7 +355,7 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -335,7 +365,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -345,7 +379,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -355,7 +393,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -365,7 +407,11 @@
                                         <?php 
                                         $ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -375,7 +421,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div>
@@ -385,7 +435,11 @@
                                         <?php
                                         $ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
                                         foreach ($ary as $name) {
-                                            echo "<div class='staff-name'>" . $name . "</div>";
+                                            $name = preg_replace('/[\r\n]+/','', $name);
+                                            if(strlen($name)==0){
+                                                continue;
+                                            }
+                                            echo "<div class='staff-name mouse-hover'>" . $name . "</div>";
                                         }?>
                                         </div>
                                     </div> 
@@ -407,33 +461,53 @@
                                 </div>
                             </div>
                             <div id="staff-right-content-container">
-                                <div class="staff-info-container">
+                                <?php
+
+                                ?>
+
+
+                                
                                     <?php
-                                    $info = explode("\n", get_page_by_title('第一組組長資料', OBJECT, 'post')->post_content);
-                                    foreach ($info as $line) {
-                                        if (preg_match("/tel:/", $line)) {
-                                            $tel = preg_split("/tel:/", $line, PREG_SPLIT_NO_EMPTY)[0];
-                                        }
-                                        $agents = array();
-                                        if (preg_match("/agents:/", $line)) {
-                                            $agents = preg_split("/[(agents:),]/", $line);
+                                    $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
+                                    $total = 0;
+                                    foreach($ary as $element){
+                                        $element = preg_replace('/[\r\n]+/','', $element);
+                                        if(strlen($element)>0){
+                                            $total++;
                                         }
                                     }
-                                    ?>
-                                    <div class="staff-tel-label">聯絡分機</div>
-                                    <div class="staff-tel"><?=$tel?></div>
-                                    <div class="staff-agent-container">
-                                        <div class="staff-agent-title">職務代理人</div>
-                                        <?php
-                                        foreach ($agents as $agent) {
-                                            if ($agent != "") {
-                                                echo "<div>" . "$agent" . "</div>";
+                                    $count = 0;
+                                    $info = explode("\n", get_page_by_title('第一組組長資料', OBJECT, 'post')->post_content);
+                                        foreach ($info as $line) {
+                                            if(!($count < $total )){
+                                                break;
+                                            }
+                                            if (preg_match("/聯絡分機:/", $line)) {
+                                                echo "<div class='staff-info-container' id='m_$count'>";
+                                                echo "<div class='staff-tel'>$line</div>";
+                                            }
+                                            $agents = array();
+                                            if (preg_match("/職務代理人:/", $line)) {
+                                                $agents = preg_split("/[(agents:),]/", $line);
+                                                echo "<div class='staff-agent-container'>";
+                                                foreach ($agents as $agent) {
+                                                    if ($agent != "") {
+                                                        echo "<div>" . "$agent" . "</div>";
+                                                    }
+                                                }
+                                                echo "</div>"; //staff-agent-con
+                                                echo "</div>"; // staff-info
+                                            }
+                                            if (preg_match("/執掌:/", $line)) {
+                                                echo "<div class='staff-job'>$line</div>";
+                                                $count++;
                                             }
                                         }
-                                        ?>
-                                    </div>
+                                    
+                                    ?>
+                                    
 
-                                </div>
+                                
                             </div>
 
 
