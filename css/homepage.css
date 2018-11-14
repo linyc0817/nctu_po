@@ -2375,6 +2375,9 @@ img:hover {
 
 .staff-info-container {
     display: none;
+    font-size: 1.3em;
+    line-height: 200%;
+    padding-left: 10px;
 }
 
 #director-info-container {
@@ -2397,8 +2400,8 @@ img:hover {
     flex-direction: column;
     margin-top: 3%;
     margin-left: 2%;
-    font-size: 1em;
-    width: 70px;
+    font-size: 1.3em;
+    width: 100px;
     height: 100px;
 }
 
@@ -2423,7 +2426,7 @@ img:hover {
     flex-wrap: wrap;
     margin-top: 3%;
     margin-left: 2%;
-    font-size: 1em;
+    font-size: 1.3em;
     width: 200px;
     height: 100px;
 }
@@ -2474,7 +2477,7 @@ img:hover {
 }
 
 #staff-right-content-container {
-    background-color: red;
+    /*background-color: red;*/
     position: absolute;
     width: 50%;
     right: 0;
