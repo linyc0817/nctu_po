@@ -2,6 +2,10 @@ ps: //scontent.fkhh1-2.fna.fbcdn.net/v/t1.0-9/39509702_2189297444432336_38515396
 body {
     font-family: 'Noto Sans TC', sans-serif;
 }
+::-webkit-scrollbar  /*捲軸顏色*/
+{ 
+background-color:#0;
+}
 
 .navbar {
     background-color: #f2f2f2;
