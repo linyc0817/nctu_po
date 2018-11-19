@@ -197,9 +197,11 @@ img#close-button:hover {
 /* 留言板 */
 
 .msg-board-container {
-    margin-top: 40vh;
+    margin-top: 30vh;
     z-index: 11;
     position: fixed;
+    font-size: 1.3em;
+    line-height: 200%;
 }
 
 .msg-board-content:hover {
