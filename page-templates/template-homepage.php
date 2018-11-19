@@ -1510,15 +1510,19 @@ function leftSideBarMsgs()
             $content = apply_filters('the_content', $content);
             $content = str_replace(']]>', ']]&gt;', $content);
             $all = getAllP($content);
-            foreach ($all as &$text) {
+            foreach ($all as $idx => &$text) {
                 $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
                 $date = get_the_date('Y-m-d', $post->ID);
                 echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
                 echo ($print);
+                if ($idx != (sizeof($all) - 1)) {
+                    echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
+                }
             }
             if ($postIndex != (sizeof($posts) - 1)) {
                 echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
             }
+            
 
         }
     }
