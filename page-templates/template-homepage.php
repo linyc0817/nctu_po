@@ -895,7 +895,7 @@
                     width:350px;
                     height: 100%;
                     display: block;
-                    z-index:100;
+                    z-index:101;
                     top:25%;
                 ">
             <img id="prev-page" class="mouse-hover" style="width:50%;"
@@ -1181,6 +1181,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     </div>
                     <div id="decree-category" style="
                         margin-top:50px;
+                        display:none;
                     ">
                         <p style="
                         color: #F4A22C;
@@ -1264,12 +1265,14 @@ foreach ($main_cats as $m_idx => $main_cat) {
 
             </div>
         </div>
+        <!-- 留言板 -->
         <div class="top" id="top_7">
             <div id="nav7">
                 <div id="navid7">留言版</div>
             </div>
 
             <!-- 後端function -->
+            
             <?php
 function hasNextP($text)
 {
@@ -1295,164 +1298,29 @@ function getAllP($text)
 }
 
 ?>
-<div class="msg-board-container other-questions">
-            <!-- 其他問題 -->
-            <?php
-//$my_postid = 98; //This is page id or post id
-$my_postid = get_posts(array('category' => get_cat_ID("其他問題")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content other-questions mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
+<?php
+$QA_type = array("abroad","part-time","other-questions","AMS","personnel","errand","specialist","teachers","postdoctoral","resignation");
+$QA_cat_id = array("出國申請","全時工讀生","其他問題","研發替代役","約用人員","差勤","專兼任計畫人員","專兼任教師","博士後研究員","離職問題");
+    foreach($QA_type as $idx => $type){
+        echo "<div class='msg-board-container $type'>";
+        $posts = get_posts(array("category" => get_cat_ID($QA_cat_id[$idx])));
+        foreach($posts as $qidx => $post){
+            echo "<div class='msg-board-QA-container'>";
+            $question = "<div class='msg-board-question $type mouse-hover question$qidx' style='display:none'>" . $post -> post_title . '</div>';
+            $answer = "<div class='msg-board-answer $type mouse-hover answer$qidx _hide' style='display:none'>" . $post -> post_content . '</div>';
+            echo ($question);
+            echo ($answer);
+            
+            echo "</div>";
+            
+        }
+        
+        echo '</div>';
+    }
 ?>
-</div>
-            <!-- 約用人員 -->
-<div class="msg-board-container personnel">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("約用人員")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content personnel mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!--全時工讀生-->
-<div class="msg-board-container part-time">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("全時工讀生")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content part-time mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-            <!-- 專兼任教師 -->
-<div class="msg-board-container teachers">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("專兼任教師")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content teachers mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!-- 出國申請 -->
-<div class="msg-board-container abroad">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("出國申請")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content abroad mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!-- 研發替代役 -->
-<div class="msg-board-container AMS">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("研發替代役")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content AMS mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!-- 差勤 -->
-<div class="msg-board-container errand">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("差勤")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content errand mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!-- 專兼任計畫人員 -->
-<div class="msg-board-container specialist">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("專兼任計畫人員")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content specialist mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!-- 博士後研究員 -->
-<div class="msg-board-container postdoctoral">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("博士後研究員")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content postdoctoral mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-<!-- 離職問題 -->
-<div class="msg-board-container resignation">
-            <?php
-$my_postid = get_posts(array('category' => get_cat_ID("離職問題")))[0];
-$content_post = get_post($my_postid);
-$content = $content_post->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-$all = getAllP($content);
-foreach ($all as &$text) {
-    $print = '<div class="msg-board-content resignation mouse-hover" style="display:none">' . $text . '</div>';
-    echo ($print);
-}
-?>
-</div>
-
-            <div class="navbox7">
+   <div class="navbox7">
                 <!-- <hr style=" border: 1px solid #EA9C32; position: fixed; top: 30%; left: 5%; width: 10%;"> -->
 
-
-
-                <!-- 留言板 -->
                 <hr-custom style="border-top: 1px solid #f4a22c;
         left: 5%;
         top:33%;

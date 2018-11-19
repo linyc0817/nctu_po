@@ -183,11 +183,25 @@ img#close-button:hover {
     width: 80%;
 }
 
-.msg-board-content {
+.msg-board-question {
     /*text-align: center;*/
     letter-spacing: 2.3px;
     font-weight: bold;
     color: #f4a22c;
+    display: block;
+    position: relative;
+    text-align: left;
+    margin-top: 3%;
+    white-space: nowrap;
+    width: 10px;
+    left: 400px;
+}
+
+.msg-board-answer {
+    /*text-align: center;*/
+    letter-spacing: 2.3px;
+    font-weight: bold;
+    color: white;
     display: block;
     position: relative;
     text-align: left;
@@ -1630,11 +1644,12 @@ img.01 {
 .decree-form-name .tooltiptext {
     visibility: hidden;
     width: 300px;
-    background-color: black;
+    background-color: grey;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
+    right: 42vw;
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
@@ -1650,8 +1665,8 @@ img.01 {
     padding: 5px 0;
     /* Position the tooltip */
     position: fixed;
-    z-index: 100;
-    left: 50px;
+    z-index: 1000;
+    left: 42vw;
     top: 60vh;
 }
 

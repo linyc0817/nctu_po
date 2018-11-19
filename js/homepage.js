@@ -16,7 +16,8 @@ $(document).ready(function () {
     }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
-        $(".msg-board-content").css('display', 'none');
+        $(".msg-board-question, .msg-board-answer").css('display', 'none');
+        $("[class*=question]").css('color', '#f4a22c');
         if (commentHighlight) {
             commentHighlight.css('color', '#f4a22c');
         }
@@ -27,6 +28,7 @@ $(document).ready(function () {
         if (bgmask == 1) {
             $(".right-bg").show();
         }
+
     });
 
 
@@ -129,16 +131,8 @@ $(function () {
         $(this).css('cursor', 'pointer');
     })
     function comments_hide() {
-        $('.msg-board-content.abroad').hide();
-        $('.msg-board-content.other-questions').hide();
-        $('.msg-board-content.personnel').hide();
-        $('.msg-board-content.teachers').hide();
-        $('.msg-board-content.part-time').hide();
-        $('.msg-board-content.AMS').hide();
-        $('.msg-board-content.errand').hide();
-        $('.msg-board-content.specialist').hide();
-        $('.msg-board-content.postdoctoral').hide();
-        $('.msg-board-content.resignation').hide();
+        $('.msg-board-question').hide();
+        $('[class*=answer]').hide();
     }
     $(".navbox7-left").click(function () {
         $("#navboxrw7_1").css('display', 'none');
@@ -149,43 +143,43 @@ $(function () {
         switch (this.id) {
             //出國申請
             case 'navboxw7_1':
-                $('.msg-board-content.abroad').css('display', 'block');
+                $('.msg-board-question.abroad').css('display', 'block');
                 break;
             //全時工讀生
             case 'navboxw7_2':
-                $('.msg-board-content.part-time').css('display', 'block');
+                $('.msg-board-question.part-time').css('display', 'block');
                 break;
             //其他問題
             case 'navboxw7_3':
-                $('.msg-board-content.other-questions').css('display', 'block');
+                $('.msg-board-question.other-questions').css('display', 'block');
                 break;
             //研發替代役
             case 'navboxw7_4':
-                $('.msg-board-content.AMS').css('display', 'block');
+                $('.msg-board-question.AMS').css('display', 'block');
                 break;
             //約用人員
             case 'navboxw7_5':
-                $('.msg-board-content.personnel').css('display', 'block');
+                $('.msg-board-question.personnel').css('display', 'block');
                 break;
             //差勤
             case 'navboxw7_6':
-                $('.msg-board-content.errand').css('display', 'block');
+                $('.msg-board-question.errand').css('display', 'block');
                 break;
             //專兼任計畫人員
             case 'navboxw7_7':
-                $('.msg-board-content.specialist').css('display', 'block');
+                $('.msg-board-question.specialist').css('display', 'block');
                 break;
             //專兼任教師
             case 'navboxw7_8':
-                $('.msg-board-content.teachers').css('display', 'block');
+                $('.msg-board-question.teachers').css('display', 'block');
                 break;
             //博士後研究員
             case 'navboxw7_9':
-                $('.msg-board-content.postdoctoral').css('display', 'block');
+                $('.msg-board-question.postdoctoral').css('display', 'block');
                 break;
             //離職問題
             case 'navboxw7_10':
-                $('.msg-board-content.resignation').css('display', 'block');
+                $('.msg-board-question.resignation').css('display', 'block');
                 break;
             default:
             //alert(this.id);
@@ -195,12 +189,36 @@ $(function () {
         $(this).css("color", "#FFFFFF");
     })
 
+    // question clicked => show answer
+    //var x = $(e.target).attr('class').toString().match(/g1m\d+_\d+/);
+    //return this.id == x;
+    QA_types = ["abroad", "part-time", "other-questions", "AMS", "personnel", "errand", "specialist", "teachers", "postdoctoral", "resignation"];
+    $("[class*=question]").click((e) => {
+        $("[class*=answer]").hide();
+        $("[class*=question]").css('color', '#f4a22c');
+        $(e.target).css('color', '#FFFFFF');
+        target_class = $(e.target).attr('class').toString();
+        for (i = 0; i < QA_types.length; i++) {
+            if (target_class.includes(QA_types[i])) {
+                type = QA_types[i];
+                break;
+            }
+        }
+        var id = target_class.match(/question\d+/)[0].replace("question", "");
+
+        var answer_class = "answer" + id;
+        $("." + answer_class + "." + type).show();
+
+
+    })
+
 });
 
 //class mouse-hover change cursor
 $(function () {
     $(".mouse-hover").hover(function () {
         $(this).css('cursor', 'pointer');
+
     })
 })
 
@@ -214,6 +232,7 @@ $(function () {
         $("#decree-left-flexbox").hide();
         $("#decree-right-details-container").hide();
         $(".decree-item").css("color", "#F4A22C");
+        $("#decree-category").hide();
         S = null;
         personnel = null;
     })
@@ -240,6 +259,7 @@ $(function () {
             return;
         }
         personnel = personnel_type;
+        $("#decree-category").show();
         showDetails();
     })
 
