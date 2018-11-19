@@ -2,9 +2,12 @@ ps: //scontent.fkhh1-2.fna.fbcdn.net/v/t1.0-9/39509702_2189297444432336_38515396
 body {
     font-family: 'Noto Sans TC', sans-serif;
 }
-::-webkit-scrollbar  /*捲軸顏色*/
-{ 
-background-color:#0;
+
+::-webkit-scrollbar
+/*捲軸顏色*/
+
+    {
+    background-color: #0;
 }
 
 .navbar {
@@ -1640,15 +1643,16 @@ img.01 {
 .decree-detail-articles .tooltiptext {
     visibility: hidden;
     width: 300px;
-    background-color: black;
+    background-color: grey;
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
     /* Position the tooltip */
-    position: absolute;
+    position: fixed;
     z-index: 100;
-    right: 0px;
+    left: 50px;
+    top: 60vh;
 }
 
 .decree-form-name:hover .tooltiptext {
@@ -1755,7 +1759,7 @@ img.01 {
     align-items: center;
     display: none;
     font-size: 14px;
-    overflow-y:auto;
+    overflow-y: auto;
 }
 
 .details-container {
@@ -2489,7 +2493,6 @@ img:hover {
     right: 0;
     color: white;
 }
-
 
 /* 本室簡介 intro.css copy */
 

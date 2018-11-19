@@ -959,7 +959,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
 
         //var_dump($articles);
         echo "</div>"; // close tag for {details-container}
-        echo ("<hr class='decree-left-hr'>");
+        echo ("<hr class='decree-left-hr $detail_cat_class'>");
 
     }
     echo "</div>"; // close tag for main-container

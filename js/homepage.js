@@ -1,3 +1,4 @@
+bgmask = 0
 // nav hover 展開2個直角梯形
 $(document).ready(function () {
     $('div.top').hover(function () {
@@ -9,7 +10,9 @@ $(document).ready(function () {
         $(this).find('div[class^="navbox"]').show();
         $(this).addClass("hover");
         $(".left-side-bar-bg").hide();
-        $(".right-bg").hide();
+        if (bgmask == 1) {
+            $(".right-bg").hide();
+        }
     }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
@@ -21,7 +24,9 @@ $(document).ready(function () {
         $(this).find('div[class^="navbox"]').hide();
         $(this).removeClass("hover");
         $(".left-side-bar-bg").show();
-        $(".right-bg").show();
+        if (bgmask == 1) {
+            $(".right-bg").show();
+        }
     });
 
 
@@ -66,6 +71,7 @@ $(function () {
 
     let highlight;
     $(".left-side-bar-element").click(function () {
+        bgmask = 1;
         if (highlight) {
             highlight.css('color', '#f4a22c');
         }
