@@ -495,16 +495,27 @@
                             <!-- 人員職掌一覽 -->
                             <div id="staff-group-3" class="_hide staff-group">
                                 <div id="staff-left-slider-container">
-                                    <?php
-                                    //hjk
-                                    $staff_wpcat_id = get_cat_iD("人員");
-                                    $staff_main_cats = get_categories(array('parent' => $staff_wpcat_id, 'hide_empty' => false));
-                                    foreach ($staff_main_cats as $m_idx => $cat) {
-
-                                    }
-                                    ?>
                                       <div id="staff-left-circle" class="staff-circle mouse-hover"></div>
                                 </div>
+                                <div id="staff-group-3-right-container">
+                                <?php
+                                    //hjk
+                                    $staff_wpcat_id = get_cat_iD("第一組執掌一覽");
+                                    $posts = get_posts( array(
+                                        'numberposts' => 100,
+                                        'category' => $staff_wpcat_id
+                                    ));
+                                    foreach ($posts as $idx => $post) {
+                                        echo "<div class='staff-overview-container'>";
+                                            echo "<div class='staff-overview-title-$idx'>" . $post->post_title . "</div>";
+                                            echo "<div class='staff'-overview-content-$idx>" . $post->post_content . "</div>";
+                                        echo "</div>";
+                                        
+
+                                    }
+                                ?>
+                                </div>
+                                
                             </div>
                             <?php 
                                 function staff_line_handle1($info, $total, $i_man){
@@ -753,16 +764,7 @@
                                     $info = explode("\n", get_page_by_title('第二組全時工讀生資料', OBJECT, 'post')->post_content);
                                     staff_line_handle2($info, $total, $i_man);
                                     ?>
-
-
-
-
-                                    
-
-                                
                             </div>
-
-
                         </div>
 
                     </div>
