@@ -155,8 +155,9 @@ img#close-button:hover {
     margin-bottom: 30px;
     font-size: 1.438em;
     letter-spacing: 0.075em;
-    width: 588em;
+    width: 800px;
     z-index: 10;
+    line-height: 170%;
 }
 
 .left-side-bar-msgs.date {
@@ -167,7 +168,6 @@ img#close-button:hover {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-left: auto;
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
