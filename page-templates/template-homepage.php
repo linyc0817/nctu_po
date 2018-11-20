@@ -545,9 +545,11 @@
                                         }
                                         if (preg_match("/執掌:/", $line)) {
                                             $jobs = explode(" ",$line);
+                                            echo "<div class='staff-job-container'>";
                                             foreach($jobs as $job){
                                                 echo "<div class='staff-job'>$job</div>";
                                             }
+                                            echo "</div>";
                                             $count++;
                                             echo "</div>"; // staff-info
                                         } 
@@ -577,9 +579,11 @@
                                         }
                                         if (preg_match("/執掌:/", $line)) {
                                             $jobs = explode(" ",$line);
+                                            echo "<div class='staff-job-container'>";
                                             foreach($jobs as $job){
                                                 echo "<div class='staff-job'>$job</div>";
                                             }
+                                            echo "</div>";
                                             $count++;
                                             echo "</div>"; // staff-info
                                         } 
