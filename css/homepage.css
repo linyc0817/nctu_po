@@ -2426,8 +2426,9 @@ img:hover {
     margin-top: 3%;
     margin-left: 2%;
     font-size: 1.3em;
-    width: 100px;
+    width: 400px;
     height: 100px;
+    line-height: 170%;
 }
 
 #director-words-container {
