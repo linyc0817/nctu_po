@@ -217,8 +217,8 @@ img#close-button:hover {
     margin-top: 30vh;
     z-index: 11;
     position: fixed;
-    font-size: 1.3em;
-    line-height: 200%;
+    font-size: 2em;
+    line-height: 250%;
 }
 
 .msg-board-content:hover {
@@ -2487,6 +2487,7 @@ img:hover {
     border-right: 1px solid white;
     left: 0;
     overflow-y: auto;
+    height:350px;
 }
 
 .staff-name-container {
