@@ -228,11 +228,10 @@
                                     </div>
                                     
                                     <div id="director-info">
-                                        <!-- <?=get_page_by_title('主任資訊', OBJECT, 'post')->post_content?> -->
                                         <?php 
                                             $content = get_page_by_title('主任資訊', OBJECT, 'post')->post_content;
                                             foreach(explode("\n",$content) as $line){
-                                                echo "<div class ='director-info-line'>$line</div>";
+                                                echo "<div class='director-info-line'>$line</div>";
                                             }
                                         ?>
                                     </div>
@@ -247,255 +246,256 @@
 
                             <div id="staff-group-1" class="_hide staff-group">
                                 <div class="right-container">
-                                <div id="staff-type-container">
-                                    <div class="staff-container">
-                                        <div class="staff-type chief" >組長</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
-                                        $count = 0;
-                                        $i_man = 0;
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                    <div id="staff-type-container">
+                                        <div class="staff-container">
+                                            <div class="staff-type chief" >組長</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
+                                            $count = 0;
+                                            $i_man = 0;
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="staff-container">
-                                        <div class="staff-type">專員</div>
-                                        <div class="staff-name-container">  
-                                        <?php
-                                        $i_man++;
-                                        $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
-                                        $count = 0;
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">專員</div>
+                                            <div class="staff-name-container">  
+                                            <?php
+                                            $i_man++;
+                                            $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
+                                            $count = 0;
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">組員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $count = 0;
-                                        $i_man++;
-                                        $ary = explode("\n", get_page_by_title('第一組組員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">組員</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $count = 0;
+                                            $i_man++;
+                                            $ary = explode("\n", get_page_by_title('第一組組員', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                     </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">行政專員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">行政專員</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $i_man++;
+                                            $count = 0;
+                                            $ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">計畫助理</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $count = 0;
-                                        $i_man++;
-                                        $ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">計畫助理</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $count = 0;
+                                            $i_man++;
+                                            $ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">約聘人員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">約聘人員</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $i_man++;
+                                            $count = 0;
+                                            $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">全時工讀生</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count=0;
-                                        $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">全時工讀生</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $i_man++;
+                                            $count=0;
+                                            $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>    
+                                    </div>    
                                 </div>    
                             </div>
+                            
                             <div id="staff-group-2" class="_hide staff-group">
                                 <div id="staff-type-container">
-                                <div class="right-container">
-                                    <div class="staff-container">
-                                        <div class="staff-type">組長</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $count = 0;
-                                        $i_man=0;
-                                        $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
+                                    <div class="right-container">
+                                        <div class="staff-container">
+                                            <div class="staff-type">組長</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $count = 0;
+                                            $i_man=0;
+                                            $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                             }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
-                                        }
-                                        $count++;
-                                        ?>
-                                        
-                                        </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">專員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                             $count++;
-                                        }?>
+                                            ?>
+                                            
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">組員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $count = 0;
-                                        $i_man++;
-                                        $ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">專員</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $i_man++;
+                                            $count = 0;
+                                            $ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">行政專員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">組員</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $count = 0;
+                                            $i_man++;
+                                            $ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">計畫助理</div>
-                                        <div class="staff-name-container">
-                                        <?php 
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">行政專員</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $i_man++;
+                                            $count = 0;
+                                            $ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">約聘人員</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">計畫助理</div>
+                                            <div class="staff-name-container">
+                                            <?php 
+                                            $i_man++;
+                                            $count = 0;
+                                            $ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/','', $name);
+                                                if(strlen($name)==0){
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            }?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="staff-container">
-                                        <div class="staff-type">全時工讀生</div>
-                                        <div class="staff-name-container">
-                                        <?php
-                                        $i_man++;
-                                        $count = 0;
-                                        $ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
-                                        foreach ($ary as $name) {
-                                            $name = preg_replace('/[\r\n]+/','', $name);
-                                            if(strlen($name)==0){
-                                                continue;
-                                            }
-                                            echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
-                                            $count++;
-                                        }?>
+                                        <div class="staff-container">
+                                            <div class="staff-type">約聘人員</div>
+                                            <div class="staff-name-container">
+                                                <?php
+                                                $i_man++;
+                                                $count = 0;
+                                                $ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
+                                                foreach ($ary as $name) {
+                                                    $name = preg_replace('/[\r\n]+/','', $name);
+                                                    if(strlen($name)==0){
+                                                        continue;
+                                                    }
+                                                    echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
+                                                    $count++;
+                                                }?>
+                                            </div>
                                         </div>
-                                    </div> 
-                                </div>     
+                                        <div class="staff-container">
+                                            <div class="staff-type">全時工讀生</div>
+                                            <div class="staff-name-container">
+                                                <?php
+                                                $i_man++;
+                                                $count = 0;
+                                                $ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
+                                                foreach ($ary as $name) {
+                                                    $name = preg_replace('/[\r\n]+/','', $name);
+                                                    if(strlen($name)==0){
+                                                        continue;
+                                                    }
+                                                    echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
+                                                    $count++;
+                                                }?>
+                                            </div>
+                                        </div> 
+                                    </div>     
                                 </div>
                             </div>
                             <!-- 人員職掌一覽 -->
@@ -516,8 +516,6 @@
                                             echo "<div class='staff-overview-title-$idx'>" . $post->post_title . "</div>";
                                             echo "<div class='staff'-overview-content-$idx>" . $post->post_content . "</div>";
                                         echo "</div>";
-                                        
-
                                     }
                                 ?>
                                 </div>
