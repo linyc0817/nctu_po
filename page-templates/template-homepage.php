@@ -535,6 +535,7 @@
                                         $agents = array();
                                         if (preg_match("/職務代理人:/", $line)) {
                                             echo "<div>職務代理人:</div>";
+                                            $line = str_replace("職務代理人:","",$line);
                                             $agents = preg_split("/[,]/", $line);
                                             echo "<div class='staff-agent-container'>";
                                             foreach ($agents as $agent) {
@@ -546,6 +547,7 @@
                                         }
                                         if (preg_match("/執掌:/", $line)) {
                                             echo "<div>執掌:</div>";
+                                            $line = str_replace("執掌:","",$line);
                                             $jobs = explode(" ",$line);
                                             echo "<div class='staff-job-container'>";
                                             foreach($jobs as $job){
@@ -570,6 +572,7 @@
                                         }
                                         $agents = array();
                                         if (preg_match("/職務代理人:/", $line)) {
+                                            $line = str_replace("職務代理人:","",$line);
                                             $agents = preg_split("/[,]/", $line);
                                             echo "<div>職務代理人:</div>";
                                             echo "<div class='staff-agent-container'>";
@@ -581,6 +584,7 @@
                                             echo "</div>"; //staff-agent-con
                                         }
                                         if (preg_match("/執掌:/", $line)) {
+                                            $line = str_replace("執掌:","",$line);
                                             $jobs = explode(" ",$line);
                                             echo "<div>執掌:</div>";
                                             echo "<div class='staff-job-container'>";
