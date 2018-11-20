@@ -228,7 +228,13 @@
                                     </div>
                                     
                                     <div id="director-info">
-                                        <?=get_page_by_title('主任資訊', OBJECT, 'post')->post_content?>
+                                        <!-- <?=get_page_by_title('主任資訊', OBJECT, 'post')->post_content?> -->
+                                        <?php 
+                                            $content = get_page_by_title('主任資訊', OBJECT, 'post')->post_content;
+                                            foreach(explode("\n",$content) as $line){
+                                                echo "<div class ='director-info-line'>$line</div>";
+                                            }
+                                        ?>
                                     </div>
                                 </div>
                                 <div id="director-words-container">
