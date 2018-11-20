@@ -185,6 +185,7 @@ img#close-button:hover {
 
 .msg-board-question {
     /*text-align: center;*/
+    font-family: ¡¥Noto Sans CJK TC Medium¡
     letter-spacing: 2.3px;
     font-weight: bold;
     color: #f4a22c;
@@ -195,12 +196,14 @@ img#close-button:hover {
     white-space: nowrap;
     width: 10px;
     left: 400px;
+    font-size:0.875em;
+    line-height: 2.5em;
 }
 
 .msg-board-answer {
     /*text-align: center;*/
+    font-family: ¡¥Noto Sans CJK TC Thin;
     letter-spacing: 2.3px;
-    font-weight: bold;
     color: white;
     display: block;
     position: relative;
@@ -209,6 +212,8 @@ img#close-button:hover {
     white-space: nowrap;
     width: 10px;
     left: 400px;
+    font-size: 0.8em;
+    line-height: 1.625em;
 }
 
 /* 留言板 */
@@ -218,7 +223,6 @@ img#close-button:hover {
     z-index: 11;
     position: fixed;
     font-size: 2em;
-    line-height: 250%;
 }
 
 .msg-board-content:hover {
