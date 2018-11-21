@@ -535,25 +535,28 @@
                                         $agents = array();
                                         if (preg_match("/職務代理人:/", $line)) {
                                             echo "<div class='staff-job-title'>職務代理人:</div>";
+                                            $line = str_replace("職務代理人: ","",$line);
                                             $line = str_replace("職務代理人:","",$line);
-                                            $agents = preg_split("/[,]/", $line);
-                                            echo "<div class='staff-agent-container'>";
-                                            foreach ($agents as $agent) {
-                                                if ($agent != "") {
-                                                    echo "<div>" . "$agent" . "</div>";
-                                                }
-                                            }
-                                            echo "</div>"; //staff-agent-con
+                                            $line = str_replace(" ", "<br>",$line);
+                                            echo "<div class='staff-agent-container'>" .$line."</div>";
+                                            // foreach ($agents as $agent) {
+                                            //     if ($agent != "") {
+                                            //         echo "<div>" . "$agent" . "</div>";
+                                            //     }
+                                            // }
                                         }
                                         if (preg_match("/執掌:/", $line)) {
                                             echo "<div class='staff-job-title'>執掌:</div>";
+                                            $line = str_replace("執掌: ","",$line);
                                             $line = str_replace("執掌:","",$line);
-                                            $jobs = explode(" ",$line);
-                                            echo "<div class='staff-job-container'>";
+                                            $line = str_replace(" ", "<br>",$line);
+                                            //$jobs = explode(" ",$line);
+                                            echo "<div class='staff-job-container'>" . $line . "</div>";
+                                            /*
                                             foreach($jobs as $job){
                                                 echo "<div class='staff-job'>$job</div>";
                                             }
-                                            echo "</div>";
+                                            */
                                             $count++;
                                             echo "</div>"; // staff-info
                                         } 
@@ -572,26 +575,18 @@
                                         }
                                         $agents = array();
                                         if (preg_match("/職務代理人:/", $line)) {
+                                            $line = str_replace("職務代理人: ","",$line);
                                             $line = str_replace("職務代理人:","",$line);
-                                            $agents = preg_split("/[,]/", $line);
+                                            $line = str_replace(" ", "<br>",$line);
                                             echo "<div class='staff-job-title'>職務代理人:</div>";
-                                            echo "<div class='staff-agent-container'>";
-                                            foreach ($agents as $agent) {
-                                                if ($agent != "") {
-                                                    echo "<div>" . "$agent" . "</div>";
-                                                }
-                                            }
-                                            echo "</div>"; //staff-agent-con
+                                            echo "<div class='staff-agent-container'>" . $line ."</div>";
                                         }
                                         if (preg_match("/執掌:/", $line)) {
+                                            $line = str_replace("執掌: ","",$line);
                                             $line = str_replace("執掌:","",$line);
-                                            $jobs = explode(" ",$line);
+                                            $line = str_replace(" ", "<br>",$line);
                                             echo "<div class='staff-job-title'>執掌:</div>";
-                                            echo "<div class='staff-job-container'>";
-                                            foreach($jobs as $job){
-                                                echo "<div class='staff-job'>$job</div>";
-                                            }
-                                            echo "</div>";
+                                            echo "<div class='staff-job-container'>".$line."</div>";
                                             $count++;
                                             echo "</div>"; // staff-info
                                         } 

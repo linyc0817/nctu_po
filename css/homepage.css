@@ -185,8 +185,7 @@ img#close-button:hover {
 
 .msg-board-question {
     /*text-align: center;*/
-    font-family: ¡¥Noto Sans CJK TC Medium¡
-    letter-spacing: 2.3px;
+    font-family: ¡¥Noto Sans CJK TC Medium¡ letter-spacing: 2.3px;
     font-weight: bold;
     color: #f4a22c;
     display: block;
@@ -196,7 +195,7 @@ img#close-button:hover {
     white-space: nowrap;
     width: 10px;
     left: 400px;
-    font-size:0.875em;
+    font-size: 0.875em;
     line-height: 2.5em;
 }
 
@@ -2401,6 +2400,13 @@ img:hover {
 }
 
 /*人事執掌*/
+
+.staff-job-title,
+.staff-agent-container,
+.staff-job-container {
+    display: inline-block;
+    vertical-align: top;
+}
 
 .staff-info-container {
     display: none;
