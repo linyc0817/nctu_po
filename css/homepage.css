@@ -2408,6 +2408,11 @@ img:hover {
     vertical-align: top;
 }
 
+.staff-job-title{
+    float: left;
+    clear: left;
+}
+
 .staff-info-container {
     display: none;
     font-size: 1.3em;
@@ -2500,7 +2505,7 @@ img:hover {
     border-right: 1px solid white;
     left: 0;
     overflow-y: auto;
-    height: 350px;
+    height: 35vw;
 }
 
 .staff-name-container {
