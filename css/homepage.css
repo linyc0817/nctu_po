@@ -2402,6 +2402,7 @@ img:hover {
 /*人事執掌*/
 
 .staff-job-title,
+.staff-agent-title,
 .staff-agent-container,
 .staff-job-container {
     display: inline-block;
