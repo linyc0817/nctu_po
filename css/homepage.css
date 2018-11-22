@@ -2419,6 +2419,7 @@ img:hover {
     font-size: 1.3em;
     line-height: 200%;
     padding-left: 10px;
+    letter-spacing: 2px;
 }
 
 #director-info-container {
