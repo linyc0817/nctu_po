@@ -2573,7 +2573,7 @@ img:hover {
 
 .staff-job-overview-dot-container {
     position: relative;
-    width: 10%;
+    width: 15%;
     left: 0;
     top: 0;
 }
@@ -2584,6 +2584,16 @@ div[class*="page"].staff-job-overview-dot {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+}
+
+.staff-job-overview-dot-name {
+    color: white;
+    width: 100%;
+}
+
+.staff-job-overview-dot._fade,
+.staff-job-overview-dot-name._fade {
+    opacity: 0.5;
 }
 
 /* 本室簡介 intro.css copy */

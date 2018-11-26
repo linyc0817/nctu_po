@@ -506,7 +506,11 @@
                                 <div id="staff-group-3-right-container">
                                 <?php
                                     $item = 0;
+                                    $group2_start_page;
                                     foreach(array("第一組","第二組") as $gidx => $group){
+                                        // 換組要換頁
+                                        $item += $gidx*14;
+                                        $group2_start_page = (int)($item/14)+1;
                                         $_group = $gidx+1;
                                         echo "<div class='staff-job-overview-container group$_group'>";
                                             $staff_titles = array("組長","專員");
@@ -554,14 +558,27 @@
                                                 }
                                             }
                                         echo "</div>";
-                                        echo "<div class='staff-job-overview-dot-container'>";
-                                            for($i = 1; $i<=(int)(($item-1)/14)+1; $i++){
-                                                // 換頁圓點
-                                                echo "<div class='staff-job-overview-dot page$i mouse-hover'></div>";
-                                            }
-                                        echo "</div>";
-
                                     }
+                                    echo "<div class='staff-job-overview-dot-container'>";
+                                            for($i = 1; $i<=(int)(($item-1)/14)+1; $i++){
+                                                $group_name = "";
+                                                if($i == 1){
+                                                    $group_name = "第一組";
+                                                }else if($i == $group2_start_page){
+                                                    $group_name = "第二組";
+                                                }
+                                                if($i < $group2_start_page){
+                                                    $group_idx = 1;
+                                                }else{
+                                                    $group_idx = 2;
+                                                }
+                                                // 換頁圓點
+                                                echo "<div>";
+                                                    echo "<div class='staff-job-overview-dot page$i mouse-hover group$group_idx'></div>";
+                                                    echo "<div class='staff-job-overview-dot-name page$i'>$group_name</div>";
+                                                echo "</div>";
+                                            }
+                                    echo "</div>";
                                     /*
                                     $staff_wpcat_id = get_cat_iD("第一組執掌一覽");
                                     $posts = get_posts( array(

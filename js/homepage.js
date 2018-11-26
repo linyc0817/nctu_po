@@ -503,7 +503,28 @@ $(function () {
 
     // 換頁
     $(".staff-job-overview-dot").click((e) => {
-        $()
+        // hide others
+        $(".staff-job-overview-item-container").hide();
+        $(".staff-job-overview-container").hide();
+
+        // get which page
+        let page = $(e.target).attr('class').toString().match(/page\d+/)[0]
+        let group = $(e.target).attr('class').toString().match(/group\d+/)[0]
+
+        // show selected
+        $(".staff-job-overview-container." + group).show();
+        $(".staff-job-overview-item-container." + page).show();
+
+        // dot fade
+        $(".staff-job-overview-dot-name,.staff-job-overview-dot").addClass('_fade');
+
+        $(".staff-job-overview-dot." + page).removeClass('_fade');
+        $(".staff-job-overview-dot-name." + page).removeClass('_fade');
+
+
+
+
+
     })
 
 
