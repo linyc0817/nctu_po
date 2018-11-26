@@ -194,8 +194,8 @@ $(function () {
     //return this.id == x;
     QA_types = ["abroad", "part-time", "other-questions", "AMS", "personnel", "errand", "specialist", "teachers", "postdoctoral", "resignation"];
     $("[class*=question]").click((e) => {
-        $("[class*=answer]").hide();
-        $("[class*=question]").css('color', '#f4a22c');
+        $("msg-board-answer").hide();
+        $(".msg-board-question ").css('color', '#f4a22c');
         $(e.target).css('color', '#FFFFFF');
         target_class = $(e.target).attr('class').toString();
         for (i = 0; i < QA_types.length; i++) {
@@ -475,7 +475,7 @@ $(function () {
                 break;
         }
     })
-    //執掌資訊
+    //人士執掌資訊
     // group 1
     $("[class*=g1m]").click((e) => {
         $('.staff-info-container').hide();
@@ -493,6 +493,18 @@ $(function () {
         }).show();
     })
 
+    // 人員執掌一覽
+    $(".staff-job-overview-item-container").mouseenter(function () {
+        $(this).addClass('active');
+    })
+    $(".staff-job-overview-item-container").mouseleave(function () {
+        $(this).removeClass('active');
+    })
+
+    // 換頁
+    $(".staff-job-overview-dot").click((e) => {
+        $()
+    })
 
 
 })

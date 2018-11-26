@@ -505,7 +505,64 @@
                                 </div>
                                 <div id="staff-group-3-right-container">
                                 <?php
-                                    //hjk
+                                    $item = 0;
+                                    foreach(array("第一組","第二組") as $gidx => $group){
+                                        $_group = $gidx+1;
+                                        echo "<div class='staff-job-overview-container group$_group'>";
+                                            $staff_titles = array("組長","專員");
+                                            foreach($staff_titles as $staff_title){
+                                                //get name
+                                                $post = get_page_by_title($group.$staff_title, OBJECT, 'post')->post_content;
+                                                $staffs = array();
+                                                foreach(explode("\n",$post) as $line){
+                                                    // 可能會有多餘的換行 要刪掉
+                                                    $line = preg_replace('/[\r\n]+/','', $line);
+                                                    if(strlen($line) == 0){
+                                                        continue;
+                                                    }
+                                                    array_push($staffs,$line);
+                                                }
+
+                                                // get information
+                                                $information = get_page_by_title($group.$staff_title.'資料',OBJECT,'post')->post_content;
+                                                $tels = array(); // 分機
+                                                $jobs = array(); // 執掌
+                                                foreach(explode("\n",$information) as $line){
+                                                    if(strlen(preg_replace('/[\r\n]+/','', $line)) == 0){
+                                                        continue;
+                                                    }
+                                                    if (preg_match("/執掌:/", $line)){
+                                                        $line = str_replace('執掌:', '', $line);
+                                                        array_push($jobs, explode(' ', trim($line)));
+                                                    }
+                                                    if (preg_match("/聯絡分機:/", $line)){
+                                                        $line = str_replace('聯絡分機:', '', $line);
+                                                        array_push($tels, "#".preg_replace('/[\r\n]+/','', $line));
+                                                    }
+                                                }
+                                                
+                                                // print out
+                                                foreach($staffs as $idx => $staff){
+                                                    foreach($jobs[$idx] as $job){
+                                                        $item++;
+                                                        $page = (int)($item/14)+1;
+                                                        echo "<div class='staff-job-overview-item-container page$page'>";
+                                                            echo "<div class='staff-job-overview-title'> $job </div>";
+                                                            echo "<div class='staff-job-overview-staff'>$staff $tels[$idx]</div>";
+                                                        echo "</div>"; // staff-job-overview-container
+                                                    }
+                                                }
+                                            }
+                                        echo "</div>";
+                                        echo "<div class='staff-job-overview-dot-container'>";
+                                            for($i = 1; $i<=(int)(($item-1)/14)+1; $i++){
+                                                // 換頁圓點
+                                                echo "<div class='staff-job-overview-dot page$i mouse-hover'></div>";
+                                            }
+                                        echo "</div>";
+
+                                    }
+                                    /*
                                     $staff_wpcat_id = get_cat_iD("第一組執掌一覽");
                                     $posts = get_posts( array(
                                         'numberposts' => 100,
@@ -514,9 +571,10 @@
                                     foreach ($posts as $idx => $post) {
                                         echo "<div class='staff-overview-container'>";
                                             echo "<div class='staff-overview-title-$idx'>" . $post->post_title . "</div>";
-                                            echo "<div class='staff'-overview-content-$idx>" . $post->post_content . "</div>";
+                                            echo "<div class='staff-overview-content-$idx'>" . $post->post_content . "</div>";
                                         echo "</div>";
                                     }
+                                    */
                                 ?>
                                 </div>
                                 

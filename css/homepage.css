@@ -2409,7 +2409,7 @@ img:hover {
     vertical-align: top;
 }
 
-.staff-job-title{
+.staff-job-title {
     float: left;
     clear: left;
 }
@@ -2529,6 +2529,61 @@ img:hover {
     right: 0;
     padding-left: 20px;
     color: white;
+}
+
+.staff-job-overview-container:nth-of-type(1) {
+    color: white;
+    width: 50%;
+    left: 15%;
+    position: absolute;
+    display: block;
+}
+
+.staff-job-overview-container {
+    color: white;
+    width: 50%;
+    left: 15%;
+    position: absolute;
+    display: none;
+}
+
+.staff-job-overview-title {
+    display: block;
+}
+
+.group1>.staff-job-overview-item-container.page1 {
+    display: block;
+}
+
+.staff-job-overview-item-container {
+    display: none;
+}
+
+.staff-job-overview-item-container.active>.staff-job-overview-title {
+    display: none;
+}
+
+.staff-job-overview-item-container.active>.staff-job-overview-staff {
+    display: block;
+}
+
+.staff-job-overview-staff {
+    display: none;
+}
+
+.staff-job-overview-dot-container {
+    position: relative;
+    width: 10%;
+    left: 0;
+    top: 0;
+}
+
+div[class*="page"].staff-job-overview-dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 /* 本室簡介 intro.css copy */
