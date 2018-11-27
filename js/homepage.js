@@ -194,7 +194,9 @@ $(function () {
     //return this.id == x;
     QA_types = ["abroad", "part-time", "other-questions", "AMS", "personnel", "errand", "specialist", "teachers", "postdoctoral", "resignation"];
     $("[class*=question]").click((e) => {
-        $("msg-board-answer").hide();
+        if ($(e.target).attr('class').toString().match(/answer/))
+            return;
+        $(".msg-board-answer").hide();
         $(".msg-board-question ").css('color', '#f4a22c');
         $(e.target).css('color', '#FFFFFF');
         target_class = $(e.target).attr('class').toString();
