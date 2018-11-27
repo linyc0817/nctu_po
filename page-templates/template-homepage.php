@@ -537,7 +537,12 @@
                                                     }
                                                     if (preg_match("/執掌:/", $line)){
                                                         $line = str_replace('執掌:', '', $line);
-                                                        array_push($jobs, explode(' ', trim($line)));
+                                                        $line = str_replace("執掌: ","",$line);
+                                                        $line = str_replace("執掌:","",$line);
+                                                        $line = str_replace("，"," ",$line);
+                                                        $line = str_replace(","," ",$line);
+                                                        $line = str_replace("、"," ",$line);
+                                                        array_push($jobs, explode(" ", trim($line)));
                                                     }
                                                     if (preg_match("/聯絡分機:/", $line)){
                                                         $line = str_replace('聯絡分機:', '', $line);
@@ -621,6 +626,9 @@
                                             echo "<div class='staff-job-title'>執掌:</div>";
                                             $line = str_replace("執掌: ","",$line);
                                             $line = str_replace("執掌:","",$line);
+                                            $line = str_replace("，"," ",$line);
+                                            $line = str_replace(","," ",$line);
+                                            $line = str_replace("、"," ",$line);
                                             $line = str_replace(" ", "<br>",$line);
                                             //$jobs = explode(" ",$line);
                                             echo "<div class='staff-job-container'>" . $line . "</div>";
@@ -660,6 +668,9 @@
                                         if (preg_match("/執掌:/", $line)) {
                                             $line = str_replace("執掌: ","",$line);
                                             $line = str_replace("執掌:","",$line);
+                                            $line = str_replace("，"," ",$line);
+                                            $line = str_replace(","," ",$line);
+                                            $line = str_replace("、"," ",$line);
                                             $line = str_replace(" ", "<br>",$line);
                                             echo "<div class='staff-job-title'>執掌:</div>";
                                             echo "<div class='staff-job-container'>".$line."</div>";
