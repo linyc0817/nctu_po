@@ -2548,7 +2548,7 @@ img:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    line-height: 500%;
+    line-height: 400%;
 }
 
 .staff-job-overview-title {
@@ -2575,7 +2575,7 @@ img:hover {
 .staff-job-overview-staff {
     display: none;
     font-size: 1.3em;
-    height: 150px;
+    /*height: 100px;*/
 }
 
 .staff-job-overview-dot-container {
