@@ -2416,7 +2416,7 @@ img:hover {
 
 .staff-info-container {
     display: none;
-    font-size: 1.3em;
+    font-size: 1.5em;
     line-height: 200%;
     padding-left: 10px;
     letter-spacing: 2px;
@@ -2533,22 +2533,27 @@ img:hover {
 
 .staff-job-overview-container:nth-of-type(1) {
     color: white;
-    width: 50%;
+    width: 80%;
     left: 15%;
     position: absolute;
-    display: block;
+    /*display: block;*/
 }
 
 .staff-job-overview-container {
     color: white;
-    width: 50%;
+    width: 80%;
+    height: 40vh;
     left: 15%;
     position: absolute;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    line-height: 500%;
 }
 
 .staff-job-overview-title {
     display: block;
+    font-size: 1.5em;
 }
 
 .group1>.staff-job-overview-item-container.page1 {
@@ -2569,33 +2574,48 @@ img:hover {
 
 .staff-job-overview-staff {
     display: none;
+    font-size: 1.3em;
+    height: 150px;
 }
 
 .staff-job-overview-dot-container {
     position: relative;
     width: 15%;
     left: 0;
-    top: 0;
+    top: 13vh;
+    line-height: 300%;
 }
 
 div[class*="page"].staff-job-overview-dot {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
+    height: 18px;
+    width: 18px;
+    background-color: #F4A22C;
     border-radius: 50%;
     display: inline-block;
+    float: left;
+    margin-top: 9px;
 }
-
+div[class*="page"].staff-job-overview-dot._fade{
+    height: 15px;
+    width: 15px;
+    background-color: #F4A22C;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin-top: 9px;
+}
 .staff-job-overview-dot-name {
     color: white;
     width: 100%;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    font-size: 1.5em;
 }
 
 .staff-job-overview-dot._fade,
 .staff-job-overview-dot-name._fade {
     opacity: 0.5;
 }
-
 /* 本室簡介 intro.css copy */
 
 .circle1 {
