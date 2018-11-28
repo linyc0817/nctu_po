@@ -2551,18 +2551,18 @@ img:hover {
     line-height: 400%;
 }
 
-.staff-job-overview-title {
-    display: block;
-    font-size: 1.5em;
-    width:350px;
-}
-
 .group1>.staff-job-overview-item-container.page1 {
     display: block;
 }
 
+.group2 {
+    display: none;
+}
+
 .staff-job-overview-item-container {
     display: none;
+    width: 350px;
+    height: 5.7vh;
 }
 
 .staff-job-overview-item-container.active>.staff-job-overview-title {
@@ -2573,11 +2573,18 @@ img:hover {
     display: block;
 }
 
+.staff-job-overview-title {
+    display: block;
+    font-size: 1.5em;
+    width: 350px;
+    height: 5.7vh;
+}
+
 .staff-job-overview-staff {
     display: none;
     font-size: 1.3em;
-    width:350px;
-    /*height: 100px;*/
+    width: 350px;
+    height: 5.7vh;
 }
 
 .staff-job-overview-dot-container {
@@ -2597,7 +2604,8 @@ div[class*="page"].staff-job-overview-dot {
     float: left;
     margin-top: 9px;
 }
-div[class*="page"].staff-job-overview-dot._fade{
+
+div[class*="page"].staff-job-overview-dot._fade {
     height: 15px;
     width: 15px;
     background-color: #F4A22C;
@@ -2606,9 +2614,10 @@ div[class*="page"].staff-job-overview-dot._fade{
     float: left;
     margin-top: 9px;
 }
+
 .staff-job-overview-dot-name {
     color: white;
-    width: 100%;
+    width: 50%;
     margin-bottom: 5px;
     margin-left: 50px;
     font-size: 1.5em;
@@ -2618,6 +2627,7 @@ div[class*="page"].staff-job-overview-dot._fade{
 .staff-job-overview-dot-name._fade {
     opacity: 0.5;
 }
+
 /* 本室簡介 intro.css copy */
 
 .circle1 {

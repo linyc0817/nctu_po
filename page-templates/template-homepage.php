@@ -578,8 +578,13 @@
                                                     $group_idx = 2;
                                                 }
                                                 // 換頁圓點
+                                                $class_fade = "";
+                                                if($i != 1)
+                                                    $class_fade = "_fade";
+                                                
+                                                
                                                 echo "<div>";
-                                                    echo "<div class='staff-job-overview-dot page$i mouse-hover group$group_idx'></div>";
+                                                    echo "<div class='staff-job-overview-dot page$i mouse-hover group$group_idx $class_fade'></div>";
                                                     echo "<div class='staff-job-overview-dot-name page$i'>$group_name</div>";
                                                 echo "</div>";
                                             }
