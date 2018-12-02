@@ -514,7 +514,7 @@ $(function () {
         let group = $(e.target).attr('class').toString().match(/group\d+/)[0]
 
         // show selected
-        $(".staff-job-overview-container." + group).show();
+        $(".staff-job-overview-container." + group).css("display", "flex");
         $(".staff-job-overview-item-container." + page).show();
 
         // dot fade

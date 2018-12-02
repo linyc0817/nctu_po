@@ -505,11 +505,12 @@
                                 </div>
                                 <div id="staff-group-3-right-container">
                                 <?php
-                                    $item = 0;
+                                    $item = 1;
                                     $group2_start_page;
                                     foreach(array("第一組","第二組") as $gidx => $group){
                                         // 換組要換頁
-                                        $item += $gidx*14;
+                                        if($gidx == 1)
+                                            $item += (14-$item%14);
                                         $group2_start_page = (int)($item/14)+1;
                                         $_group = $gidx+1;
                                         echo "<div class='staff-job-overview-container group$_group'>";
@@ -553,12 +554,12 @@
                                                 // print out
                                                 foreach($staffs as $idx => $staff){
                                                     foreach($jobs[$idx] as $job){
-                                                        $item++;
-                                                        $page = (int)($item/14)+1;
-                                                        echo "<div class='staff-job-overview-item-container page$page'>";
+                                                        $page = (int)(($item-1)/14)+1;
+                                                        echo "<div class='staff-job-overview-item-container page$page item$item'>";
                                                             echo "<div class='staff-job-overview-title'> $job </div>";
                                                             echo "<div class='staff-job-overview-staff'>$staff $tels[$idx]</div>";
                                                         echo "</div>"; // staff-job-overview-container
+                                                        $item++;
                                                     }
                                                 }
                                             }

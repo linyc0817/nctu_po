@@ -2558,7 +2558,7 @@ img:hover {
 }
 
 .group1>.staff-job-overview-item-container.page1 {
-    display: block;
+    display: flex;
 }
 
 .group2 {
@@ -2606,7 +2606,7 @@ div[class*="page"].staff-job-overview-dot {
     width: 18px;
     background-color: #F4A22C;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
     float: left;
     margin-top: 9px;
 }
@@ -2616,7 +2616,7 @@ div[class*="page"].staff-job-overview-dot._fade {
     width: 15px;
     background-color: #F4A22C;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
     float: left;
     margin-top: 9px;
 }
