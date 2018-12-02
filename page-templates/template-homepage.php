@@ -1000,7 +1000,7 @@
                     position: fixed;
                     font-size: 18px;
                     margin-left: 0px;
-                    letter-spacing: 0.3em;
+                    letter-spacing: 0.1em;
                     width:350px;
                     height: 100%;
                     display: block;
@@ -1082,7 +1082,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
                     position: fixed;
                     font-size: 18px;
                     margin-left: 0px;
-                    letter-spacing: 0.3em;
+                    letter-spacing: 0.1em;
                     width:50vw;
                     height: 100%;
                     display: none;
