@@ -523,11 +523,7 @@ $(function () {
         $(".staff-job-overview-dot." + page).removeClass('_fade');
         $(".staff-job-overview-dot-name." + page).removeClass('_fade');
 
-
-
-
-
     })
-
-
 })
+
+

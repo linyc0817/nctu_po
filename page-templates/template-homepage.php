@@ -8,13 +8,14 @@
 <html>
 
 <head>
-
+    <title>交大人事室</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewpoint" content="width=device-width, initial-scale=1" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <!-- bootstrap -->
     <link href="<?php bloginfo('template_url');?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="<?php bloginfo('template_url');?>/bootstrap/js/bootstrap.min.js"></script>
@@ -23,6 +24,9 @@
     <link href="<?php bloginfo('template_url');?>/css/style.css" rel="stylesheet">
 
     <script src="<?php bloginfo('template_url');?>/js/homepage.js"></script>
+    <script src="<?php bloginfo('template_url');?>/js/homepage_db.js"></script>
+    
+
 
     <style type="text/css">
     </style>
@@ -44,7 +48,7 @@
     <div class="navbar">
         <div class="triangle"></div>
 
-        <a href="<?php echo site_url() ?>/welcome"; ><img src="<?php bloginfo('template_url');?>/image/logo.png" alt="NCTU logo"
+        <a href="<?php echo site_url() ?>"; ><img src="<?php bloginfo('template_url');?>/image/logo.png" alt="NCTU logo"
                 width="360" height="75" style="position: relative; left: 6%; top: 1.5em;"></a>
 
 
@@ -989,6 +993,24 @@
             </div>
         </div>
 
+        <div class="top" id="top_2">
+            <div id="nav2">
+                <div id="navid3">訊息公告</div>
+                <div class="nav-triangle" id="nav2-triangle"></div>
+            </div>
+            <div class="navbox2"></div>
+            <div class="navbox2_2">
+                <div>公告日期</div>
+                <div>主旨</div>
+                
+                <div class="announcement-container" >
+                    <announcement-container date-class="msg-date" title-class="msg-title"  v-for="_item in items"  v-bind:item="_item" v-bind:key="_item.id"></announcement-container>
+                
+                </div>
+                
+            </div>
+        </div>
+
         <div class="top" id="top_3">
             <div id="nav3">
                 <div id="navid3">法令&表件</div>
@@ -1419,8 +1441,7 @@ $QA_cat_id = array("出國申請","全時工讀生","其他問題","研發替代
             $question = "<div class='msg-board-question $type mouse-hover question$qidx' style='display:none'>" . $post -> post_title . '</div>';
             $answer = "<div class='msg-board-answer $type mouse-hover answer$qidx _hide' style='display:none'>" . $post -> post_content . '</div>';
             echo ($question);
-            echo ($answer);
-            
+            echo ($answer);    
             echo "</div>";
             
         }

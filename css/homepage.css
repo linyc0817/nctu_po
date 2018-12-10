@@ -3,17 +3,17 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-::-webkit-scrollbar
 /*捲軸顏色*/
-{
+
+::-webkit-scrollbar {
     background-colorz: #0;
-    width:5px;
+    width: 5px;
 }
-::-webkit-scrollbar-thumb
-{
-    background-color:#aaa;
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
@@ -379,7 +379,7 @@ input[type=text] {
 #nav3 {
     width: 10%;
     height: 31%;
-    left: 25%;
+    left: 35%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -475,7 +475,7 @@ input[type=text] {
 #nav6 {
     width: 12%;
     height: 33%;
-    left: 35%;
+    left: 45%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -500,7 +500,7 @@ input[type=text] {
 #nav7 {
     width: 10%;
     height: 33%;
-    left: 45%;
+    left: 55%;
     top: 70%;
     position: absolute;
     /*background-color: #F4A22C;*/
@@ -1537,7 +1537,7 @@ img.01 {
 
 .navbox2 {
     width: 28%;
-    height: 0;
+    height: 50vh;
     /*margin:10.2% auto;*/
     padding: 0;
     border-right: 80px solid transparent;
@@ -1552,7 +1552,7 @@ img.01 {
 
 .navbox2_2 {
     width: 75%;
-    height: 0;
+    height: 50vh;
     /*margin:10.2% auto;*/
     padding: 0;
     border-left: 80px solid transparent;
@@ -1562,6 +1562,7 @@ img.01 {
     top: 25%;
     right: 0;
     display: none;
+    color: white;
 }
 
 .navbox3 {
@@ -1592,6 +1593,14 @@ img.01 {
     /* right: 350px; */
     display: none;
 }
+
+/* 訊息公告 */
+
+.msg-list {
+    color: white;
+}
+
+/* 法令 */
 
 #decree-flex-container {
     display: flex;
