@@ -1000,29 +1000,32 @@
                 <div id="navid3">訊息公告</div>
                 <div class="nav-triangle" id="nav2-triangle"></div>
             </div>
-            <div class="navbox2">
-                <div class="navbox2_1_1">可查閱重要訊息、業<br>務訊息、活動訊息、<br>法規訊息及友校訊息</div>
-                <div class="navbox2_1">
-                    <div>一般訊息</div>
-                    <div>活動訊息</div>
-                    <div>法規訊息</div>
-                    <div>友校訊息</div>
-                    <div>業務訊息</div>
-                    <div>重要訊息</div>
+            <div class="announcement-container">
+                <div class="navbox2">
+                    <div class="navbox2_1_1">可查閱重要訊息、業<br>務訊息、活動訊息、<br>法規訊息及友校訊息</div>
+                    <div class="navbox2_1">
+                        <div v-on:click="fetch_data(1,'重要訊息')">重要訊息</div>
+                        <div v-on:click="fetch_data(1,'業務訊息')">業務訊息</div>
+                        <div v-on:click="fetch_data(1,'法規訊息')">法規訊息</div>
+                        <div v-on:click="fetch_data(1,'友校訊息')">友校訊息</div>
+                        
+                        
+                    </div>
                 </div>
-            </div>
-            <div class="navbox2_2">
-                <div class="navbox2_2_1">
-                <div style="dispaly:inline;">公告日期</div>
-                <div style="dispaly:inline;">主旨</div>
-                </div>
-                <div class="announcement-container">
+                <div class="navbox2_2">
+                    <div class="navbox2_2_1">
+                    <div style="dispaly:inline;">公告日期</div>
+                    <div style="dispaly:inline;">主旨</div>
+                    </div>
+                    <div id="msg-next-page" v-on:click="next_page">next page</div>
+                    <div id="msg-prev-page" v-on:click="prev_page">prev page</div>
+                    <ul>
+                        <announcement-title v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title.title"></announcement-title>
+                        
                     
-
+                    </ul>
                     
-                
                 </div>
-                
             </div>
         </div>
 

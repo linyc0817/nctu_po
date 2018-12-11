@@ -12,7 +12,11 @@ if (isset($_REQUEST['type'])) {
     if ($_REQUEST['type'] == "msg-title") {
         $datas = array();
         $cat_id = get_cat_ID($_REQUEST['category']);
-        $posts = get_posts(array('category' => $cat_id, 'numberposts' => $_REQUEST['data_per_page']));
+        $data_per_page = $_REQUEST['data_per_page'];
+        $page = $_REQUEST['page'];
+        $posts = get_posts(array('category' => $cat_id, 'numberposts' => $_REQUEST['data_per_page'], 'offset' => (($page - 1) * $data_per_page)));
+
+
 
         for ($i = 0; $i < sizeof($posts); $i++) {
             $title = $posts[$i]->post_title;
