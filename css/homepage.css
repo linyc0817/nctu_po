@@ -1549,7 +1549,24 @@ img.01 {
     top: 25%;
     display: none;
 }
-
+.navbox2_1_1{
+    top:30%;
+    left:5%;
+    position: fixed;
+    font-size: 1.3em;
+    line-height: 180%;
+    color: white;
+    letter-spacing: 5px;
+}
+.navbox2_1 {
+    top:50%;
+    left: 5%;
+    position: fixed;
+    font-size: 1.5em;
+    line-height:35px;
+    color: white;
+    letter-spacing: 3px;
+}
 .navbox2_2 {
     width: 75%;
     height: 50vh;
@@ -1563,6 +1580,9 @@ img.01 {
     right: 0;
     display: none;
     color: white;
+}
+.navbox2_2_1{
+    display: inline;
 }
 
 .navbox3 {
@@ -2435,6 +2455,7 @@ img:hover {
     line-height: 200%;
     padding-left: 10px;
     letter-spacing: 2px;
+    overflow-y:auto;
 }
 
 #director-info-container {

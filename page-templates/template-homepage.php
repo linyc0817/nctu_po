@@ -1001,14 +1001,21 @@
                 <div class="nav-triangle" id="nav2-triangle"></div>
             </div>
             <div class="navbox2">
-                <div>重要訊息</div>
-                <div>業務訊息</div>
-                <div>法規訊息</div>
-                <div>友校訊息</div>
+                <div class="navbox2_1_1">可查閱重要訊息、業<br>務訊息、活動訊息、<br>法規訊息及友校訊息</div>
+                <div class="navbox2_1">
+                    <div>一般訊息</div>
+                    <div>活動訊息</div>
+                    <div>法規訊息</div>
+                    <div>友校訊息</div>
+                    <div>業務訊息</div>
+                    <div>重要訊息</div>
+                </div>
             </div>
             <div class="navbox2_2">
-                <div>公告日期</div>
-                <div>主旨</div>
+                <div class="navbox2_2_1">
+                <div style="dispaly:inline;">公告日期</div>
+                <div style="dispaly:inline;">主旨</div>
+                </div>
                 <div class="announcement-container">
                     
 
