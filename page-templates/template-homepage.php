@@ -1009,9 +1009,10 @@
             <div class="navbox2_2">
                 <div>公告日期</div>
                 <div>主旨</div>
-                <div v-on:click="next_page">{{page}}</div>
-                <div class="announcement-container" >
-                    <announcement item-title="item-title" item-date="item-date" v-for="_item in items"  v-bind:item="_item" v-bind:key="_item.id"></announcement>
+                <div class="announcement-container">
+                    
+
+                    
                 
                 </div>
                 
