@@ -17,14 +17,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <!-- bootstrap -->
-    <link href="<?php bloginfo('template_url');?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="<?php bloginfo('template_url');?>/bootstrap/js/bootstrap.min.js"></script>
+    <link href="<?php bloginfo('template_url'); ?>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="<?php bloginfo('template_url'); ?>/bootstrap/js/bootstrap.min.js"></script>
 
-    <link href="<?php bloginfo('template_url');?>/css/homepage.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_url');?>/css/style.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/css/homepage.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_url'); ?>/css/style.css" rel="stylesheet">
 
-    <script src="<?php bloginfo('template_url');?>/js/homepage.js"></script>
-    <script src="<?php bloginfo('template_url');?>/js/homepage_db.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/homepage.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/homepage_db.js"></script>
     
 
 
@@ -39,8 +39,8 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="img01" src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg">
-        <img class="modal-content" id="img02" src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" alt="">
+        <img class="modal-content" id="img01" src="<?php bloginfo('template_url'); ?>/image/大地圖_北大門_for人事室專用.jpg">
+        <img class="modal-content" id="img02" src="<?php bloginfo('template_url'); ?>/image/office_2nd.jpg" alt="">
         <div id="caption"></div>
     </div>
 
@@ -48,7 +48,7 @@
     <div class="navbar">
         <div class="triangle"></div>
 
-        <a href="<?php echo site_url() ?>"; ><img src="<?php bloginfo('template_url');?>/image/logo.png" alt="NCTU logo"
+        <a href="<?php echo site_url() ?>"; ><img src="<?php bloginfo('template_url'); ?>/image/logo.png" alt="NCTU logo"
                 width="360" height="75" style="position: relative; left: 6%; top: 1.5em;"></a>
 
 
@@ -114,14 +114,14 @@
                     <div class="position_page pp1">
                         <div id="pp1_photo1">
                             <div class="image-map" id="big-map">
-                                <img  style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/大地圖_北大門_for人事室專用.jpg" >
+                                <img  style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url'); ?>/image/大地圖_北大門_for人事室專用.jpg" >
 
                             <div class="pp1_photo_font">
                                 光復校區位置分佈圖
                             </div>
                             </div>
                             <div class="image-map" id="second-floor">
-                                <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url');?>/image/office_2nd.jpg" >
+                                <img style="width: 100%;max-width:300px;"  src="<?php bloginfo('template_url'); ?>/image/office_2nd.jpg" >
                             <div class="pp1_photo_font">
                                 行政大樓二樓平面圖
                             </div>
@@ -228,22 +228,22 @@
                             <div id="staff-director-page">
                                 <div id="director-info-container">
                                     <div id="director-name">
-                                        <?=get_page_by_title('主任大名', OBJECT, 'post')->post_content?>
+                                        <?= get_page_by_title('主任大名', OBJECT, 'post')->post_content ?>
                                     </div>
                                     
                                     <div id="director-info">
                                         <?php 
-                                            $content = get_page_by_title('主任資訊', OBJECT, 'post')->post_content;
-                                            foreach(explode("\n",$content) as $line){
-                                                echo "<div class='director-info-line'>$line</div>";
-                                            }
+                                        $content = get_page_by_title('主任資訊', OBJECT, 'post')->post_content;
+                                        foreach (explode("\n", $content) as $line) {
+                                            echo "<div class='director-info-line'>$line</div>";
+                                        }
                                         ?>
                                     </div>
                                 </div>
                                 <div id="director-words-container">
                                     <div id="director-word">主任的話</div>
                                     <div id="director-word-content">
-                                        <?=get_page_by_title('主任的話', OBJECT, 'post')->post_content?>
+                                        <?= get_page_by_title('主任的話', OBJECT, 'post')->post_content ?>
                                     </div>
                                 </div>
                             </div>
@@ -259,13 +259,13 @@
                                             $count = 0;
                                             $i_man = 0;
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
 
@@ -277,13 +277,13 @@
                                             $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
                                             $count = 0;
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -294,13 +294,13 @@
                                             $i_man++;
                                             $ary = explode("\n", get_page_by_title('第一組組員', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -311,13 +311,13 @@
                                             $count = 0;
                                             $ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -328,13 +328,13 @@
                                             $i_man++;
                                             $ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -345,13 +345,13 @@
                                             $count = 0;
                                             $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -359,16 +359,16 @@
                                             <div class="staff-name-container">
                                             <?php
                                             $i_man++;
-                                            $count=0;
+                                            $count = 0;
                                             $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                     </div>    
@@ -383,11 +383,11 @@
                                             <div class="staff-name-container">
                                             <?php
                                             $count = 0;
-                                            $i_man=0;
+                                            $i_man = 0;
                                             $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
@@ -405,13 +405,13 @@
                                             $count = 0;
                                             $ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -422,13 +422,13 @@
                                             $i_man++;
                                             $ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -439,13 +439,13 @@
                                             $count = 0;
                                             $ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -456,13 +456,13 @@
                                             $count = 0;
                                             $ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
                                             foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/','', $name);
-                                                if(strlen($name)==0){
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
                                                     continue;
                                                 }
                                                 echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                                 $count++;
-                                            }?>
+                                            } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -473,13 +473,13 @@
                                                 $count = 0;
                                                 $ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
                                                 foreach ($ary as $name) {
-                                                    $name = preg_replace('/[\r\n]+/','', $name);
-                                                    if(strlen($name)==0){
+                                                    $name = preg_replace('/[\r\n]+/', '', $name);
+                                                    if (strlen($name) == 0) {
                                                         continue;
                                                     }
                                                     echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                                     $count++;
-                                                }?>
+                                                } ?>
                                             </div>
                                         </div>
                                         <div class="staff-container">
@@ -490,13 +490,13 @@
                                                 $count = 0;
                                                 $ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
                                                 foreach ($ary as $name) {
-                                                    $name = preg_replace('/[\r\n]+/','', $name);
-                                                    if(strlen($name)==0){
+                                                    $name = preg_replace('/[\r\n]+/', '', $name);
+                                                    if (strlen($name) == 0) {
                                                         continue;
                                                     }
                                                     echo "<div class='staff-name mouse-hover g2m{$i_man}_{$count}'>" . $name . "</div>";
                                                     $count++;
-                                                }?>
+                                                } ?>
                                             </div>
                                         </div> 
                                     </div>     
@@ -509,91 +509,91 @@
                                 </div>
                                 <div id="staff-group-3-right-container">
                                 <?php
-                                    $item = 1;
-                                    $group2_start_page;
-                                    foreach(array("第一組","第二組") as $gidx => $group){
+                                $item = 1;
+                                $group2_start_page;
+                                foreach (array("第一組",  "第二組") as $gidx => $group) {
                                         // 換組要換頁
-                                        if($gidx == 1)
-                                            $item += (14-$item%14);
-                                        $group2_start_page = (int)($item/14)+1;
-                                        $_group = $gidx+1;
-                                        echo "<div class='staff-job-overview-container group$_group'>";
-                                            $staff_titles = array("組長","專員");
-                                            foreach($staff_titles as $staff_title){
+                                    if ($gidx == 1)
+                                        $item += (14 - $item % 14);
+                                    $group2_start_page = (int)($item / 14) + 1;
+                                    $_group = $gidx + 1;
+                                    echo "<div class='staff-job-overview-container group$_group'>";
+                                    $staff_titles = array("組長", "專員");
+                                    foreach ($staff_titles as $staff_title) {
                                                 //get name
-                                                $post = get_page_by_title($group.$staff_title, OBJECT, 'post')->post_content;
-                                                $staffs = array();
-                                                foreach(explode("\n",$post) as $line){
+                                        $post = get_page_by_title($group . $staff_title, OBJECT, 'post')->post_content;
+                                        $staffs = array();
+                                        foreach (explode("\n", $post) as $line) {
                                                     // 可能會有多餘的換行 要刪掉
-                                                    $line = preg_replace('/[\r\n]+/','', $line);
-                                                    if(strlen($line) == 0){
-                                                        continue;
-                                                    }
-                                                    array_push($staffs,$line);
-                                                }
+                                            $line = preg_replace('/[\r\n]+/', '', $line);
+                                            if (strlen($line) == 0) {
+                                                continue;
+                                            }
+                                            array_push($staffs, $line);
+                                        }
 
                                                 // get information
-                                                $information = get_page_by_title($group.$staff_title.'資料',OBJECT,'post')->post_content;
-                                                $tels = array(); // 分機
-                                                $jobs = array(); // 執掌
-                                                foreach(explode("\n",$information) as $line){
-                                                    if(strlen(preg_replace('/[\r\n]+/','', $line)) == 0){
-                                                        continue;
-                                                    }
-                                                    if (preg_match("/執掌:/", $line)){
-                                                        $line = str_replace('執掌:', '', $line);
-                                                        $line = str_replace("執掌: ","",$line);
-                                                        $line = str_replace("執掌:","",$line);
-                                                        $line = str_replace("，"," ",$line);
-                                                        $line = str_replace(","," ",$line);
-                                                        $line = str_replace("、"," ",$line);
-                                                        array_push($jobs, explode(" ", trim($line)));
-                                                    }
-                                                    if (preg_match("/聯絡分機:/", $line)){
-                                                        $line = str_replace('聯絡分機:', '', $line);
-                                                        array_push($tels, "#".preg_replace('/[\r\n]+/','', $line));
-                                                    }
-                                                }
+                                        $information = get_page_by_title($group . $staff_title . '資料', OBJECT, 'post')->post_content;
+                                        $tels = array(); // 分機
+                                        $jobs = array(); // 執掌
+                                        foreach (explode("\n", $information) as $line) {
+                                            if (strlen(preg_replace('/[\r\n]+/', '', $line)) == 0) {
+                                                continue;
+                                            }
+                                            if (preg_match("/執掌:/", $line)) {
+                                                $line = str_replace('執掌:', '', $line);
+                                                $line = str_replace("執掌: ", "", $line);
+                                                $line = str_replace("執掌:", "", $line);
+                                                $line = str_replace("，", " ", $line);
+                                                $line = str_replace(",", " ", $line);
+                                                $line = str_replace("、", " ", $line);
+                                                array_push($jobs, explode(" ", trim($line)));
+                                            }
+                                            if (preg_match("/聯絡分機:/", $line)) {
+                                                $line = str_replace('聯絡分機:', '', $line);
+                                                array_push($tels, "#" . preg_replace('/[\r\n]+/', '', $line));
+                                            }
+                                        }
                                                 
                                                 // print out
-                                                foreach($staffs as $idx => $staff){
-                                                    foreach($jobs[$idx] as $job){
-                                                        $page = (int)(($item-1)/14)+1;
-                                                        echo "<div class='staff-job-overview-item-container page$page item$item'>";
-                                                            echo "<div class='staff-job-overview-title'> $job </div>";
-                                                            echo "<div class='staff-job-overview-staff'>$staff $tels[$idx]</div>";
-                                                        echo "</div>"; // staff-job-overview-container
-                                                        $item++;
-                                                    }
-                                                }
+                                        foreach ($staffs as $idx => $staff) {
+                                            foreach ($jobs[$idx] as $job) {
+                                                $page = (int)(($item - 1) / 14) + 1;
+                                                echo "<div class='staff-job-overview-item-container page$page item$item'>";
+                                                echo "<div class='staff-job-overview-title'> $job </div>";
+                                                echo "<div class='staff-job-overview-staff'>$staff $tels[$idx]</div>";
+                                                echo "</div>"; // staff-job-overview-container
+                                                $item++;
                                             }
-                                        echo "</div>";
+                                        }
                                     }
-                                    echo "<div class='staff-job-overview-dot-container'>";
-                                            for($i = 1; $i<=(int)(($item-1)/14)+1; $i++){
-                                                $group_name = "";
-                                                if($i == 1){
-                                                    $group_name = "第一組";
-                                                }else if($i == $group2_start_page){
-                                                    $group_name = "第二組";
-                                                }
-                                                if($i < $group2_start_page){
-                                                    $group_idx = 1;
-                                                }else{
-                                                    $group_idx = 2;
-                                                }
-                                                // 換頁圓點
-                                                $class_fade = "";
-                                                if($i != 1)
-                                                    $class_fade = "_fade";
-                                                
-                                                
-                                                echo "<div>";
-                                                    echo "<div class='staff-job-overview-dot page$i mouse-hover group$group_idx $class_fade'></div>";
-                                                    echo "<div class='staff-job-overview-dot-name page$i'>$group_name</div>";
-                                                echo "</div>";
-                                            }
                                     echo "</div>";
+                                }
+                                echo "<div class='staff-job-overview-dot-container'>";
+                                for ($i = 1; $i <= (int)(($item - 1) / 14) + 1; $i++) {
+                                    $group_name = "";
+                                    if ($i == 1) {
+                                        $group_name = "第一組";
+                                    } else if ($i == $group2_start_page) {
+                                        $group_name = "第二組";
+                                    }
+                                    if ($i < $group2_start_page) {
+                                        $group_idx = 1;
+                                    } else {
+                                        $group_idx = 2;
+                                    }
+                                                // 換頁圓點
+                                    $class_fade = "";
+                                    if ($i != 1)
+                                        $class_fade = "_fade";
+
+
+                                    echo "<div>";
+                                    echo "<div class='staff-job-overview-dot page$i mouse-hover group$group_idx $class_fade'></div>";
+                                    echo "<div class='staff-job-overview-dot-name page$i'>$group_name</div>";
+                                    echo "</div>";
+                                }
+                                echo "</div>";
                                     /*
                                     $staff_wpcat_id = get_cat_iD("第一組執掌一覽");
                                     $posts = get_posts( array(
@@ -606,98 +606,100 @@
                                             echo "<div class='staff-overview-content-$idx'>" . $post->post_content . "</div>";
                                         echo "</div>";
                                     }
-                                    */
+                                 */
                                 ?>
                                 </div>
                                 
                             </div>
                             <?php 
-                                function staff_line_handle1($info, $total, $i_man){
-                                    $count = 0;
-                                    foreach ($info as $line) {
-                                        if(!($count < $total )){
-                                            break;
-                                        }
-                                        if (preg_match("/聯絡分機:/", $line)) {
-                                            echo "<div class='staff-info-container' id='g1m{$i_man}_{$count}'>";
-                                            echo "<div class='staff-tel'>$line</div>";
-                                        }
-                                        $agents = array();
-                                        if (preg_match("/職務代理人:/", $line)) {
-                                            echo "<div class='staff-agent-block'>";
-                                            echo "<div class='staff-agent-title'>職務代理人:</div>";
-                                            $line = str_replace("職務代理人: ","",$line);
-                                            $line = str_replace("職務代理人:","",$line);
-                                            $line = str_replace(" ", "<br>",$line);
-                                            echo "<div class='staff-agent-container'>" .$line."</div>";
-                                            echo "</div>";
-                                        }
-                                        if (preg_match("/執掌:/", $line)) {
-                                            echo "<div class='staff-job-title'>執掌:</div>";
-                                            $line = str_replace("執掌: ","",$line);
-                                            $line = str_replace("執掌:","",$line);
-                                            $line = str_replace("，"," ",$line);
-                                            $line = str_replace(","," ",$line);
-                                            $line = str_replace("、"," ",$line);
-                                            $line = str_replace(" ", "<br>",$line);
+                            function staff_line_handle1($info, $total, $i_man)
+                            {
+                                $count = 0;
+                                foreach ($info as $line) {
+                                    if (!($count < $total)) {
+                                        break;
+                                    }
+                                    if (preg_match("/聯絡分機:/", $line)) {
+                                        echo "<div class='staff-info-container' id='g1m{$i_man}_{$count}'>";
+                                        echo "<div class='staff-tel'>$line</div>";
+                                    }
+                                    $agents = array();
+                                    if (preg_match("/職務代理人:/", $line)) {
+                                        echo "<div class='staff-agent-block'>";
+                                        echo "<div class='staff-agent-title'>職務代理人:</div>";
+                                        $line = str_replace("職務代理人: ", "", $line);
+                                        $line = str_replace("職務代理人:", "", $line);
+                                        $line = str_replace(" ", "<br>", $line);
+                                        echo "<div class='staff-agent-container'>" . $line . "</div>";
+                                        echo "</div>";
+                                    }
+                                    if (preg_match("/執掌:/", $line)) {
+                                        echo "<div class='staff-job-title'>執掌:</div>";
+                                        $line = str_replace("執掌: ", "", $line);
+                                        $line = str_replace("執掌:", "", $line);
+                                        $line = str_replace("，", " ", $line);
+                                        $line = str_replace(",", " ", $line);
+                                        $line = str_replace("、", " ", $line);
+                                        $line = str_replace(" ", "<br>", $line);
                                             //$jobs = explode(" ",$line);
-                                            echo "<div class='staff-job-container'>" . $line . "</div>";
+                                        echo "<div class='staff-job-container'>" . $line . "</div>";
                                             /*
                                             foreach($jobs as $job){
                                                 echo "<div class='staff-job'>$job</div>";
                                             }
-                                            */
-                                            $count++;
-                                            echo "</div>"; // staff-info
-                                        } 
+                                         */
+                                        $count++;
+                                        echo "</div>"; // staff-info
                                     }
                                 }
+                            }
 
-                                function staff_line_handle2($info, $total, $i_man){
-                                    $count = 0;
-                                    foreach ($info as $line) {
-                                        if(!($count < $total )){
-                                            break;
-                                        }
-                                        if (preg_match("/聯絡分機:/", $line)) {
-                                            echo "<div class='staff-info-container' id='g2m{$i_man}_{$count}'>";
-                                            echo "<div class='staff-tel'>$line</div>";
-                                        }
-                                        $agents = array();
-                                        if (preg_match("/職務代理人:/", $line)) {
-                                            echo "<div class='staff-agent-block'>";
+                            function staff_line_handle2($info, $total, $i_man)
+                            {
+                                $count = 0;
+                                foreach ($info as $line) {
+                                    if (!($count < $total)) {
+                                        break;
+                                    }
+                                    if (preg_match("/聯絡分機:/", $line)) {
+                                        echo "<div class='staff-info-container' id='g2m{$i_man}_{$count}'>";
+                                        echo "<div class='staff-tel'>$line</div>";
+                                    }
+                                    $agents = array();
+                                    if (preg_match("/職務代理人:/", $line)) {
+                                        echo "<div class='staff-agent-block'>";
 
-                                            $line = str_replace("職務代理人: ","",$line);
-                                            $line = str_replace("職務代理人:","",$line);
-                                            $line = str_replace(" ", "<br>",$line);
-                                            echo "<div class='staff-agent-title'>職務代理人:</div>";
-                                            echo "<div class='staff-agent-container'>" . $line ."</div>";
+                                        $line = str_replace("職務代理人: ", "", $line);
+                                        $line = str_replace("職務代理人:", "", $line);
+                                        $line = str_replace(" ", "<br>", $line);
+                                        echo "<div class='staff-agent-title'>職務代理人:</div>";
+                                        echo "<div class='staff-agent-container'>" . $line . "</div>";
 
-                                            echo "</div>";
-                                        }
-                                        if (preg_match("/執掌:/", $line)) {
-                                            $line = str_replace("執掌: ","",$line);
-                                            $line = str_replace("執掌:","",$line);
-                                            $line = str_replace("，"," ",$line);
-                                            $line = str_replace(","," ",$line);
-                                            $line = str_replace("、"," ",$line);
-                                            $line = str_replace(" ", "<br>",$line);
-                                            echo "<div class='staff-job-title'>執掌:</div>";
-                                            echo "<div class='staff-job-container'>".$line."</div>";
-                                            $count++;
-                                            echo "</div>"; // staff-info
-                                        } 
+                                        echo "</div>";
+                                    }
+                                    if (preg_match("/執掌:/", $line)) {
+                                        $line = str_replace("執掌: ", "", $line);
+                                        $line = str_replace("執掌:", "", $line);
+                                        $line = str_replace("，", " ", $line);
+                                        $line = str_replace(",", " ", $line);
+                                        $line = str_replace("、", " ", $line);
+                                        $line = str_replace(" ", "<br>", $line);
+                                        echo "<div class='staff-job-title'>執掌:</div>";
+                                        echo "<div class='staff-job-container'>" . $line . "</div>";
+                                        $count++;
+                                        echo "</div>"; // staff-info
                                     }
                                 }
+                            }
                             ?>
                             <div id="staff-right-content-container">
                                     <?php
                                     $ary = explode("\n", get_page_by_title('第一組組長', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man = 0;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -708,9 +710,9 @@
                                     $ary = explode("\n", get_page_by_title('第一組專員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -721,9 +723,9 @@
                                     $ary = explode("\n", get_page_by_title('第一組組員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -735,9 +737,9 @@
                                     $ary = explode("\n", get_page_by_title('第一組行政專員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -749,9 +751,9 @@
                                     $ary = explode("\n", get_page_by_title('第一組計畫助理', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -762,9 +764,9 @@
                                     $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -775,9 +777,9 @@
                                     $ary = explode("\n", get_page_by_title('第一組全時工讀生', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -789,9 +791,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組組長', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man = 0;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -802,9 +804,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組專員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -815,9 +817,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組組員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -829,9 +831,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組行政專員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -843,9 +845,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組計畫助理', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -856,9 +858,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組約聘人員', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -869,9 +871,9 @@
                                     $ary = explode("\n", get_page_by_title('第二組全時工讀生', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
-                                    foreach($ary as $element){
-                                        $element = preg_replace('/[\r\n]+/','', $element);
-                                        if(strlen($element)>0){
+                                    foreach ($ary as $element) {
+                                        $element = preg_replace('/[\r\n]+/', '', $element);
+                                        if (strlen($element) > 0) {
                                             $total++;
                                         }
                                     }
@@ -998,13 +1000,18 @@
                 <div id="navid3">訊息公告</div>
                 <div class="nav-triangle" id="nav2-triangle"></div>
             </div>
-            <div class="navbox2"></div>
+            <div class="navbox2">
+                <div>重要訊息</div>
+                <div>業務訊息</div>
+                <div>法規訊息</div>
+                <div>友校訊息</div>
+            </div>
             <div class="navbox2_2">
                 <div>公告日期</div>
                 <div>主旨</div>
-                
+                <div v-on:click="next_page">{{page}}</div>
                 <div class="announcement-container" >
-                    <announcement-container date-class="msg-date" title-class="msg-title"  v-for="_item in items"  v-bind:item="_item" v-bind:key="_item.id"></announcement-container>
+                    <announcement item-title="item-title" item-date="item-date" v-for="_item in items"  v-bind:item="_item" v-bind:key="_item.id"></announcement>
                 
                 </div>
                 
@@ -1031,73 +1038,73 @@
                     top:25%;
                 ">
             <img id="prev-page" class="mouse-hover" style="width:50%;"
-            src="<?php bloginfo('template_url');?>/image/prev-page.png" alt="prev-page-img">
+            src="<?php bloginfo('template_url'); ?>/image/prev-page.png" alt="prev-page-img">
                     <div id="decree-left-flexbox">
 
                         <?php
 //這邊處理法令表格的內部細向
-$decree_cat_id = get_cat_iD("法令表格");
+                        $decree_cat_id = get_cat_iD("法令表格");
 //透過wordpress類別將法令表格下的大項自動生成 '歸類大項'
-$main_cats = get_categories(array('parent' => $decree_cat_id, 'hide_empty' => false));
-foreach ($main_cats as $m_idx => $main_cat) {
+                        $main_cats = get_categories(array('parent' => $decree_cat_id, 'hide_empty' => false));
+                        foreach ($main_cats as $m_idx => $main_cat) {
     //echo $main_cat->cat_name;
     //每一個大項的細像
 
     // S1 or S2 or .. Sn
-    $main_container_class = "main" . substr(($main_cat->description), 1);
-    echo "<div class='$main_container_class decree-main-container'>";
+                            $main_container_class = "main" . substr(($main_cat->description), 1);
+                            echo "<div class='$main_container_class decree-main-container'>";
     //歸類大項下的歸類細項
-    $detail_cats = get_categories(array('parent' => $main_cat->cat_ID, 'hide_empty' => true));
+                            $detail_cats = get_categories(array('parent' => $main_cat->cat_ID, 'hide_empty' => true));
 
-    foreach ($detail_cats as $index => $detail_cat) {
-        $detail_cat_class = "decree-details detail-cat" . ($index + 1);
+                            foreach ($detail_cats as $index => $detail_cat) {
+                                $detail_cat_class = "decree-details detail-cat" . ($index + 1);
         //隸屬於哪些人員
-        for ($i = 0; $i < strlen($detail_cat->description); $i++) {
-            if ($detail_cat->description[$i] == "O") {
-                $detail_cat_class .= " personnel" . ($i + 1) . " ";
-            }
-        }
+                                for ($i = 0; $i < strlen($detail_cat->description); $i++) {
+                                    if ($detail_cat->description[$i] == "O") {
+                                        $detail_cat_class .= " personnel" . ($i + 1) . " ";
+                                    }
+                                }
         // 隸屬於哪個歸類大項 （增加往parent的連結）
-        $detail_cat_class .= (" " . explode(" ", $detail_cat->description)[1]);
+                                $detail_cat_class .= (" " . explode(" ", $detail_cat->description)[1]);
         //類項container
-        echo "<div class='details-container $detail_cat_class'>";
+                                echo "<div class='details-container $detail_cat_class'>";
         //echo 類項名稱
 
-        echo "<p>" . $detail_cat->cat_name . '</p>';
+                                echo "<p>" . $detail_cat->cat_name . '</p>';
         //細項下法規
-        $articles = get_posts(array(
-            'numberposts' => 50,
-            'category' => $detail_cat->cat_ID,
-            'hide_empty' => false,
-        ));
-        echo "<div class='articles-container'>";
-        foreach ($articles as $article) {
+                                $articles = get_posts(array(
+                                    'numberposts' => 50,
+                                    'category' => $detail_cat->cat_ID,
+                                    'hide_empty' => false,
+                                ));
+                                echo "<div class='articles-container'>";
+                                foreach ($articles as $article) {
             // post[num]是用來實作js -> 點選時右邊內容顯示什麼
-            $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover" . " post_" . $article->ID;
+                                    $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover" . " post_" . $article->ID;
             //var_dump($article);
-            if(mb_strlen($article->post_title,"utf-8") > 14){
-                $tmp_title = $article->post_title;
-                $tmp_title = mb_substr($tmp_title,0,14,"utf-8") . "...";
-                echo "<div class='$article_class'>" . $tmp_title ."<span class='tooltiptext'>$article->post_title</span>" . "</div>";
+                                    if (mb_strlen($article->post_title, "utf-8") > 14) {
+                                        $tmp_title = $article->post_title;
+                                        $tmp_title = mb_substr($tmp_title, 0, 14, "utf-8") . "...";
+                                        echo "<div class='$article_class'>" . $tmp_title . "<span class='tooltiptext'>$article->post_title</span>" . "</div>";
                 //asdd
-            }else{
-                echo "<div class= '$article_class'>" . $article->post_title. "</div>";
-            }
+                                    } else {
+                                        echo "<div class= '$article_class'>" . $article->post_title . "</div>";
+                                    }
             //$myJSON = json_decode($article->post_content);
             //echo "<p>" . $myJSON->name . "</p>";
             //var_dump($myJSON);
-        }
-        echo "</div>"; // close tag for {article-container}
+                                }
+                                echo "</div>"; // close tag for {article-container}
 
         //var_dump($articles);
-        echo "</div>"; // close tag for {details-container}
-        echo ("<hr class='decree-left-hr $detail_cat_class'>");
+                                echo "</div>"; // close tag for {details-container}
+                                echo ("<hr class='decree-left-hr $detail_cat_class'>");
 
-    }
-    echo "</div>"; // close tag for main-container
-}
+                            }
+                            echo "</div>"; // close tag for main-container
+                        }
 
-?>
+                        ?>
 
                     </div>
                 </div>
@@ -1116,158 +1123,156 @@ foreach ($main_cats as $m_idx => $main_cat) {
                 ">
                     <div id="decree-right-flexbox">
                         <?php
-$right_article_has = []; //use to avoid duplicate article content
-foreach ($main_cats as $m_idx => $main_cat) {
-    $detail_cats = get_categories(array('parent' => $main_cat->cat_ID, 'hide_empty' => true));
-    foreach ($detail_cats as $index => $detail_cat) {
-        $personnel_cat = []; //歸類人員
-        if ($detail_cat->description[0] == 'O') {
-            array_push($personnel_cat, "教師", "約聘教師", "研究類教師", "助教", "科技部補助延攬人才", "兼任教師", "教官", "研究人員", "計畫類博士後研究");
-        }
-        if ($detail_cat->description[1] == 'O') {
-            array_push($personnel_cat, "公務人員");
-        }
-        if ($detail_cat->description[2] == 'O') {
-            array_push($personnel_cat, "研發替代役", "約用人員", "計畫人員", "全時工讀生", "學生兼任助理", "臨時工");
-        }
-        $articles = get_posts(array(
-            'numberposts' => 50,
-            'category' => $detail_cat->cat_ID,
-            'hide_empty' => false,
-        ));
-        foreach ($articles as $article) {
+                        $right_article_has = []; //use to avoid duplicate article content
+                        foreach ($main_cats as $m_idx => $main_cat) {
+                            $detail_cats = get_categories(array('parent' => $main_cat->cat_ID, 'hide_empty' => true));
+                            foreach ($detail_cats as $index => $detail_cat) {
+                                $personnel_cat = []; //歸類人員
+                                if ($detail_cat->description[0] == 'O') {
+                                    array_push($personnel_cat, "教師", "約聘教師", "研究類教師", "助教", "科技部補助延攬人才", "兼任教師", "教官", "研究人員", "計畫類博士後研究");
+                                }
+                                if ($detail_cat->description[1] == 'O') {
+                                    array_push($personnel_cat, "公務人員");
+                                }
+                                if ($detail_cat->description[2] == 'O') {
+                                    array_push($personnel_cat, "研發替代役", "約用人員", "計畫人員", "全時工讀生", "學生兼任助理", "臨時工");
+                                }
+                                $articles = get_posts(array(
+                                    'numberposts' => 50,
+                                    'category' => $detail_cat->cat_ID,
+                                    'hide_empty' => false,
+                                ));
+                                foreach ($articles as $article) {
             //過濾重複
-            if ($right_article_has[$article->ID] == true) {
-                continue;
-            } else {
-                $right_article_has[$article->ID] = true;
-            }
-            $article_content = $article->post_content;
-            $item_container_class = "decree-right-item-container " . "post_" . $article->ID;
-            echo "<div class='$item_container_class'>";
-            echo ("<div class='decree-right-cell-container'>");
-            echo ("<div class='decree-right-item-title'>法規</div>");
-            echo ("<div style='color:white;'>" . $article->post_title . "</div>");
-            echo ("</div>"); //cell
-            echo ("<hr class='decree-right-hr'>");
-            echo ("<div class='decree-right-cell-container'>");
-            echo ("<div class='decree-right-item-title'>相關表格</div>");
-            $article_slices = explode("\n", $article_content);
-            $forms_pdf = [];
-            $forms_doc = [];
-            $forms_odf = [];
-            $forms_name = [];
-            $revisions_name = [];
-            $revisions_link = [];
-            foreach ($article_slices as $slice) { //slicing
-                trim($slice);
+                                    if ($right_article_has[$article->ID] == true) {
+                                        continue;
+                                    } else {
+                                        $right_article_has[$article->ID] = true;
+                                    }
+                                    $article_content = $article->post_content;
+                                    $item_container_class = "decree-right-item-container " . "post_" . $article->ID;
+                                    echo "<div class='$item_container_class'>";
+                                    echo ("<div class='decree-right-cell-container'>");
+                                    echo ("<div class='decree-right-item-title'>法規</div>");
+                                    echo ("<div style='color:white;'>" . $article->post_title . "</div>");
+                                    echo ("</div>"); //cell
+                                    echo ("<hr class='decree-right-hr'>");
+                                    echo ("<div class='decree-right-cell-container'>");
+                                    echo ("<div class='decree-right-item-title'>相關表格</div>");
+                                    $article_slices = explode("\n", $article_content);
+                                    $forms_pdf = [];
+                                    $forms_doc = [];
+                                    $forms_odf = [];
+                                    $forms_name = [];
+                                    $revisions_name = [];
+                                    $revisions_link = [];
+                                    foreach ($article_slices as $slice) { //slicing
+                                        trim($slice);
                 //if it's a form:
-                if (preg_match('/^form/', $slice)) {
+                                        if (preg_match('/^form/', $slice)) {
                     //explode the $slice to title and content
-                    $title_content = explode(" ", $slice);
-                    $title = $title_content[0];
-                    $content = substr($slice, strpos($slice, ":") + 1);
+                                            $title_content = explode(" ", $slice);
+                                            $title = $title_content[0];
+                                            $content = substr($slice, strpos($slice, ":") + 1);
                     //remove spaces from both side
-                    $title = trim($title, " \t\n\r\0\x0B\xC2\xA0");
-                    $content = trim($content, " \t\n\r\0\x0B\xC2\xA0");
+                                            $title = trim($title, " \t\n\r\0\x0B\xC2\xA0");
+                                            $content = trim($content, " \t\n\r\0\x0B\xC2\xA0");
                     //form1-pdf: -> 1-pdf:
-                    $index_type = trim($title, "form");
+                                            $index_type = trim($title, "form");
                     //1-pdf: -> ["1","pdf:"]
-                    $index_type = explode("-", $index_type);
-                    $index = (int) $index_type[0];
+                                            $index_type = explode("-", $index_type);
+                                            $index = (int)$index_type[0];
                     //"pdf:" -> "pdf"
-                    $type = trim($index_type[1], " \t\n\r\0\x0B\xC2\xA0:");
-                    $type = trim($type, ":");
+                                            $type = trim($index_type[1], " \t\n\r\0\x0B\xC2\xA0:");
+                                            $type = trim($type, ":");
 
-                    if ($type == "pdf") {
-                        array_push($forms_pdf, $content);
-                    } else if ($type == "doc") {
-                        array_push($forms_doc, $content);
-                    } else if ($type == "odf") {
-                        array_push($forms_odf, $content);
-                    } else if ($type == "name") {
-                        array_push($forms_name, $content);
-                    } else {
+                                            if ($type == "pdf") {
+                                                array_push($forms_pdf, $content);
+                                            } else if ($type == "doc") {
+                                                array_push($forms_doc, $content);
+                                            } else if ($type == "odf") {
+                                                array_push($forms_odf, $content);
+                                            } else if ($type == "name") {
+                                                array_push($forms_name, $content);
+                                            } else {
                         //echo $type . "\n";
-                    }
-                } //{forms}
-                if (preg_match('/^revision/', $slice)) { // matching revision
-                    $content = substr($slice, strpos($slice, ":") + 1);
-                    if (preg_match('/name/', $slice)) {
-                        array_push($revisions_name, $content);
-                    }
+                                            }
+                                        } //{forms}
+                                        if (preg_match('/^revision/', $slice)) { // matching revision
+                                            $content = substr($slice, strpos($slice, ":") + 1);
+                                            if (preg_match('/name/', $slice)) {
+                                                array_push($revisions_name, $content);
+                                            }
 
-                    if (preg_match('/link/', $slice)) {
-                        array_push($revisions_link, $content);
-                    }
+                                            if (preg_match('/link/', $slice)) {
+                                                array_push($revisions_link, $content);
+                                            }
 
-                }
+                                        }
 
-            }
-            $html_href = function ($link, $type) {
-                return (
-                    "<a href='$link' target='_blank'>"
-                    . '<img border="0" alt="ICON" class="fileIcon" src="'
-                    . (get_bloginfo('template_url')
-                        . '/image/' . strtoupper($type) . 'icon.png ')
-                    . '">'
-                    . "</a>"
-                );
-            };
+                                    }
+                                    $html_href = function ($link, $type) {
+                                        return ("<a href='$link' target='_blank'>"
+                                            . '<img border="0" alt="ICON" class="fileIcon" src="'
+                                            . (get_bloginfo('template_url')
+                                            . '/image/' . strtoupper($type) . 'icon.png ')
+                                            . '">'
+                                            . "</a>");
+                                    };
             //form names
-            echo ("<div class='decree-form-names-container'>");
-            for ($i = 0; $i < sizeof($forms_name); $i++) {
+                                    echo ("<div class='decree-form-names-container'>");
+                                    for ($i = 0; $i < sizeof($forms_name); $i++) {
                 // shorten long name
-                if(mb_strlen($forms_name[$i],"utf-8") > 15){
-                    $tmp_name = $forms_name[$i];
-                    $forms_name[$i] = mb_substr($forms_name[$i],0,15,"utf-8") . "...";
-                    echo ("<div class='decree-form-name'>$forms_name[$i]"."<span class='tooltiptext'>$tmp_name</span>"."</div>");
-                }else{
-                echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
-                }
-            }
-            echo ("</div>");
-            echo ("<div class='decree-forms-container'>");
-            for ($i = 0; $i < max(sizeof($forms_pdf), sizeof($forms_doc), sizeof($forms_odf)); $i++) {
-                echo ("<div class='decree-form-flex-item'>");
+                                        if (mb_strlen($forms_name[$i], "utf-8") > 15) {
+                                            $tmp_name = $forms_name[$i];
+                                            $forms_name[$i] = mb_substr($forms_name[$i], 0, 15, "utf-8") . "...";
+                                            echo ("<div class='decree-form-name'>$forms_name[$i]" . "<span class='tooltiptext'>$tmp_name</span>" . "</div>");
+                                        } else {
+                                            echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
+                                        }
+                                    }
+                                    echo ("</div>");
+                                    echo ("<div class='decree-forms-container'>");
+                                    for ($i = 0; $i < max(sizeof($forms_pdf), sizeof($forms_doc), sizeof($forms_odf)); $i++) {
+                                        echo ("<div class='decree-form-flex-item'>");
 
-                echo $html_href($forms_doc[$i], "doc");
-                echo $html_href($forms_pdf[$i], "pdf");
-                echo $html_href($forms_odf[$i], "odf");
+                                        echo $html_href($forms_doc[$i], "doc");
+                                        echo $html_href($forms_pdf[$i], "pdf");
+                                        echo $html_href($forms_odf[$i], "odf");
                 //echo "<br>";
-                echo ("</div>");
-            }
-            echo "</div>";
-            echo "</div>"; //decree-right-cell-container
-            echo ("<hr class='decree-right-hr'>");
-            echo ("<div class='decree-right-cell-container'>");
-            echo ("<div class='decree-right-item-title'>法規動態</div>");
-            echo ("<div class='decree-revisions-container'>");
-            foreach (array_reverse($revisions_name) as $idx => $revision) {
-                echo ("<a href='$revisions_link[$idx]' class='revisions'>$revision</a>");
-            }
-            echo ("</div>");
-            echo ("</div>"); //decree-right-cell-container
-            echo ("<hr class='decree-right-hr'>");
-            echo ("<div class='decree-right-cell-container'>");
-            echo ("<div class='decree-right-item-title'>適用人員</div>");
-            echo ("<div class='personnel-category'>");
-            foreach ($personnel_cat as $key => $value) {
-                echo $value;
-                if ($key != sizeof($personnel_cat) - 1) {
-                    echo '、';
-                }
-            }
-            echo ("</div>");
-            echo ("</div>"); //decree-right-cell-container
-            echo ("<hr class='decree-right-hr'>");
-            echo "</div>"; // decree-right-item-container
+                                        echo ("</div>");
+                                    }
+                                    echo "</div>";
+                                    echo "</div>"; //decree-right-cell-container
+                                    echo ("<hr class='decree-right-hr'>");
+                                    echo ("<div class='decree-right-cell-container'>");
+                                    echo ("<div class='decree-right-item-title'>法規動態</div>");
+                                    echo ("<div class='decree-revisions-container'>");
+                                    foreach (array_reverse($revisions_name) as $idx => $revision) {
+                                        echo ("<a href='$revisions_link[$idx]' class='revisions'>$revision</a>");
+                                    }
+                                    echo ("</div>");
+                                    echo ("</div>"); //decree-right-cell-container
+                                    echo ("<hr class='decree-right-hr'>");
+                                    echo ("<div class='decree-right-cell-container'>");
+                                    echo ("<div class='decree-right-item-title'>適用人員</div>");
+                                    echo ("<div class='personnel-category'>");
+                                    foreach ($personnel_cat as $key => $value) {
+                                        echo $value;
+                                        if ($key != sizeof($personnel_cat) - 1) {
+                                            echo '、';
+                                        }
+                                    }
+                                    echo ("</div>");
+                                    echo ("</div>"); //decree-right-cell-container
+                                    echo ("<hr class='decree-right-hr'>");
+                                    echo "</div>"; // decree-right-item-container
 
-        }
-    }
-}
+                                }
+                            }
+                        }
 
-?>
+                        ?>
                     </div>
                 </div>
 
@@ -1377,7 +1382,7 @@ foreach ($main_cats as $m_idx => $main_cat) {
             <div class="navbox6_2"></div>
             <div class="navbox6_map">
 
-                <div class="map1" style="background-image: " url(<?php bloginfo('template_url');?>/image/clock_map_1.png");">
+                <div class="map1" style="background-image: " url(<?php bloginfo('template_url'); ?>/image/clock_map_1.png");">
 
                 </div>
                 <button id="close">X</button>
@@ -1406,48 +1411,48 @@ foreach ($main_cats as $m_idx => $main_cat) {
             <!-- 後端function -->
             
             <?php
-function hasNextP($text)
-{
-    return (strpos($text, "<p>") !== false);
-}
-function getAllP($text)
-{
-    $all = array();
-    $start_pos = 0;
+            function hasNextP($text)
+            {
+                return (strpos($text, "<p>") !== false);
+            }
+            function getAllP($text)
+            {
+                $all = array();
+                $start_pos = 0;
 
-    while (hasNextP($text)) {
-        $start = strpos($text, "<p>", $start_pos) + 3;
-        $length = strpos($text, "</p>", $start) - $start;
+                while (hasNextP($text)) {
+                    $start = strpos($text, "<p>", $start_pos) + 3;
+                    $length = strpos($text, "</p>", $start) - $start;
         //echo $length . " ";
-        $string = substr($text, $start, $length);
+                    $string = substr($text, $start, $length);
 
-        $all[] = $string;
-        $startpos = $start + $length + 5;
-        $text = substr($text, $startpos);
-    }
+                    $all[] = $string;
+                    $startpos = $start + $length + 5;
+                    $text = substr($text, $startpos);
+                }
 
-    return $all;
-}
+                return $all;
+            }
 
-?>
+            ?>
 <?php
-$QA_type = array("abroad","part-time","other-questions","AMS","personnel","errand","specialist","teachers","postdoctoral","resignation");
-$QA_cat_id = array("出國申請","全時工讀生","其他問題","研發替代役","約用人員","差勤","專兼任計畫人員","專兼任教師","博士後研究員","離職問題");
-    foreach($QA_type as $idx => $type){
-        echo "<div class='msg-board-container $type'>";
-        $posts = get_posts(array("category" => get_cat_ID($QA_cat_id[$idx])));
-        foreach($posts as $qidx => $post){
-            echo "<div class='msg-board-QA-container'>";
-            $question = "<div class='msg-board-question $type mouse-hover question$qidx' style='display:none'>" . $post -> post_title . '</div>';
-            $answer = "<div class='msg-board-answer $type mouse-hover answer$qidx _hide' style='display:none'>" . $post -> post_content . '</div>';
-            echo ($question);
-            echo ($answer);    
-            echo "</div>";
-            
-        }
-        
-        echo '</div>';
+$QA_type = array("abroad", "part-time", "other-questions", "AMS", "personnel", "errand", "specialist", "teachers", "postdoctoral", "resignation");
+$QA_cat_id = array("出國申請", "全時工讀生", "其他問題", "研發替代役", "約用人員", "差勤", "專兼任計畫人員", "專兼任教師", "博士後研究員", "離職問題");
+foreach ($QA_type as $idx => $type) {
+    echo "<div class='msg-board-container $type'>";
+    $posts = get_posts(array("category" => get_cat_ID($QA_cat_id[$idx])));
+    foreach ($posts as $qidx => $post) {
+        echo "<div class='msg-board-QA-container'>";
+        $question = "<div class='msg-board-question $type mouse-hover question$qidx' style='display:none'>" . $post->post_title . '</div>';
+        $answer = "<div class='msg-board-answer $type mouse-hover answer$qidx _hide' style='display:none'>" . $post->post_content . '</div>';
+        echo ($question);
+        echo ($answer);
+        echo "</div>";
+
     }
+
+    echo '</div>';
+}
 ?>
    <div class="navbox7">
                 <!-- <hr style=" border: 1px solid #EA9C32; position: fixed; top: 30%; left: 5%; width: 10%;"> -->
@@ -1483,51 +1488,51 @@ $QA_cat_id = array("出國申請","全時工讀生","其他問題","研發替代
             <div class="navbox2"></div>
             <div class="navbox2_2"></div>
 
-            <img id="close-button" src="<?php bloginfo('template_url');?>/image/close-button.png" alt="close button">
-            <div class="bgd" style="background-image: url(<?php bloginfo('template_url');?>/image/picture.jpg);">
+            <img id="close-button" src="<?php bloginfo('template_url'); ?>/image/close-button.png" alt="close button">
+            <div class="bgd" style="background-image: url(<?php bloginfo('template_url'); ?>/image/picture.jpg);">
 
                 <!-- 左欄抓文章 -->
                 <?php
-function debug_to_console($data)
-{
-    $output = $data;
-    if (is_array($output)) {
-        $output = implode(',', $output);
-    }
+                function debug_to_console($data)
+                {
+                    $output = $data;
+                    if (is_array($output)) {
+                        $output = implode(',', $output);
+                    }
 
-    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
-}
-function leftSideBarMsgs()
-{
-    $categorys = array("重要訊息", "業務訊息", "法規訊息", "友校訊息");
-    $cat_class = array("important-msgs", "business-msgs", "legislation-msgs", "friendSchools-msgs");
-    foreach ($categorys as $index => &$catname) {
-        $cat_id = get_cat_ID($catname);
-        $posts = get_posts(array('category' => $cat_id, 'numberposts' => 5));
-        foreach ($posts as $postIndex => $post) {
-            $content = get_post($post->ID)->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace(']]>', ']]&gt;', $content);
-            $all = getAllP($content);
-            foreach ($all as $idx => &$text) {
-                $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
-                $date = get_the_date('Y-m-d', $post->ID);
-                echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
-                echo ($print);
-                if ($idx != (sizeof($all) - 1)) {
-                    echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
+                    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
                 }
-            }
-            if ($postIndex != (sizeof($posts) - 1)) {
-                echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
-            }
-            
+                function leftSideBarMsgs()
+                {
+                    $categorys = array("重要訊息", "業務訊息", "法規訊息", "友校訊息");
+                    $cat_class = array("important-msgs", "business-msgs", "legislation-msgs", "friendSchools-msgs");
+                    foreach ($categorys as $index => &$catname) {
+                        $cat_id = get_cat_ID($catname);
+                        $posts = get_posts(array('category' => $cat_id, 'numberposts' => 5));
+                        foreach ($posts as $postIndex => $post) {
+                            $content = get_post($post->ID)->post_content;
+                            $content = apply_filters('the_content', $content);
+                            $content = str_replace(']]>', ']]&gt;', $content);
+                            $all = getAllP($content);
+                            foreach ($all as $idx => &$text) {
+                                $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
+                                $date = get_the_date('Y-m-d', $post->ID);
+                                echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
+                                echo ($print);
+                                if ($idx != (sizeof($all) - 1)) {
+                                    echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
+                                }
+                            }
+                            if ($postIndex != (sizeof($posts) - 1)) {
+                                echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
+                            }
 
-        }
-    }
-}
 
-?>
+                        }
+                    }
+                }
+
+                ?>
 
                 <!-- 左欄box -->
                 <div class="left-side-bar-bg">
@@ -1560,7 +1565,7 @@ function leftSideBarMsgs()
                 </div>
                 <div class="right-bg">
                     <div id="left-msgs" style="position: relative;overflow-y:auto;overflow-x:hidden;height:100%;top: 0px;left:100px;">
-                        <?php leftSideBarMsgs();?>
+                        <?php leftSideBarMsgs(); ?>
                     </div>
                     <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:100%; width:55vw;
                     top:0vh; position :absolute; left:15vw; display:none;" frameborder="0" scrolling="no">
@@ -1612,7 +1617,7 @@ function leftSideBarMsgs()
             <div class="pic1">
                 <div class="picline1"></div>
                 <div class="img1">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/01.png" class="01" alt="01">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/01.png" class="01" alt="01">
                     <div class="text1">
                         <p>適用勞基法</p>
                         <p>專區</p>
@@ -1627,7 +1632,7 @@ function leftSideBarMsgs()
             <div class="pic2">
                 <div class="picline2"></div>
                 <div class="img2">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/02.png" alt="02">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/02.png" alt="02">
                     <div class="text2">
                         <p>外籍教職員</p>
                         <p>專區</p>
@@ -1641,7 +1646,7 @@ function leftSideBarMsgs()
             <div class="pic3">
                 <div class="picline3"></div>
                 <div class="img3">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/03.png" alt="03">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/03.png" alt="03">
                     <div class="text3">
                         <p>兼任教師</p>
                         <p>專區</p>
@@ -1655,7 +1660,7 @@ function leftSideBarMsgs()
             <div class="pic4">
                 <div class="picline4"></div>
                 <div class="img4 ">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/04.png" alt="04">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/04.png" alt="04">
                     <div class="text4">
                         <p>學習與勞動</p>
                         <p>權益專區</p>
@@ -1669,7 +1674,7 @@ function leftSideBarMsgs()
             <div class="pic5">
                 <div class="picline5"></div>
                 <div class="img5">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/05.png" alt="05">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/05.png" alt="05">
                     <div class="text5">
                         <p>教師升等</p>
                         <p>專區</p>
@@ -1685,7 +1690,7 @@ function leftSideBarMsgs()
             <div class="pic6">
                 <div class="picline6"></div>
                 <div class="img6">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/06.png" alt="06">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/06.png" alt="06">
                     <div class="text6">
                         <p>退休</p>
                         <p>專區</p>
@@ -1699,7 +1704,7 @@ function leftSideBarMsgs()
             <div class="pic7">
                 <div class="picline7"></div>
                 <div class="img7">
-                    <img class="buttom-icon" src="<?php bloginfo('template_url');?>/image/07.png" alt="07">
+                    <img class="buttom-icon" src="<?php bloginfo('template_url'); ?>/image/07.png" alt="07">
 
                     <div class="text7">
                         <p>福利專區 </p>
@@ -1727,7 +1732,7 @@ function leftSideBarMsgs()
 
 
 <div id="foot">
-  <div id="foot-img"><img src="<?php bloginfo('template_url');?>/image/footer.png" alt="01" style=" position: relative; min-height:20% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));z-index: 25;"></div>
+  <div id="foot-img"><img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="01" style=" position: relative; min-height:20% ; top: 0%; left: 0%; height: 4em;width: 100vw;filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1));z-index: 25;"></div>
 
         <div id="foot_left">
             <div id="foot-area1">
@@ -1964,7 +1969,7 @@ function leftSideBarMsgs()
   </div>
 
   <div id="foot_bottom">
-         <img src="<?php bloginfo('template_url');?>/image/logo_guide.png" width=200px height=100% float:left alt="03">
+         <img src="<?php bloginfo('template_url'); ?>/image/logo_guide.png" width=200px height=100% float:left alt="03">
          <div id="foot_bottom_description">
             30010 新竹市大學路1001號<br>
             最佳瀏覽環境│IE 8 以上版本│建議解析度│1024 x 768<br>
@@ -1979,7 +1984,7 @@ function leftSideBarMsgs()
 
 
     <!-- <div class="footer">
-  <img src="<?php bloginfo('template_url');?>/image/footer.png" alt="footer" width="100%" style="position: fixed; bottom: 0; left: 0;">
+  <img src="<?php bloginfo('template_url'); ?>/image/footer.png" alt="footer" width="100%" style="position: fixed; bottom: 0; left: 0;">
 </div> -->
 
 </body>
