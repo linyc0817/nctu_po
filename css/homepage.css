@@ -1578,7 +1578,7 @@ img.01 {
     position: fixed;
     top: 25%;
     right: 0;
-    /*display: none;*/
+    display: none;
     color: white;
 }
 .navbox2_2_1{
@@ -1594,6 +1594,20 @@ img.01 {
     position: fixed;
     font-size:1.4em;
     color:#F4A22C;
+}
+.msg_container{
+    position: fixed;
+    top:33%;
+    left: 31%;
+    font-size: 1.6em;
+    line-height: 70px;
+}
+.msg-date{
+    display: inline;
+}
+.msg-title{
+    display: inline;
+    margin-left: 35px;
 }
 .navbox3 {
     width: 350px;

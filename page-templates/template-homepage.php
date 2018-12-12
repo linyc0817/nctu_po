@@ -1021,7 +1021,8 @@
                         <div id="msg-next-page" v-on:click="next_page" style="display:inline;" >next page</div>
                         <div id="msg-prev-page" v-on:click="prev_page" style="display:inline; margin-left: 25px;">prev page</div>
                     </div>
-                    <ul>
+                    
+                    <ul class="msg_container">
                         <announcement-title v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
                         
                     
