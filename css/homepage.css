@@ -1578,13 +1578,23 @@ img.01 {
     position: fixed;
     top: 25%;
     right: 0;
-    display: none;
+    /*display: none;*/
     color: white;
 }
 .navbox2_2_1{
-    display: inline;
+    top: 30%;
+    left: 33%;
+    color:#F4A22C;
+    font-size: 1.4em;
+    position: fixed;
 }
-
+.navbox2_2_2{
+    top:30%;
+    left: 85%;
+    position: fixed;
+    font-size:1.4em;
+    color:#F4A22C;
+}
 .navbox3 {
     width: 350px;
     height: 0;

@@ -1014,11 +1014,13 @@
                 </div>
                 <div class="navbox2_2">
                     <div class="navbox2_2_1">
-                    <div style="dispaly:inline;">公告日期</div>
-                    <div style="dispaly:inline;">主旨</div>
+                        <div style="display:inline;">公告日期</div>
+                        <div style="display:inline; margin-left: 25px;">主旨</div>
                     </div>
-                    <div id="msg-next-page" v-on:click="next_page">next page</div>
-                    <div id="msg-prev-page" v-on:click="prev_page">prev page</div>
+                    <div class="navbox2_2_2">
+                        <div id="msg-next-page" v-on:click="next_page" style="display:inline;" >next page</div>
+                        <div id="msg-prev-page" v-on:click="prev_page" style="display:inline; margin-left: 25px;">prev page</div>
+                    </div>
                     <ul>
                         <announcement-title v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
                         
