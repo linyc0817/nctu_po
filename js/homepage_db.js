@@ -19,13 +19,11 @@ function request_msg(_type, _page, _data_per_page, _category) {
 $(function () {
     Vue.component('announcementTitle', {
         props: ['title'],
-        template: '<li>{{title}}</li>'
+        template: '<li><div class="msg-date">{{title.date}}</div> <div class="msg-title">{{title.title}}</div></li>'
     })
     var announcementContainer = new Vue({
         el: '.announcement-container',
         data: {
-            //msg_titles: [
-            //    { 'id': 0, 'title': "a" }, { 'id': 1, 'title': "b" }]
             msg_titles: [],
             category: "重要訊息",
             page: 1,

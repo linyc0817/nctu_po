@@ -1020,7 +1020,7 @@
                     <div id="msg-next-page" v-on:click="next_page">next page</div>
                     <div id="msg-prev-page" v-on:click="prev_page">prev page</div>
                     <ul>
-                        <announcement-title v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title.title"></announcement-title>
+                        <announcement-title v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
                         
                     
                     </ul>
