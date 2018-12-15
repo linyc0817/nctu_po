@@ -1771,11 +1771,11 @@ img.01 {
 }
 
 .decree-form-flex-item {
-    width: 10vw;
+    /* width: 10vw; */
 }
 
 .fileIcon {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     display: inline;
     width: 20px;
 }

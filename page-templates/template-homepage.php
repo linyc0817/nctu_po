@@ -8,7 +8,7 @@
 <html>
 
 <head>
-    <title>交大人事室</title>
+    <title>國立交通大學人事室(測試版)</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -354,7 +354,7 @@
                                             } ?>
                                             </div>
                                         </div>
-                                        <div class="staff-container">
+                                        <!-- <div class="staff-container">
                                             <div class="staff-type">全時工讀生</div>
                                             <div class="staff-name-container">
                                             <?php
@@ -370,7 +370,7 @@
                                                 $count++;
                                             } ?>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>    
                                 </div>    
                             </div>
@@ -511,14 +511,14 @@
                                 <?php
                                 $item = 1;
                                 $group2_start_page;
-                                foreach (array("第一組",  "第二組") as $gidx => $group) {
+                                foreach (array("第一組", "第二組") as $gidx => $group) {
                                         // 換組要換頁
                                     if ($gidx == 1)
                                         $item += (14 - $item % 14);
                                     $group2_start_page = (int)($item / 14) + 1;
                                     $_group = $gidx + 1;
                                     echo "<div class='staff-job-overview-container group$_group'>";
-                                    $staff_titles = array("組長", "專員");
+                                    $staff_titles = array("組長", "專員", "約聘人員", "行政專員", "計畫助理", "組員", "全時工讀生");
                                     foreach ($staff_titles as $staff_title) {
                                                 //get name
                                         $post = get_page_by_title($group . $staff_title, OBJECT, 'post')->post_content;
@@ -547,6 +547,7 @@
                                                 $line = str_replace("，", " ", $line);
                                                 $line = str_replace(",", " ", $line);
                                                 $line = str_replace("、", " ", $line);
+
                                                 array_push($jobs, explode(" ", trim($line)));
                                             }
                                             if (preg_match("/聯絡分機:/", $line)) {
@@ -560,6 +561,9 @@
                                             foreach ($jobs[$idx] as $job) {
                                                 $page = (int)(($item - 1) / 14) + 1;
                                                 echo "<div class='staff-job-overview-item-container page$page item$item'>";
+                                                if (mb_strlen($job, 'utf-8') > 19) {
+                                                    $job = mb_substr($job, 0, 19, 'utf-8') . "...";
+                                                }
                                                 echo "<div class='staff-job-overview-title'> $job </div>";
                                                 echo "<div class='staff-job-overview-staff'>$staff $tels[$idx]</div>";
                                                 echo "</div>"; // staff-job-overview-container
@@ -634,7 +638,7 @@
                                         echo "</div>";
                                     }
                                     if (preg_match("/執掌:/", $line)) {
-                                        echo "<div class='staff-job-title'>執掌:</div>";
+                                        echo "<div class='staff-job-title'>職掌:</div>";
                                         $line = str_replace("執掌: ", "", $line);
                                         $line = str_replace("執掌:", "", $line);
                                         $line = str_replace("，", " ", $line);
@@ -1152,7 +1156,7 @@
                                     array_push($personnel_cat, "研發替代役", "約用人員", "計畫人員", "全時工讀生", "學生兼任助理", "臨時工");
                                 }
                                 $articles = get_posts(array(
-                                    'numberposts' => 50,
+                                    'numberposts' => 500,
                                     'category' => $detail_cat->cat_ID,
                                     'hide_empty' => false,
                                 ));
@@ -1172,7 +1176,7 @@
                                     echo ("</div>"); //cell
                                     echo ("<hr class='decree-right-hr'>");
                                     echo ("<div class='decree-right-cell-container'>");
-                                    echo ("<div class='decree-right-item-title'>相關表格</div>");
+                                    echo ("<div class='decree-right-item-title'>相關表件</div>");
                                     $article_slices = explode("\n", $article_content);
                                     $forms_pdf = [];
                                     $forms_doc = [];
@@ -1180,36 +1184,54 @@
                                     $forms_name = [];
                                     $revisions_name = [];
                                     $revisions_link = [];
+                                    $prev_idx = 1;
+                                    $has_type = [];
                                     foreach ($article_slices as $slice) { //slicing
                                         trim($slice);
-                //if it's a form:
+                                        //if it's a form:
                                         if (preg_match('/^form/', $slice)) {
-                    //explode the $slice to title and content
+                                            //explode the $slice to title and content
                                             $title_content = explode(" ", $slice);
                                             $title = $title_content[0];
                                             $content = substr($slice, strpos($slice, ":") + 1);
-                    //remove spaces from both side
+                                            //remove spaces from both side
                                             $title = trim($title, " \t\n\r\0\x0B\xC2\xA0");
                                             $content = trim($content, " \t\n\r\0\x0B\xC2\xA0");
-                    //form1-pdf: -> 1-pdf:
+                                            //form1-pdf: -> 1-pdf:
                                             $index_type = trim($title, "form");
-                    //1-pdf: -> ["1","pdf:"]
+                                            //1-pdf: -> ["1","pdf:"]
                                             $index_type = explode("-", $index_type);
                                             $index = (int)$index_type[0];
-                    //"pdf:" -> "pdf"
+                                            if ($index != $prev_idx) {
+                                                if (!array_key_exists("pdf", $has_type)) {
+                                                    array_push($forms_pdf, "-1");
+                                                }
+                                                if (!array_key_exists("doc", $has_type)) {
+                                                    array_push($forms_doc, "-1");
+                                                }
+                                                if (!array_key_exists("odf", $has_type)) {
+                                                    array_push($forms_odf, "-1");
+                                                }
+                                                $has_type = [];
+                                                $prev_idx = $index;
+                                            }
+                                            //"pdf:" -> "pdf"
                                             $type = trim($index_type[1], " \t\n\r\0\x0B\xC2\xA0:");
                                             $type = trim($type, ":");
 
                                             if ($type == "pdf") {
                                                 array_push($forms_pdf, $content);
+                                                $has_type["pdf"] = 1;
                                             } else if ($type == "doc") {
                                                 array_push($forms_doc, $content);
+                                                $has_type["doc"] = 1;
                                             } else if ($type == "odf") {
                                                 array_push($forms_odf, $content);
+                                                $has_type["odf"] = 1;
                                             } else if ($type == "name") {
                                                 array_push($forms_name, $content);
                                             } else {
-                        //echo $type . "\n";
+                                                //echo $type . "\n";
                                             }
                                         } //{forms}
                                         if (preg_match('/^revision/', $slice)) { // matching revision
@@ -1225,6 +1247,15 @@
                                         }
 
                                     }
+                                    if (!array_key_exists("pdf", $has_type)) {
+                                        array_push($forms_pdf, "-1");
+                                    }
+                                    if (!array_key_exists("doc", $has_type)) {
+                                        array_push($forms_doc, "-1");
+                                    }
+                                    if (!array_key_exists("odf", $has_type)) {
+                                        array_push($forms_odf, "-1");
+                                    }
                                     $html_href = function ($link, $type) {
                                         return ("<a href='$link' target='_blank'>"
                                             . '<img border="0" alt="ICON" class="fileIcon" src="'
@@ -1233,10 +1264,10 @@
                                             . '">'
                                             . "</a>");
                                     };
-            //form names
+                                    //form names
                                     echo ("<div class='decree-form-names-container'>");
                                     for ($i = 0; $i < sizeof($forms_name); $i++) {
-                // shorten long name
+                                        // shorten long name
                                         if (mb_strlen($forms_name[$i], "utf-8") > 15) {
                                             $tmp_name = $forms_name[$i];
                                             $forms_name[$i] = mb_substr($forms_name[$i], 0, 15, "utf-8") . "...";
@@ -1250,10 +1281,13 @@
                                     for ($i = 0; $i < max(sizeof($forms_pdf), sizeof($forms_doc), sizeof($forms_odf)); $i++) {
                                         echo ("<div class='decree-form-flex-item'>");
 
-                                        echo $html_href($forms_doc[$i], "doc");
-                                        echo $html_href($forms_pdf[$i], "pdf");
-                                        echo $html_href($forms_odf[$i], "odf");
-                //echo "<br>";
+                                        if ($forms_doc[$i] != "-1")
+                                            echo $html_href($forms_doc[$i], "doc");
+                                        if ($forms_pdf[$i] != "-1")
+                                            echo $html_href($forms_pdf[$i], "pdf");
+                                        if ($forms_odf[$i] != "-1")
+                                            echo $html_href($forms_odf[$i], "odf");
+                                        //echo "<br>";
                                         echo ("</div>");
                                     }
                                     echo "</div>";
