@@ -2689,6 +2689,7 @@ div[class*="page"].staff-job-overview-dot._fade {
 
 .staff-job-overview-dot-name {
     color: white;
+    height: 15px;
     width: 50%;
     margin-bottom: 5px;
     margin-left: 30px;
