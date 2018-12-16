@@ -224,7 +224,7 @@ img#close-button:hover {
 /* 留言板 */
 
 .msg-board-container {
-    margin-top: 30vh;
+    margin-top: 26vh;
     z-index: 11;
     position: fixed;
     font-size: 2em;
@@ -1603,13 +1603,14 @@ img.01 {
 
 .msg_container {
     position: fixed;
-    top: 33%;
+    top:35%;
     left: 31%;
     font-size: 1.6em;
-    line-height: 70px;
 }
-
-.msg-date {
+.msg_size{
+    height: 70px;
+}
+.msg-date{
     display: inline;
 }
 
@@ -2488,7 +2489,8 @@ img:hover {
     line-height: 200%;
     padding-left: 10px;
     letter-spacing: 2px;
-    overflow-y: auto;
+    overflow-y:auto;
+    height: 35vh;
 }
 
 #director-info-container {
@@ -2528,7 +2530,7 @@ img:hover {
     margin-left: 13%;
     font-size: 2em;
     width: 17%;
-    height: 100px;
+    height: 150px;
     border-right: 1px solid white;
 }
 
@@ -2539,8 +2541,9 @@ img:hover {
     margin-top: 3%;
     margin-left: 2%;
     font-size: 1.3em;
-    width: 40vw;
-    height: 100px;
+    width: 300px;
+    height: 150px;
+    overflow-y: auto;
 }
 
 .staff-container {
@@ -2670,7 +2673,7 @@ div[class*="page"].staff-job-overview-dot {
     background-color: #F4A22C;
     border-radius: 50%;
     display: block;
-    float: left;
+    /*float: left;*/
     margin-top: 9px;
 }
 
@@ -2680,7 +2683,7 @@ div[class*="page"].staff-job-overview-dot._fade {
     background-color: #F4A22C;
     border-radius: 50%;
     display: block;
-    float: left;
+    /*float: left;*/
     margin-top: 9px;
 }
 
@@ -2688,7 +2691,7 @@ div[class*="page"].staff-job-overview-dot._fade {
     color: white;
     width: 50%;
     margin-bottom: 5px;
-    margin-left: 50px;
+    margin-left: 30px;
     font-size: 1.5em;
 }
 
