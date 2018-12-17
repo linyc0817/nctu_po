@@ -268,6 +268,23 @@
                                             } ?>
                                             </div>
                                         </div>
+                                        <div class="staff-container">
+                                            <div class="staff-type">秘書</div>
+                                            <div class="staff-name-container">
+                                            <?php
+                                            $i_man++;
+                                            $count = 0;
+                                            $ary = explode("\n", get_page_by_title('第一組秘書', OBJECT, 'post')->post_content);
+                                            foreach ($ary as $name) {
+                                                $name = preg_replace('/[\r\n]+/', '', $name);
+                                                if (strlen($name) == 0) {
+                                                    continue;
+                                                }
+                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
+                                                $count++;
+                                            } ?>
+                                            </div>
+                                        </div>
 
                                         <div class="staff-container">
                                             <div class="staff-type">專員</div>
@@ -337,23 +354,7 @@
                                             } ?>
                                             </div>
                                         </div>
-                                        <div class="staff-container">
-                                            <div class="staff-type">約聘人員</div>
-                                            <div class="staff-name-container">
-                                            <?php
-                                            $i_man++;
-                                            $count = 0;
-                                            $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
-                                            foreach ($ary as $name) {
-                                                $name = preg_replace('/[\r\n]+/', '', $name);
-                                                if (strlen($name) == 0) {
-                                                    continue;
-                                                }
-                                                echo "<div class='staff-name mouse-hover g1m{$i_man}_{$count}'>" . $name . "</div>";
-                                                $count++;
-                                            } ?>
-                                            </div>
-                                        </div>
+                                        
                                         <!-- <div class="staff-container">
                                             <div class="staff-type">全時工讀生</div>
                                             <div class="staff-name-container">
@@ -688,7 +689,7 @@
                                         $line = str_replace(",", " ", $line);
                                         $line = str_replace("、", " ", $line);
                                         $line = str_replace(" ", "<br>", $line);
-                                        echo "<div class='staff-job-title'>執掌:</div>";
+                                        echo "<div class='staff-job-title'>職掌:</div>";
                                         echo "<div class='staff-job-container'>" . $line . "</div>";
                                         $count++;
                                         echo "</div>"; // staff-info
@@ -765,7 +766,7 @@
                                     staff_line_handle1($info, $total, $i_man);
                                     ?>
                                     <?php
-                                    $ary = explode("\n", get_page_by_title('第一組約聘人員', OBJECT, 'post')->post_content);
+                                    $ary = explode("\n", get_page_by_title('第一組秘書', OBJECT, 'post')->post_content);
                                     $total = 0;
                                     $i_man++;
                                     foreach ($ary as $element) {
@@ -1451,7 +1452,7 @@
         <!-- 留言板 -->
         <div class="top" id="top_7">
             <div id="nav7">
-                <div id="navid7">留言版</div>
+                <div id="navid7">常見Q&A <br>&nbsp留言版</div>
             </div>
 
             <!-- 後端function -->

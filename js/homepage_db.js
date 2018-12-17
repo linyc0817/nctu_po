@@ -54,7 +54,7 @@ $(function () {
             },
             prev_page: function () {
                 this.page--;
-                this.page = Math.min(this.page, 1);
+                this.page = Math.max(this.page, 1);
                 this.fetch_data(this.page, this.category);
             }
         },
