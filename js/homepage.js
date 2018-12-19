@@ -2,17 +2,21 @@ bgmask = 0
 // nav hover 展開2個直角梯形
 $(document).ready(function () {
     $('div.top').hover(function () {
-        //clock
-        if (this.id == 'top_6') {
-            return;
-        }
+        $(this).click(() => {
+            //clock
+            if (this.id == 'top_6') {
+                return;
+            }
 
-        $(this).find('div[class^="navbox"]').show();
-        $(this).addClass("hover");
-        $(".left-side-bar-bg").hide();
-        if (bgmask == 1) {
-            $(".right-bg").hide();
-        }
+            $(this).find('div[class^="navbox"]').show();
+            $(this).addClass("hover");
+            $(".left-side-bar-bg").hide();
+            if (bgmask == 1) {
+                $(".right-bg").hide();
+            }
+
+        })
+
     }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');

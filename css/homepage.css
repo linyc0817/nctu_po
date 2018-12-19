@@ -1603,14 +1603,16 @@ img.01 {
 
 .msg_container {
     position: fixed;
-    top:35%;
+    top: 35%;
     left: 31%;
     font-size: 1.6em;
 }
-.msg_size{
+
+.msg_size {
     height: 70px;
 }
-.msg-date{
+
+.msg-date {
     display: inline;
 }
 
@@ -2489,7 +2491,7 @@ img:hover {
     line-height: 200%;
     padding-left: 10px;
     letter-spacing: 2px;
-    overflow-y:auto;
+    overflow-y: auto;
     height: 35vh;
 }
 
@@ -2541,7 +2543,7 @@ img:hover {
     margin-top: 3%;
     margin-left: 2%;
     font-size: 1.3em;
-    width: 300px;
+    width: 35vw;
     height: 150px;
     overflow-y: auto;
 }

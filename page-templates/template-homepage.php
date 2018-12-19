@@ -62,7 +62,7 @@
       <div class="lang-right lang-choose">EN</div>
     </div> -->
 
-        <div id="tool_bar">
+        <!-- <div id="tool_bar">
 
             <form>
                 <input type="text" name="search" placeholder="">
@@ -74,7 +74,7 @@
                 <a href="<?php echo site_url() ?>/working" target="_blank"><div class="lang-right lang-choose">EN</div></a>
             </div>
 
-        </div>
+        </div> -->
 
 
 
@@ -1018,20 +1018,26 @@
                     </div>
                 </div>
                 <div class="navbox2_2">
-                    <div class="navbox2_2_1">
-                        <div style="display:inline;">公告日期</div>
-                        <div style="display:inline; margin-left: 80px;">主旨</div>
+                    <div id="msg-display-board">
+                        <div class="navbox2_2_1">
+                            <div style="display:inline;">公告日期</div>
+                            <div style="display:inline; margin-left: 80px;">主旨</div>
+                        </div>
+                        <div class="navbox2_2_2">
+                            <div id="msg-next-page" v-on:click="next_page" style="display:inline;" >prev page</div>
+                            <div id="msg-prev-page" v-on:click="prev_page" style="display:inline; margin-left: 25px;">next page</div>
+                        </div>
+                        
+                        <ul class="msg_container">
+                            <announcement-title class="msg_size" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
+                        </ul>
                     </div>
-                    <div class="navbox2_2_2">
-                        <div id="msg-next-page" v-on:click="next_page" style="display:inline;" >prev page</div>
-                        <div id="msg-prev-page" v-on:click="prev_page" style="display:inline; margin-left: 25px;">next page</div>
+                    <div id="msg-detail-board">
+
+                    
                     </div>
-                    
-                    <ul class="msg_container">
-                        <announcement-title class="msg_size" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
-                    </ul>
-                    
                 </div>
+                
             </div>
         </div>
 
