@@ -1024,16 +1024,28 @@
                         </div>
                         
                         <ul class="msg_container">
-                            <announcement-title class="msg_size" v-on:click.native="show_detail();fetch_detail()" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
+                            <announcement-title class="msg_size mouse-hover" v-on:click.native="show_detail();fetch_detail()" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
                         </ul>
                     </div>
                     <div id="msg-detail-board" v-if="display" >
                         <div class="msg-detail-title">{{msg_detail_data.title}}</div>
-                        <div class="msg-detail-content" v-html="msg_detail_data.content">{{}}</div>
-                        <div class="msg-detail-attachment"></div>
-                        <div class="msg-detail-link">{{msg_detail_data.link}}</div>
-                        <div class="msg-detail-contact"></div>
-                        <div class="msg-detail-date"></div>
+                        <div class="msg-detail-content" v-html="msg_detail_data.content"></div>
+                        <!-- <div class="msg-detail-attachment-container"></div> -->
+                        <ul id="msg-detail-link-container">
+                            <msg-detail class="msg-detail-link" v-for="(content,index) in msg_detail_data.links" :key="index" :content="content">{{content}}
+                            </msg-detail>
+                        </ul>
+                        <ul id="msg-detail-attachment-container">
+                            <msg-detail class="msg-detail-attachment" v-for="(content,index) in msg_detail_data.attachments" :key="index" :content="content">{{content}}
+                            </msg-detail>
+                        </ul>
+                        <ul id="msg-detail-contact-container">
+                            <msg-detail class="msg-detail-contact" v-for="(content,index) in msg_detail_data.contacts" :key="index" :content="content">{{content}}
+                            </msg-detail>
+                        </ul>
+                        <!-- <div class="msg-detail-link-container">{{msg_detail_data.link}}</div> -->
+                        <!-- <div class="msg-detail-contact-container"></div> -->
+                        <!-- <div class="msg-detail-date"></div> -->
 
 
                     </div>

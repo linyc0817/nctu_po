@@ -35,7 +35,7 @@ if (isset($_REQUEST['type'])) {
         $content = "";
         $attachments = [];
         $links = [];
-        $contact = [];
+        $contacts = [];
         $flag = 0;
         foreach (explode("\n", $raw_content) as $line) {
             // 可能會有多餘的換行 要刪掉
@@ -48,7 +48,14 @@ if (isset($_REQUEST['type'])) {
                     $link = preg_replace('/link:/', '', $line, 1);
                     array_push($links, $link);
                 }
-
+                if (preg_match("/attachment:/", $line)) {
+                    $attachment = preg_replace('/attachment:/', '', $line, 1);
+                    array_push($attachments, $attachment);
+                }
+                if (preg_match("/contact:/", $line)) {
+                    $contact = preg_replace('/contact:/', '', $line, 1);
+                    array_push($contacts, $contact);
+                }
                 if (preg_match("/content:/", $line)) {
                     $line = preg_replace('/content:/', '', $line, 1);
                     $flag = 1;
@@ -60,7 +67,7 @@ if (isset($_REQUEST['type'])) {
 
 
         }
-        $data = array('title' => $post->post_title, 'content' => $content, 'links' => $links);
+        $data = array('title' => $post->post_title, 'content' => $content, 'links' => $links, 'attachments' => $attachments, 'contacts' => $contacts);
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
     }
 }

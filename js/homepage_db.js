@@ -21,6 +21,15 @@ $(function () {
         props: ['title'],
         template: '<li><div class="msg-date">{{title.date}}</div> <div class="msg-title">{{title.title}}</div></li>'
     })
+    Vue.component('msgDetail', {
+        props: ['type', 'content'],
+        // data: function () {
+        //     return {
+        //         className: "msg-detail-" + this.props.type + "-container"
+        //     }
+        // },
+        template: '<li>{{content}}</li>'
+    })
     var announcementContainer = new Vue({
         el: '.announcement-container',
         data: {
@@ -29,7 +38,7 @@ $(function () {
             page: 1,
             data_per_page: 5,
             display: false,
-            msg_detail_data: { title: "", content: "" }
+            msg_detail_data: { title: "", content: "", links: [], attachments: [], contacts: [] }
         },
         methods: {
             fetch_data: function (_page, _category) {
@@ -44,7 +53,8 @@ $(function () {
                     for (let index = 0; index < msg.length; index++) {
                         msg_titles.push({ id: index, title: msg[index].title, date: msg[index].date });
                     }
-                    vm.msg_titles = Object.assign({}, msg_titles);
+                    //vm.msg_titles = Object.assign({}, msg_titles);
+                    vm.msg_titles = msg_titles;
                     this.category = _category;
                     this.page = _page;
                 });
@@ -71,9 +81,14 @@ $(function () {
                     data: { type: "fetch_detail", title: title }
                 }).done(function (response) {
                     response = $.parseJSON(response);
+                    //Object.assign({}, msg_titles);
                     vm.msg_detail_data.title = response.title;
                     vm.msg_detail_data.content = response.content;
-                    vm.msg_detail_data.link = response.links;
+                    vm.msg_detail_data.links = response.links;
+                    vm.msg_detail_data.attachments = response.attachments;
+                    vm.msg_detail_data.contacts = response.contacts;
+                    //vm.msg_detail_data.link = Object.assign({}, response.links);
+                    console.log(response.links)
                 });
 
             }
