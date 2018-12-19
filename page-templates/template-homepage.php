@@ -1019,8 +1019,8 @@
                             <div style="display:inline; margin-left: 80px;">主旨</div>
                         </div>
                         <div class="navbox2_2_2">
-                            <div id="msg-prev-page" v-on:click="prev_page" style="display:inline;" >prev page</div>
-                            <div id="msg-next-page" v-on:click="next_page" style="display:inline; margin-left: 25px;">next page</div>
+                            <div id="msg-prev-page" v-on:click="prev_page" style="display:inline; cursor: pointer;" >prev page</div>
+                            <div id="msg-next-page" v-on:click="next_page" style="display:inline; margin-left: 25px; cursor: pointer;">next page</div>
                         </div>
                         
                         <ul class="msg_container">

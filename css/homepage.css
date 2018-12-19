@@ -473,7 +473,7 @@ input[type=text] {
 }
 
 #nav6 {
-    width: 12%;
+    width: 10%;
     height: 33%;
     left: 45%;
     top: 70%;
@@ -1586,7 +1586,7 @@ img.01 {
 }
 
 .navbox2_2_1 {
-    top: 30%;
+    top: 29%;
     left: 33%;
     color: #F4A22C;
     font-size: 1.4em;
@@ -1594,7 +1594,7 @@ img.01 {
 }
 
 .navbox2_2_2 {
-    top: 30%;
+    top: 29%;
     left: 85%;
     position: fixed;
     font-size: 1.4em;
@@ -1604,8 +1604,10 @@ img.01 {
 .msg_container {
     position: fixed;
     top: 35%;
-    left: 31%;
-    font-size: 1.6em;
+    left: 30.5%;
+    font-size: 1.4em;
+    list-style-type:none;
+    cursor: pointer;
 }
 
 .msg_size {
@@ -1614,11 +1616,21 @@ img.01 {
 
 .msg-date {
     display: inline;
+    color:#F4A22C;
 }
-
+.msg-date:hover {
+    display: inline;
+    color: white;
+}
 .msg-title {
     display: inline;
     margin-left: 35px;
+    color:#F4A22C;
+}
+.msg-title:hover {
+    display: inline;
+    margin-left: 35px;
+    color:white;
 }
 
 .navbox3 {
