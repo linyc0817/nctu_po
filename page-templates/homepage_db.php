@@ -17,7 +17,6 @@ if (isset($_REQUEST['type'])) {
 
         for ($i = 0; $i < sizeof($posts); $i++) {
             $title = $posts[$i]->post_title;
-            //$arr = explode("\n", $posts[$i]->post_content);
             $time_title = array();
             $date = get_the_date('Y-m-d', $posts[$i]->ID);
             $time_title["date"] = $date;
@@ -32,8 +31,36 @@ if (isset($_REQUEST['type'])) {
      */
     if ($_REQUEST['type'] == "fetch_detail") {
         $post = get_page_by_title($_REQUEST["title"], OBJECT, 'post');
-        $content = $post->content;
-        $data = array('title' => $post->post_title, 'content' => $content);
+        $raw_content = $post->post_content;
+        $content = "";
+        $attachments = [];
+        $links = [];
+        $contact = [];
+        $flag = 0;
+        foreach (explode("\n", $raw_content) as $line) {
+            // 可能會有多餘的換行 要刪掉
+            $line = preg_replace('/[\r\n]+/', '', $line);
+            if (strlen($line) == 0) {
+                continue;
+            }
+            if ($flag == 0) {
+                if (preg_match("/link:/", $line)) {
+                    $link = preg_replace('/link:/', '', $line, 1);
+                    array_push($links, $link);
+                }
+
+                if (preg_match("/content:/", $line)) {
+                    $line = preg_replace('/content:/', '', $line, 1);
+                    $flag = 1;
+                }
+            }
+            if ($flag == 1) {
+                $content = $content . $line;
+            }
+
+
+        }
+        $data = array('title' => $post->post_title, 'content' => $content, 'links' => $links);
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
     }
 }

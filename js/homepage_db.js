@@ -73,6 +73,7 @@ $(function () {
                     response = $.parseJSON(response);
                     vm.msg_detail_data.title = response.title;
                     vm.msg_detail_data.content = response.content;
+                    vm.msg_detail_data.link = response.links;
                 });
 
             }

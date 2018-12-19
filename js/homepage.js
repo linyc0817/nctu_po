@@ -1,22 +1,24 @@
-bgmask = 0
+'use strict';
+
+var bgmask = 0;
 // nav hover 展開2個直角梯形
 $(document).ready(function () {
     $('div.top').hover(function () {
-        $(this).click(() => {
+        var _this = this;
+
+        $(this).click(function () {
             //clock
-            if (this.id == 'top_6') {
+            if (_this.id == 'top_6') {
                 return;
             }
 
-            $(this).find('div[class^="navbox"]').show();
-            $(this).addClass("hover");
+            $(_this).find('div[class^="navbox"]').show();
+            $(_this).addClass("hover");
             $(".left-side-bar-bg").hide();
             if (bgmask == 1) {
                 $(".right-bg").hide();
             }
-
-        })
-
+        });
     }, function () {
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
@@ -32,16 +34,12 @@ $(document).ready(function () {
         if (bgmask == 1) {
             $(".right-bg").show();
         }
-
     });
 
-
-    $("#navboxw7_11").click(() => {
+    $("#navboxw7_11").click(function () {
         window.open('http://personnel.nctu.edu.tw/guestbook.php', '_blank');
-    })
+    });
 });
-
-
 
 // nav click 展開2個直角梯形
 /*
@@ -73,9 +71,9 @@ $(document).ready(function () {
 $(function () {
     $(".left-side-bar-element").hover(function () {
         $(this).css('cursor', 'pointer');
-    })
+    });
 
-    let highlight;
+    var highlight = void 0;
     $(".left-side-bar-element").click(function () {
         bgmask = 1;
         if (highlight) {
@@ -115,25 +113,24 @@ $(function () {
         } else {
             $("#msg-calender").css("display", 'none');
         }
-    })
+    });
 
-    $("#close-button").click(() => {
+    $("#close-button").click(function () {
         highlight.css('color', '#f4a22c');
         $(".right-bg").css("display", "none");
         $("#close-button").css("display", 'none');
-    })
+    });
 
     //行事曆
+});
 
-})
-
-let commentHighlight;
+var commentHighlight = void 0;
 //留言板
 $(function () {
-    let highlight;
+    var highlight = void 0;
     $(".navbox7-left").hover(function () {
         $(this).css('cursor', 'pointer');
-    })
+    });
     function comments_hide() {
         $('.msg-board-question').hide();
         $('[class*=answer]').hide();
@@ -191,15 +188,14 @@ $(function () {
 
         commentHighlight = $(this);
         $(this).css("color", "#FFFFFF");
-    })
+    });
 
     // question clicked => show answer
     //var x = $(e.target).attr('class').toString().match(/g1m\d+_\d+/);
     //return this.id == x;
-    QA_types = ["abroad", "part-time", "other-questions", "AMS", "personnel", "errand", "specialist", "teachers", "postdoctoral", "resignation"];
-    $("[class*=question]").click((e) => {
-        if ($(e.target).attr('class').toString().match(/answer/))
-            return;
+    var QA_types = ["abroad", "part-time", "other-questions", "AMS", "personnel", "errand", "specialist", "teachers", "postdoctoral", "resignation"];
+    $("[class*=question]").click(function (e) {
+        if ($(e.target).attr('class').toString().match(/answer/)) return;
         $(".msg-board-answer").hide();
         $(".msg-board-question ").css('color', '#f4a22c');
         $(e.target).css('color', '#FFFFFF');
@@ -214,26 +210,22 @@ $(function () {
 
         var answer_class = "answer" + id;
         $("." + answer_class + "." + type).show();
-
-
-    })
-
+    });
 });
 
 //class mouse-hover change cursor
 $(function () {
     $(".mouse-hover").hover(function () {
         $(this).css('cursor', 'pointer');
-
-    })
-})
+    });
+});
 
 //法令類別
 $(function () {
     var personnel = null; //用來判斷現在點選哪個人員
     var S = null; // 用來判斷現在點選哪個類別
 
-    $("#prev-page").click((e) => {
+    $("#prev-page").click(function (e) {
         $('decree-main-container').show();
         $("#decree-left-flexbox").hide();
         $("#decree-right-details-container").hide();
@@ -241,8 +233,9 @@ $(function () {
         $("#decree-category").hide();
         S = null;
         personnel = null;
-    })
-    function showDetails() { //顯示細項
+    });
+    function showDetails() {
+        //顯示細項
         if (personnel === null || S === null) {
             return;
         }
@@ -253,11 +246,10 @@ $(function () {
         $("#decree-right-details-container").css('display', 'flex');
         //第二層法條顯示
         $('decree-main-container').hide();
-        $('.main' + (S.substr(1))).show();
+        $('.main' + S.substr(1)).show();
     }
 
-
-    $(".personnels").click((e) => {
+    $(".personnels").click(function (e) {
         $(".personnels").css('color', '#F4A22C');
         var personnel_type = event.target.id;
         $(event.target).css('color', 'white');
@@ -267,41 +259,36 @@ $(function () {
         personnel = personnel_type;
         $("#decree-category").show();
         showDetails();
-    })
+    });
 
-    $(".decree-main").click((e) => {
+    $(".decree-main").click(function (e) {
         var sType = event.target.id;
-        var re = /S{1}/
-        if (re.test(sType))
-            S = sType;
-        else
-            return;
+        var re = /S{1}/;
+        if (re.test(sType)) S = sType; else return;
         $(".decree-main").css('color', '#F4A22C');
         $(event.target).css('color', 'white');
         showDetails();
-    })
+    });
 
     //法條點選後 右邊decree-right顯示
-    $(".decree-detail-articles").click((e) => {
+    $(".decree-detail-articles").click(function (e) {
         $(".decree-detail-articles").css('color', '#F4A22C');
         $(event.target).css('color', 'white');
-        let all_classes = $(event.target).attr("class");
-        let clicked_postid = all_classes.match(/post_\w+/)[0];
+        var all_classes = $(event.target).attr("class");
+        var clicked_postid = all_classes.match(/post_\w+/)[0];
         //console.log(clicked_postid);
         $('.decree-right-item-container').hide();
         $('.decree-right-item-container' + ('.' + clicked_postid)).first().show();
-
-    })
-
-})
+    });
+});
 
 //關於本室右邊選項click
 $(function () {
-    $("div[id^='navboxw1_2_']").click((e) => {
+    $("div[id^='navboxw1_2_']").click(function (e) {
         //$("#navboxw1").hide();
         //$("#navboxw1_2").hide();
     });
-})
+});
 
 // 本室介紹下各頁面
 $(function () {
@@ -314,30 +301,28 @@ $(function () {
         $("#intro_position").hide();
         $("#jobs_page").hide();
     }
-    let new_css = { "position": "fixed", "top": "40%" }; // 移動簡介選單
-    $("#navboxw1_2_1").click(() => {
+    var new_css = { "position": "fixed", "top": "40%" }; // 移動簡介選單
+    $("#navboxw1_2_1").click(function () {
         intro_hide_others();
         $("#intro_page").show();
         change_css("#navboxw1_2", new_css);
-    })
-    $("#navboxw1_2_4").click(() => {
+    });
+    $("#navboxw1_2_4").click(function () {
         intro_hide_others();
         $("#vision_page").show();
         change_css("#navboxw1_2", new_css);
-    })
-    $("#navboxw1_2_2").click(() => {
+    });
+    $("#navboxw1_2_2").click(function () {
         intro_hide_others();
         $("#intro_position").show();
         change_css("#navboxw1_2", new_css);
-    })
-    $("#navboxw1_2_3").click(() => {
+    });
+    $("#navboxw1_2_3").click(function () {
         intro_hide_others();
         $("#jobs_page").show();
         change_css("#navboxw1_2", new_css);
-
-    })
-
-})
+    });
+});
 
 //簡介區的圓圈
 $(document).ready(function () {
@@ -366,7 +351,6 @@ $(document).ready(function () {
         $('.cb3').hide();
         $(".cb3-title").hide();
     });
-
 });
 
 $(document).ready(function () {
@@ -380,142 +364,142 @@ $(document).ready(function () {
 //本室位置
 $(function () {
     //本室位置 slider bar control
-    $("#school_map_circle").click((e) => {
+    $("#school_map_circle").click(function (e) {
         $(".position_page").hide();
         $(".position_page.pp1").show();
         $(".position-circle").removeClass('solid-circle');
         $(e.target).addClass('solid-circle');
-    })
-    $("#google_map_circle").click((e) => {
+    });
+    $("#google_map_circle").click(function (e) {
         $(".position_page").hide();
         $(".position_page.pp2").show();
         $(".position-circle").removeClass('solid-circle');
         $(e.target).addClass('solid-circle');
-    })
-    $("#transport_circle").click((e) => {
+    });
+    $("#transport_circle").click(function (e) {
         $(".position_page").hide();
         $(".position_page.pp3").show();
         $(".position-circle").removeClass('solid-circle');
         $(e.target).addClass('solid-circle');
-    })
+    });
     //  圖片放大
-    $("#big-map").click((e) => {
+    $("#big-map").click(function (e) {
         $("#myModal").show();
         $("#img01").show();
-    })
-    $("#second-floor").click((e) => {
+    });
+    $("#second-floor").click(function (e) {
         $("#myModal").show();
         $("#img02").show();
-    })
+    });
 
-    $("#myModal").add(".close").click(e => {
+    $("#myModal").add(".close").click(function (e) {
         $("#myModal").hide();
         $(".modal-content").hide();
-    })
+    });
 
     // 本室位置 聯外交通資訊
-    $("#head-north").click((e) => {
+    $("#head-north").click(function (e) {
         $(".pp3-right-context").hide();
         $("#head-north-context").show();
         $(".transport-title").css("color", "#f4a22c");
         $(e.target).css("color", "white");
-    })
-    $("#head-south").click((e) => {
+    });
+    $("#head-south").click(function (e) {
         $(".pp3-right-context").hide();
         $("#head-south-context").show();
         $(".transport-title").css("color", "#f4a22c");
         $(e.target).css("color", "white");
-    })
-    $("#HSR").click((e) => {
+    });
+    $("#HSR").click(function (e) {
         $(".pp3-right-context").hide();
         $("#HSR-context").show();
         $(".transport-title").css("color", "#f4a22c");
         $(e.target).css("color", "white");
-    })
-    $("#TRA").click((e) => {
+    });
+    $("#TRA").click(function (e) {
         $(".pp3-right-context").hide();
         $("#TRA-context").show();
         $(".transport-title").css("color", "#f4a22c");
         $(e.target).css("color", "white");
-    })
-    $("#caoch").click((e) => {
+    });
+    $("#caoch").click(function (e) {
         $(".pp3-right-context").hide();
         $("#caoch-context").show();
         $(".transport-title").css("color", "#f4a22c");
         $(e.target).css("color", "white");
-    })
-})
+    });
+});
 //人員職掌
 $(function () {
-    $(".staff-circle").click(e => {
+    $(".staff-circle").click(function (e) {
         $(".staff-circle").removeClass("solid-circle");
         $(e.target).addClass("solid-circle");
         $('.staff-info-container').hide();
         switch (e.target.id) {
             case "director_circle":
-                $("#staff-director-page").show()
+                $("#staff-director-page").show();
                 $("#staff-group-1").hide();
                 $("#staff-group-2").hide();
                 $("#staff-group-3").hide();
                 break;
 
             case "first_group_circle":
-                $("#staff-director-page").hide()
+                $("#staff-director-page").hide();
                 $("#staff-group-1").show();
                 $("#staff-group-2").hide();
                 $("#staff-group-3").hide();
                 $("#g1m0_0").show();
                 break;
             case "second_group_circle":
-                $("#staff-director-page").hide()
+                $("#staff-director-page").hide();
                 $("#staff-group-1").hide();
                 $("#staff-group-2").show();
                 $("#staff-group-3").hide();
                 $("#g2m0_0").show();
                 break;
             case "third_group_circle":
-                $("#staff-director-page").hide()
+                $("#staff-director-page").hide();
                 $("#staff-group-1").hide();
                 $("#staff-group-2").hide();
                 $("#staff-group-3").show();
                 break;
         }
-    })
+    });
     //人士執掌資訊
     // group 1
-    $("[class*=g1m]").click((e) => {
+    $("[class*=g1m]").click(function (e) {
         $('.staff-info-container').hide();
         $('.staff-info-container').filter(function () {
             var x = $(e.target).attr('class').toString().match(/g1m\d+_\d+/);
             return this.id == x;
         }).show();
-    })
+    });
     // group 2
-    $("[class*=g2m]").click((e) => {
+    $("[class*=g2m]").click(function (e) {
         $('.staff-info-container').hide();
         $('.staff-info-container').filter(function () {
             var x = $(e.target).attr('class').toString().match(/g2m\d+_\d+/);
             return this.id == x;
         }).show();
-    })
+    });
 
     // 人員執掌一覽
     $(".staff-job-overview-item-container").mouseenter(function () {
         $(this).addClass('active');
-    })
+    });
     $(".staff-job-overview-item-container").mouseleave(function () {
         $(this).removeClass('active');
-    })
+    });
 
     // 換頁
-    $(".staff-job-overview-dot").click((e) => {
+    $(".staff-job-overview-dot").click(function (e) {
         // hide others
         $(".staff-job-overview-item-container").hide();
         $(".staff-job-overview-container").hide();
 
         // get which page
-        let page = $(e.target).attr('class').toString().match(/page\d+/)[0]
-        let group = $(e.target).attr('class').toString().match(/group\d+/)[0]
+        var page = $(e.target).attr('class').toString().match(/page\d+/)[0];
+        var group = $(e.target).attr('class').toString().match(/group\d+/)[0];
 
         // show selected
         $(".staff-job-overview-container." + group).css("display", "flex");
@@ -526,8 +510,5 @@ $(function () {
 
         $(".staff-job-overview-dot." + page).removeClass('_fade');
         $(".staff-job-overview-dot-name." + page).removeClass('_fade');
-
-    })
-})
-
-
+    });
+});

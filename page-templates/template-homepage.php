@@ -8,10 +8,10 @@
 <html>
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>國立交通大學人事室(測試版)</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewpoint" content="width=device-width, initial-scale=1" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -22,18 +22,13 @@
 
     <link href="<?php bloginfo('template_url'); ?>/css/homepage.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/css/style.css" rel="stylesheet">
-
+    <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/homepage.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/homepage_db.js"></script>
     
 
 
-    <style type="text/css">
-    </style>
 </head>
-<script type="text/javascript">
-
-</script>
 
 <body>
     <!-- The Modal -->
@@ -95,7 +90,7 @@
                         <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 30vw;color: white;">Google Map
                         </div>
                         <div id="google_map_circle" class="position-circle  circle6-2 mouse-hover"></div>
-                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;" : ">聯外交通資訊</div>
+                        <div style="position:absolute; top: 1vh;font-size: 1.5em;margin-left: 50vw;color: white;">聯外交通資訊</div>
                         <div id="transport_circle" class="position-circle  circle7-2 mouse-hover"></div>
                         <div style="position:absolute; top: 6.3vh; left:13.2vw; width: 18.8vw;height: 1.5px; background:#F4A22C">
                         </div>
@@ -130,7 +125,7 @@
                     </div>
                     <div class="position_page pp2" style="display:none;">
                         <div style="width:50vw;margin-left:20vw;">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.2887850892794!2d120.99884471455455!3d24.78774981002353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836102a748fd7%3A0x7eb013e01a93d031!2zMzAw5paw56u55biC5p2x5Y2A6KGM5pS_5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1540813184016" width="500" height=300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.2887850892794!2d120.99884471455455!3d24.78774981002353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836102a748fd7%3A0x7eb013e01a93d031!2zMzAw5paw56u55biC5p2x5Y2A6KGM5pS_5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1540813184016" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>        
                     </div>
                     <div class="position_page pp3">
@@ -138,8 +133,8 @@
                             <div id="containerself-driving">
                                 <div class="containerself-driving-left">自行開車</div>
                                 <div class="containerself-driving-right">
-                                    <div id="head-south" class="mouse-hover transport-title"">南下</div>
-                                    <div id="head-north" class="mouse-hover transport-title"">北上</div>
+                                    <div id="head-south" class="mouse-hover transport-title">南下</div>
+                                    <div id="head-north" class="mouse-hover transport-title">北上</div>
                                 </div>
                             </div>
                             <div id="public-transport-container">
@@ -1018,7 +1013,7 @@
                     </div>
                 </div>
                 <div class="navbox2_2">
-                    <div id="msg-display-board">
+                    <div id="msg-display-board" v-if="!display">
                         <div class="navbox2_2_1">
                             <div style="display:inline;">公告日期</div>
                             <div style="display:inline; margin-left: 80px;">主旨</div>
@@ -1032,11 +1027,11 @@
                             <announcement-title class="msg_size" v-on:click.native="show_detail();fetch_detail()" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
                         </ul>
                     </div>
-                    <div id="msg-detail-board" v-if="display">
+                    <div id="msg-detail-board" v-if="display" >
                         <div class="msg-detail-title">{{msg_detail_data.title}}</div>
                         <div class="msg-detail-content" v-html="msg_detail_data.content">{{}}</div>
                         <div class="msg-detail-attachment"></div>
-                        <div class="msg-detail-link"></div>
+                        <div class="msg-detail-link">{{msg_detail_data.link}}</div>
                         <div class="msg-detail-contact"></div>
                         <div class="msg-detail-date"></div>
 

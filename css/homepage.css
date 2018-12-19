@@ -1656,6 +1656,15 @@ img.01 {
     color: white;
 }
 
+#msg-detail-board {
+    left: 0;
+    top: 0;
+    background-color: black;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
 /* 法令 */
 
 #decree-flex-container {
