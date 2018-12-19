@@ -19,15 +19,10 @@ function request_msg(_type, _page, _data_per_page, _category) {
 $(function () {
     Vue.component('announcementTitle', {
         props: ['title'],
-        template: '<li><div class="msg-date">{{title.date}}</div> <div class="msg-title">{{title.title}}</div></li>'
+        template: '<li><div class="msg-date">{{title.date}}</div> <div class="msg-title">{{title.title}}</div><div class="orange-hr"></div></li>'
     })
     Vue.component('msgDetail', {
-        props: ['type', 'content'],
-        // data: function () {
-        //     return {
-        //         className: "msg-detail-" + this.props.type + "-container"
-        //     }
-        // },
+        props: ['content'],
         template: '<li>{{content}}</li>'
     })
     var announcementContainer = new Vue({
