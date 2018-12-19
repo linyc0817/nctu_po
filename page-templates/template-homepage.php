@@ -1029,12 +1029,18 @@
                         </div>
                         
                         <ul class="msg_container">
-                            <announcement-title class="msg_size" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
+                            <announcement-title class="msg_size" v-on:click.native="show_detail();fetch_detail()" v-for="title in msg_titles" v-bind:key="title.id" v-bind:title="title"></announcement-title>
                         </ul>
                     </div>
-                    <div id="msg-detail-board">
+                    <div id="msg-detail-board" v-if="display">
+                        <div class="msg-detail-title">{{msg_detail_data.title}}</div>
+                        <div class="msg-detail-content" v-html="msg_detail_data.content">{{}}</div>
+                        <div class="msg-detail-attachment"></div>
+                        <div class="msg-detail-link"></div>
+                        <div class="msg-detail-contact"></div>
+                        <div class="msg-detail-date"></div>
 
-                    
+
                     </div>
                 </div>
                 

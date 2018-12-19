@@ -4,7 +4,6 @@
  */
 //訊息公告
 if (isset($_REQUEST['type'])) {
-
     /* 訊息公告nav內request 
      ** 回傳所屬頁面跟數量及category的post
      ** param: 'data_per_page', 'category', 'page'
@@ -16,8 +15,6 @@ if (isset($_REQUEST['type'])) {
         $page = $_REQUEST['page'];
         $posts = get_posts(array('category' => $cat_id, 'numberposts' => $_REQUEST['data_per_page'], 'offset' => (($page - 1) * $data_per_page)));
 
-
-
         for ($i = 0; $i < sizeof($posts); $i++) {
             $title = $posts[$i]->post_title;
             //$arr = explode("\n", $posts[$i]->post_content);
@@ -26,16 +23,18 @@ if (isset($_REQUEST['type'])) {
             $time_title["date"] = $date;
             $time_title["title"] = $title;
             array_push($datas, $time_title);
-            // for($j = 0; $j < sizeof($arr); $j++){
-            //     $arr[$j] = str_replace(']]>', ']]&gt;', $arr[$j]);
-            //     if(strlen($arr[$j]) == 0)
-            //         continue; 
-            //     array_push($datas, $arr[$j]);
-            // }
-
         }
         echo json_encode($datas, JSON_UNESCAPED_UNICODE);
+    }
 
+    /*
+     **  訊息公告內文
+     */
+    if ($_REQUEST['type'] == "fetch_detail") {
+        $post = get_page_by_title($_REQUEST["title"], OBJECT, 'post');
+        $content = $post->content;
+        $data = array('title' => $post->post_title, 'content' => $content);
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
     }
 }
 

@@ -27,7 +27,9 @@ $(function () {
             msg_titles: [],
             category: "重要訊息",
             page: 1,
-            data_per_page: 5
+            data_per_page: 5,
+            display: false,
+            msg_detail_data: { title: "", content: "" }
         },
         methods: {
             fetch_data: function (_page, _category) {
@@ -56,6 +58,23 @@ $(function () {
                 this.page--;
                 this.page = Math.max(this.page, 1);
                 this.fetch_data(this.page, this.category);
+            },
+            show_detail: function () {
+                this.display = true;
+            },
+            fetch_detail: function () {
+                var vm = this;
+                var title = $(event.currentTarget).find(".msg-title").text();
+                $.ajax({
+                    url: 'homepage_db',
+                    type: "POST",
+                    data: { type: "fetch_detail", title: title }
+                }).done(function (response) {
+                    response = $.parseJSON(response);
+                    vm.msg_detail_data.title = response.title;
+                    vm.msg_detail_data.content = response.content;
+                });
+
             }
         },
         created: function () {
