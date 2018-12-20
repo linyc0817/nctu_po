@@ -10,6 +10,7 @@ $(function () {
 
 var bgmask = 0;
 // nav hover 展開2個直角梯形
+var navOffClickable = 0; // 用來檢查是否該關閉nav
 $(document).ready(function () {
     $('div.top').hover(function () {
         var _this = this;
@@ -18,7 +19,6 @@ $(document).ready(function () {
             if (_this.id == 'top_6') {
                 return;
             }
-
             $(_this).find('div[class^="navbox"]').show();
             $(_this).addClass("hover");
             $(".left-side-bar-bg").hide();
@@ -27,6 +27,11 @@ $(document).ready(function () {
             }
         });
     }, function () {
+        navOffClickable = 1;
+    });
+    $("*").click(() => {
+        if (!navOffClickable)
+            return;
         //留言板預設行
         $("#navboxrw7_1").css('display', 'inline-block');
         $(".msg-board-question, .msg-board-answer").css('display', 'none');
@@ -35,15 +40,14 @@ $(document).ready(function () {
             commentHighlight.css('color', '#f4a22c');
         }
         //
-        $(this).find('div[class^="navbox"]').hide();
-        $(this).removeClass("hover");
+        $("div.top").find('div[class^="navbox"]').hide();
+        $("div.top").removeClass("hover");
         $(".left-side-bar-bg").show();
         if (bgmask == 1) {
-
             $(".right-bg").show();
         }
-
-    });
+        navOffClickable = 0;
+    })
 
     $("#navboxw7_11").click(function () {
         window.open('http://personnel.nctu.edu.tw/guestbook.php', '_blank');
