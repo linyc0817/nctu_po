@@ -1,11 +1,18 @@
 'use strict';
+// 建置中
+$(function () {
+    $("#nav6,.buttom-icon").click(e => {
+        window.open('wordpress/working/', '_blank');
+    })
+})
+
+
 
 var bgmask = 0;
 // nav hover 展開2個直角梯形
 $(document).ready(function () {
     $('div.top').hover(function () {
         var _this = this;
-
         $(this).click(function () {
             //clock
             if (_this.id == 'top_6') {
@@ -32,8 +39,10 @@ $(document).ready(function () {
         $(this).removeClass("hover");
         $(".left-side-bar-bg").show();
         if (bgmask == 1) {
+
             $(".right-bg").show();
         }
+
     });
 
     $("#navboxw7_11").click(function () {
@@ -113,12 +122,18 @@ $(function () {
         } else {
             $("#msg-calender").css("display", 'none');
         }
+        if (this.id == "insurance-msgs") {
+            $(".insurance-msgs").css("display", 'block');
+        } else {
+            $(".insurance-msgs").css("display", 'none');
+        }
     });
 
     $("#close-button").click(function () {
         highlight.css('color', '#f4a22c');
         $(".right-bg").css("display", "none");
         $("#close-button").css("display", 'none');
+        bgmask = 0;
     });
 
     //行事曆
@@ -214,11 +229,11 @@ $(function () {
 });
 
 //class mouse-hover change cursor
-$(function () {
-    $(".mouse-hover").hover(function () {
-        $(this).css('cursor', 'pointer');
-    });
-});
+// $(function () {
+//     $(".mouse-hover").hover(function () {
+//         $(this).css('cursor', 'pointer');
+//     });
+// });
 
 //法令類別
 $(function () {

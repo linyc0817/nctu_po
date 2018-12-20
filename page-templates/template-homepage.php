@@ -23,8 +23,10 @@
     <link href="<?php bloginfo('template_url'); ?>/css/homepage.css" rel="stylesheet">
     <link href="<?php bloginfo('template_url'); ?>/css/style.css" rel="stylesheet">
     <script src="//cdn.polyfill.io/v2/polyfill.min.js"></script>
+
     <script src="<?php bloginfo('template_url'); ?>/js/homepage.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/homepage_db.js"></script>
+    
     
 
 
@@ -1043,9 +1045,8 @@
                             <msg-detail class="msg-detail-contact" v-for="(content,index) in msg_detail_data.contacts" :key="index" :content="content">{{content}}
                             </msg-detail>
                         </ul>
-                        <!-- <div class="msg-detail-link-container">{{msg_detail_data.link}}</div> -->
-                        <!-- <div class="msg-detail-contact-container"></div> -->
-                        <!-- <div class="msg-detail-date"></div> -->
+                        <img id="msg-close-button" @click="close_detail" src="<?php bloginfo('template_url'); ?>/image/close-button.png" alt="close button">
+                        
 
 
                     </div>
@@ -1118,9 +1119,9 @@
             // post[num]是用來實作js -> 點選時右邊內容顯示什麼
                                     $article_class = "detail-cat" . ($index + 1) . " decree-detail-articles mouse-hover" . " post_" . $article->ID;
             //var_dump($article);
-                                    if (mb_strlen($article->post_title, "utf-8") > 14) {
+                                    if (mb_strlen($article->post_title, "utf-8") > 30) {
                                         $tmp_title = $article->post_title;
-                                        $tmp_title = mb_substr($tmp_title, 0, 14, "utf-8") . "...";
+                                        $tmp_title = mb_substr($tmp_title, 0, 30, "utf-8") . "...";
                                         echo "<div class='$article_class'>" . $tmp_title . "<span class='tooltiptext'>$article->post_title</span>" . "</div>";
                 //asdd
                                     } else {
@@ -1243,7 +1244,7 @@
                                             } else if ($type == "doc") {
                                                 array_push($forms_doc, $content);
                                                 $has_type["doc"] = 1;
-                                            } else if ($type == "odf") {
+                                            } else if ($type == "odf" || $type == "odt" || $type == "ods" || $type == "odp") {
                                                 array_push($forms_odf, $content);
                                                 $has_type["odf"] = 1;
                                             } else if ($type == "name") {
@@ -1286,9 +1287,9 @@
                                     echo ("<div class='decree-form-names-container'>");
                                     for ($i = 0; $i < sizeof($forms_name); $i++) {
                                         // shorten long name
-                                        if (mb_strlen($forms_name[$i], "utf-8") > 15) {
+                                        if (mb_strlen($forms_name[$i], "utf-8") > 25) {
                                             $tmp_name = $forms_name[$i];
-                                            $forms_name[$i] = mb_substr($forms_name[$i], 0, 15, "utf-8") . "...";
+                                            $forms_name[$i] = mb_substr($forms_name[$i], 0, 25, "utf-8") . "...";
                                             echo ("<div class='decree-form-name'>$forms_name[$i]" . "<span class='tooltiptext'>$tmp_name</span>" . "</div>");
                                         } else {
                                             echo ("<div class='decree-form-name'>$forms_name[$i]</div>");
@@ -1576,19 +1577,26 @@ foreach ($QA_type as $idx => $type) {
                         $cat_id = get_cat_ID($catname);
                         $posts = get_posts(array('category' => $cat_id, 'numberposts' => 5));
                         foreach ($posts as $postIndex => $post) {
-                            $content = get_post($post->ID)->post_content;
-                            $content = apply_filters('the_content', $content);
-                            $content = str_replace(']]>', ']]&gt;', $content);
-                            $all = getAllP($content);
-                            foreach ($all as $idx => &$text) {
-                                $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
-                                $date = get_the_date('Y-m-d', $post->ID);
-                                echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
-                                echo ($print);
-                                if ($idx != (sizeof($all) - 1)) {
-                                    echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
-                                }
-                            }
+                            $title = get_post($post->ID)->post_title;
+                            //$content = get_post($post->ID)->post_content;
+                            //$content = apply_filters('the_content', $content);
+                            //$content = str_replace(']]>', ']]&gt;', $content);
+                            //$all = getAllP($content);
+                            //foreach ($all as $idx => &$text) {
+                            //     $print = '<div class="' . $cat_class[$index] . ' left-side-bar-msgs">' . $text . '</div>';
+                            //     $date = get_the_date('Y-m-d', $post->ID);
+                            //     echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
+                            //     echo ($print);
+                            //     if ($idx != (sizeof($all) - 1)) {
+                            //         echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
+                            //     }
+                            // }
+
+                            $date = get_the_date('Y-m-d', $post->ID);
+                            echo ('<div class="' . $cat_class[$index] . ' left-side-bar-msgs date">' . $date . '</div>');
+                            $print = '<div @click="msgClick" class="' . $cat_class[$index] . ' left-side-bar-msgs mouse-hover">' . $title . '</div>';
+                            echo ($print);
+
                             if ($postIndex != (sizeof($posts) - 1)) {
                                 echo ('<div class="' . $cat_class[$index] . ' white-hr ' . ' left-side-bar-msgs" ></div>');
                             }
@@ -1623,7 +1631,7 @@ foreach ($QA_type as $idx => $type) {
                         <div id="calendar-msgs" class="left-side-bar-element ">
                             動態行事曆
                         </div>
-                        <div class="left-side-bar-element ">
+                        <div id="insurance-msgs" class="left-side-bar-element ">
                             加保人數
                         </div>
 
@@ -1632,7 +1640,18 @@ foreach ($QA_type as $idx => $type) {
                 <div class="right-bg">
                     <div id="left-msgs" style="position: relative;overflow-y:auto;overflow-x:hidden;height:100%;top: 0px;left:100px;">
                         <?php leftSideBarMsgs(); ?>
+                        <div class="insurance-msgs">
+                        <?php
+                        $cat_id = get_cat_ID("加保人數");
+                        $posts = get_posts(array('category' => $cat_id, 'numberposts' => 5));
+                        foreach ($posts as $post) {
+                            $print = '<div class="left-side-bar-msgs" style="display:block;">' . $post->post_content . '</div>';
+                            echo ($print);
+                        }
+                        ?>
+                        </div>
                     </div>
+                    
                     <iframe id="msg-calender" src="https://calendar.google.com/calendar/embed?src=personnel.nctu%40gmail.com&ctz=Asia%2FTaipei" style="border: 0; height:100%; width:55vw;
                     top:0vh; position :absolute; left:15vw; display:none;" frameborder="0" scrolling="no">
                     </iframe>

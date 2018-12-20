@@ -43,28 +43,22 @@ if (isset($_REQUEST['type'])) {
             if (strlen($line) == 0) {
                 continue;
             }
-            if ($flag == 0) {
-                if (preg_match("/link:/", $line)) {
-                    $link = preg_replace('/link:/', '', $line, 1);
-                    array_push($links, $link);
-                }
-                if (preg_match("/attachment:/", $line)) {
-                    $attachment = preg_replace('/attachment:/', '', $line, 1);
-                    array_push($attachments, $attachment);
-                }
-                if (preg_match("/contact:/", $line)) {
-                    $contact = preg_replace('/contact:/', '', $line, 1);
-                    array_push($contacts, $contact);
-                }
-                if (preg_match("/content:/", $line)) {
-                    $line = preg_replace('/content:/', '', $line, 1);
-                    $flag = 1;
-                }
-            }
-            if ($flag == 1) {
+            if (preg_match("/link:/", $line)) {
+                $link = preg_replace('/link:/', '', $line, 1);
+                array_push($links, $link);
+            } else if (preg_match("/attachment:/", $line)) {
+                $attachment = preg_replace('/attachment:/', '', $line, 1);
+                array_push($attachments, $attachment);
+            } else if (preg_match("/contact:/", $line)) {
+                $contact = preg_replace('/contact:/', '', $line, 1);
+                array_push($contacts, $contact);
+            } else if (preg_match("/content:/", $line)) {
+                $line = preg_replace('/content:/', '', $line, 1);
+                $content = $content . $line;
+            } else {
+                $line = preg_replace('/content:/', '', $line, 1);
                 $content = $content . $line;
             }
-
 
         }
         $data = array('title' => $post->post_title, 'content' => $content, 'links' => $links, 'attachments' => $attachments, 'contacts' => $contacts);

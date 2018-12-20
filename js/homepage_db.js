@@ -1,7 +1,5 @@
 // 訊息公告
-
 function request_msg(_type, _page, _data_per_page, _category) {
-
     $.ajax({
         url: 'homepage_db',
         type: "POST",
@@ -12,11 +10,11 @@ function request_msg(_type, _page, _data_per_page, _category) {
             msg_data.push({ 'id': index, 'title': msg[index].title, 'date': msg[index].date });
         }
     });
-
 }
 
 
 $(function () {
+    Vue.prototype.$bus = new Vue()
     Vue.component('announcementTitle', {
         props: ['title'],
         template: '<li><div class="msg-date">{{title.date}}</div> <div class="msg-title">{{title.title}}</div><div class="orange-hr"></div></li>'
@@ -85,16 +83,49 @@ $(function () {
                     //vm.msg_detail_data.link = Object.assign({}, response.links);
                     console.log(response.links)
                 });
-
+            },
+            close_detail: function () {
+                this.display = 0;
             }
         },
         created: function () {
             this.fetch_data(1, this.category);
+            this.$bus.$on('msgClicked', title => {
+                var vm = this;
+                $.ajax({
+                    url: 'homepage_db',
+                    type: "POST",
+                    data: { type: "fetch_detail", title: title }
+                }).done(function (response) {
+                    response = $.parseJSON(response);
+                    vm.msg_detail_data.title = response.title;
+                    vm.msg_detail_data.content = response.content;
+                    vm.msg_detail_data.links = response.links;
+                    vm.msg_detail_data.attachments = response.attachments;
+                    vm.msg_detail_data.contacts = response.contacts;
+                    console.log(response.links)
+                });
+                this.show_detail();
+                $('div.top').find('div[class^="navbox2"]').show();
+
+
+            })
 
         }
-
-
     })
+
+    var frontMsg = new Vue({
+        el: '.right-bg',
+        data: {
+        },
+        methods: {
+            msgClick: function () {
+                var title = $(event.currentTarget).text();
+                this.$bus.$emit('msgClicked', title);
+            }
+        }
+    });
+
 
 
 

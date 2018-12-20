@@ -27,7 +27,7 @@
   
 </script>
 <body>
-<div style="margin: 0 0 0 0;font-size:100px">此部分網站尚未完成！....</div>
+<div style="margin: 0 0 0 0;font-size:100px">此部分網站人仍在建構中！....</div>
 
 </body>
 </html>

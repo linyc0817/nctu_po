@@ -16,6 +16,10 @@ body {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
+.mouse-hover {
+    cursor: pointer;
+}
+
 .navbar {
     background-color: #f2f2f2;
     background-size: cover;
@@ -126,7 +130,15 @@ img#close-button {
     top: 300px;
     right: 20px;
     z-index: 10;
-    dislay: none;
+    display: none;
+}
+
+img#msg-close-button {
+    height: 100px;
+    position: absolute;
+    bottom: 30vh;
+    right: 20px;
+    z-index: 10;
 }
 
 img#close-button:hover {
@@ -1606,7 +1618,7 @@ img.01 {
     top: 35%;
     left: 30.5%;
     font-size: 1.4em;
-    list-style-type:none;
+    list-style-type: none;
     cursor: pointer;
 }
 .orange-hr {
@@ -1625,21 +1637,24 @@ img.01 {
 
 .msg-date {
     display: inline;
-    color:#F4A22C;
+    color: #F4A22C;
 }
+
 .msg-date:hover {
     display: inline;
     color: white;
 }
+
 .msg-title {
     display: inline;
     margin-left: 35px;
-    color:#F4A22C;
+    color: #F4A22C;
 }
+
 .msg-title:hover {
     display: inline;
     margin-left: 35px;
-    color:white;
+    color: white;
 }
 
 .navbox3 {
@@ -1679,7 +1694,7 @@ img.01 {
 
 #msg-detail-board {
     left: 0;
-    top: 0;
+    top: 25%;
     background-color: black;
     position: fixed;
     height: 100vh;
@@ -1754,9 +1769,10 @@ img.01 {
     border-radius: 6px;
     padding: 5px 0;
     right: 42vw;
+    top: 60vh;
     /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 102;
 }
 
 .decree-detail-articles .tooltiptext {
@@ -1911,9 +1927,9 @@ img.01 {
 .articles-container {
     display: flex;
     font-size: 14px;
-    margin-left: 50px;
+    margin-left: 0px;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     /* align-items: center; */
 }
 
