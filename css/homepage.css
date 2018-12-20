@@ -1785,7 +1785,7 @@ img.01 {
 .decree-form-name {
     display: inline;
     color: white;
-    width: 500px;
+    width: 400px;
     font-size: 14px;
     /*change*/
     text-align: justify;
@@ -1817,7 +1817,7 @@ img.01 {
 }
 
 .fileIcon {
-    /* margin-right: 20px; */
+    margin-right: 15px;
     display: inline;
     width: 20px;
 }
