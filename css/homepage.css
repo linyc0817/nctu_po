@@ -1598,7 +1598,7 @@ img.01 {
 }
 
 .navbox2_2_1 {
-    top: 29%;
+    top: 27%;
     left: 33%;
     color: #F4A22C;
     font-size: 1.4em;
@@ -1606,7 +1606,7 @@ img.01 {
 }
 
 .navbox2_2_2 {
-    top: 29%;
+    top: 27%;
     left: 85%;
     position: fixed;
     font-size: 1.4em;
@@ -1615,14 +1615,15 @@ img.01 {
 
 .msg_container {
     position: fixed;
-    top: 35%;
+    top: 31.5%;
     left: 30.5%;
     font-size: 1.4em;
     list-style-type: none;
     cursor: pointer;
 }
 .orange-hr {
-    margin-top: 23px;
+    float: left;
+    margin-bottom: 10px;
     width: 800px;
     border: 0;
     height: 1px;
@@ -1633,28 +1634,41 @@ img.01 {
 
 .msg_size {
     height: 70px;
+    width: 800px;
 }
 
 .msg-date {
     display: inline;
+    float: left;
     color: #F4A22C;
+    height: 70px;
 }
 
 .msg-date:hover {
     display: inline;
+    float: left;
     color: white;
+    height: 70px;
 }
 
 .msg-title {
+    word-wrap:break-word;
+    float: left;
     display: inline;
     margin-left: 35px;
     color: #F4A22C;
+    width: 650px;
+    height: 70px;
 }
 
 .msg-title:hover {
+    word-wrap:break-word;
+    float: left;
     display: inline;
     margin-left: 35px;
     color: white;
+    width: 650px;
+    height: 70px;
 }
 
 .navbox3 {
@@ -1687,7 +1701,16 @@ img.01 {
 }
 
 /* 訊息公告 */
-
+.bar-hr{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    width: 90%;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #F4A22C,#F4A22C , #F4A22C);
+}
 .msg-list {
     color: white;
 }
@@ -1701,6 +1724,17 @@ img.01 {
     width: 100%;
 }
 
+.msg-detail-title{
+    width: 80%;
+    line-height: 150%;
+    font-size: 1.3em;
+}
+
+.msg-detail-content{
+    width: 80%;
+    line-height: 150%;
+    font-size: 1.3em;
+}
 /* 法令 */
 
 #decree-flex-container {
