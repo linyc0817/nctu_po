@@ -1031,22 +1031,24 @@
                     </div>
                     <div id="msg-detail-board" v-if="display" >
                         <div class="left-space" style="float:left; height:100%; width:60%;">
-                        <div class="bar-hr"></div>
-                        <div style="display:flex; height:18%;align-items:center; width:90%; word-wrap:break-word;">
-                        <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">主旨</div>
-                        <div class="msg-detail-title">{{msg_detail_data.title}}</div>
-                        </div>
+                            <div class="bar-hr"></div>
+                            <div style="display:flex; height:18%;align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">主旨</div>
+                                <div class="msg-detail-title">{{msg_detail_data.title}}</div>
+                            </div>
                         
-                        <div class="bar-hr"></div>
-                        <div style="display:flex; height:46%; align-items:center; width:90%; word-wrap:break-word;">
-                        <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">內容</div>
-                        <div class="msg-detail-content" v-html="msg_detail_data.content"></div>
+                            <div class="bar-hr"></div>
+                            <div style="display:flex; height:46%; align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">內容</div>
+                                <div class="msg-detail-content" v-html="msg_detail_data.content"></div>
+                            </div>
                         </div>
-                        </div>
+
                         <div class="right-space" style="float:left; height:100%; width:40%;">
-                        <div class="bar-hr"></div>
-                        <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">附件</div>
-                        <div class="bar-hr"></div>
+                            <div class="bar-hr"></div>
+                            <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">附件</div>
+                            
+                            <div class="bar-hr"></div>
                         </div>
                         <!-- <div class="msg-detail-attachment-container"></div> -->
                         <ul id="msg-detail-link-container">
