@@ -1702,10 +1702,10 @@ img.01 {
 
 /* 訊息公告 */
 .bar-hr{
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 15px;
+    margin-bottom: 10px;
     margin-left: 5%;
-    width: 90%;
+    width: 93%;
     border: 0;
     height: 1px;
     background: #333;

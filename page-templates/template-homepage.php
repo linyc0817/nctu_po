@@ -1030,7 +1030,7 @@
                         </ul>
                     </div>
                     <div id="msg-detail-board" v-if="display" >
-                        <div class="left-space" style="float:left; height:100%; width:60%;">
+                        <div class="left-space" style="float:left; height:100%; width:57%;">
                             <div class="bar-hr"></div>
                             <div style="display:flex; height:18%;align-items:center; width:90%; word-wrap:break-word;">
                                 <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">主旨</div>
@@ -1042,27 +1042,55 @@
                                 <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">內容</div>
                                 <div class="msg-detail-content" v-html="msg_detail_data.content"></div>
                             </div>
+                            
                         </div>
 
-                        <div class="right-space" style="float:left; height:100%; width:40%;">
+                        <div class="right-space" style="float:left; height:100%; width:41%;">
                             <div class="bar-hr"></div>
-                            <div style="color:#F4A22C; padding-left: 5%;width:14%; font-size:1.3em;">附件</div>
+                            <div style="display:flex; height:30%;align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:16%; font-size:1.3em;">附件</div>
+                                <ul id="msg-detail-attachment-container">
+                                <msg-detail class="msg-detail-attachment" v-for="(content,index) in msg_detail_data.attachments" :key="index" :content="content">{{content}}
+                                </msg-detail>
+                                </ul>
+                            </div>    
+                            <div class="bar-hr"></div>
+
+                            <div style="display:flex; height:5%;align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:16%; font-size:1.3em;">連結</div>
+                                <ul id="msg-detail-link-container">
+                                <msg-detail class="msg-detail-link" v-for="(content,index) in msg_detail_data.links" :key="index" :content="content">{{content}}
+                                </msg-detail>
+                                </ul>
+                            </div>    
+                            <div class="bar-hr"></div>
                             
+                            <div style="display:flex; height:5%;align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:16%; font-size:1.3em;">聯絡人</div>
+                                
+                            </div>    
+                            <div class="bar-hr"></div>
+
+                            <div style="display:flex; height:5%;align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:16%; font-size:1.3em;">活動日期</div>
+                                
+                            </div>    
+                            <div class="bar-hr"></div>
+
+                            <div style="display:flex; height:5%;align-items:center; width:90%; word-wrap:break-word;">
+                                <div style="color:#F4A22C; padding-left: 5%;width:16%; font-size:1.3em;">公告日期</div>
+                                
+                            </div>    
                             <div class="bar-hr"></div>
                         </div>
                         <!-- <div class="msg-detail-attachment-container"></div> -->
-                        <ul id="msg-detail-link-container">
-                            <msg-detail class="msg-detail-link" v-for="(content,index) in msg_detail_data.links" :key="index" :content="content">{{content}}
-                            </msg-detail>
-                        </ul>
-                        <ul id="msg-detail-attachment-container">
-                            <msg-detail class="msg-detail-attachment" v-for="(content,index) in msg_detail_data.attachments" :key="index" :content="content">{{content}}
-                            </msg-detail>
-                        </ul>
+                        
+                        
                         <ul id="msg-detail-contact-container">
                             <msg-detail class="msg-detail-contact" v-for="(content,index) in msg_detail_data.contacts" :key="index" :content="content">{{content}}
                             </msg-detail>
                         </ul>
+
                         <img id="msg-close-button" @click="close_detail" src="<?php bloginfo('template_url'); ?>/image/close-button.png" alt="close button">
                         
 
