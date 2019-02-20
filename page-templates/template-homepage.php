@@ -1067,7 +1067,10 @@
                             
                             <div style="display:flex; height:5%;align-items:center; width:90%; word-wrap:break-word;">
                                 <div style="color:#F4A22C; padding-left: 5%;width:16%; font-size:1.3em;">聯絡人</div>
-                                
+                                <ul id="msg-detail-contact-container">
+                                <msg-detail class="msg-detail-contact" v-for="(content,index) in msg_detail_data.contacts" :key="index" :content="content">{{content}}
+                                </msg-detail>
+                                </ul>
                             </div>    
                             <div class="bar-hr"></div>
 
@@ -1085,11 +1088,6 @@
                         </div>
                         <!-- <div class="msg-detail-attachment-container"></div> -->
                         
-                        
-                        <ul id="msg-detail-contact-container">
-                            <msg-detail class="msg-detail-contact" v-for="(content,index) in msg_detail_data.contacts" :key="index" :content="content">{{content}}
-                            </msg-detail>
-                        </ul>
 
                         <img id="msg-close-button" @click="close_detail" src="<?php bloginfo('template_url'); ?>/image/close-button.png" alt="close button">
                         
@@ -1199,7 +1197,7 @@
                     width:50vw;
                     height: 100%;
                     display: none;
-                    z-index:100;
+                    z-index:105;
                     right: 0;
                     top:25%;
                     background-color:black;

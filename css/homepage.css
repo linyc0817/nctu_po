@@ -1324,6 +1324,7 @@ img.01 {
   position: absolute;
 }*/
 
+
 /*關於本室，訊息公告.....hover後橘色效果*/
 
 #nav1:hover {
@@ -1580,6 +1581,7 @@ img.01 {
     line-height: 35px;
     color: white;
     letter-spacing: 3px;
+    cursor: pointer;
 }
 
 .navbox2_2 {
@@ -1792,6 +1794,11 @@ img.01 {
 
 .decree-forms-container {
     background-color: #144959;
+    height: 100px;
+    width:150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .decree-form-name .tooltiptext {
@@ -1819,7 +1826,7 @@ img.01 {
     padding: 5px 0;
     /* Position the tooltip */
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
     left: 42vw;
     top: 60vh;
 }
@@ -1840,7 +1847,7 @@ img.01 {
     /*change*/
     text-align: justify;
     text-justify: inter-ideograph;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 .decree-form-names-container {
@@ -1849,6 +1856,7 @@ img.01 {
     flex-direction: column;
     /*margin-right: 50px;*/
     line-height: 180%;
+    white-space: nowrap;
 }
 
 .decree-revisions-container {
@@ -3182,6 +3190,7 @@ div[class*="page"].staff-job-overview-dot._fade {
     background-color: #262626;
     /*
   border:solid 1px #FFFFFF;*/
+    
 }
 
 #foot-area2 {
