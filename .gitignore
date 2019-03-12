@@ -67,3 +67,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# vim swp file
+*.swp
+
+# node_modules(Prepare for npm)
+node_modules
