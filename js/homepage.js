@@ -531,3 +531,4 @@ $(function () {
         $(".staff-job-overview-dot-name." + page).removeClass('_fade');
     });
 });
+
