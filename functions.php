@@ -16,7 +16,24 @@ class NCTUPO {
 			'show_in_rest' => true
 		));
 	}
+	public static function sidebar_register() {
+        wp_register_script(
+            'po-guten-sidebar.js',
+            get_template_directory_uri() . '/js/guten-sidebar.js',
+            array( 'wp-plugins', 'wp-edit-post', 'wp-element', 'wp-data' )
+		);
+		wp_register_style(
+			'po-guten-sidebar.css',
+			get_template_directory_uri() . '/css/guten-sidebar.css',
+		);
+	}
+    public static function sidebar_enqueue_script() {
+		wp_enqueue_style('po-guten-sidebar.css');
+        wp_enqueue_script('po-guten-sidebar.js');
+    }
 }
 
 add_action('init', ['NCTUPO', 'po_register_meta']);
+add_action('init', ['NCTUPO', 'sidebar_register']);
+add_action('enqueue_block_editor_assets', ['NCTUPO', 'sidebar_enqueue_script']);
 ?>
