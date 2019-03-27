@@ -18,12 +18,17 @@
 <!--
 Top Navbar
 -->
-<nav class="top-navbar">
-  <div class="topnav" id="top-menu">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a id="nav-more"style="font-size:15px;" class="icon">&#9776;</a>
-  </div>
-  <?php get_template_part('includes/navbar-search'); ?>
-</nav>
+<header class="top-navbar">
+    <div class="top-navbar-logo-wrapper">
+        <img class="top-navbar-logo" src="<?php bloginfo('template_url')?>/image/logo.png"></img>
+    </div>
+    <?php
+    wp_nav_menu( array(
+        'menu' => 'top-navbar',
+        'theme_location' => 'top',
+        'container' => 'nav',
+        'container_class' => 'top-navbar-menu-container'
+    ));
+    ?>
+    <?php get_search_form(); ?>
+</header>
