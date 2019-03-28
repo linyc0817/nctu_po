@@ -34,6 +34,10 @@ Top Navbar
                 </a>
             </div>
             <div class="top-search-wrapper">
+                <div class="top-navbar-lang-switch">
+                    <span class="btn-lang-switch lang-switch-ch">中文</span>
+                    <span class="btn-lang-switch lang-switch-en">English</span>
+                </div>
                 <?php get_search_form(); ?>
             </div>
         </div>
