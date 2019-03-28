@@ -30,15 +30,15 @@ a {
 /* Top navigation container */
 .top-navbar {
   display: flex;
-  border-bottom: 2px solid #f4a22c;
+  border-bottom: 3px solid #f4a22c;
   background-color: #f2f2f2;
   min-height: 6rem;
 }
 /* triangle on the top-left corner of the page */
 .top-navbar-triangle {
-  flex: 0 0 3rem;
+  flex: 0 0 3.6rem;
   align-self: stretch;
-  max-width: 3rem;
+  max-width: 3.6rem;
   max-height: 100%;
 }
 .top-navbar-triangle svg {
@@ -53,29 +53,24 @@ a {
 .top-navbar-logo-menu-container {
   flex: 1 1 auto;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 /* Top logo */
 .top-navbar-logo-wrapper {
-  flex: 0 0 24rem;
-  align: center;
+  flex: 0 0 auto;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
-  margin-right: -6rem;
 }
 .top-navbar-logo {
-  /* 這裏必須用上面的24rem而不能用100%
-   * 原因不明
-   */
   max-width: 24rem;
 }
 
 /* Top menu */
 .top-navbar-menu-container {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   margin-left: 8rem;
-  align-self: flex-end;
 }
 
 .top-navbar-menu-container ul {
@@ -85,13 +80,13 @@ a {
 /* Top navigation menu */
 .top-navbar-menu-container li {
   float: left;
-  font-size: 1.0em;
+  font-size: 0.9em;
   height: 3.8em;
   width: 6.0em;
   cursor: pointer;
   padding-top: 0.4em;
-  padding-left: 1.2em;
-  padding-right: 1em;
+  padding-left: 1.4em;
+  padding-right: 0.6em;
   transform: skewX(-15deg);
 }
 .top-navbar-menu-container li a {
