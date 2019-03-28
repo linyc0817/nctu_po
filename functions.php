@@ -23,6 +23,7 @@ class NCTUPO {
 		);
 	}
 	public static function po_enqueue_theme_script() {
+		wp_enqueue_style('dashicons');
 		wp_enqueue_style('po-global-style.css');
         wp_enqueue_script('po-global-script.js');
 	}

@@ -25,11 +25,16 @@ Top Navbar
             Sorry, your browser does not support inline SVG.
         </svg>
     </div>
-    <div class="top-navbar-logo-menu-container">
-        <div class="top-navbar-logo-wrapper">
-            <a href="<?php bloginfo('url'); ?>">
-                <img class="top-navbar-logo" src="<?php bloginfo('template_url')?>/image/logo.png"></img>
-            </a>
+    <div class="top-navbar-container">
+        <div class="top-navbar-logo-search-container">
+            <div class="top-navbar-logo-wrapper">
+                <a href="<?php bloginfo('url'); ?>">
+                    <img class="top-navbar-logo" src="<?php bloginfo('template_url')?>/image/logo.png"></img>
+                </a>
+            </div>
+            <div class="top-search-wrapper">
+                <?php get_search_form(); ?>
+            </div>
         </div>
         <?php
         wp_nav_menu( array(
@@ -39,8 +44,5 @@ Top Navbar
             'container_class' => 'top-navbar-menu-container'
         ));
         ?>
-    </div>
-    <div class="top-search-wrapper">
-        <?php get_search_form(); ?>
     </div>
 </header>
