@@ -3,7 +3,7 @@
  * Class as namespace
  */
 class NCTUPO {
-	// 佈景主題的選單功能
+	// 佈景主題的選單
 	public static function po_register_nav_menu() {
 		register_nav_menu('top', __('Main menu', 'nctu_po'));
 	}
@@ -53,14 +53,21 @@ class NCTUPO {
 		wp_enqueue_style('po-guten-sidebar.css');
         wp_enqueue_script('po-guten-sidebar.js');
     }
+	public static function run() {
+		// 頁面主題圖片功能
+		add_theme_support('post-thumbnails', array('page'));
+
+		add_action('init', [self::class, 'po_register_nav_menu']);
+
+		add_action('init', [self::class, 'po_register_theme_script']);
+		add_action('wp_enqueue_scripts', [self::class,'po_enqueue_theme_script']);
+
+		add_action('init', [self::class, 'po_register_meta']);
+		add_action('init', [self::class, 'sidebar_register']);
+		add_action('enqueue_block_editor_assets', [self::class, 'sidebar_enqueue_script']);
+	}
 }
 
-add_action('init', ['NCTUPO', 'po_register_nav_menu']);
+NCTUPO::run();
 
-add_action('init', ['NCTUPO', 'po_register_theme_script']);
-add_action('wp_enqueue_scripts', ['NCTUPO','po_enqueue_theme_script']);
-
-add_action('init', ['NCTUPO', 'po_register_meta']);
-add_action('init', ['NCTUPO', 'sidebar_register']);
-add_action('enqueue_block_editor_assets', ['NCTUPO', 'sidebar_enqueue_script']);
 ?>
