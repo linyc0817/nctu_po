@@ -19,16 +19,28 @@
 Top Navbar
 -->
 <header class="top-navbar">
-    <div class="top-navbar-logo-wrapper">
-        <img class="top-navbar-logo" src="<?php bloginfo('template_url')?>/image/logo.png"></img>
+    <div class="top-navbar-triangle">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon points="0,0 100,0 0,100" fill="#83e5de"/>
+            Sorry, your browser does not support inline SVG.
+        </svg>
     </div>
-    <?php
-    wp_nav_menu( array(
-        'menu' => 'top-navbar',
-        'theme_location' => 'top',
-        'container' => 'nav',
-        'container_class' => 'top-navbar-menu-container'
-    ));
-    ?>
-    <?php get_search_form(); ?>
+    <div class="top-navbar-logo-menu-container">
+        <div class="top-navbar-logo-wrapper">
+            <a href="<?php bloginfo('url'); ?>">
+                <img class="top-navbar-logo" src="<?php bloginfo('template_url')?>/image/logo.png"></img>
+            </a>
+        </div>
+        <?php
+        wp_nav_menu( array(
+            'menu' => 'top-navbar',
+            'theme_location' => 'top',
+            'container' => 'nav',
+            'container_class' => 'top-navbar-menu-container'
+        ));
+        ?>
+    </div>
+    <div class="top-search-wrapper">
+        <?php get_search_form(); ?>
+    </div>
 </header>
