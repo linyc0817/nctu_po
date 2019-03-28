@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" type="image/x-icon">
 
     <?php
+    wp_enqueue_style('header.css', get_template_directory_uri() . '/css/header.css');
     // wp_head()會引入在functions.php所指定的script，並且處理相依性產生的引入順序變化
     ?>
     <?php wp_head(); ?>

@@ -1,0 +1,130 @@
+/* Top navigation container */
+.top-navbar {
+  display: flex;
+  border-bottom: 3px solid #f4a22c;
+  background-color: #f2f2f2;
+  min-height: 6rem;
+}
+/* triangle on the top-left corner of the page */
+.top-navbar-triangle {
+  flex: 0 0 3.6rem;
+  align-self: stretch;
+  max-width: 3.6rem;
+  max-height: 100%;
+}
+.top-navbar-triangle svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* The container that wraps logo and menu, help to fix
+ * the search form on right.
+ */
+
+.top-navbar-container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.top-navbar-logo-search-container {
+  flex: 0 0 auto;
+  display: flex;
+}
+
+/* Top logo */
+.top-navbar-logo-wrapper {
+  flex: 0 0 auto;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+.top-navbar-logo {
+  max-width: 24rem;
+}
+
+/* Top menu */
+.top-navbar-menu-container {
+  flex: 0 0 auto;
+  margin-left: 8vw;
+}
+
+.top-navbar-menu-container ul {
+  list-style-type: none;
+}
+
+/* Top navigation menu */
+.top-navbar-menu-container li {
+  float: left;
+  font-size: 0.9em;
+  height: 3.8em;
+  width: 6.0em;
+  cursor: pointer;
+  padding-top: 0.4em;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  transform: skewX(-15deg);
+}
+.top-navbar-menu-container li a {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  transform: skewX(15deg);
+}
+.top-navbar-menu-container li:hover, .top-navbar-menu-container li:hover a {
+  color: #fff;
+}
+.top-navbar-menu-container li:hover{
+  background-color: #f4a22c;
+  transition: 0.2s;
+}
+
+/* Top search bar */
+.top-search-wrapper {
+  flex: 1 1 auto;
+  align-self: flex-start;
+  padding-top: 1.8em;
+  padding-right: 4em;
+}
+.top-search-wrapper .form-group {
+  height: 1.8em;
+  border-bottom: 2px solid #144959;
+  float: right;
+}
+.top-search-wrapper input {
+  border: none;
+  height: 100%;
+  width: 10em;
+  font-size: 1.0em;
+  background-color: transparent;
+}
+.top-search-wrapper .form-group:before {
+  content: "\f179";
+  position: relative;
+  top: 0.1em;
+  height: 100%;
+  font: normal 1rem/1 dashicons !important;
+  color: #144959;
+}
+.top-search-wrapper .top-navbar-lang-switch {
+  float: right;
+  margin-left: 2em;
+  font-size: 0.9em;
+  display: flex;
+
+}
+.top-navbar-lang-switch .lang-switch-en {
+  flex: 1 0 auto;
+  padding: 0.1em 0.5em;
+  border: 3px solid #144959;
+  border-left: 3px solid #144959;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.top-navbar-lang-switch .lang-switch-ch {
+  flex: 1 0 auto;
+  padding: 0.1em 0.5em;
+  border: 3px solid #144959;
+  border-right: 0px solid #144959;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
