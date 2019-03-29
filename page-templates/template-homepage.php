@@ -142,9 +142,9 @@
                             <div id="public-transport-container">
                                 <div class="public-transport-container-left">大眾運輸</div>
                                 <div class="public-transport-container-right">
-                                    <div id="HSR" class="mouse-hover transport-title"">高鐵</div>
-                                    <div id="TRA" class="mouse-hover transport-title"">台鐵</div>
-                                    <div id="caoch" class="mouse-hover transport-title"">客運</div>
+                                    <div id="HSR" class="mouse-hover transport-title">高鐵</div>
+                                    <div id="TRA" class="mouse-hover transport-title">台鐵</div>
+                                    <div id="caoch" class="mouse-hover transport-title">客運</div>
                                 </div>
                             </div>
                         </div>
