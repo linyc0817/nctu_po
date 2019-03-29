@@ -1,6 +1,6 @@
 <?php get_template_part('includes/header'); ?>
 
-<div class="container">
+<div class="main-container">
   <div class="row">
     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
         <?php get_template_part('includes/sidebar'); ?>

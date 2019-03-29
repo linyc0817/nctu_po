@@ -1,7 +1,8 @@
 /* Top navigation container */
 .top-navbar {
+  flex: 0 0 auto;
   display: flex;
-  border-bottom: 3px solid #f4a22c;
+  border-bottom: 4px solid #f4a22c;
   background-color: #f2f2f2;
   min-height: 6rem;
 }
@@ -87,20 +88,28 @@
 }
 .top-search-wrapper .navbar-form {
   height: 1.8em;
-  border-bottom: 2px solid #144959;
   float: right;
 }
 .top-search-wrapper input {
   border: none;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
   height: 100%;
-  width: 10em;
+  width: 12em;
   font-size: 1.0em;
   background-color: transparent;
+  text-indent: 1.4em;
+  transition: 0.2s;
+}
+.top-search-wrapper input:focus {
+  border-bottom: 2px solid #144959;
+  transition: 0.2s;
 }
 .top-search-wrapper .form-group:before {
   content: "\f179";
   position: relative;
   top: 0.1em;
+  left: 1.4em;
   height: 100%;
   font: normal 1rem/1 dashicons !important;
   color: #144959;

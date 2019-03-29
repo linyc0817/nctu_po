@@ -6,13 +6,22 @@ p span {
     font-size: 1em
 }
 
+/* 關於body height: 為了使用垂直flex需要填滿整個頁面，用
+ * .logged-in class來處理wpadminbar的高度，如果把html和body
+ * 設成100%，wordpress會放一個32px的top margin，會產生
+ * scroll bar，用vh就不需要把html也設成100%
+ */
 body {
     overflow: hidden;
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-    font-size: 100%;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    height: 100vh;
+}
+body.logged-in {
+  height: calc(100vh - 32px);
 }
 
 img {
@@ -25,4 +34,17 @@ a {
     text-decoration: none;
     color: #144959;
     outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.full-col-flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main-container {
+  flex: 1 1 auto;
 }

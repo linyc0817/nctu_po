@@ -19,6 +19,7 @@
 <!--
 Top Navbar
 -->
+<div class="full-col-flex">
 <header class="top-navbar">
     <div class="top-navbar-triangle">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
