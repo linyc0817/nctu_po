@@ -71,5 +71,5 @@ $RECYCLE.BIN/
 # vim swp file
 *.swp
 
-# node_modules(Prepare for npm)
 node_modules
+dist/*.js

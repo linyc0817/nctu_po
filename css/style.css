@@ -11,10 +11,12 @@ p span {
  * 設成100%，wordpress會放一個32px的top margin，會產生
  * scroll bar，用vh就不需要把html也設成100%
  */
+html {
+    font-size: 18px;
+}
 body {
     overflow: auto;
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-    font-size: 18px;
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;

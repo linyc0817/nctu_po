@@ -20,14 +20,14 @@
 Top Navbar
 -->
 <div class="full-col-flex">
-<header class="top-navbar">
+<header class="top-navbar-container">
     <div class="top-navbar-triangle">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon points="0,0 100,0 0,100" fill="#83e5de"/>
             Sorry, your browser does not support inline SVG.
         </svg>
     </div>
-    <div class="top-navbar-container">
+    <div class="top-navbar">
         <div class="top-navbar-logo-search-container">
             <div class="top-navbar-logo-wrapper">
                 <a href="<?php echo site_url(); ?>">
@@ -42,13 +42,16 @@ Top Navbar
                 <?php get_search_form(); ?>
             </div>
         </div>
+        <div class="top-navbar-menu-container">
+        <div class="top-navbar-menu-left-padding"></div>
         <?php
         wp_nav_menu( array(
             'menu' => 'top-navbar',
             'theme_location' => 'top',
             'container' => 'nav',
-            'container_class' => 'top-navbar-menu-container'
+            'container_class' => 'top-navbar-menu'
         ));
         ?>
+        </div>
     </div>
 </header>

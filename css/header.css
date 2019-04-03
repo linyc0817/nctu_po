@@ -1,10 +1,9 @@
 /* Top navigation container */
-.top-navbar {
+.top-navbar-container {
   flex: 0 0 auto;
   display: flex;
   border-bottom: 4px solid #f4a22c;
   background-color: #f2f2f2;
-  min-height: 6rem;
 }
 /* triangle on the top-left corner of the page */
 .top-navbar-triangle {
@@ -18,11 +17,7 @@
   height: 100%;
 }
 
-/* The container that wraps logo and menu, help to fix
- * the search form on right.
- */
-
-.top-navbar-container {
+.top-navbar {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -46,15 +41,22 @@
 /* Top menu */
 .top-navbar-menu-container {
   flex: 0 0 auto;
-  margin-left: 8vw;
+  display: flex;
+}
+.top-navbar-menu {
+  flex: 0 0 auto;
+  padding-right: 2rem;
+}
+.top-navbar-menu-left-padding {
+  flex: 0 1 8vw;
 }
 
-.top-navbar-menu-container ul {
+.top-navbar-menu ul {
   list-style-type: none;
 }
 
 /* Top navigation menu */
-.top-navbar-menu-container li {
+.top-navbar-menu li {
   float: left;
   font-size: 1rem;
   height: 3.8rem;
@@ -65,16 +67,16 @@
   padding-right: 1.4rem;
   transform: skewX(-15deg);
 }
-.top-navbar-menu-container li a {
+.top-navbar-menu li a {
   height: 100%;
   width: 100%;
   display: inline-block;
   transform: skewX(15deg);
 }
-.top-navbar-menu-container li:hover, .top-navbar-menu-container li:hover a {
+.top-navbar-menu li:hover, .top-navbar-menu-container li:hover a {
   color: #fff;
 }
-.top-navbar-menu-container li:hover{
+.top-navbar-menu li:hover{
   background-color: #f4a22c;
   transition: 0.2s;
 }
