@@ -30,7 +30,7 @@ Top Navbar
     <div class="top-navbar-container">
         <div class="top-navbar-logo-search-container">
             <div class="top-navbar-logo-wrapper">
-                <a href="<?php bloginfo('url'); ?>">
+                <a href="<?php echo site_url(); ?>">
                     <img class="top-navbar-logo" src="<?php bloginfo('template_url')?>/image/logo.png"></img>
                 </a>
             </div>
