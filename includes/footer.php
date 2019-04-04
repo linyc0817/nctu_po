@@ -1,4 +1,3 @@
-<?php wp_enqueue_style('footer.css', get_template_directory_uri() . '/css/footer.css'); ?>
 <footer class="site-footer">
 
 	<div class="dynamic-footer">

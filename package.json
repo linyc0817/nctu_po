@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:style": "node-sass -o css/dist css",
+    "build:style": "node-sass -o css/dist css/style.scss",
+    "build:editor-style": "node-sass -o css/dist css/guten-sidebar.scss",
     "build:script": "webpack",
     "build-all": "run-p build:*",
     "build": "cross-env NODE_ENV=production npm run build-all",

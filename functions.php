@@ -19,7 +19,7 @@ class NCTUPO {
         );
         wp_register_style(
             'po-global-style.css',
-            get_template_directory_uri() . '/css/style.css'
+            get_template_directory_uri() . '/css/dist/style.css'
         );
     }
     public static function po_enqueue_theme_script() {
@@ -46,7 +46,7 @@ class NCTUPO {
         );
         wp_register_style(
             'po-guten-sidebar.css',
-            get_template_directory_uri() . '/css/guten-sidebar.css'
+            get_template_directory_uri() . '/css/dist/guten-sidebar.css'
         );
     }
     public static function sidebar_enqueue_script() {
