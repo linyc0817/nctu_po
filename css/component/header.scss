@@ -1,9 +1,10 @@
+@import "../variables";
 /* Top navigation container */
 .top-navbar-container {
   flex: 0 0 auto;
   display: flex;
-  border-bottom: 4px solid #f4a22c;
-  background-color: #f2f2f2;
+  border-bottom: 4px solid $highlight-background-color;
+  background-color: $header-background-color;
 }
 /* triangle on the top-left corner of the page */
 .top-navbar-triangle {
@@ -11,10 +12,10 @@
   align-self: stretch;
   max-width: 3.6rem;
   max-height: 100%;
-}
-.top-navbar-triangle svg {
-  width: 100%;
-  height: 100%;
+  svg {
+      width: 100%;
+      height: 100%;
+  }
 }
 
 .top-navbar {
@@ -43,42 +44,40 @@
   flex: 0 0 auto;
   display: flex;
 }
-.top-navbar-menu {
-  flex: 0 0 auto;
-  padding-right: 2rem;
-}
 .top-navbar-menu-left-padding {
   flex: 0 1 8vw;
 }
 
-.top-navbar-menu ul {
-  list-style-type: none;
-}
-
 /* Top navigation menu */
-.top-navbar-menu li {
-  float: left;
-  font-size: 1rem;
-  height: 3.8rem;
-  width: 6.6rem;
-  cursor: pointer;
-  padding-top: 0.4rem;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
-  transform: skewX(-15deg);
-}
-.top-navbar-menu li a {
-  height: 100%;
-  width: 100%;
-  display: inline-block;
-  transform: skewX(15deg);
-}
-.top-navbar-menu li:hover, .top-navbar-menu-container li:hover a {
-  color: #fff;
-}
-.top-navbar-menu li:hover{
-  background-color: #f4a22c;
-  transition: 0.2s;
+.top-navbar-menu {
+  flex: 0 0 auto;
+  padding-right: 2rem;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    float: left;
+    font-size: 1rem;
+    height: 3.8rem;
+    width: 6.6rem;
+    cursor: pointer;
+    padding-top: 0.4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    transform: skewX(-15deg);
+
+    &:hover {
+      background-color: $highlight-background-color;
+      transition: 0.2s;
+      a { color: #fff;}
+    }
+    a {
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      transform: skewX(15deg);
+    }
+  }
 }
 
 /* Top search bar */
@@ -87,55 +86,55 @@
   align-self: flex-start;
   padding-top: 1.8rem;
   padding-right: 4rem;
-}
-.top-search-wrapper .navbar-form {
-  height: 1.8rem;
-  float: right;
-}
-.top-search-wrapper input {
-  border: none;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 3px;
-  height: 100%;
-  width: 12rem;
-  font-size: 1.0rem;
-  background-color: transparent;
-  text-indent: 1.4rem;
-  transition: 0.2s;
-}
-.top-search-wrapper input:focus {
-  border-bottom: 2px solid #144959;
-  transition: 0.2s;
-}
-.top-search-wrapper .form-group:before {
-  content: "\f179";
-  position: relative;
-  top: 0.1rem;
-  left: 1.4rem;
-  height: 100%;
-  font: normal 1rem/1 dashicons !important;
-  color: #144959;
-}
-.top-search-wrapper .top-navbar-lang-switch {
-  float: right;
-  margin-left: 2rem;
-  font-size: 0.9rem;
-  display: flex;
-
-}
-.top-navbar-lang-switch .lang-switch-en {
-  flex: 1 0 auto;
-  padding: 0.1rem 0.5rem;
-  border: 3px solid #144959;
-  border-left: 3px solid #144959;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-.top-navbar-lang-switch .lang-switch-ch {
-  flex: 1 0 auto;
-  padding: 0.1rem 0.5rem;
-  border: 3px solid #144959;
-  border-right: 0px solid #144959;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  
+  .navbar-form {
+    height: 1.8rem;
+    float: right;
+  }
+  input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 3px;
+    height: 100%;
+    width: 12rem;
+    font-size: 1.0rem;
+    background-color: transparent;
+    text-indent: 1.4rem;
+    transition: 0.2s;
+    &:focus {
+      border-bottom: 2px solid $main-font-color;
+      transition: 0.2s;
+    }
+  }
+  .form-group:before {
+    content: "\f179";
+    position: relative;
+    top: 0.1rem;
+    left: 1.4rem;
+    height: 100%;
+    font: normal 1rem/1 dashicons !important;
+    color: $main-font-color;
+  }
+  .top-navbar-lang-switch {
+    float: right;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    .lang-switch-en {
+      flex: 1 0 auto;
+      padding: 0.1rem 0.5rem;
+      border: 3px solid $main-font-color;
+      border-left: 3px solid $main-font-color;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+    .lang-switch-ch {
+      flex: 1 0 auto;
+      padding: 0.1rem 0.5rem;
+      border: 3px solid $main-font-color;
+      border-right: 0px solid $main-font-color;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+  }
 }

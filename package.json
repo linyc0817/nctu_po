@@ -10,7 +10,7 @@
     "build:script": "webpack",
     "build-all": "run-p build:*",
     "build": "cross-env NODE_ENV=production npm run build-all",
-    "dev": "chokidar \"css/*.scss\" \"js/**/*.js\" \"js/**/*.vue\" \"js/**/*.scss\" -i \"**/dist\" -c \"cross-env NODE_ENV=development npm run build-all\""
+    "dev": "chokidar \"css/**/*.scss\" \"js/**/*.js\" \"js/**/*.vue\" \"js/**/*.scss\" -i \"**/dist\" -c \"cross-env NODE_ENV=development npm run build-all\""
   },
   "author": "",
   "license": "UNLICENSED",
