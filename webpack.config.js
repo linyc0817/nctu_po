@@ -6,11 +6,17 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: NODE_ENV,
-  entry: path.join(__dirname, 'js/intro/index.js'),
+  entry: {
+    intro: path.join(__dirname, 'js/intro/index.js'),
+    news: path.join(__dirname, 'js/news/index.js'),
+    regulations: path.join(__dirname, 'js/regulations/index.js'),
+    punchclock: path.join(__dirname, 'js/punchclock/index.js'),
+    faq: path.join(__dirname, 'js/faq/index.js')
+  },
 
   output: {
     path: path.join(__dirname, 'js/dist'),
-    filename: 'intro.build.js'
+    filename: '[name].build.js'
   },
 
   module: {
@@ -18,7 +24,7 @@ module.exports = {
       {
         test: /.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: ['babel-loader']
       },
       {
         test: /.vue$/,
