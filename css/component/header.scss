@@ -66,10 +66,20 @@
     padding-right: 1.4rem;
     transform: skewX(-15deg);
 
+    &.current_page_item,
     &:hover {
       background-color: $highlight-background-color;
       transition: 0.2s;
       a { color: #fff;}
+      &::after {
+        content: "";
+        position: absolute;
+        top: 4.4rem;
+        left: 0;
+        border-left: 4.7rem solid transparent;
+        border-right: 4.7rem solid transparent;
+        border-top: 10px solid $highlight-background-color;
+      }
     }
     a {
       height: 100%;
@@ -83,20 +93,25 @@
 /* Top search bar */
 .top-search-wrapper {
   flex: 1 1 auto;
+  overflow: hidden;
   align-self: flex-start;
+  display: flex;
   padding-top: 1.8rem;
   padding-right: 4rem;
   
+  .search-form-left-padding {
+    flex: 1 1 auto;
+  }
   .navbar-form {
     height: 1.8rem;
-    float: right;
+    flex: 0 1 12rem;
   }
   input {
     border: none;
     border-bottom: 2px solid #ccc;
     padding-bottom: 3px;
     height: 100%;
-    width: 12rem;
+    width: calc(100% - 1.5rem);
     font-size: 1.0rem;
     background-color: transparent;
     text-indent: 1.4rem;
@@ -116,6 +131,7 @@
     color: $main-font-color;
   }
   .top-navbar-lang-switch {
+    flex: 0 0 auto;
     float: right;
     margin-left: 2rem;
     font-size: 0.9rem;
