@@ -7,6 +7,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 module.exports = {
   mode: NODE_ENV,
   entry: {
+    homepage: path.join(__dirname, 'app/homepage/index.js'),
     intro: path.join(__dirname, 'app/intro/index.js'),
     news: path.join(__dirname, 'app/news/index.js'),
     regulations: path.join(__dirname, 'app/regulations/index.js'),
