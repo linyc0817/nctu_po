@@ -3,6 +3,20 @@
  * Class as namespace
  */
 class NCTUPO {
+    // 佈景主題自訂背景功能
+    // 更改預設套在body的class，改為任何有.nctupo-bg class的元素
+    public static function custom_background_cb() {
+        $bg = set_url_scheme( get_background_image() );
+?>
+        <style>
+        .nctupo-bg { 
+            background-image: url(<?php echo $bg; ?>); 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        </style>
+<?php
+    }
     // 佈景主題的選單
     public static function po_register_nav_menu() {
         register_nav_menu('top', __('Main menu', 'nctu_po'));
@@ -56,6 +70,11 @@ class NCTUPO {
     public static function run() {
         // 頁面主題圖片功能
         add_theme_support('post-thumbnails', array('page'));
+        // 自訂背景
+        add_theme_support('custom-background', array(
+            'default-image' => get_template_directory_uri() . '/image/background.jpg',
+            'wp-head-callback' => [self::class, 'custom_background_cb']
+        ));
 
         add_action('init', [self::class, 'po_register_nav_menu']);
 

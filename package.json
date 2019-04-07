@@ -10,7 +10,7 @@
     "build:script": "webpack",
     "build-all": "run-p build:*",
     "build": "cross-env NODE_ENV=production npm run build-all",
-    "dev": "chokidar \"css/**/*.scss\" \"js/**/*.js\" \"js/**/*.vue\" \"js/**/*.scss\" -i \"**/dist\" -c \"cross-env NODE_ENV=development npm run build-all\""
+    "dev": "chokidar \"css/**/*.scss\" \"app/**/*.js\" \"app/**/*.vue\" \"app/**/*.scss\" -i \"**/dist\" -c \"cross-env NODE_ENV=development npm run build-all\""
   },
   "author": "",
   "license": "UNLICENSED",
@@ -31,6 +31,8 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "axios": "^0.18.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.2"
   }
 }
