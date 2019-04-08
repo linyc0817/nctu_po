@@ -5,6 +5,8 @@
   display: flex;
   border-bottom: 4px solid $highlight-background-color;
   background-color: $header-background-color;
+  position: relative;
+  z-index: 1;
 }
 /* triangle on the top-left corner of the page */
 .top-navbar-triangle {
@@ -52,9 +54,6 @@
 .top-navbar-menu {
   flex: 0 0 auto;
   padding-right: 2rem;
-  ul {
-    list-style-type: none;
-  }
   li {
     float: left;
     font-size: 1rem;
