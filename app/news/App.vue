@@ -1,18 +1,45 @@
 <template>
-    <div>Hello Vue Template {{ foo }}</div>
+  <TabView v-bind:tab-list="tabList" v-bind:page-name="pageName">
+    <router-view></router-view>
+  </TabView>
 </template>
+
 <script>
-    export default {
-        data() {
-            return {
-                foo: 'hey news'
-            }
+  import axios from 'axios'
+  import TabView from '../common/js/TabView.vue'
+  export default {
+    data() {
+      return {
+        tabList: [],
+        pageName: 'news',
+      }
+    },
+    components: {
+      TabView
+    },
+    mounted() {
+      axios.get('/wp-json/wp/v2/categories', {
+        params: {
+          orderby: 'slug'
         }
+      }).then((response) => {
+        this.tabList = response.data.filter((cat) => 
+          cat.slug !== 'uncategorized'
+        ).map(cat => ({
+          id: cat.id,
+          name: cat.name
+        }))
+        if(this.tabList.length > 0)
+          this.currentTab = this.tabList[0].id
+        console.log(this.tabList)
+      }).catch((error) => {
+        console.log('Fetch tab list failed')
+        console.log(error)
+      })
+
     }
+  }
 </script>
 
 <style lang="scss" scoped>
-div {
-    color: #f00;
-}
 </style>
