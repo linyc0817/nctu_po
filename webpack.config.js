@@ -40,6 +40,18 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'clock-[hash].[ext]',
+              publicPath: '/wp-content/themes/nctu_po/js/dist'
+            }
+          }
+        ]
       }
     ]
   },

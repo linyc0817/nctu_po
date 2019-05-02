@@ -40,5 +40,4 @@ ehthumbs.db
 *.swp
 
 node_modules
-**/dist/*.js
-**/dist/*.css
+**/dist/*.*
