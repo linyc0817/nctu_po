@@ -82,7 +82,7 @@
         color: #fff;
       }
       a.router-link-active {
-        color: $main-font-color;
+        color: $top-font-color;
       }
     }
   }

@@ -20,6 +20,7 @@ class NCTUPO {
     // 佈景主題的選單
     public static function po_register_nav_menu() {
         register_nav_menu('top', __('Main menu', 'nctu_po'));
+        register_nav_menu('bottom', __('Bottom menu', 'nctu_po'));
     }
     // 佈景主題所使用的script和stylesheet
     // wp_enqueue_style 和 wp_enqueue_script裡使用wp_register裡註冊的名稱

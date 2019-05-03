@@ -1,3 +1,27 @@
+@import "../variables";
 .site-footer {
   flex: 0 0 auto;
+}
+.footer-menu-container {
+  background-color: $footer-background-color;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+.footer-nav-btn {
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  .footer-nav-title {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    &::before {
+      content: "☰";
+    }
+  }
 }
