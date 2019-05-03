@@ -73,6 +73,7 @@
       background-color: $highlight-background-color;
       transition: 0.2s;
       a { color: #fff;}
+      /* The triangle marker below the menu item */
       &::after {
         content: "";
         position: absolute;

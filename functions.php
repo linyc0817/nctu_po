@@ -71,6 +71,7 @@ class NCTUPO {
     public static function run() {
         // 頁面主題圖片功能
         add_theme_support('post-thumbnails', array('page'));
+        set_post_thumbnail_size( 75, 75 );
         // 自訂背景
         add_theme_support('custom-background', array(
             'default-image' => get_template_directory_uri() . '/image/background.jpg',
