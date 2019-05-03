@@ -41,6 +41,14 @@
     },
     mounted() {
     },
+    watch: {
+      $route(now, prev) {
+        if(now.path !== '/' && prev.path === '/') {
+          console.log('Hey Change')
+          jQuery('#footer-menu-container').hide()
+        }
+      }
+    },
   }
 </script>
 

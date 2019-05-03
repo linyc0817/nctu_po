@@ -1,5 +1,5 @@
 <footer class="site-footer">
-    <div class="footer-menu-container">
+    <div id="footer-menu-container" class="footer-menu-container">
     <?php
     require_once('NCTUPO_Bottom_Menu_Walker.php');
     wp_nav_menu( array(
