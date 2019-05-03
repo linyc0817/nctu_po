@@ -1,8 +1,17 @@
 import Vue from 'vue';
+import VueRouter from 'vue-router'
 import App from './App.vue'
 
+const routes = [
+]
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  routes
+});
 const vm = new Vue({
   el: '#app-root',
+  router,
   data: {
     foo: 'Hello',
   },

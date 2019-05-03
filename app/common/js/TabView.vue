@@ -5,18 +5,27 @@
         <div v-if="pageContent.length !== 0" class="page-content" v-html="pageContent">
         </div>
         <div v-else class="page-content">No content</div>
-        <ul>
+        <ul v-if="$route.path !== '/'">
           <template v-for="cat in tabList">
-            <li v-bind:class="{'current-item': cat.id == currentTab}">
-              {{ cat.name }}
+            <li>
+              <router-link v-bind:to="cat.id.toString()">{{ cat.name }}</router-link>
             </li>
           </template>
         </ul>
       </div>
     </div>
     <div class="content-wrapper">
-      <div class="content">
+      <div v-if="$route.path !== '/'" class="content">
         <slot></slot>
+      </div>
+      <div v-else class="content first-layer">
+        <ul>
+          <template v-for="cat in tabList">
+            <li>
+              <router-link v-bind:to="cat.id.toString()">{{ cat.name }}</router-link>
+            </li>
+          </template>
+        </ul>
       </div>
     </div>
   </div>
@@ -25,26 +34,12 @@
 <script>
   import axios from 'axios'
   export default {
-    props: ['tab-list', 'page-name'],
+    props: ['tab-list', 'page-name', 'page-content'],
     data() {
       return {
-        pageContent: '',
-        currentTab: 0,
       }
     },
     mounted() {
-      axios.get('/wp-json/wp/v2/pages', {
-          params: {
-            slug: this.pageName
-          }
-        }
-      ).then((response) => {
-        if(response.data.length > 0)
-          this.pageContent = response.data[0].content.rendered
-      }).catch((error) => {
-        console.log('Fetch page content failed')
-        console.log(error)
-      })
     },
   }
 </script>
@@ -82,7 +77,10 @@
     li {
       letter-spacing: 0.2rem;
       margin-top: 0.7rem;
-      &.current-item {
+      a {
+        color: #fff;
+      }
+      a.router-link-active {
         color: $main-font-color;
       }
     }
@@ -105,6 +103,23 @@
   .content {
     transform-origin: 0 0;
     transform: skewX(15deg);
+  }
+}
+.first-layer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  ul {
+    flex: 0 0 auto;
+    padding-left: 2rem;
+    li {
+      margin: 15px;
+      a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        letter-spacing: 0.4rem;
+      }
+    }
   }
 }
 </style>

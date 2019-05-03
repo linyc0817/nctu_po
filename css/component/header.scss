@@ -65,6 +65,9 @@
     padding-right: 1.4rem;
     transform: skewX(-15deg);
 
+    a {
+      color: $top-link-color;
+    }
     &.current_page_item,
     &:hover {
       background-color: $highlight-background-color;
@@ -138,16 +141,16 @@
     .lang-switch-en {
       flex: 1 0 auto;
       padding: 0.1rem 0.5rem;
-      border: 3px solid $main-font-color;
-      border-left: 3px solid $main-font-color;
+      border: 3px solid $top-link-color;
+      border-left: 3px solid $top-link-color;
       border-top-right-radius: 1rem;
       border-bottom-right-radius: 1rem;
     }
     .lang-switch-ch {
       flex: 1 0 auto;
       padding: 0.1rem 0.5rem;
-      border: 3px solid $main-font-color;
-      border-right: 0px solid $main-font-color;
+      border: 3px solid $top-link-color;
+      border-right: 0px solid $top-link-color;
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem;
     }

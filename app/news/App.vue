@@ -1,5 +1,5 @@
 <template>
-  <TabView v-bind:tab-list="tabList" v-bind:page-name="pageName">
+  <TabView v-bind:tab-list="tabList" v-bind:page-name="pageName" v-bind:page-content="pageContent">
     <router-view></router-view>
   </TabView>
 </template>
@@ -12,6 +12,7 @@
       return {
         tabList: [],
         pageName: 'news',
+        pageContent: '',
       }
     },
     components: {
