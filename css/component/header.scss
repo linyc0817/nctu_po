@@ -66,7 +66,7 @@
     transform: skewX(-15deg);
 
     a {
-      color: $top-link-color;
+      color: $top-font-color;
     }
     &.current_page_item,
     &:hover {
@@ -119,7 +119,7 @@
     text-indent: 1.4rem;
     transition: 0.2s;
     &:focus {
-      border-bottom: 2px solid $main-font-color;
+      border-bottom: 2px solid $top-font-color;
       transition: 0.2s;
     }
   }
@@ -130,7 +130,7 @@
     left: 1.4rem;
     height: 100%;
     font: normal 1rem/1 dashicons !important;
-    color: $main-font-color;
+    color: $top-font-color;
   }
   .top-navbar-lang-switch {
     flex: 0 0 auto;
@@ -141,16 +141,16 @@
     .lang-switch-en {
       flex: 1 0 auto;
       padding: 0.1rem 0.5rem;
-      border: 3px solid $top-link-color;
-      border-left: 3px solid $top-link-color;
+      border: 3px solid $top-font-color;
+      border-left: 3px solid $top-font-color;
       border-top-right-radius: 1rem;
       border-bottom-right-radius: 1rem;
     }
     .lang-switch-ch {
       flex: 1 0 auto;
       padding: 0.1rem 0.5rem;
-      border: 3px solid $top-link-color;
-      border-right: 0px solid $top-link-color;
+      border: 3px solid $top-font-color;
+      border-right: 0px solid $top-font-color;
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem;
     }
