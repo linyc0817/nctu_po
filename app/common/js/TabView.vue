@@ -49,6 +49,7 @@
 .container {
   height: 100%;
   display: flex;
+  position: absolute;
 }
 .sidebar-wrapper {
   height: 100%;

@@ -19,6 +19,16 @@
       TabView
     },
     mounted() {
+      axios.get('/wp-json/wp/v2/pages', {
+        params: {
+          slug: 'news',
+        }
+      }).then((response) => {
+        this.pageContent = response.data[0].content.rendered
+      }).catch((error) => {
+        console.log('Failed to fetch page content')
+        console.log(error)
+      })
       axios.get('/wp-json/wp/v2/categories', {
         params: {
           orderby: 'slug'
