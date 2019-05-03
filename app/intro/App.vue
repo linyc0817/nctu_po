@@ -21,14 +21,15 @@
     mounted() {
       axios.get('/wp-json/wp/v2/pages', {
         params: {
-          orderby: 'slug',
           slug: 'intro',
         }
       }).then((response) => {
         this.pageContent = response.data[0].content.rendered
         return axios.get('/wp-json/wp/v2/pages', {
           params: {
-            parent: response.data[0].id
+            parent: response.data[0].id,
+            orderby: 'slug',
+            order: 'asc'
           }
         })
       }).then((response) => {
